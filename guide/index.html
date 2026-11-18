@@ -479,5 +479,18 @@ footer{padding-bottom:72px!important}
 </nav>
 
 </div>
+<script>
+/* 견적 가이드 — 견적 버튼·전화 버튼 클릭 기록 */
+(function () {
+  var track = function (name, params) { try { if (window.gtag) gtag('event', name, params || {}); } catch (e) {} };
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href="/#contact"], a[href^="tel:"]');
+    if (!a) return;
+    var where = a.closest('header') ? 'guide_header' : (a.closest('.hq-mbar') ? 'guide_mobile_bar' : (a.closest('footer') ? 'guide_footer' : 'guide_bottom'));
+    if (a.getAttribute('href').indexOf('tel:') === 0) track('tel_click', { link_location: where });
+    else track('cta_click', { cta_location: where });
+  });
+})();
+</script>
 </body>
 </html>

@@ -859,6 +859,14 @@ var FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbygeDwPXtwVaCzFGCY9
     track('cta_click', { cta_location: sec });
   });
 
+  /* 5-1) 전화 버튼·견적 가이드 링크 클릭 기록 */
+  doc.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href^="tel:"], a[href="/guide/"]');
+    if (!a) return;
+    var where = a.closest('header') ? 'header' : (a.closest('.cw-mbar') ? 'mobile_bar' : (a.closest('footer') ? 'footer' : ((a.closest('section[id]') || {}).id || 'etc')));
+    track(a.getAttribute('href').indexOf('tel:') === 0 ? 'tel_click' : 'guide_click', { link_location: where });
+  });
+
   /* 6) 지금 보는 구간을 상단 메뉴에 표시 */
   var links = doc.querySelectorAll('.cw-nav-links a');
   var map = [['ch2', 0], ['crew', 0], ['ch3', 0], ['review', 1], ['ch4', 2], ['contact', -1]];
