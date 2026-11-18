@@ -151,7 +151,7 @@ section{padding-left:20px!important;padding-right:20px!important}
 section[style*="border-radius:48px"]{border-radius:32px 32px 0 0!important}
 #top{padding-top:52px!important;padding-bottom:88px!important}
 #ch1{padding-top:96px!important;padding-bottom:104px!important}
-#pick,#ch3,#review,#ch4,#service,#contact,#faq,#crew{padding-top:84px!important;padding-bottom:92px!important}
+#pick,#ch3,#review,#ch4,#contact,#faq,#crew{padding-top:84px!important;padding-bottom:92px!important}
 #ch2{padding-top:88px!important;padding-bottom:132px!important}
 .cw-numsec{padding-top:56px!important;padding-bottom:64px!important}
 .cw-nums>div{padding:26px 4px!important;text-align:center}
@@ -202,6 +202,9 @@ footer{padding-left:20px!important;padding-right:20px!important}
 @keyframes cwDot{0%,100%{opacity:.35;transform:none}50%{opacity:1;transform:translateY(-3px)}}
 @keyframes cwWaitOut{to{opacity:0;visibility:hidden}}
 @media (prefers-reduced-motion:reduce){.cw-rw-wait{display:none}}
+/* 1118e */
+.cw-br-m{display:none}
+@media (max-width:640px){.cw-br-m{display:inline}.cw-ch3{font-size:25px!important;line-height:1.5!important}.cw-scope{font-size:12.5px!important;grid-template-columns:1fr!important}.cw-scope>div:first-child{display:none!important}.cw-edu{padding:24px 20px!important;align-items:flex-start!important;gap:18px!important}}
 /* reveal on view (activated by script on the live site only) */
 .js-rv .rv{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1);transition-delay:var(--rvd,0s)}
 .js-rv .rv.in{opacity:1;transform:none}
@@ -228,7 +231,7 @@ footer{padding-left:20px!important;padding-right:20px!important}
 <span style="font-size:20px;font-weight:700;letter-spacing:-0.03em">Crewth Studio<span style="color:#E95623">.</span></span>
 <span class="cw-hide-m" style="font-size:12px;color:#8A8A8A;letter-spacing:0">크루스 스튜디오</span>
 </a>
-<nav class="cw-nav-links" aria-label="주요 메뉴" style="display:flex;align-items:center;gap:6px;font-size:15px;color:#A3A3A3"><a href="#ch2" style="padding:8px 14px">일하는 방식</a><a href="#review" style="padding:8px 14px">고객 반응</a><a href="#ch4" style="padding:8px 14px">전략 설계</a><a href="#service" style="padding:8px 14px">서비스</a></nav>
+<nav class="cw-nav-links" aria-label="주요 메뉴" style="display:flex;align-items:center;gap:6px;font-size:15px;color:#A3A3A3"><a href="#ch2" style="padding:8px 14px">일하는 방식</a><a href="#review" style="padding:8px 14px">고객 반응</a><a href="#ch4" style="padding:8px 14px">전략 설계</a></nav>
 <a href="#contact" class="cw-btn cw-cta" style="background:#E95623;color:#0A0A0A;font-size:14px;font-weight:700;padding:12px 20px;border-radius:999px">견적 받기</a>
 </div>
 </header>
@@ -306,27 +309,29 @@ footer{padding-left:20px!important;padding-right:20px!important}
 
 <!-- 같은 주제, 두 개의 첫 문장 -->
 <div class="cw-rw" style="margin:96px auto 0;max-width:1060px">
-<p style="margin:0 0 24px;text-align:center;font-size:14px;color:#8A8A8A;letter-spacing:0.01em">같은 주제, 두 개의 첫 문장 <span style="color:#5A5A5A">(예시 · 세무사무소)</span></p>
+<p style="margin:0 0 24px;text-align:center;font-size:14px;color:#8A8A8A;letter-spacing:0.01em">같은 주제, 두 개의 글 <span style="color:#5A5A5A">(예시 · 세무사무소)</span></p>
 <div class="cw-rw-grid" style="display:grid;grid-template-columns:minmax(0,1fr) 64px minmax(0,1fr);align-items:stretch">
 <div class="cw-rw-a" style="border-radius:24px;background:#141414;border:1px solid #242424;padding:32px 32px 26px;text-align:left;display:flex;flex-direction:column">
 <p style="margin:0;font-size:13px;color:#7A7A7A;display:flex;align-items:center;gap:8px"><span style="width:6px;height:6px;border-radius:50%;background:#5A5A5A"></span>검색어만 채운 글</p>
-<div class="cw-rw-body" style="margin-top:22px;flex:1;display:flex;flex-direction:column;gap:12px;font-size:18px;line-height:1.6;letter-spacing:-0.02em;color:#B5B5B5">
+<div class="cw-rw-body" style="margin-top:22px;flex:1;display:flex;flex-direction:column;gap:12px;font-size:17px;line-height:1.65;letter-spacing:-0.02em;color:#B5B5B5">
 <span class="cw-rw-s" style="--d:0"><span>종합소득세 신고 기간이 다가왔습니다.</span></span>
 <span class="cw-rw-s" style="--d:1"><span>오늘은 종합소득세 신고 방법에 대해 알아보겠습니다.</span></span>
 <span class="cw-rw-s" style="--d:2"><span>종합소득세란 1년 동안 얻은 소득에 매기는 세금으로…</span></span>
+<span class="cw-rw-s" style="--d:3"><span>신고 대상과 기한은 다음과 같습니다.</span></span>
 </div>
-<p style="margin:24px 0 0;padding-top:16px;border-top:1px solid #242424;font-size:14px;color:#6E6E6E">어느 세무사무소 블로그에 붙여도 똑같은 문장</p>
+<p style="margin:24px 0 0;padding-top:16px;border-top:1px solid #242424;font-size:14px;color:#6E6E6E">어느 세무사무소 블로그에 붙여도 똑같은 글</p>
 </div>
 <div aria-hidden="true" class="cw-rw-arrow" style="display:flex;align-items:center;justify-content:center"><span style="width:40px;height:40px;border-radius:50%;background:#E95623;color:#0A0A0A;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:800;box-shadow:0 0 0 6px rgba(233,86,35,.16)">→</span></div>
 <div class="cw-rw-b" style="border-radius:24px;background:#fff;color:#0A0A0A;padding:32px 32px 26px;text-align:left;display:flex;flex-direction:column">
 <p style="margin:0;font-size:13px;color:#E95623;font-weight:700;display:flex;align-items:center;gap:8px"><span class="cw-live" style="width:6px;height:6px;border-radius:50%;background:#E95623"></span>대표님 인터뷰에서 시작한 글</p>
-<div class="cw-rw-body" style="margin-top:22px;flex:1;position:relative;display:flex;flex-direction:column;gap:12px;font-size:18px;line-height:1.6;letter-spacing:-0.02em;color:#3A3A3A">
+<div class="cw-rw-body" style="margin-top:22px;flex:1;position:relative;display:flex;flex-direction:column;gap:12px;font-size:17px;line-height:1.65;letter-spacing:-0.02em;color:#3A3A3A">
 <span class="cw-rw-wait" aria-hidden="true"><i></i><i></i><i></i><em>대표님 이야기를 듣는 중</em></span>
-<span class="cw-rw-t" style="--d:0">5월이면 꼭 이 전화가 옵니다.</span>
-<span class="cw-rw-t" style="--d:1;font-weight:700;color:#0A0A0A">“작년이랑 똑같이 벌었는데, 왜 세금이 더 나와요?”</span>
-<span class="cw-rw-t" style="--d:2">세무사님이 그 전화에 매번 하시는 대답부터 적었습니다.</span>
+<span class="cw-rw-t" style="--d:0">5월에 가까워질수록, 대표님들뿐 아니라 제 마음도 같이 조급해집니다.</span>
+<span class="cw-rw-t" style="--d:1">미리 준비해달라고 말씀드리긴 하지만, 여건상 쉽지 않다는 것도 누구보다 잘 알고 있습니다.</span>
+<span class="cw-rw-t" style="--d:2;margin-top:10px">이맘때쯤 예상 세액을 안내해 드리면 <b style="font-weight:700;color:#0A0A0A">“작년이랑 비슷하게 벌었는데, 왜 세금이 더 나오나요?”</b>라는 질문을 종종 받아서,</span>
+<span class="cw-rw-t" style="--d:3">오늘은 그에 대한 답변을 드리고자 합니다.</span>
 </div>
-<p style="margin:24px 0 0;padding-top:16px;border-top:1px solid #ECEBE6;font-size:14px;color:#5C5C5C">이 사무소만 쓸 수 있는 첫 문장</p>
+<p style="margin:24px 0 0;padding-top:16px;border-top:1px solid #ECEBE6;font-size:14px;color:#5C5C5C">이 세무사님만 쓸 수 있는 글</p>
 </div>
 </div>
 <p style="margin:28px 0 0;text-align:center"><button type="button" class="cw-rw-replay" style="font:inherit;cursor:pointer;background:none;border:1px solid #2E2E2E;color:#A3A3A3;border-radius:999px;padding:10px 18px;font-size:13.5px;align-items:center;gap:6px">다시 보기 <span aria-hidden="true">↻</span></button></p>
@@ -466,20 +471,10 @@ footer{padding-left:20px!important;padding-right:20px!important}
 </section>
 
 <!-- ━━━ 03 결과 ━━━ -->
-<section id="ch3" style="background:#0A0A0A;color:#fff;padding:140px 32px 150px">
+<section id="ch3" style="background:#0A0A0A;color:#fff;padding:130px 32px 140px">
 <div style="max-width:1160px;margin:0 auto">
 
-<div class="cw-res" style="margin-top:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:56px;align-items:center">
-<p style="margin:0;font-size:clamp(24px,2.4vw,34px);line-height:1.45;letter-spacing:-0.03em"><span style="font-weight:600">저희는 대표님 블로그를<br>연습장으로 쓰지 않습니다.</span><br><span style="font-weight:400;color:#6E6E6E">오래 직접 써봤고, 그 경험으로<br>다른 대표들을 가르치고 있습니다.</span><br><span style="font-weight:600">콘텐츠가 돈으로 바뀌는<br>과정을 설계합니다<span style="color:#E95623">.</span></span></p>
-<div class="cw-stairs" style="padding:28px 28px 24px;border-radius:28px;background:#111;border:1px solid #1F1F1F">
-<p style="margin:0;font-size:13px;color:#8A8A8A">콘텐츠가 돈으로 바뀌는 계단</p>
-<div class="cw-stairs-grid" style="margin-top:20px;height:250px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr)) minmax(0,1.2fr);gap:8px;align-items:end"><div style="display:flex;flex-direction:column;justify-content:flex-end;height:100%"><div class="cw-bar" style="height:24%;border-radius:12px 12px 3px 3px;background:#222;padding:12px 10px;display:flex;flex-direction:column;animation-delay:0.00s"><span style="font-size:14.5px;font-weight:700;color:#E5E5E5;letter-spacing:-0.02em">콘텐츠</span><span style="margin-top:3px;font-size:11px;color:#7A7A7A;line-height:1.35">대표님 이야기</span></div></div><div style="display:flex;flex-direction:column;justify-content:flex-end;height:100%"><div class="cw-bar" style="height:40%;border-radius:12px 12px 3px 3px;background:#222;padding:12px 10px;display:flex;flex-direction:column;animation-delay:0.12s"><span style="font-size:14.5px;font-weight:700;color:#E5E5E5;letter-spacing:-0.02em">발견</span><span style="margin-top:3px;font-size:11px;color:#7A7A7A;line-height:1.35">검색·피드·커뮤니티</span></div></div><div style="display:flex;flex-direction:column;justify-content:flex-end;height:100%"><div class="cw-bar" style="height:56%;border-radius:12px 12px 3px 3px;background:#222;padding:12px 10px;display:flex;flex-direction:column;animation-delay:0.24s"><span style="font-size:14.5px;font-weight:700;color:#E5E5E5;letter-spacing:-0.02em">신뢰</span><span style="margin-top:3px;font-size:11px;color:#7A7A7A;line-height:1.35">블로그·후기</span></div></div><div style="display:flex;flex-direction:column;justify-content:flex-end;height:100%"><div class="cw-bar" style="height:72%;border-radius:12px 12px 3px 3px;background:#222;padding:12px 10px;display:flex;flex-direction:column;animation-delay:0.36s"><span style="font-size:14.5px;font-weight:700;color:#E5E5E5;letter-spacing:-0.02em">문의</span><span style="margin-top:3px;font-size:11px;color:#7A7A7A;line-height:1.35">플레이스·예약</span></div></div><div style="display:flex;flex-direction:column;justify-content:flex-end;height:100%"><div class="cw-bar" style="height:100%;border-radius:12px 12px 3px 3px;background:#E95623;box-shadow:0 0 50px rgba(233,86,35,.4);padding:16px 14px;display:flex;flex-direction:column;justify-content:space-between;animation-delay:.5s"><p style="margin:0;font-size:clamp(26px,2.6vw,36px);font-weight:800;letter-spacing:-0.04em;line-height:1;color:#fff">매출</p><svg aria-hidden="true" width="30" height="30" viewBox="0 0 40 40" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 30L30 10M14 10h16v16"/></svg></div></div></div>
-<div aria-hidden="true" style="margin-top:8px;height:1px;background:#2A2A2A"></div>
-</div>
-</div>
-
-
-
+<p class="cw-ch3" style="margin:0 auto;max-width:1120px;text-align:center;font-size:clamp(26px,3.3vw,46px);line-height:1.42;letter-spacing:-0.035em"><span style="font-weight:700">저희는 대표님 블로그를<br class="cw-br-m"> 연습장으로 쓰지 않습니다.</span><br><span style="font-weight:300;color:#6E6E6E">오래 직접 써봤고, 그 경험으로<br class="cw-br-m"> 다른 대표들을 가르치고 있습니다.</span><br><span style="font-weight:700">콘텐츠가 돈으로 바뀌는<br class="cw-br-m"> 과정을 설계합니다<span style="color:#E95623">.</span></span></p>
 </div>
 </section>
 
@@ -517,8 +512,13 @@ footer{padding-left:20px!important;padding-right:20px!important}
 <div style="max-width:1160px;margin:0 auto">
 
 <h2 style="margin:0;text-align:center;font-size:clamp(34px,4.6vw,62px);line-height:1.22;letter-spacing:-0.03em"><span style="font-weight:300;color:#8F8F8F">100개의 사업체에는</span><br><span style="font-weight:600">100가지의 마케팅 전략이 필요합니다</span></h2>
-<p style="margin:26px auto 0;text-align:center;max-width:620px;font-size:17px;line-height:1.8;color:#5C5C5C">정해진 패키지를 내밀지 않습니다.<br>크루스는 아래 순서로, 대표님 사업만의 전략을 짭니다.</p>
-<div class="cw-steps" style="margin-top:72px;border-top:1px solid #EAE9E4"><details class="cw-acc" name="cw-step" open style="border-bottom:1px solid #EAE9E4">
+<p style="margin:26px auto 0;text-align:center;max-width:620px;font-size:17px;line-height:1.8;color:#5C5C5C">정해진 패키지를 내밀지 않습니다.<br>진단만 맡기셔도, 운영까지 맡기셔도 같은 전담 크루가 이 순서로 이어갑니다.</p>
+<div class="cw-scope" style="margin:44px auto 0;max-width:760px;display:grid;grid-template-columns:3fr 2fr;font-size:13.5px;text-align:center">
+<div style="grid-column:1 / 3;display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-bottom:10px;font-size:12px;color:#8F8F8F;font-family:ui-monospace,Menlo,monospace"><span>01 LISTEN</span><span>02 PATH</span><span>03 PLAN</span><span>04 BUILD</span><span>05 GROW</span></div>
+<div style="padding:12px 10px;border-radius:999px;background:#F6F5F1;border:1px solid #EAE9E4;color:#3A3A3A"><b style="font-weight:700;color:#0A0A0A">진단·전략만</b> 맡기실 때 · 01~03</div>
+<div style="grid-column:1 / 3;margin-top:8px;padding:12px 10px;border-radius:999px;border:1.5px solid #E95623;color:#0A0A0A"><b style="font-weight:700">운영까지 맡기실 때</b> · 01~05, 같은 전담 크루가 이어서</div>
+</div>
+<div class="cw-steps" style="margin-top:56px;border-top:1px solid #EAE9E4"><details class="cw-acc" name="cw-step" open style="border-bottom:1px solid #EAE9E4">
 <summary style="display:grid;grid-template-columns:64px 76px minmax(0,1fr) minmax(0,1.2fr) 28px;gap:20px;align-items:center;padding:26px 0;cursor:pointer">
 <span style="font-size:34px;font-weight:200;color:#C9C7C0;letter-spacing:-0.04em;font-variant-numeric:tabular-nums">01</span>
 <span style="font-size:12px;font-weight:700;color:#E95623;letter-spacing:.14em;font-family:ui-monospace,Menlo,monospace">LISTEN</span>
@@ -527,7 +527,7 @@ footer{padding-left:20px!important;padding-right:20px!important}
 <span class="cw-acc-ic" aria-hidden="true" style="font-size:24px;font-weight:300;color:#8F8F8F;text-align:right">+</span>
 </summary>
 <div class="cw-step cw-fade" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:56px;padding:6px 0 44px 160px;align-items:center">
-<p style="margin:0;font-size:16px;line-height:1.85;color:#3A3A3A">무엇을 팔고, 왜 이 일을 하시는지, 고객이 무엇을 묻는지 직접 듣습니다. 경쟁 업체와 다른 진짜 이유가 여기서 나옵니다.</p>
+<div><p style="margin:0;font-size:16px;line-height:1.85;color:#3A3A3A">무엇을 팔고, 왜 이 일을 하시는지, 고객이 무엇을 묻는지 직접 듣습니다. 경쟁 업체와 다른 진짜 이유가 여기서 나옵니다.</p><p style="margin:22px 0 10px;font-size:12px;font-weight:700;color:#E95623;letter-spacing:.02em">이 단계에서 받으시는 것</p><div style="display:flex;flex-wrap:wrap;gap:6px"><span style="font-size:13.5px;padding:7px 12px;border-radius:999px;background:#F6F5F1;border:1px solid #EAE9E4;color:#2A2A2A">사전 질문지</span><span style="font-size:13.5px;padding:7px 12px;border-radius:999px;background:#F6F5F1;border:1px solid #EAE9E4;color:#2A2A2A">대표님 인터뷰</span></div></div>
 <div><div style="display:flex;flex-direction:column;gap:8px"><div style="display:flex;gap:12px;align-items:baseline;padding:13px 16px;border-radius:14px;background:#fff;border:1px solid #EAE9E4;font-size:14.5px"><span style="font-size:11px;color:#8F8F8F;font-family:ui-monospace,Menlo,monospace">Q1</span>고객이 가장 자주 묻는 질문은 무엇인가요?</div><div style="display:flex;gap:12px;align-items:baseline;padding:13px 16px;border-radius:14px;background:#fff;border:1px solid #EAE9E4;font-size:14.5px"><span style="font-size:11px;color:#8F8F8F;font-family:ui-monospace,Menlo,monospace">Q2</span>경쟁 업체와 다르다고 자신 있게 말할 수 있는 건요?</div><div style="display:flex;gap:12px;align-items:baseline;padding:13px 16px;border-radius:14px;background:#fff;border:1px solid #EAE9E4;font-size:14.5px"><span style="font-size:11px;color:#8F8F8F;font-family:ui-monospace,Menlo,monospace">Q3</span>다시 찾아오는 고객은 무엇 때문에 오나요?</div><div style="display:flex;gap:12px;align-items:baseline;padding:13px 16px;border-radius:14px;background:#fff;border:1px solid #EAE9E4;font-size:14.5px"><span style="font-size:11px;color:#8F8F8F;font-family:ui-monospace,Menlo,monospace">Q4</span>올해 꼭 늘리고 싶은 매출은 어디서 나오나요?</div><p style="margin:4px 0 0;font-size:12px;color:#8F8F8F">사전 질문지 일부</p></div></div></div>
 </details><details class="cw-acc" name="cw-step" style="border-bottom:1px solid #EAE9E4">
 <summary style="display:grid;grid-template-columns:64px 76px minmax(0,1fr) minmax(0,1.2fr) 28px;gap:20px;align-items:center;padding:26px 0;cursor:pointer">
@@ -538,7 +538,7 @@ footer{padding-left:20px!important;padding-right:20px!important}
 <span class="cw-acc-ic" aria-hidden="true" style="font-size:24px;font-weight:300;color:#8F8F8F;text-align:right">+</span>
 </summary>
 <div class="cw-step cw-fade" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:56px;padding:6px 0 44px 160px;align-items:center">
-<p style="margin:0;font-size:16px;line-height:1.85;color:#3A3A3A">고객이 어디서 처음 알고, 무엇을 확인한 뒤 문의하는지 따라가며 매출 직전에 끊기는 곳을 찾습니다.</p>
+<div><p style="margin:0;font-size:16px;line-height:1.85;color:#3A3A3A">고객이 어디서 처음 알고, 무엇을 확인한 뒤 문의하는지 따라가며 매출 직전에 끊기는 곳을 찾습니다.</p><p style="margin:22px 0 10px;font-size:12px;font-weight:700;color:#E95623;letter-spacing:.02em">이 단계에서 받으시는 것</p><div style="display:flex;flex-wrap:wrap;gap:6px"><span style="font-size:13.5px;padding:7px 12px;border-radius:999px;background:#F6F5F1;border:1px solid #EAE9E4;color:#2A2A2A">고객·경쟁사 분석</span><span style="font-size:13.5px;padding:7px 12px;border-radius:999px;background:#F6F5F1;border:1px solid #EAE9E4;color:#2A2A2A">고객이 찾아오는 경로 진단</span></div></div>
 <div><div style="padding:26px 22px;border-radius:18px;background:#fff;border:1px solid #EAE9E4"><div style="display:flex;align-items:center"><div style="display:flex;flex-direction:column;align-items:center;gap:10px;flex-shrink:0"><span style="width:12px;height:12px;border-radius:50%;background:#0A0A0A"></span><span style="font-size:14px;font-weight:500;color:#0A0A0A">발견</span></div><div style="flex:1;position:relative;margin:0 8px 26px;height:2px;background:#0A0A0A"></div><div style="display:flex;flex-direction:column;align-items:center;gap:10px;flex-shrink:0"><span style="width:12px;height:12px;border-radius:50%;background:#0A0A0A"></span><span style="font-size:14px;font-weight:500;color:#0A0A0A">신뢰</span></div><div style="flex:1;position:relative;margin:0 8px 26px;height:2px;background:repeating-linear-gradient(90deg,#E5484D 0 6px,transparent 6px 10px)"><span style="position:absolute;left:50%;top:-30px;transform:translateX(-50%);white-space:nowrap;font-size:11.5px;font-weight:700;color:#E5484D;background:#FDECEC;padding:3px 8px;border-radius:999px">여기서 새요</span></div><div style="display:flex;flex-direction:column;align-items:center;gap:10px;flex-shrink:0"><span style="width:12px;height:12px;border-radius:50%;background:#0A0A0A"></span><span style="font-size:14px;font-weight:500;color:#0A0A0A">문의</span></div><div style="flex:1;position:relative;margin:0 8px 26px;height:2px;background:#0A0A0A"></div><div style="display:flex;flex-direction:column;align-items:center;gap:10px;flex-shrink:0"><span style="width:18px;height:18px;border-radius:50%;background:#E95623"></span><span style="font-size:14px;font-weight:700;color:#E95623">매출</span></div></div><p style="margin:14px 0 0;font-size:12.5px;color:#8F8F8F">예: 글은 읽히는데, 문의 직전에 고객이 나가는 경우</p></div></div></div>
 </details><details class="cw-acc" name="cw-step" style="border-bottom:1px solid #EAE9E4">
 <summary style="display:grid;grid-template-columns:64px 76px minmax(0,1fr) minmax(0,1.2fr) 28px;gap:20px;align-items:center;padding:26px 0;cursor:pointer">
@@ -549,7 +549,7 @@ footer{padding-left:20px!important;padding-right:20px!important}
 <span class="cw-acc-ic" aria-hidden="true" style="font-size:24px;font-weight:300;color:#8F8F8F;text-align:right">+</span>
 </summary>
 <div class="cw-step cw-fade" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:56px;padding:6px 0 44px 160px;align-items:center">
-<p style="margin:0;font-size:16px;line-height:1.85;color:#3A3A3A">지금 하는 것 중 살릴 것과 멈출 것을 나누고, 채널별로 무엇을 어떤 순서로 말할지 정합니다. 기획과 실행은 따로 설계합니다.</p>
+<div><p style="margin:0;font-size:16px;line-height:1.85;color:#3A3A3A">지금 하는 것 중 살릴 것과 멈출 것을 나누고, 채널별로 무엇을 어떤 순서로 말할지 정합니다. 기획과 실행은 따로 설계합니다.</p><p style="margin:22px 0 10px;font-size:12px;font-weight:700;color:#E95623;letter-spacing:.02em">이 단계에서 받으시는 것</p><div style="display:flex;flex-wrap:wrap;gap:6px"><span style="font-size:13.5px;padding:7px 12px;border-radius:999px;background:#F6F5F1;border:1px solid #EAE9E4;color:#2A2A2A">채널 설계</span><span style="font-size:13.5px;padding:7px 12px;border-radius:999px;background:#F6F5F1;border:1px solid #EAE9E4;color:#2A2A2A">인터뷰 기반 주제 기획</span><span style="font-size:13.5px;padding:7px 12px;border-radius:999px;background:#F6F5F1;border:1px solid #EAE9E4;color:#2A2A2A">운영 계획 제안서</span></div></div>
 <div><div style="border-radius:18px;background:#fff;border:1px solid #EAE9E4;overflow:hidden;font-size:14px"><div style="display:grid;grid-template-columns:.8fr 1.2fr 1fr;background:#0A0A0A;color:#fff;font-size:12.5px"><span style="padding:11px 14px">채널</span><span style="padding:11px 14px">말할 것</span><span style="padding:11px 14px;color:#8A8A8A">말하지 않을 것</span></div><div style="display:grid;grid-template-columns:.8fr 1.2fr 1fr;border-top:1px solid #EEEDE8"><span style="padding:12px 14px;font-weight:600">블로그</span><span style="padding:12px 14px">진료 과정 · 자주 묻는 질문</span><span style="padding:12px 14px;color:#8F8F8F;text-decoration:line-through">과장 표현 · 가격 비교</span></div><div style="display:grid;grid-template-columns:.8fr 1.2fr 1fr;border-top:1px solid #EEEDE8"><span style="padding:12px 14px;font-weight:600">플레이스</span><span style="padding:12px 14px">예약 · 위치 · 진짜 후기</span><span style="padding:12px 14px;color:#8F8F8F;text-decoration:line-through">광고 문구 남발</span></div><div style="display:grid;grid-template-columns:.8fr 1.2fr 1fr;border-top:1px solid #EEEDE8"><span style="padding:12px 14px;font-weight:600">숏폼 · 스레드</span><span style="padding:12px 14px">처음 알게 되는 이야기</span><span style="padding:12px 14px;color:#8F8F8F;text-decoration:line-through">긴 설명</span></div></div></div></div>
 </details><details class="cw-acc" name="cw-step" style="border-bottom:1px solid #EAE9E4">
 <summary style="display:grid;grid-template-columns:64px 76px minmax(0,1fr) minmax(0,1.2fr) 28px;gap:20px;align-items:center;padding:26px 0;cursor:pointer">
@@ -560,7 +560,7 @@ footer{padding-left:20px!important;padding-right:20px!important}
 <span class="cw-acc-ic" aria-hidden="true" style="font-size:24px;font-weight:300;color:#8F8F8F;text-align:right">+</span>
 </summary>
 <div class="cw-step cw-fade" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:56px;padding:6px 0 44px 160px;align-items:center">
-<p style="margin:0;font-size:16px;line-height:1.85;color:#3A3A3A">판단이 필요한 일은 사람이, 빠르게 할 일은 AI가 맡아 브랜드 콘텐츠를 만들고, 광고 규정까지 검수한 뒤 발행합니다.</p>
+<div><p style="margin:0;font-size:16px;line-height:1.85;color:#3A3A3A">판단이 필요한 일은 사람이, 빠르게 할 일은 AI가 맡아 브랜드 콘텐츠를 만들고, 광고 규정까지 검수한 뒤 발행합니다.</p><p style="margin:22px 0 10px;font-size:12px;font-weight:700;color:#E95623;letter-spacing:.02em">이 단계에서 받으시는 것</p><div style="display:flex;flex-wrap:wrap;gap:6px"><span style="font-size:13.5px;padding:7px 12px;border-radius:999px;background:#F6F5F1;border:1px solid #EAE9E4;color:#2A2A2A">전담 크루 1명 배정</span><span style="font-size:13.5px;padding:7px 12px;border-radius:999px;background:#F6F5F1;border:1px solid #EAE9E4;color:#2A2A2A">블로그·SNS·영상 콘텐츠 제작</span><span style="font-size:13.5px;padding:7px 12px;border-radius:999px;background:#F6F5F1;border:1px solid #EAE9E4;color:#2A2A2A">광고 표현 검토</span></div></div>
 <div><div style="padding:22px;border-radius:18px;background:#0A0A0A;color:#fff"><div style="display:flex;align-items:center;gap:10px;margin-bottom:16px"><span style="width:30px;height:30px;border-radius:50%;background:#1A1A1A;box-shadow:0 0 0 2px #E95623;display:inline-flex;align-items:flex-end;justify-content:center;overflow:hidden"><svg width="22" height="22" viewBox="0 0 40 40" fill="#8A8A8A"><path d="M20 8a7 7 0 1 1 0 14a7 7 0 1 1 0-14Z M6 36c0-8 6.3-12.5 14-12.5S34 28 34 36Z"/></svg></span><span style="font-size:13.5px;color:#A3A3A3">같은 전담 크루가 처음부터 끝까지</span></div><div style="display:flex;flex-wrap:wrap;gap:6px;align-items:center"><span style="font-size:13px;padding:7px 12px;border-radius:999px;background:#E95623;color:#fff">인터뷰</span><span style="color:#5A5A5A">→</span><span style="font-size:13px;padding:7px 12px;border-radius:999px;background:#E95623;color:#fff">기획</span><span style="color:#5A5A5A">→</span><span style="font-size:13px;padding:7px 12px;border-radius:999px;border:1.5px solid #E5E5E5;color:#fff">초안</span><span style="color:#5A5A5A">→</span><span style="font-size:13px;padding:7px 12px;border-radius:999px;background:#E95623;color:#fff">말투·규정 검수</span><span style="color:#5A5A5A">→</span><span style="font-size:13px;padding:7px 12px;border-radius:999px;border:1.5px solid #E5E5E5;color:#fff">발행</span></div></div></div></div>
 </details><details class="cw-acc" name="cw-step" style="border-bottom:1px solid #EAE9E4">
 <summary style="display:grid;grid-template-columns:64px 76px minmax(0,1fr) minmax(0,1.2fr) 28px;gap:20px;align-items:center;padding:26px 0;cursor:pointer">
@@ -571,7 +571,7 @@ footer{padding-left:20px!important;padding-right:20px!important}
 <span class="cw-acc-ic" aria-hidden="true" style="font-size:24px;font-weight:300;color:#8F8F8F;text-align:right">+</span>
 </summary>
 <div class="cw-step cw-fade" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:56px;padding:6px 0 44px 160px;align-items:center">
-<p style="margin:0;font-size:16px;line-height:1.85;color:#3A3A3A">반응과 매출 변화를 대표님과 함께 보고, 잘된 것은 키우고 안 된 것은 바꿉니다. 그렇게 선순환이 쌓입니다.</p>
+<div><p style="margin:0;font-size:16px;line-height:1.85;color:#3A3A3A">반응과 매출 변화를 대표님과 함께 보고, 잘된 것은 키우고 안 된 것은 바꿉니다. 그렇게 선순환이 쌓입니다.</p><p style="margin:22px 0 10px;font-size:12px;font-weight:700;color:#E95623;letter-spacing:.02em">이 단계에서 받으시는 것</p><div style="display:flex;flex-wrap:wrap;gap:6px"><span style="font-size:13.5px;padding:7px 12px;border-radius:999px;background:#F6F5F1;border:1px solid #EAE9E4;color:#2A2A2A">발행·노출 관리</span><span style="font-size:13.5px;padding:7px 12px;border-radius:999px;background:#F6F5F1;border:1px solid #EAE9E4;color:#2A2A2A">월간 성과·매출 점검</span><span style="font-size:13.5px;padding:7px 12px;border-radius:999px;background:#F6F5F1;border:1px solid #EAE9E4;color:#2A2A2A">다음 달 기획 공유</span></div></div>
 <div><div style="padding:22px 22px 18px;border-radius:18px;background:#fff;border:1px solid #EAE9E4"><div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;align-items:end;height:130px"><div style="display:flex;flex-direction:column;justify-content:flex-end;height:100%;gap:8px"><span style="font-size:11.5px;color:#8F8F8F;font-weight:600;text-align:center">매출 점검</span><div style="height:36%;border-radius:10px 10px 3px 3px;background:#E6E5E0"></div></div><div style="display:flex;flex-direction:column;justify-content:flex-end;height:100%;gap:8px"><span style="font-size:11.5px;color:#8F8F8F;font-weight:600;text-align:center">매출 점검</span><div style="height:52%;border-radius:10px 10px 3px 3px;background:#E6E5E0"></div></div><div style="display:flex;flex-direction:column;justify-content:flex-end;height:100%;gap:8px"><span style="font-size:11.5px;color:#E95623;font-weight:600;text-align:center">매출 점검</span><div style="height:76%;border-radius:10px 10px 3px 3px;background:#E95623"></div></div></div><div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:8px;font-size:12.5px;color:#6E6E6E;text-align:center"><span>1개월</span><span>2개월</span><span>3개월</span></div><p style="margin:12px 0 0;font-size:12px;color:#8F8F8F">그래프는 흐름을 보여주기 위한 예시예요</p></div></div></div>
 </details></div>
 <div style="margin-top:56px"><div style="border-radius:24px;padding:30px;background:#0A0A0A;color:#fff">
@@ -586,51 +586,14 @@ footer{padding-left:20px!important;padding-right:20px!important}
 <div style="background:#1C1C1C;border-radius:14px;padding:16px 14px"><span style="display:block;color:#8A8A8A;font-size:12px;margin-bottom:4px">누가</span>담당 크루</div>
 </div>
 </div></div>
-</div>
-</section>
-
-<!-- 서비스 -->
-<section id="service" style="background:#F6F5F1;padding:150px 32px">
-<div style="max-width:1160px;margin:0 auto">
-<div class="cw-split" style="display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap">
-<h2 style="margin:0;font-size:clamp(30px,3.6vw,48px);line-height:1.3;font-weight:600;letter-spacing:-0.03em">진단부터 운영까지,<br>한 크루가 이어서 맡습니다</h2>
-<p style="margin:0;max-width:380px;font-size:16.5px;line-height:1.8;color:#5C5C5C">진단 하나만 맡기셔도 되고, 운영 전체를 맡기셔도 됩니다. 어느 단계든 같은 전담 크루가 이어갑니다.</p>
-</div>
-
-<div style="margin-top:56px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px" class="cw-svc">
-<div style="background:#0A0A0A;color:#fff;border-radius:28px;padding:40px 38px;display:flex;flex-direction:column;gap:22px">
-<p style="margin:0;font-size:13px;color:#8A8A8A">01 · 진단·전략</p>
-<h3 style="margin:0;font-size:26px;line-height:1.4;font-weight:600;letter-spacing:-0.025em">마케팅 진단과<br>전략 설계</h3>
-<p style="margin:0;font-size:15.5px;line-height:1.8;color:#A3A3A3">지금 어디서 돈이 새고 있는지부터 찾아요. 블로그와 채널을 고객의 눈으로 읽고, 문의가 끊기는 곳을 짚어드려요.</p>
-<ul style="margin:0;padding:22px 0 0;list-style:none;display:flex;flex-direction:column;gap:12px;font-size:15px;color:#E5E5E5;border-top:1px solid #222">
-<li>고객·경쟁사 분석</li><li>고객이 찾아오는 경로·채널 설계</li><li>운영 계획 제안서</li>
-</ul>
-</div>
-<div style="background:#0A0A0A;color:#fff;border-radius:28px;padding:40px 38px;display:flex;flex-direction:column;gap:22px">
-<p style="margin:0;font-size:13px;color:#8A8A8A">02 · 기획·제작</p>
-<h3 style="margin:0;font-size:26px;line-height:1.4;font-weight:600;letter-spacing:-0.025em">콘텐츠 기획과<br>제작</h3>
-<p style="margin:0;font-size:15.5px;line-height:1.8;color:#A3A3A3">건당 작가가 아니라 전담 크루가 인터뷰에서 주제를 뽑고, 대표님 말투로 씁니다. 고칠 곳만 짚어주시면 돼요.</p>
-<ul style="margin:0;padding:22px 0 0;list-style:none;display:flex;flex-direction:column;gap:12px;font-size:15px;color:#E5E5E5;border-top:1px solid #222">
-<li>전담 크루 1명 배정</li><li>인터뷰 기반 주제 기획</li><li>블로그·SNS·영상 콘텐츠 제작·광고 표현 검토</li>
-</ul>
-</div>
-<div style="background:#0A0A0A;color:#fff;border-radius:28px;padding:40px 38px;display:flex;flex-direction:column;gap:22px">
-<p style="margin:0;font-size:13px;color:#8A8A8A">03 · 운영·개선</p>
-<h3 style="margin:0;font-size:26px;line-height:1.4;font-weight:600;letter-spacing:-0.025em">SNS 채널<br>운영</h3>
-<p style="margin:0;font-size:15.5px;line-height:1.8;color:#A3A3A3">올려놓고 방치하는 SNS는 비용만 나가요. 발행부터 반응 확인, 다음 달 방향까지 크루가 챙겨요.</p>
-<ul style="margin:0;padding:22px 0 0;list-style:none;display:flex;flex-direction:column;gap:12px;font-size:15px;color:#E5E5E5;border-top:1px solid #222">
-<li>전담 크루가 발행·노출 관리</li><li>체험 후기·기사 확산</li><li>월간 성과·매출 점검, 다음 달 기획 공유</li>
-</ul>
-</div>
-<div style="background:#fff;border:1px solid #E6E5E0;border-radius:28px;padding:40px 38px;display:flex;flex-direction:column;gap:22px">
-<p style="margin:0;font-size:13px;color:#8F8F8F">교육 · 프로젝트</p>
-<h3 style="margin:0;font-size:26px;line-height:1.4;font-weight:600;letter-spacing:-0.025em">기업·기관 교육과<br>단기 프로젝트</h3>
-<p style="margin:0;font-size:15.5px;line-height:1.8;color:#5C5C5C">블로그·콘텐츠 마케팅 교육이나 단기 프로젝트도 대상과 일정에 맞춰 따로 구성해 드려요.</p>
-<a href="#contact" data-pick="edu" class="cw-btn" style="margin-top:auto;align-self:flex-start;background:#0A0A0A;color:#fff;font-size:15px;font-weight:600;padding:15px 22px;border-radius:12px">교육·프로젝트 문의 →</a>
-</div>
+<div class="cw-split cw-edu" style="margin-top:16px;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:24px 30px;border-radius:24px;border:1px solid #EAE9E4;background:#F6F5F1">
+<div><p style="margin:0;font-size:16.5px;font-weight:700;letter-spacing:-0.02em">기업·기관 교육과 단기 프로젝트도 따로 맡습니다</p><p style="margin:5px 0 0;font-size:14.5px;color:#5C5C5C">블로그·콘텐츠 마케팅 교육이나 단기 프로젝트도 대상과 일정에 맞춰 따로 구성해 드려요.</p></div>
+<a href="#contact" data-pick="edu" class="cw-btn" style="flex-shrink:0;background:#0A0A0A;color:#fff;font-size:15px;font-weight:600;padding:15px 22px;border-radius:12px">교육·프로젝트 문의 →</a>
 </div>
 </div>
 </section>
+
+
 
 <!-- 상담 -->
 <section id="contact" style="background:#0A0A0A;color:#fff;padding:150px 32px">
@@ -892,7 +855,7 @@ var FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbygeDwPXtwVaCzFGCY9
 
   /* 6) 지금 보는 구간을 상단 메뉴에 표시 */
   var links = doc.querySelectorAll('.cw-nav-links a');
-  var map = [['ch2', 0], ['crew', 0], ['ch3', 0], ['review', 1], ['ch4', 2], ['service', 3], ['contact', -1]];
+  var map = [['ch2', 0], ['crew', 0], ['ch3', 0], ['review', 1], ['ch4', 2], ['contact', -1]];
   var ticking = false;
   var nav = function () {
     ticking = false;
