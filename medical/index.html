@@ -111,6 +111,17 @@ section{padding-left:20px!important;padding-right:20px!important}
 footer{padding-bottom:72px!important}
 }
 
+.md-reg .hq-s2>span{color:#C9C9C9}
+@media (max-width:900px){
+.md-reghead{display:none!important}
+.md-reg{grid-template-columns:minmax(0,1fr)!important;gap:10px!important}
+.md-reg .md-arrow{display:none}
+}
+.md-chk:hover{border-color:#0A0A0A!important}
+.md-chk .md-box svg{opacity:0}
+.md-chk[aria-pressed="true"]{border-color:#0A0A0A!important;background:#FBFAF7!important}
+.md-chk[aria-pressed="true"] .md-box{background:#E95623;border-color:#E95623!important}
+.md-chk[aria-pressed="true"] .md-box svg{opacity:1}
 .md-faq summary::-webkit-details-marker{display:none}
 .md-faq[open] .md-plus{transform:rotate(45deg)}
 @media (max-width:900px){
@@ -187,11 +198,68 @@ footer{padding-bottom:72px!important}
 </div>
 </section>
 
-<section aria-label="환자가 병원을 고르는 길" style="position:relative;z-index:2;margin-top:-48px;background:#F6F5F1;border-radius:48px 48px 0 0;padding:130px 32px 170px">
+<section aria-label="게시 전에 걸러내는 표현" style="position:relative;z-index:2;margin-top:-48px;background:#0A0A0A;color:#fff;border-radius:48px 48px 0 0;padding:130px 32px 170px">
+<div style="max-width:1160px;margin:0 auto">
+<h2 style="margin:0;font-size:clamp(32px,3.8vw,52px);line-height:1.28;letter-spacing:-0.04em"><span style="display:block;font-weight:200;color:#8A8A8A">병원 글에서</span><span style="display:block;font-weight:700">게시 전에 걸러내는 표현<span class="hq-period" style="color:#E95623">.</span></span></h2>
+<p style="margin:24px 0 0;max-width:640px;font-size:17px;line-height:1.8;color:#C9C9C9">의료법은 거짓·과장, 치료 경험담, 비교·비방 광고를 금지하고(제56조), 대가를 건 환자 유인도 금지합니다(제27조). 초안에 흔히 들어가는 표현을 이렇게 바꿉니다.</p>
+<div class="md-reghead" style="margin-top:56px;display:grid;grid-template-columns:150px minmax(0,1fr) 28px minmax(0,1.15fr);gap:20px;padding:0 16px 14px;font-size:12px;color:#8A8A8A"><span>유형</span><span>초안에 흔한 표현</span><span></span><span>크루스가 바꾸는 방향</span></div>
+<ol style="margin:0;padding:0;list-style:none;border-bottom:1px solid #232323"><li class="hq-row md-reg" style="display:grid;grid-template-columns:150px minmax(0,1fr) 28px minmax(0,1.15fr);gap:8px 20px;align-items:center;padding:24px 16px;border-top:1px solid #232323;border-radius:4px">
+<span style="font-size:15px;font-weight:700;letter-spacing:-0.02em;color:#fff"><span style="display:block;font-size:12px;font-weight:400;color:#E95623;font-family:ui-monospace,Menlo,monospace;margin-bottom:4px">01</span>효과 단정·보장</span>
+<span class="hq-s2" style="--d:0.40s;font-size:15px;line-height:1.6"><span>“한 번이면 낫습니다”<br>“100% 효과를 보장합니다”</span></span>
+<span class="md-arrow" aria-hidden="true" style="color:#5A5A5A;text-align:center">→</span>
+<span style="font-size:15px;line-height:1.6;color:#fff;font-weight:600;display:flex;gap:10px;align-items:baseline"><span style="flex-shrink:0;position:relative;top:1px"><svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#E95623" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span><span>“도움이 될 수 있습니다. 상태에 따라 결과는 다릅니다”</span></span>
+</li><li class="hq-row md-reg" style="display:grid;grid-template-columns:150px minmax(0,1fr) 28px minmax(0,1.15fr);gap:8px 20px;align-items:center;padding:24px 16px;border-top:1px solid #232323;border-radius:4px">
+<span style="font-size:15px;font-weight:700;letter-spacing:-0.02em;color:#fff"><span style="display:block;font-size:12px;font-weight:400;color:#E95623;font-family:ui-monospace,Menlo,monospace;margin-bottom:4px">02</span>최고·유일 표현</span>
+<span class="hq-s2" style="--d:0.75s;font-size:15px;line-height:1.6"><span>“지역 최고”, “유일한 치료”</span></span>
+<span class="md-arrow" aria-hidden="true" style="color:#5A5A5A;text-align:center">→</span>
+<span style="font-size:15px;line-height:1.6;color:#fff;font-weight:600;display:flex;gap:10px;align-items:baseline"><span style="flex-shrink:0;position:relative;top:1px"><svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#E95623" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span><span>전문의 자격, 장비, 진료 시간처럼 확인되는 사실만 적습니다</span></span>
+</li><li class="hq-row md-reg" style="display:grid;grid-template-columns:150px minmax(0,1fr) 28px minmax(0,1.15fr);gap:8px 20px;align-items:center;padding:24px 16px;border-top:1px solid #232323;border-radius:4px">
+<span style="font-size:15px;font-weight:700;letter-spacing:-0.02em;color:#fff"><span style="display:block;font-size:12px;font-weight:400;color:#E95623;font-family:ui-monospace,Menlo,monospace;margin-bottom:4px">03</span>치료 후기 형식</span>
+<span class="hq-s2" style="--d:1.10s;font-size:15px;line-height:1.6"><span>“3회 만에 통증이 사라진 환자분”</span></span>
+<span class="md-arrow" aria-hidden="true" style="color:#5A5A5A;text-align:center">→</span>
+<span style="font-size:15px;line-height:1.6;color:#fff;font-weight:600;display:flex;gap:10px;align-items:baseline"><span style="flex-shrink:0;position:relative;top:1px"><svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#E95623" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span><span>후기 대신 원장님이 진료 과정과 판단 기준을 직접 설명합니다</span></span>
+</li><li class="hq-row md-reg" style="display:grid;grid-template-columns:150px minmax(0,1fr) 28px minmax(0,1.15fr);gap:8px 20px;align-items:center;padding:24px 16px;border-top:1px solid #232323;border-radius:4px">
+<span style="font-size:15px;font-weight:700;letter-spacing:-0.02em;color:#fff"><span style="display:block;font-size:12px;font-weight:400;color:#E95623;font-family:ui-monospace,Menlo,monospace;margin-bottom:4px">04</span>다른 병원과 비교</span>
+<span class="hq-s2" style="--d:1.45s;font-size:15px;line-height:1.6"><span>“다른 병원에서 못 고친 통증”</span></span>
+<span class="md-arrow" aria-hidden="true" style="color:#5A5A5A;text-align:center">→</span>
+<span style="font-size:15px;line-height:1.6;color:#fff;font-weight:600;display:flex;gap:10px;align-items:baseline"><span style="flex-shrink:0;position:relative;top:1px"><svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#E95623" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span><span>다른 곳 이야기는 빼고, 우리 병원의 진료 방식만 말합니다</span></span>
+</li><li class="hq-row md-reg" style="display:grid;grid-template-columns:150px minmax(0,1fr) 28px minmax(0,1.15fr);gap:8px 20px;align-items:center;padding:24px 16px;border-top:1px solid #232323;border-radius:4px">
+<span style="font-size:15px;font-weight:700;letter-spacing:-0.02em;color:#fff"><span style="display:block;font-size:12px;font-weight:400;color:#E95623;font-family:ui-monospace,Menlo,monospace;margin-bottom:4px">05</span>할인·이벤트</span>
+<span class="hq-s2" style="--d:1.80s;font-size:15px;line-height:1.6"><span>“이번 달만 반값”<br>“후기 쓰면 할인”</span></span>
+<span class="md-arrow" aria-hidden="true" style="color:#5A5A5A;text-align:center">→</span>
+<span style="font-size:15px;line-height:1.6;color:#fff;font-weight:600;display:flex;gap:10px;align-items:baseline"><span style="flex-shrink:0;position:relative;top:1px"><svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#E95623" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span><span>가격과 보험 적용 여부를 있는 그대로 안내합니다</span></span>
+</li><li class="hq-row md-reg" style="display:grid;grid-template-columns:150px minmax(0,1fr) 28px minmax(0,1.15fr);gap:8px 20px;align-items:center;padding:24px 16px;border-top:1px solid #232323;border-radius:4px">
+<span style="font-size:15px;font-weight:700;letter-spacing:-0.02em;color:#fff"><span style="display:block;font-size:12px;font-weight:400;color:#E95623;font-family:ui-monospace,Menlo,monospace;margin-bottom:4px">06</span>부작용 누락</span>
+<span class="hq-s2" style="--d:2.15s;font-size:15px;line-height:1.6"><span>장점만 나열한 시술 소개</span></span>
+<span class="md-arrow" aria-hidden="true" style="color:#5A5A5A;text-align:center">→</span>
+<span style="font-size:15px;line-height:1.6;color:#fff;font-weight:600;display:flex;gap:10px;align-items:baseline"><span style="flex-shrink:0;position:relative;top:1px"><svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#E95623" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span><span>부작용과 주의할 점을 함께 적습니다</span></span>
+</li><li class="hq-row md-reg" style="display:grid;grid-template-columns:150px minmax(0,1fr) 28px minmax(0,1.15fr);gap:8px 20px;align-items:center;padding:24px 16px;border-top:1px solid #232323;border-radius:4px">
+<span style="font-size:15px;font-weight:700;letter-spacing:-0.02em;color:#fff"><span style="display:block;font-size:12px;font-weight:400;color:#E95623;font-family:ui-monospace,Menlo,monospace;margin-bottom:4px">07</span>불안 조장</span>
+<span class="hq-s2" style="--d:2.50s;font-size:15px;line-height:1.6"><span>“방치하면 큰일 납니다”</span></span>
+<span class="md-arrow" aria-hidden="true" style="color:#5A5A5A;text-align:center">→</span>
+<span style="font-size:15px;line-height:1.6;color:#fff;font-weight:600;display:flex;gap:10px;align-items:baseline"><span style="flex-shrink:0;position:relative;top:1px"><svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#E95623" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span><span>“2주 넘게 이어지면 진료로 원인을 확인해 보세요”</span></span>
+</li></ol>
+<div style="margin-top:40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px">
+<div style="border-radius:24px;background:#121212;border:1px solid #232323;padding:28px"><span style="font-size:12px;color:#E95623;font-family:ui-monospace,Menlo,monospace">사전심의</span><h3 style="margin:10px 0 0;font-size:20px;font-weight:700;letter-spacing:-0.03em;line-height:1.4">블로그·인스타·유튜브 글도 심의 대상이 될 수 있습니다</h3><p style="margin:10px 0 0;font-size:15px;line-height:1.75;color:#A3A3A3">기준은 병원 계정의 방문자 수가 아니라 플랫폼의 규모입니다. 병원을 알리는 글인지, 의학 정보를 전하는 글인지에 따라 달라지기 때문에 기획 단계에서 글의 성격부터 나눕니다.</p></div>
+<div style="border-radius:24px;background:#121212;border:1px solid #232323;padding:28px"><span style="font-size:12px;color:#E95623;font-family:ui-monospace,Menlo,monospace">금지 규정</span><h3 style="margin:10px 0 0;font-size:20px;font-weight:700;letter-spacing:-0.03em;line-height:1.4">심의 대상이 아니어도 금지 규정은 그대로 적용됩니다</h3><p style="margin:10px 0 0;font-size:15px;line-height:1.75;color:#A3A3A3">심의는 광고물 하나에 대한 확인입니다. 매일 쌓이는 글 전체를 지켜주지는 않습니다. 그래서 글마다 표현을 확인합니다.</p></div>
+</div>
+<p style="margin:28px 0 0;font-size:13px;line-height:1.7;color:#6E6E6E">법령 해석과 심의 기준은 바뀔 수 있습니다. 판단이 갈리는 표현은 원장님께 먼저 말씀드리고, 필요하면 의료광고 심의 기구나 관할 보건소 확인을 권해 드립니다.</p>
+</div>
+</section>
+
+<section aria-label="진료과마다 다른 환자의 길" style="position:relative;z-index:3;margin-top:-48px;background:#F6F5F1;border-radius:48px 48px 0 0;padding:130px 32px 170px">
+<div style="max-width:1160px;margin:0 auto">
+<h2 style="margin:0;font-size:clamp(32px,3.8vw,52px);line-height:1.28;letter-spacing:-0.04em"><span style="display:block;font-weight:200;color:#8A8A8A">같은 병원이라도,</span><span style="display:block;font-weight:700">진료과마다 환자는 다르게 움직입니다<span class="hq-period" style="color:#E95623">.</span></span></h2>
+<p style="margin:24px 0 0;max-width:640px;font-size:17px;line-height:1.8;color:#5C5C5C">동네 정형외과와 피부 클리닉, 요양병원에 같은 글을 쓸 수는 없습니다. 누가 찾고, 무엇을 확인한 뒤 결정하는지부터 다르기 때문입니다.</p>
+<div style="margin-top:56px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;align-items:start"><article class="hq-card" style="background:#fff;border:1px solid #EEEDE8;border-radius:24px;padding:28px 28px 12px;display:flex;flex-direction:column"><span style="font-size:12px;color:#E95623;font-family:ui-monospace,Menlo,monospace">01</span><h3 style="margin:10px 0 0;font-size:24px;font-weight:700;letter-spacing:-0.035em">통증·생활 진료</h3><p style="margin:4px 0 20px;font-size:14px;color:#8F8F8F">정형외과 · 내과 · 재활의학과</p><dl style="margin:0"><div style="padding:16px 0;border-top:1px solid #EEEDE8"><dt style="font-size:12px;color:#8F8F8F;">찾는 사람</dt><dd style="margin:6px 0 0;font-size:15px;line-height:1.7;color:#3A3A3A;">지금 아프고, 가까운 곳에서 바로 해결하고 싶은 환자</dd></div><div style="padding:16px 0;border-top:1px solid #EEEDE8"><dt style="font-size:12px;color:#8F8F8F;">검색하는 말</dt><dd style="margin:6px 0 0;font-size:15px;line-height:1.7;color:#3A3A3A;">동네 이름 + 증상이나 시술 이름</dd></div><div style="padding:16px 0;border-top:1px solid #EEEDE8"><dt style="font-size:12px;color:#8F8F8F;">예약 직전에 보는 것</dt><dd style="margin:6px 0 0;font-size:15px;line-height:1.7;color:#3A3A3A;">진료 시간, 보험이 되는지, 주사나 시술이 아픈지</dd></div><div style="padding:16px 0;border-top:1px solid #EEEDE8"><dt style="font-size:12px;color:#E95623;font-weight:700">그래서 콘텐츠는</dt><dd style="margin:6px 0 0;font-size:15px;line-height:1.7;color:#0A0A0A;font-weight:600">진료를 권하기보다 판단을 돕습니다. 비용과 보험을 투명하게 안내하고, 지역 이름을 원장님 말 속에 자연스럽게 넣습니다</dd></div></dl></article><article class="hq-card" style="background:#fff;border:1px solid #EEEDE8;border-radius:24px;padding:28px 28px 12px;display:flex;flex-direction:column"><span style="font-size:12px;color:#E95623;font-family:ui-monospace,Menlo,monospace">02</span><h3 style="margin:10px 0 0;font-size:24px;font-weight:700;letter-spacing:-0.035em">비급여 클리닉</h3><p style="margin:4px 0 20px;font-size:14px;color:#8F8F8F">피부 · 탈모 · 성형</p><dl style="margin:0"><div style="padding:16px 0;border-top:1px solid #EEEDE8"><dt style="font-size:12px;color:#8F8F8F;">찾는 사람</dt><dd style="margin:6px 0 0;font-size:15px;line-height:1.7;color:#3A3A3A;">여러 병원을 오래 비교하는 환자</dd></div><div style="padding:16px 0;border-top:1px solid #EEEDE8"><dt style="font-size:12px;color:#8F8F8F;">검색하는 말</dt><dd style="margin:6px 0 0;font-size:15px;line-height:1.7;color:#3A3A3A;">시술 이름 + 가격, 부작용, 후기</dd></div><div style="padding:16px 0;border-top:1px solid #EEEDE8"><dt style="font-size:12px;color:#8F8F8F;">예약 직전에 보는 것</dt><dd style="margin:6px 0 0;font-size:15px;line-height:1.7;color:#3A3A3A;">원장이 어떤 사람인지, 부작용, 가격</dd></div><div style="padding:16px 0;border-top:1px solid #EEEDE8"><dt style="font-size:12px;color:#E95623;font-weight:700">그래서 콘텐츠는</dt><dd style="margin:6px 0 0;font-size:15px;line-height:1.7;color:#0A0A0A;font-weight:600">원장님의 판단 기준을 보여줍니다. 부작용을 정직하게 적고, 할인 대신 가격을 있는 그대로 안내합니다</dd></div></dl></article><article class="hq-card" style="background:#fff;border:1px solid #EEEDE8;border-radius:24px;padding:28px 28px 12px;display:flex;flex-direction:column"><span style="font-size:12px;color:#E95623;font-family:ui-monospace,Menlo,monospace">03</span><h3 style="margin:10px 0 0;font-size:24px;font-weight:700;letter-spacing:-0.035em">요양병원</h3><p style="margin:4px 0 20px;font-size:14px;color:#8F8F8F">요양 · 재활</p><dl style="margin:0"><div style="padding:16px 0;border-top:1px solid #EEEDE8"><dt style="font-size:12px;color:#8F8F8F;">찾는 사람</dt><dd style="margin:6px 0 0;font-size:15px;line-height:1.7;color:#3A3A3A;">환자 본인이 아니라 보호자</dd></div><div style="padding:16px 0;border-top:1px solid #EEEDE8"><dt style="font-size:12px;color:#8F8F8F;">검색하는 말</dt><dd style="margin:6px 0 0;font-size:15px;line-height:1.7;color:#3A3A3A;">지역 이름 + 요양병원 비용, 면회, 재활</dd></div><div style="padding:16px 0;border-top:1px solid #EEEDE8"><dt style="font-size:12px;color:#8F8F8F;">입원 직전에 보는 것</dt><dd style="margin:6px 0 0;font-size:15px;line-height:1.7;color:#3A3A3A;">돌봄 방식, 시설, 면회, 비용. 대부분 직접 방문해 확인합니다</dd></div><div style="padding:16px 0;border-top:1px solid #EEEDE8"><dt style="font-size:12px;color:#E95623;font-weight:700">그래서 콘텐츠는</dt><dd style="margin:6px 0 0;font-size:15px;line-height:1.7;color:#0A0A0A;font-weight:600">보호자의 질문에 답합니다. 하루 일과와 돌봄 방식을 보여주고, 방문 상담으로 이어지게 합니다</dd></div></dl></article></div>
+</div>
+</section>
+
+<section aria-label="환자가 병원을 고르는 길" style="position:relative;z-index:4;margin-top:-48px;background:#fff;border-radius:48px 48px 0 0;padding:130px 32px 170px">
 <div style="max-width:1160px;margin:0 auto">
 <h2 style="margin:0;font-size:clamp(32px,3.8vw,52px);line-height:1.28;letter-spacing:-0.04em"><span style="display:block;font-weight:200;color:#8A8A8A">환자가 병원을 고르는 길,</span><span style="display:block;font-weight:700">처음부터 끝까지 봅니다<span class="hq-period" style="color:#E95623">.</span></span></h2>
 <p style="margin:24px 0 0;max-width:620px;font-size:17px;line-height:1.8;color:#5C5C5C">글만 잘 써서는 예약으로 이어지지 않습니다. 환자가 병원을 알게 되는 순간부터 다시 찾아오기까지, 어디서 끊기는지를 함께 봅니다.</p>
-<div class="hq-card" style="margin-top:56px;border-radius:28px;background:#fff;border:1px solid #EEEDE8;padding:44px 28px 36px">
+<div class="hq-card" style="margin-top:56px;border-radius:28px;background:#F6F5F1;border:1px solid #EEEDE8;padding:44px 28px 36px">
 <div class="md-path" style="position:relative;display:grid;grid-template-columns:repeat(5,minmax(0,1fr))">
 <svg class="md-line" aria-hidden="true" style="position:absolute;left:10%;top:8px;width:80%;height:4px;overflow:visible" viewBox="0 0 100 4" preserveAspectRatio="none"><line class="hq-flow" x1="0" y1="2" x2="100" y2="2" stroke="#E95623" stroke-width="1.5" vector-effect="non-scaling-stroke"/></svg>
 <div class="md-node" style="position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 10px">
@@ -231,7 +299,15 @@ footer{padding-bottom:72px!important}
 </div>
 </section>
 
-<section aria-label="병의원이라서 더 지키는 것" style="position:relative;z-index:3;margin-top:-48px;background:#0A0A0A;color:#fff;border-radius:48px 48px 0 0;padding:130px 32px 170px">
+<section aria-label="원장님 목소리를 지키는 방법" style="position:relative;z-index:5;margin-top:-48px;background:#F6F5F1;border-radius:48px 48px 0 0;padding:130px 32px 170px">
+<div style="max-width:1160px;margin:0 auto">
+<h2 style="margin:0;font-size:clamp(32px,3.8vw,52px);line-height:1.28;letter-spacing:-0.04em"><span style="display:block;font-weight:200;color:#8A8A8A">대신 써도,</span><span style="display:block;font-weight:700">원장님이 쓴 글이어야 합니다<span class="hq-period" style="color:#E95623">.</span></span></h2>
+<p style="margin:24px 0 0;max-width:640px;font-size:17px;line-height:1.8;color:#5C5C5C">환자는 글에서 의사를 봅니다. 그래서 병원마다 원장님의 말투와 진료 철학을 따로 정리해 두고, 그 기준으로 씁니다.</p>
+<div style="margin-top:56px;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px"><article class="hq-card" style="background:#fff;border:1px solid #EEEDE8;border-radius:24px;padding:22px;display:flex;flex-direction:column"><div style="height:150px;border-radius:16px;background:#F6F5F1;border:1px solid #EEEDE8;padding:16px 18px;display:flex;align-items:center;justify-content:center"><div style="width:100%;display:flex;flex-direction:column;gap:8px"><span class="hq-in" style="--d:.2s;align-self:flex-start;max-width:86%;padding:8px 12px;border-radius:12px 12px 12px 4px;background:#fff;border:1px solid #E6E5E0;font-size:12px;line-height:1.5;color:#3A3A3A">환자분들이 제일 많이 묻는 게 뭔가요?</span><span class="hq-in" style="--d:.9s;align-self:flex-end;max-width:86%;padding:8px 12px;border-radius:12px 12px 4px 12px;background:#0A0A0A;font-size:12px;line-height:1.5;color:#fff">“수술해야 하나요?”를 제일 많이 들어요</span></div></div><span style="margin-top:22px;font-size:12px;color:#E95623;font-family:ui-monospace,Menlo,monospace">01 · 인터뷰</span><h3 style="margin:8px 0 0;font-size:19px;font-weight:700;letter-spacing:-0.03em;line-height:1.4">원장님 말을 그대로 받아 적습니다</h3><p style="margin:10px 0 0;font-size:14px;line-height:1.75;color:#5C5C5C">진료실에서 환자에게 하시는 설명이 가장 좋은 재료입니다. 환자가 실제로 묻는 말도 함께 모읍니다.</p></article><article class="hq-card" style="background:#fff;border:1px solid #EEEDE8;border-radius:24px;padding:22px;display:flex;flex-direction:column"><div style="height:150px;border-radius:16px;background:#F6F5F1;border:1px solid #EEEDE8;padding:16px 18px;display:flex;align-items:center;justify-content:center"><div style="width:100%;display:flex;flex-direction:column;gap:10px"><span style="font-size:11px;color:#8F8F8F">자주 쓰시는 말</span><div style="display:flex;flex-wrap:wrap;gap:6px"><span style="padding:5px 10px;border-radius:999px;font-size:12px;background:#0A0A0A;color:#fff">쉽게 말씀드리면</span><span style="padding:5px 10px;border-radius:999px;font-size:12px;background:#0A0A0A;color:#fff">우선은</span></div><span style="font-size:11px;color:#8F8F8F">쓰지 않으시는 말</span><div style="display:flex;flex-wrap:wrap;gap:6px"><span style="padding:5px 10px;border-radius:999px;font-size:12px;background:#fff;border:1px solid #E0DFDA;color:#A3A3A3;text-decoration:line-through">획기적인</span><span style="padding:5px 10px;border-radius:999px;font-size:12px;background:#fff;border:1px solid #E0DFDA;color:#A3A3A3;text-decoration:line-through">완치</span></div></div></div><span style="margin-top:22px;font-size:12px;color:#E95623;font-family:ui-monospace,Menlo,monospace">02 · 말투 정리</span><h3 style="margin:8px 0 0;font-size:19px;font-weight:700;letter-spacing:-0.03em;line-height:1.4">자주 쓰시는 말과 쓰지 않는 말을 나눕니다</h3><p style="margin:10px 0 0;font-size:14px;line-height:1.75;color:#5C5C5C">원장님마다 입에 붙은 표현이 있습니다. 병원별로 정리해 두고 모든 글에 같은 목소리를 씁니다.</p></article><article class="hq-card" style="background:#fff;border:1px solid #EEEDE8;border-radius:24px;padding:22px;display:flex;flex-direction:column"><div style="height:150px;border-radius:16px;background:#F6F5F1;border:1px solid #EEEDE8;padding:16px 18px;display:flex;align-items:center;justify-content:center"><div style="width:100%;display:flex;flex-direction:column;gap:10px"><div style="display:grid;grid-template-columns:36px minmax(0,1fr);gap:8px;align-items:baseline"><span style="font-size:11px;color:#8F8F8F">초안</span><span class="hq-strike2" style="font-size:13px;line-height:1.5"><span>치료가 필요합니다</span></span></div><div style="height:1px;background:#E6E5E0"></div><div class="hq-fix" style="display:grid;grid-template-columns:36px minmax(0,1fr);gap:8px;align-items:baseline"><span style="font-size:11px;color:#E95623">원장님</span><span style="font-size:13px;line-height:1.5;font-weight:600;color:#0A0A0A">먼저 원인부터 확인해 보시죠</span></div></div></div><span style="margin-top:22px;font-size:12px;color:#E95623;font-family:ui-monospace,Menlo,monospace">03 · 수정 기록</span><h3 style="margin:8px 0 0;font-size:19px;font-weight:700;letter-spacing:-0.03em;line-height:1.4">원장님이 고치신 곳을 다음 글에 반영합니다</h3><p style="margin:10px 0 0;font-size:14px;line-height:1.75;color:#5C5C5C">초안과 최종본을 비교해 어디를 어떻게 고치셨는지 남깁니다. 같은 수정을 두 번 하시지 않도록.</p></article><article class="hq-card" style="background:#fff;border:1px solid #EEEDE8;border-radius:24px;padding:22px;display:flex;flex-direction:column"><div style="height:150px;border-radius:16px;background:#F6F5F1;border:1px solid #EEEDE8;padding:16px 18px;display:flex;align-items:center;justify-content:center"><div style="width:100%;display:flex;flex-direction:column;gap:10px"><div class="hq-in" style="--d:0.2s;display:flex;align-items:center;gap:8px;font-size:13px;color:#0A0A0A"><svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#E95623" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>의학 정보 사실 확인</div><div class="hq-in" style="--d:0.7s;display:flex;align-items:center;gap:8px;font-size:13px;color:#0A0A0A"><svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#E95623" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>광고 표현 확인</div><div class="hq-in" style="--d:1.2s;display:flex;align-items:center;gap:8px;font-size:13px;color:#0A0A0A"><svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#E95623" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>원장님 말투 확인</div></div></div><span style="margin-top:22px;font-size:12px;color:#E95623;font-family:ui-monospace,Menlo,monospace">04 · 발행 전 검수</span><h3 style="margin:8px 0 0;font-size:19px;font-weight:700;letter-spacing:-0.03em;line-height:1.4">세 가지를 따로 확인합니다</h3><p style="margin:10px 0 0;font-size:14px;line-height:1.75;color:#5C5C5C">쓰는 일과 검수하는 일을 나눕니다. 마지막에는 원장님께 먼저 보여드린 뒤 발행합니다.</p></article></div>
+</div>
+</section>
+
+<section aria-label="병의원이라서 더 지키는 것" style="position:relative;z-index:6;margin-top:-48px;background:#0A0A0A;color:#fff;border-radius:48px 48px 0 0;padding:130px 32px 170px">
 <div class="hq-promise" style="max-width:1160px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:72px">
 <div style="position:sticky;top:110px;align-self:start;display:flex;flex-direction:column;gap:26px">
 <h2 style="margin:0;font-size:clamp(32px,3.8vw,52px);line-height:1.28;letter-spacing:-0.04em"><span style="display:block;font-weight:200;color:#8A8A8A">병의원이라서</span><span style="display:block;font-weight:700">더 지키는 다섯 가지<span class="hq-period" style="color:#E95623">.</span></span></h2>
@@ -262,13 +338,38 @@ footer{padding-bottom:72px!important}
 </div>
 </section>
 
-<section aria-label="자주 묻는 질문" style="position:relative;z-index:4;margin-top:-48px;background:#F6F5F1;border-radius:48px 48px 0 0;padding:130px 32px 170px">
+<section aria-label="우리 병원 블로그 점검" style="position:relative;z-index:7;margin-top:-48px;background:#F6F5F1;border-radius:48px 48px 0 0;padding:130px 32px 170px">
+<div style="max-width:1160px;margin:0 auto">
+<h2 style="margin:0;font-size:clamp(32px,3.8vw,52px);line-height:1.28;letter-spacing:-0.04em"><span style="display:block;font-weight:200;color:#8A8A8A">지금 병원 블로그,</span><span style="display:block;font-weight:700">해당하는 것을 눌러 보세요<span class="hq-period" style="color:#E95623">.</span></span></h2>
+<div class="hq-promise" style="margin-top:56px;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:24px;align-items:start">
+<div>
+<div style="display:flex;flex-direction:column;gap:10px"><button type="button" class="md-chk" aria-pressed="false" style="display:grid;grid-template-columns:26px minmax(0,1fr);gap:14px;align-items:center;width:100%;text-align:left;padding:20px 22px;border-radius:16px;border:1px solid #E0DFDA;background:#fff;font:inherit;font-size:16px;line-height:1.55;letter-spacing:-0.02em;color:#0A0A0A;cursor:pointer;transition:border-color .2s ease,background .2s ease"><span class="md-box" aria-hidden="true" style="width:26px;height:26px;border-radius:8px;border:1.5px solid #CFCDC6;display:flex;align-items:center;justify-content:center;transition:all .2s ease"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span><span>병원 이름을 다른 병원으로 바꿔도 글이 그대로 읽힌다</span></button><button type="button" class="md-chk" aria-pressed="false" style="display:grid;grid-template-columns:26px minmax(0,1fr);gap:14px;align-items:center;width:100%;text-align:left;padding:20px 22px;border-radius:16px;border:1px solid #E0DFDA;background:#fff;font:inherit;font-size:16px;line-height:1.55;letter-spacing:-0.02em;color:#0A0A0A;cursor:pointer;transition:border-color .2s ease,background .2s ease"><span class="md-box" aria-hidden="true" style="width:26px;height:26px;border-radius:8px;border:1.5px solid #CFCDC6;display:flex;align-items:center;justify-content:center;transition:all .2s ease"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span><span>원장님이 발행 전에 글을 확인한 적이 없다</span></button><button type="button" class="md-chk" aria-pressed="false" style="display:grid;grid-template-columns:26px minmax(0,1fr);gap:14px;align-items:center;width:100%;text-align:left;padding:20px 22px;border-radius:16px;border:1px solid #E0DFDA;background:#fff;font:inherit;font-size:16px;line-height:1.55;letter-spacing:-0.02em;color:#0A0A0A;cursor:pointer;transition:border-color .2s ease,background .2s ease"><span class="md-box" aria-hidden="true" style="width:26px;height:26px;border-radius:8px;border:1.5px solid #CFCDC6;display:flex;align-items:center;justify-content:center;transition:all .2s ease"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span><span>“최고”, “완치” 같은 표현이나 환자 후기 형식의 글이 올라가 있다</span></button><button type="button" class="md-chk" aria-pressed="false" style="display:grid;grid-template-columns:26px minmax(0,1fr);gap:14px;align-items:center;width:100%;text-align:left;padding:20px 22px;border-radius:16px;border:1px solid #E0DFDA;background:#fff;font:inherit;font-size:16px;line-height:1.55;letter-spacing:-0.02em;color:#0A0A0A;cursor:pointer;transition:border-color .2s ease,background .2s ease"><span class="md-box" aria-hidden="true" style="width:26px;height:26px;border-radius:8px;border:1.5px solid #CFCDC6;display:flex;align-items:center;justify-content:center;transition:all .2s ease"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span><span>글은 매주 올라가는데, 어느 글이 예약으로 이어졌는지 모른다</span></button><button type="button" class="md-chk" aria-pressed="false" style="display:grid;grid-template-columns:26px minmax(0,1fr);gap:14px;align-items:center;width:100%;text-align:left;padding:20px 22px;border-radius:16px;border:1px solid #E0DFDA;background:#fff;font:inherit;font-size:16px;line-height:1.55;letter-spacing:-0.02em;color:#0A0A0A;cursor:pointer;transition:border-color .2s ease,background .2s ease"><span class="md-box" aria-hidden="true" style="width:26px;height:26px;border-radius:8px;border:1.5px solid #CFCDC6;display:flex;align-items:center;justify-content:center;transition:all .2s ease"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span><span>담당자가 바뀔 때마다 병원 설명을 처음부터 다시 한다</span></button></div>
+<div style="margin-top:16px;padding:22px 24px;border-radius:16px;background:#fff;border:1px solid #E0DFDA;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px">
+<p style="margin:0;font-size:16px;line-height:1.6;color:#0A0A0A"><b id="md-count" style="font-size:22px;font-family:ui-monospace,Menlo,monospace;color:#E95623;margin-right:8px">0</b><span id="md-msg">해당하는 항목을 눌러 보세요.</span></p>
+<a href="/#contact" class="hq-btn hq-cta" style="background:#E95623;color:#0A0A0A;font-size:15px;font-weight:700;padding:14px 22px;border-radius:12px;white-space:nowrap">내 병원 맞춤 견적 받기</a>
+</div>
+</div>
+<div style="border-radius:24px;background:#0A0A0A;color:#fff;padding:32px 30px 20px">
+<span style="font-size:12px;color:#E95623;font-family:ui-monospace,Menlo,monospace">솔직하게</span>
+<h3 style="margin:10px 0 18px;font-size:24px;font-weight:700;letter-spacing:-0.035em;line-height:1.35">이런 경우에는<br>권하지 않습니다</h3>
+<ul style="margin:0;padding:0;list-style:none;border-bottom:1px solid #232323"><li style="display:grid;grid-template-columns:20px minmax(0,1fr);gap:12px;padding:16px 0;border-top:1px solid #232323;font-size:16px;line-height:1.6;color:#E5E5E5"><span aria-hidden="true" style="color:#6E6E6E">—</span><span>검색 순위나 후기 개수만 빠르게 늘리고 싶으실 때</span></li><li style="display:grid;grid-template-columns:20px minmax(0,1fr);gap:12px;padding:16px 0;border-top:1px solid #232323;font-size:16px;line-height:1.6;color:#E5E5E5"><span aria-hidden="true" style="color:#6E6E6E">—</span><span>원장님 확인 없이 알아서 올려주길 원하실 때</span></li><li style="display:grid;grid-template-columns:20px minmax(0,1fr);gap:12px;padding:16px 0;border-top:1px solid #232323;font-size:16px;line-height:1.6;color:#E5E5E5"><span aria-hidden="true" style="color:#6E6E6E">—</span><span>오직 가격만 비교하실 때</span></li></ul>
+<p style="margin:18px 0 12px;font-size:14px;line-height:1.7;color:#A3A3A3">함께 성과를 내기 어렵다고 판단되면 상담에서 솔직하게 말씀드립니다.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section aria-label="자주 묻는 질문" style="position:relative;z-index:8;margin-top:-48px;background:#fff;border-radius:48px 48px 0 0;padding:130px 32px 170px">
 <div style="max-width:920px;margin:0 auto">
 <h2 style="margin:0 0 48px;font-size:clamp(32px,3.8vw,52px);line-height:1.28;letter-spacing:-0.04em"><span style="display:block;font-weight:200;color:#8A8A8A">원장님들이</span><span style="display:block;font-weight:700">자주 물으시는 것<span class="hq-period" style="color:#E95623">.</span></span></h2>
 <div style="border-bottom:1px solid #E0DFDA"><details class="md-faq" style="border-top:1px solid #E0DFDA" open>
 <summary style="display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 4px;cursor:pointer;font-size:18px;font-weight:600;letter-spacing:-0.02em;list-style:none">의료 광고 규정이 걱정됩니다.<span class="md-plus" aria-hidden="true" style="flex-shrink:0;font-size:22px;font-weight:300;color:#8F8F8F;transition:transform .3s ease">+</span></summary>
 <p style="margin:0;padding:0 4px 26px;font-size:16px;line-height:1.8;color:#5C5C5C;max-width:760px">의료·법률·세무 업종을 오래 맡아 왔습니다. 규정에 걸릴 수 있는 표현은 제작 단계에서 걸러내고, 모든 콘텐츠는 발행 전에 원장님께 먼저 보여드립니다.</p>
 </details><details class="md-faq" style="border-top:1px solid #E0DFDA">
+<summary style="display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 4px;cursor:pointer;font-size:18px;font-weight:600;letter-spacing:-0.02em;list-style:none">블로그 글도 사전심의를 받아야 하나요?<span class="md-plus" aria-hidden="true" style="flex-shrink:0;font-size:22px;font-weight:300;color:#8F8F8F;transition:transform .3s ease">+</span></summary>
+<p style="margin:0;padding:0 4px 26px;font-size:16px;line-height:1.8;color:#5C5C5C;max-width:760px">글의 성격에 따라 다릅니다. 병원을 알리는 글은 심의 대상이 될 수 있고, 의학 정보 중심의 글은 일률적으로 광고로 보지 않는다는 해석이 있습니다. 기획 단계에서 글의 성격을 먼저 나누고, 판단이 필요한 글은 원장님께 미리 말씀드립니다.</p>
+</details>
+<details class="md-faq" style="border-top:1px solid #E0DFDA">
 <summary style="display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 4px;cursor:pointer;font-size:18px;font-weight:600;letter-spacing:-0.02em;list-style:none">진료 때문에 시간을 많이 못 냅니다.<span class="md-plus" aria-hidden="true" style="flex-shrink:0;font-size:22px;font-weight:300;color:#8F8F8F;transition:transform .3s ease">+</span></summary>
 <p style="margin:0;padding:0 4px 26px;font-size:16px;line-height:1.8;color:#5C5C5C;max-width:760px">처음 인터뷰에 한두 시간이면 충분합니다. 그다음부터는 평소 진료하며 하시는 말씀, 메모, 사진을 편하게 보내주시면 저희가 콘텐츠로 옮깁니다.</p>
 </details><details class="md-faq" style="border-top:1px solid #E0DFDA">
@@ -284,7 +385,7 @@ footer{padding-bottom:72px!important}
 </div>
 </section>
 
-<section aria-label="견적 받기" style="position:relative;z-index:5;margin-top:-48px;background:#0A0A0A;color:#fff;border-radius:48px 48px 0 0;padding:150px 32px 160px;overflow:hidden">
+<section aria-label="견적 받기" style="position:relative;z-index:9;margin-top:-48px;background:#0A0A0A;color:#fff;border-radius:48px 48px 0 0;padding:150px 32px 160px;overflow:hidden">
 <div aria-hidden="true" style="position:absolute;left:50%;top:50%;width:900px;height:600px;transform:translate(-50%,-50%);background:radial-gradient(closest-side,rgba(233,86,35,.13),rgba(233,86,35,0));pointer-events:none"></div>
 <div style="position:relative;max-width:1000px;margin:0 auto;text-align:center;display:flex;flex-direction:column;align-items:center">
 <h2 style="margin:0;font-size:clamp(32px,4.2vw,58px);line-height:1.28;letter-spacing:-0.04em"><span style="display:block;font-weight:200;color:#8A8A8A">원장님 병원을 먼저 살펴보고,</span><span style="display:block;font-weight:700">맞는 그림과 견적을<br>보내드립니다<span class="hq-period" style="color:#E95623">.</span></span></h2>
@@ -294,7 +395,7 @@ footer{padding-bottom:72px!important}
 </div>
 </section>
 <footer style="background:#0A0A0A;color:#8A8A8A;border-top:1px solid #1C1C1C;padding:64px 32px 0;overflow:hidden">
-<p style="max-width:1160px;margin:0 auto 32px;font-size:12px;color:#6E6E6E">이 페이지의 글 비교와 그림은 설명을 위한 예시입니다.</p>
+<p style="max-width:1160px;margin:0 auto 32px;font-size:12px;color:#6E6E6E">이 페이지의 글 비교와 표현 예시, 그림은 설명을 위한 예시입니다.</p>
 <div style="max-width:1160px;margin:0 auto;display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;font-size:14px;line-height:1.9">
 <div>
 <p style="margin:0;color:#fff;font-size:16px;font-weight:500;letter-spacing:-0.02em">당신의 일을, 당신의 언어로.</p>
@@ -329,6 +430,23 @@ footer{padding-bottom:72px!important}
     var where = a.closest('header') ? 'medical_header' : (a.closest('.hq-mbar') ? 'medical_mobile_bar' : (a.closest('footer') ? 'medical_footer' : 'medical_bottom'));
     if (a.getAttribute('href').indexOf('tel:') === 0) track('tel_click', { link_location: where });
     else track('cta_click', { cta_location: where });
+  });
+})();
+</script>
+<script>
+/* 병원 블로그 점검 */
+(function () {
+  var btns = document.querySelectorAll('.md-chk'), count = document.getElementById('md-count'), msg = document.getElementById('md-msg');
+  if (!btns.length || !count || !msg) return;
+  var sent = false;
+  var update = function () {
+    var n = document.querySelectorAll('.md-chk[aria-pressed="true"]').length;
+    count.textContent = n;
+    msg.textContent = n === 0 ? '해당하는 항목을 눌러 보세요.' : (n === 1 ? '한 가지라면, 그 부분부터 고치면 됩니다.' : '두 가지 이상이면, 글 수를 늘리기 전에 방향부터 점검할 때입니다.');
+    if (n > 0 && !sent) { sent = true; try { if (window.gtag) gtag('event', 'selfcheck_start', { page: 'medical' }); } catch (e) {} }
+  };
+  Array.prototype.forEach.call(btns, function (b) {
+    b.addEventListener('click', function () { b.setAttribute('aria-pressed', b.getAttribute('aria-pressed') === 'true' ? 'false' : 'true'); update(); });
   });
 })();
 </script>
