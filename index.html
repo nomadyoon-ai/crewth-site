@@ -706,9 +706,11 @@ var FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbygeDwPXtwVaCzFGCY9
     if(!FORM_ENDPOINT){msg.textContent='지금은 온라인 접수 준비 중입니다. 010-7778-2045로 연락 주세요.';msg.hidden=false;return}
     var data=new URLSearchParams(); fields.forEach(function(f){data.append(f.name,f.value)}); data.append('topic',topic); data.append('page',location.href); data.append('t',String(Date.now()-T0));
     send.disabled=true; var old=send.textContent; send.textContent='보내는 중…'; msg.hidden=true;
-    fetch(FORM_ENDPOINT,{method:'POST',mode:'no-cors',body:data}).then(function(){try{if(window.gtag)gtag('event','generate_lead',{form_name:'quote',budget:(form.querySelector('[name=budget]')||{}).value||''})}catch(e){} form.hidden=true;sent.hidden=false;sent.scrollIntoView({block:'center'})})
-      .catch(function(){msg.textContent='전송에 실패했어요. 잠시 후 다시 시도하시거나 010-7778-2045로 연락 주세요.';msg.hidden=false})
-      .then(function(){send.disabled=false;send.textContent=old});
+    var shown=false, failed=false;
+    function ok(){if(shown||failed)return; shown=true; try{if(window.gtag)gtag('event','generate_lead',{form_name:'quote',budget:(form.querySelector('[name=budget]')||{}).value||''})}catch(e){} form.hidden=true;sent.hidden=false;sent.scrollIntoView({block:'center'});send.disabled=false;send.textContent=old}
+    var timer=setTimeout(ok,1800);
+    fetch(FORM_ENDPOINT,{method:'POST',mode:'no-cors',body:data,keepalive:true}).then(function(){clearTimeout(timer);ok()})
+      .catch(function(){failed=true;clearTimeout(timer);sent.hidden=true;form.hidden=false;send.disabled=false;send.textContent=old;msg.textContent='전송에 실패했어요. 잠시 후 다시 시도하시거나 010-7778-2045로 연락 주세요.';msg.hidden=false;msg.scrollIntoView({block:'center'})});
   });
   $('#cw-reset').addEventListener('click',function(){sent.hidden=true;form.hidden=false});
 })();
