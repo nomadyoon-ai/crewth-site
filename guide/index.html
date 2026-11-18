@@ -120,6 +120,21 @@ footer{padding-bottom:72px!important}
 }
 </style>
 <style>@media (max-width:860px){.cw-logo-mark{width:24px!important;height:21px!important}}</style>
+<style id="cw-dd-css">
+.cw-dd{position:relative;display:inline-flex}
+.cw-dd-btn{all:unset;box-sizing:border-box;cursor:pointer;padding:8px 14px;display:inline-flex;align-items:center;gap:6px;transition:color .25s ease}
+.cw-dd:hover .cw-dd-btn,.cw-dd:focus-within .cw-dd-btn{color:#fff}
+.cw-dd-btn:focus-visible{outline:2px solid #E95623;outline-offset:3px;border-radius:8px}
+.cw-dd-caret{font-size:10px;transition:transform .25s ease}
+.cw-dd:hover .cw-dd-caret,.cw-dd:focus-within .cw-dd-caret{transform:rotate(180deg)}
+.cw-dd-menu{position:absolute;top:100%;left:50%;width:236px;padding-top:10px;transform:translate(-50%,-6px);opacity:0;visibility:hidden;transition:opacity .2s ease,transform .2s ease,visibility .2s;z-index:50}
+.cw-dd-menu>div{padding:6px;border-radius:14px;background:#161616;border:1px solid #2A2A2A;box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.cw-dd:hover .cw-dd-menu,.cw-dd:focus-within .cw-dd-menu{opacity:1;visibility:visible;transform:translate(-50%,0)}
+.cw-dd-menu a{display:block;padding:11px 12px!important;border-radius:9px;color:#fff!important;font-size:14px;font-weight:600;letter-spacing:-0.02em}
+.cw-dd-menu a:hover,.cw-dd-menu a[aria-current="page"]{background:#1F1F1F}
+.cw-dd-menu a::after{display:none!important}
+.cw-dd-menu a small{display:block;margin-top:2px;font-size:12px;font-weight:400;color:#8A8A8A}
+</style>
 </head>
 <body>
 <div style="font-family:'Pretendard Variable',Pretendard,-apple-system,sans-serif;color:#0A0A0A;letter-spacing:-0.01em;-webkit-font-smoothing:antialiased;background:#0A0A0A;width:100%">
@@ -131,7 +146,7 @@ footer{padding-bottom:72px!important}
 <span style="font-size:20px;font-weight:700;letter-spacing:-0.03em">Crewth Studio<span style="color:#E95623">.</span></span>
 <span class="hq-hide-m" style="font-size:12px;color:#8A8A8A;letter-spacing:0">크루스 스튜디오</span>
 </a>
-<nav class="hq-nav" aria-label="주요 메뉴" style="display:flex;align-items:center;gap:6px;font-size:15px;color:#A3A3A3"><a href="/#ch2" style="padding:8px 14px">일하는 방식</a><a href="/#review" style="padding:8px 14px">고객 반응</a><a href="/#ch4" style="padding:8px 14px">전략 설계</a><a href="/medical/" style="padding:8px 14px">병원·의원</a><a href="/guide/" aria-current="page" style="padding:8px 14px;color:#fff;font-weight:600">견적 가이드</a></nav>
+<nav class="hq-nav" aria-label="주요 메뉴" style="display:flex;align-items:center;gap:6px;font-size:15px;color:#A3A3A3"><a href="/#ch2" style="padding:8px 14px">일하는 방식</a><a href="/#review" style="padding:8px 14px">고객 반응</a><a href="/#ch4" style="padding:8px 14px">전략 설계</a><div class="cw-dd"><button type="button" class="cw-dd-btn" aria-haspopup="true">업종별 마케팅<span class="cw-dd-caret" aria-hidden="true">▾</span></button><div class="cw-dd-menu"><div><a href="/business/">기업·브랜드<small>공식 블로그·SNS 운영</small></a><a href="/medical/">병원·의원<small>검색부터 예약까지</small></a></div></div></div><a href="/guide/" aria-current="page" style="padding:8px 14px;color:#fff;font-weight:600">견적 가이드</a></nav>
 <a href="/#contact" class="hq-btn hq-cta" style="background:#E95623;color:#0A0A0A;font-size:14px;font-weight:700;padding:12px 20px;border-radius:999px">견적 받기</a>
 </div>
 </header>
