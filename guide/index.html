@@ -809,6 +809,11 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&isOpen()){s
 var mq=window.matchMedia('(min-width:861px)');var f=function(e){if(e.matches&&isOpen())set(false)};
 if(mq.addEventListener)mq.addEventListener('change',f);else if(mq.addListener)mq.addListener(f);
 })();
+/* 문의 유입 경로 — 이번 방문에서 본 페이지 순서를 탭 안에만 적어 두었다가, 폼을 보낼 때 '페이지' 값 뒤에 붙임 */
+(function(){var K='cw_path',N={'/':'메인','/medical/':'병원','/business/':'기업','/guide/':'견적 가이드','/diagnosis/':'블로그 진단'};
+function get(){try{var a=JSON.parse(sessionStorage.getItem(K)||'[]');return Array.isArray(a)?a:[]}catch(e){return []}}
+try{var a=get(),p=location.pathname.replace(/index\.html$/,'');if(a[a.length-1]!==p){a.push(p);if(a.length>10)a=a.slice(-10);sessionStorage.setItem(K,JSON.stringify(a))}}catch(e){}
+window.cwPath=function(){var a=get();if(!a.length)return '';return ' | 경로: '+a.map(function(x){return N[x]||x}).join(' → ')}})();
 /* 메인: 견적 폼을 쓰는 동안에는 하단 고정 바를 내려 폼을 가리지 않게 */
 (function(){var bar=document.querySelector('.cw-mbar'),card=document.querySelector('#contact .cw-formcard');if(!bar||!card||!('IntersectionObserver' in window))return;
 new IntersectionObserver(function(es){bar.classList.toggle('cw-away',es[0].isIntersecting)},{rootMargin:'-30% 0px -30% 0px'}).observe(card)})();
