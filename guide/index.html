@@ -348,9 +348,9 @@ section[class*="gd2-"]{word-break:keep-all;overflow-wrap:break-word}
 @media (prefers-reduced-motion:reduce){.gd2-end s span{background-size:100% 3px}.gd2-sh .fade{opacity:.3}}
 
 /* 쌓이는 구조: 스크롤 그대로. 왼쪽 광고는 올라오다 사라지고, 오른쪽 콘텐츠는 종이처럼 겹쳐 쌓여 남는다 */
-.gd2-dv{--t0:230px;--st:30px;--h:170px;--g:330px;margin:72px auto 0;max-width:820px;display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.gd2-dv{--t0:230px;--st:34px;--h:190px;--g:210px;margin:64px auto 0;max-width:860px;display:grid;grid-template-columns:1fr 1fr;gap:48px}
 .gd2-dv .c{display:flex;flex-direction:column}
-.gd2-dv .hd{position:sticky;top:calc(var(--t0) - 92px);margin:0 0 calc(var(--st) * 6 + 30px);padding-bottom:14px;border-bottom:1px solid #DEDDD8;font-size:21px;font-weight:700;letter-spacing:-0.035em;background:#F6F5F1;z-index:1}
+.gd2-dv .hd{position:sticky;top:calc(var(--t0) - 92px);margin:0 0 calc(var(--st) * 4 + 30px);padding-bottom:14px;border-bottom:1px solid #DEDDD8;font-size:21px;font-weight:700;letter-spacing:-0.035em;background:#F6F5F1;z-index:1}
 .gd2-dv .hd span{display:block;margin-top:3px;font-size:13px;font-weight:500;color:#8F8F8F}
 .gd2-dv .ct .hd{border-bottom-color:#E95623}
 .gd2-dv .it{position:relative;margin:0;height:var(--h);border-radius:18px;padding:16px 20px;font-size:13px;letter-spacing:-0.01em}
@@ -361,17 +361,20 @@ section[class*="gd2-"]{word-break:keep-all;overflow-wrap:break-word}
 .gd2-dv .ad .it:before{content:"";position:absolute;left:20px;right:34%;top:54%;height:12px;border-radius:6px;background:#fff}
 .gd2-dv .ad .it:after{content:"";position:absolute;left:20px;bottom:22px;width:74px;height:26px;border-radius:999px;background:#E95623}
 /* 콘텐츠: 한 편의 글 */
-.gd2-dv .ct .it{position:sticky;top:calc(var(--t0) + var(--k) * var(--st));margin-top:calc(var(--g) - (6 - var(--k)) * var(--st));margin-bottom:calc((5 - var(--k)) * var(--st));background:#fff;color:#8F8F8F;border:1px solid #EAE9E4;box-shadow:0 -6px 18px rgba(0,0,0,.05)}
+.gd2-dv .ct .it{position:sticky;top:calc(var(--t0) + var(--k) * var(--st));margin-top:calc(var(--g) - (4 - var(--k)) * var(--st));margin-bottom:calc((3 - var(--k)) * var(--st));background:#fff;color:#8F8F8F;border:1px solid #EAE9E4;box-shadow:0 -6px 18px rgba(0,0,0,.05)}
 .gd2-dv .ct .it:first-of-type{margin-top:0}
 .gd2-dv .ct .it:nth-of-type(odd){transform:rotate(-.7deg)}
 .gd2-dv .ct .it:nth-of-type(even){transform:rotate(.6deg)}
 .gd2-dv .ct .it b{color:#E95623}
 .gd2-dv .ct .it:before{content:"";position:absolute;left:20px;right:30%;top:50px;height:10px;border-radius:5px;background:#0A0A0A}
 .gd2-dv .ct .it:after{content:"";position:absolute;left:20px;right:20px;top:78px;height:6px;border-radius:3px;background:#EAE9E4;box-shadow:0 16px 0 #EAE9E4,0 32px 0 #F0EFEA,0 48px 0 #F3F2EE}
-.gd2-dv .sp{height:34vh}
+.gd2-dv .sp{height:20vh}
+.gd2-dv .ct .it.stuck{animation:gd2Land .5s cubic-bezier(.3,1.5,.4,1)}
+.gd2-dv .ct .it.stuck:before{background:#E95623;transition:background .4s ease}
+@keyframes gd2Land{0%{box-shadow:0 0 0 0 rgba(233,86,35,.35)}40%{box-shadow:0 0 0 10px rgba(233,86,35,.12)}100%{box-shadow:0 -6px 18px rgba(0,0,0,.05)}}
 .gd2-dvnt{margin:8px 0 0;text-align:center;font-size:11px;color:#BDBCB6}
 @media (max-width:700px){
-  .gd2-dv{--t0:200px;--st:24px;--h:120px;--g:280px;gap:14px;margin-top:48px}
+  .gd2-dv{--t0:200px;--st:26px;--h:130px;--g:180px;gap:14px;margin-top:48px}
   .gd2-dv .hd{font-size:16px}.gd2-dv .hd span{font-size:11px}
   .gd2-dv .it{padding:11px 14px;font-size:12px;border-radius:14px}
   .gd2-dv .ad .it:before{left:14px;height:9px}
@@ -539,8 +542,8 @@ section[class*="gd2-"]{word-break:keep-all;overflow-wrap:break-word}
 <h2 class="gd2-sh">광고비는 끄면 <span class="fade">사라지고,</span><br>콘텐츠는 <em>쌓입니다</em><b>.</b></h2>
 <p class="gd2-sl">크루스가 만드는 건 한 달짜리 노출이 아니라, <strong>매출로 이어지는 길</strong>입니다. 한 번 만든 길은 다음 달에도 고객을 데려옵니다.</p>
 <div class="gd2-dv" role="img" aria-label="스크롤을 내리면 달마다의 광고는 지나가며 사라지고, 달마다의 콘텐츠는 화면에 남아 차곡차곡 쌓입니다.">
-<div class="c ad"><p class="hd">광고비<span>멈추면 바로 0</span></p><p class="it" style="--k:0"><b>1</b>개월 광고</p><p class="it" style="--k:1"><b>2</b>개월 광고</p><p class="it" style="--k:2"><b>3</b>개월 광고</p><p class="it" style="--k:3"><b>4</b>개월 광고</p><p class="it" style="--k:4"><b>5</b>개월 광고</p><p class="it" style="--k:5"><b>6</b>개월 광고</p></div>
-<div class="c ct"><p class="hd">콘텐츠<span>검색에 남아 계속 일함</span></p><p class="it" style="--k:0"><b>1</b>개월 콘텐츠</p><p class="it" style="--k:1"><b>2</b>개월 콘텐츠</p><p class="it" style="--k:2"><b>3</b>개월 콘텐츠</p><p class="it" style="--k:3"><b>4</b>개월 콘텐츠</p><p class="it" style="--k:4"><b>5</b>개월 콘텐츠</p><p class="it" style="--k:5"><b>6</b>개월 콘텐츠</p><div class="sp"></div></div>
+<div class="c ad"><p class="hd">광고비<span>멈추면 바로 0</span></p><p class="it" style="--k:0"><b>1</b>개월 광고</p><p class="it" style="--k:1"><b>2</b>개월 광고</p><p class="it" style="--k:2"><b>3</b>개월 광고</p><p class="it" style="--k:3"><b>4</b>개월 광고</p></div>
+<div class="c ct"><p class="hd">콘텐츠<span>검색에 남아 계속 일함</span></p><p class="it" style="--k:0"><b>1</b>개월 콘텐츠</p><p class="it" style="--k:1"><b>2</b>개월 콘텐츠</p><p class="it" style="--k:2"><b>3</b>개월 콘텐츠</p><p class="it" style="--k:3"><b>4</b>개월 콘텐츠</p><div class="sp"></div></div>
 </div>
 <p class="gd2-dvnt">흐름을 설명하기 위한 그림이며 실제 수치가 아닙니다.</p>
 <p class="gd2-loop"><b>매출로 이어지는 선순환</b> 기획된 브랜드 콘텐츠 → 발견과 믿음 → 예약·방문, 매출 → 진짜 후기. 후기에서 나온 질문이 다음 달 콘텐츠가 되어 다시 처음으로 돌아갑니다.</p>
@@ -695,14 +698,16 @@ section[class*="gd2-"]{word-break:keep-all;overflow-wrap:break-word}
 /* 쌓이는 구조 — 광고 조각은 콘텐츠가 자리 잡는 바로 그 높이에 닿으며 사라진다 */
 (function () {
   var dv = document.querySelector('.gd2-dv'); if (!dv) return;
-  var its = [].slice.call(dv.querySelectorAll('.ad .it')), cs = getComputedStyle(dv);
+  var its = [].slice.call(dv.querySelectorAll('.ad .it')), cts = [].slice.call(dv.querySelectorAll('.ct .it')), cs = getComputedStyle(dv);
   var t0 = parseFloat(cs.getPropertyValue('--t0')) || 230, st = parseFloat(cs.getPropertyValue('--st')) || 30, tick = false;
   function frame() {
     tick = false; cs = getComputedStyle(dv); t0 = parseFloat(cs.getPropertyValue('--t0')) || t0; st = parseFloat(cs.getPropertyValue('--st')) || st;
     its.forEach(function (el, k) {
-      var o = Math.max(0, Math.min(1, (el.getBoundingClientRect().top - (t0 + k * st)) / 170));
-      el.style.opacity = o.toFixed(3); el.style.filter = o < 1 ? 'blur(' + ((1 - o) * 6).toFixed(1) + 'px)' : ''; el.style.transform = o < 1 ? 'scale(' + (0.94 + 0.06 * o).toFixed(3) + ')' : '';
+      var o = Math.max(0, Math.min(1, (el.getBoundingClientRect().top - (t0 + k * st)) / 200)), e = 1 - o;
+      el.style.opacity = (o * o).toFixed(3); el.style.filter = e > 0 ? 'blur(' + (e * 10).toFixed(1) + 'px)' : '';
+      el.style.transform = e > 0 ? 'translate(' + (-e * 26).toFixed(1) + 'px,' + (-e * 18).toFixed(1) + 'px) rotate(' + (-e * 5).toFixed(2) + 'deg) scale(' + (1 - e * 0.1).toFixed(3) + ')' : '';
     });
+    cts.forEach(function (el, k) { el.classList.toggle('stuck', el.getBoundingClientRect().top <= t0 + k * st + 2); });
   }
   window.addEventListener('scroll', function () { if (!tick) { tick = true; requestAnimationFrame(frame); } }, { passive: true });
   window.addEventListener('resize', frame); frame();
