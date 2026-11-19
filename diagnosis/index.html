@@ -695,6 +695,9 @@ mark.hl{background-size:100% 100%;transition:none}.od>span{transition:none}
 .dx-next li{counter-increment:nx;position:relative;padding:14px 0 14px 38px;border-top:1px solid #EEECE5;font-size:var(--sm);line-height:1.7;color:#5C5C5C}
 .dx-next li:before{content:counter(nx);position:absolute;left:0;top:15px;width:24px;height:24px;border-radius:50%;background:#0A0A0A;color:#E95623;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center}
 .dx-next b{display:block;font-size:var(--md);color:#0A0A0A}
+
+/* 오픈 전 안내 */
+.dx-soon{display:inline-block;padding:18px 34px;border-radius:14px;background:rgba(255,255,255,.08);color:#F4F2EC;font-size:var(--md);font-weight:600;letter-spacing:-0.02em}
 </style>
 <style id="cw-nav-fit">header nav a,header nav .cw-dd-btn,header>div>a{white-space:nowrap}@media (max-width:1180px){header nav{gap:0!important}header nav>a,header nav .cw-dd-btn{padding-left:10px!important;padding-right:10px!important}header>div>a[aria-label]>span:last-child{display:none!important}}@media (max-width:1000px){header>div{gap:14px!important}header nav{font-size:14px!important}header nav>a,header nav .cw-dd-btn{padding-left:7px!important;padding-right:7px!important}}</style>
 </head>
@@ -708,7 +711,7 @@ mark.hl{background-size:100% 100%;transition:none}.od>span{transition:none}
 <span class="hq-hide-m dg-hide-nav" style="font-size:12px;color:#8A8A8A;letter-spacing:0">크루스 스튜디오</span>
 </a>
 <nav class="hq-nav" aria-label="주요 메뉴" style="display:flex;align-items:center;gap:6px;font-size:15px;color:#A3A3A3"><a href="/#ch2" style="padding:8px 14px">일하는 방식</a><a href="/#review" style="padding:8px 14px">고객 반응</a><a href="/#ch4" style="padding:8px 14px">전략 설계</a><div class="cw-dd"><button type="button" class="cw-dd-btn" aria-haspopup="true">업종별 마케팅<span class="cw-dd-caret" aria-hidden="true">▾</span></button><div class="cw-dd-menu"><div><a href="/business/">기업·브랜드<small>공식 블로그·SNS 운영</small></a><a href="/medical/">병원·의원<small>검색부터 예약까지</small></a></div></div></div><a href="/guide/" style="padding:8px 14px">견적 가이드</a><a href="/diagnosis/" aria-current="page" style="padding:8px 14px;color:#fff;font-weight:600">블로그 진단</a></nav>
-<a href="#apply" class="hq-btn hq-cta" style="background:#E95623;color:#0A0A0A;font-size:14px;font-weight:700;padding:12px 20px;border-radius:999px;white-space:nowrap">선착순 신청</a>
+<a href="#apply" class="hq-btn hq-cta" style="background:#E95623;color:#0A0A0A;font-size:14px;font-weight:700;padding:12px 20px;border-radius:999px;white-space:nowrap">곧 오픈</a>
 </div>
 </header>
 
@@ -722,7 +725,7 @@ mark.hl{background-size:100% 100%;transition:none}.od>span{transition:none}
 <div class="dx-offer dx-un">
 <p class="t"><b>99만 원 상당</b>의 1:1 컨설팅급 진단 보고서를</p>
 <p class="pr"><span class="was">990,000<small>원</small></span><span class="ar" aria-hidden="true">→</span><span class="now">99,000<small>원</small></span></p>
-<div class="b"><p class="lm"><span class="hq-live"></span>매월 <b>10개 업체</b>에만</p><a href="#apply" class="dx-cta hq-btn hq-cta">선착순 신청하기</a></div>
+<div class="b"><p class="lm"><span class="hq-live"></span>매월 <b>10개 업체</b>에만</p><a href="#apply" class="dx-cta hq-btn hq-cta">곧 오픈합니다</a></div>
 </div>
 <a href="#check" class="dx-down dx-un" aria-label="아래로">내 블로그도 해당되는지 체크해 보기 <span aria-hidden="true">↓</span></a>
 </div>
@@ -741,7 +744,7 @@ mark.hl{background-size:100% 100%;transition:none}.od>span{transition:none}
 <div class="dx-hd rv"><p class="dx-pill">셀프 체크</p><h2>이 중 <mark class="hl">3개 이상</mark> 해당된다면,<br>진단이 필요한 블로그예요</h2><p class="dx-sub">읽다가 “어, 내 얘기인데?” 싶은 문장을 눌러 보세요.</p></div>
 <div class="dx-cgs"><div class="dx-cg rv"><p class="dx-cg-h"><b>01</b>조회수·유입</p><button type="button" class="dx-ck" aria-pressed="false" data-k="0"><i aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M5.5 10.4l3 3 6-6.6"/></svg></i><span>요즘 조회수가 갑자기 뚝 떨어졌는데, 혹시 저품질인가 싶어요.</span></button><button type="button" class="dx-ck" aria-pressed="false" data-k="1"><i aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M5.5 10.4l3 3 6-6.6"/></svg></i><span>몇 달째 꾸준히 올리는데, 조회수는 제자리예요.</span></button><button type="button" class="dx-ck" aria-pressed="false" data-k="2"><i aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M5.5 10.4l3 3 6-6.6"/></svg></i><span>예전에 잘 되던 글 몇 개에만 유입이 몰려 있어요.</span></button></div><div class="dx-cg rv"><p class="dx-cg-h"><b>02</b>노출·누락</p><button type="button" class="dx-ck" aria-pressed="false" data-k="3"><i aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M5.5 10.4l3 3 6-6.6"/></svg></i><span>새 글을 올려도 검색에 안 잡혀서, 누락된 건지 매번 직접 검색해 봐요.</span></button><button type="button" class="dx-ck" aria-pressed="false" data-k="4"><i aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M5.5 10.4l3 3 6-6.6"/></svg></i><span>같은 키워드로 여러 번 썼는데, 상위 노출된 글이 하나도 없어요.</span></button><button type="button" class="dx-ck" aria-pressed="false" data-k="5"><i aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M5.5 10.4l3 3 6-6.6"/></svg></i><span>AI로 쓴 글이라 노출이 안 되는 건 아닌지 불안해요.</span></button></div><div class="dx-cg rv"><p class="dx-cg-h"><b>03</b>키워드</p><button type="button" class="dx-ck" aria-pressed="false" data-k="6"><i aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M5.5 10.4l3 3 6-6.6"/></svg></i><span>어떤 키워드로 써야 할지 몰라서, 그날 떠오르는 주제로 써요.</span></button><button type="button" class="dx-ck" aria-pressed="false" data-k="7"><i aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M5.5 10.4l3 3 6-6.6"/></svg></i><span>검색량 많은 키워드로 썼는데, 들어오는 사람이 우리 고객이 아닌 것 같아요.</span></button><button type="button" class="dx-ck" aria-pressed="false" data-k="8"><i aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M5.5 10.4l3 3 6-6.6"/></svg></i><span>경쟁사는 노출되는데 우리 글은 안 보이는 키워드가 있어요.</span></button></div><div class="dx-cg rv"><p class="dx-cg-h"><b>04</b>글 구성</p><button type="button" class="dx-ck" aria-pressed="false" data-k="9"><i aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M5.5 10.4l3 3 6-6.6"/></svg></i><span>글은 길게 쓰는데, 고객이 궁금한 답이 어디 있는지 저도 모르겠어요.</span></button><button type="button" class="dx-ck" aria-pressed="false" data-k="10"><i aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M5.5 10.4l3 3 6-6.6"/></svg></i><span>제목에 “총정리”라고 써 놓고, 정작 가격은 “문의 주세요”로 끝내요.</span></button><button type="button" class="dx-ck" aria-pressed="false" data-k="11"><i aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M5.5 10.4l3 3 6-6.6"/></svg></i><span>오래전에 쓴 글에 지난 연도와 날짜가 그대로 남아 있어요.</span></button></div><div class="dx-cg rv"><p class="dx-cg-h"><b>05</b>문의 전환</p><button type="button" class="dx-ck" aria-pressed="false" data-k="12"><i aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M5.5 10.4l3 3 6-6.6"/></svg></i><span>조회수가 잘 나온 날도 문의는 0건이라 더 허탈해요.</span></button><button type="button" class="dx-ck" aria-pressed="false" data-k="13"><i aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M5.5 10.4l3 3 6-6.6"/></svg></i><span>블로그를 보고 문의한 사람이 몇 명인지 모르겠어요.</span></button><button type="button" class="dx-ck" aria-pressed="false" data-k="14"><i aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M5.5 10.4l3 3 6-6.6"/></svg></i><span>글을 다 읽은 사람이 어디로 가야 할지 안내가 없어요.</span></button></div><div class="dx-cg rv"><p class="dx-cg-h"><b>06</b>관리·대행</p><button type="button" class="dx-ck" aria-pressed="false" data-k="15"><i aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M5.5 10.4l3 3 6-6.6"/></svg></i><span>대행사에 맡겼는데, 발행 목록 말고는 받은 게 없어요.</span></button><button type="button" class="dx-ck" aria-pressed="false" data-k="16"><i aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M5.5 10.4l3 3 6-6.6"/></svg></i><span>블로그 지수, 최적화 같은 말만 듣고 정작 뭘 고칠지는 몰라요.</span></button><button type="button" class="dx-ck" aria-pressed="false" data-k="17"><i aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M5.5 10.4l3 3 6-6.6"/></svg></i><span>카더라가 너무 많아서, 지금 잘하고 있는 건지 확신이 없어요.</span></button></div></div>
 <div class="dx-res rv" aria-live="polite"><p class="n"><b id="dx-cnt">0</b><span> / 18개 해당</span></p><p class="m" id="dx-msg">해당하는 문장을 눌러 체크해 보세요.</p>
-<a href="#apply" class="dx-cta hq-btn hq-cta" id="dx-res-cta" hidden>체크한 고민부터 진단받기</a></div>
+<a href="#apply" class="dx-cta hq-btn hq-cta" id="dx-res-cta" hidden>곧 오픈합니다</a></div>
 </div>
 </section>
 
@@ -812,21 +815,8 @@ mark.hl{background-size:100% 100%;transition:none}.od>span{transition:none}
 <div class="dx-w dx-narrow" style="text-align:center">
 <div class="rv"><p class="dx-pill">매월 10개 업체 한정</p>
 <h2 class="dx-h2l" style="margin-top:0">1:1 컨설팅급의 진단 보고서를,<br><mark class="hl">단돈 99,000원</mark>으로<span class="hq-period">.</span></h2>
-<p class="dx-sub">이름과 휴대폰 번호만 남겨주세요. 신청 방법을 문자로 바로 안내드립니다.</p></div>
-<div class="rv dx-lform" style="--d:1">
-<div class="dg-form" id="dg-form"><div class="dg-fg">
-<div class="dg-f2"><label>이름<em>*</em><input class="dg-in" name="name" required autocomplete="name" placeholder="홍길동"></label><label>연락처<em>*</em><input class="dg-in" name="contact" required type="tel" inputmode="tel" autocomplete="tel" placeholder="010-0000-0000"></label></div>
-<label class="dg-ck"><input type="checkbox" name="agree" required><span>개인정보 수집·이용에 동의합니다. <a href="/privacy.html" target="_blank" rel="noopener" style="text-decoration:underline;color:#0A0A0A">전문 보기</a></span></label>
-<input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
-<button type="button" class="dg-send hq-btn hq-cta" id="dg-send">선착순 신청하기</button>
-<p id="dg-msg" role="alert" hidden style="margin:-4px 0 0;text-align:center;color:#C0392B"></p>
-<p style="margin:-4px 0 0;text-align:center;line-height:1.7;color:#8F8F8F">신청만으로는 결제되지 않습니다.</p>
-</div></div>
-<div class="dg-form" id="dg-sent" hidden style="text-align:center">
-<h3 style="margin:0;font-weight:700;letter-spacing:-0.03em">신청이 접수됐습니다</h3>
-<p style="margin:10px 0 0;line-height:1.75;color:#5C5C5C">남겨주신 번호로 안내 문자를 보내드립니다. 문자를 확인해 주세요.</p>
-</div>
-</div>
+<p class="dx-sub">지금은 오픈 준비 중입니다. 매월 10개 업체에만 신청을 받습니다.</p></div>
+<div class="rv" style="--d:1;margin-top:36px"><span class="dx-soon">준비 중입니다. 곧 오픈합니다.</span></div>
 </div>
 </section>
 <footer style="background:#0A0A0A;color:#8A8A8A;border-top:1px solid #1C1C1C;padding:64px 32px 0;overflow:hidden">
@@ -852,7 +842,7 @@ mark.hl{background-size:100% 100%;transition:none}.od>span{transition:none}
 </div>
 <p aria-hidden="true" style="max-width:1160px;margin:72px auto 0;padding-bottom:110px;font-size:clamp(40px,11.4vw,168px);line-height:.9;font-weight:700;letter-spacing:-0.045em;white-space:nowrap;color:#1A1A1A">Crewth Studio<span style="color:#E95623">.</span></p>
 </footer>
-<div class="dx-bar" aria-label="진단 신청"><div><p class="p">99,000원 <small>1:1 컨설팅급 진단 보고서</small></p><p class="s"><span class="hq-live"></span>매월 10개 업체 한정</p></div><a href="#apply" class="hq-btn">선착순 신청하기</a></div><p class="dx-pin" aria-hidden="true"><b id="dx-pin-n">0</b> / 18개 체크</p>
+<div class="dx-bar" aria-label="진단 신청"><div><p class="p">99,000원 <small>1:1 컨설팅급 진단 보고서</small></p><p class="s"><span class="hq-live"></span>매월 10개 업체 한정</p></div><a href="#apply" class="hq-btn">곧 오픈</a></div><p class="dx-pin" aria-hidden="true"><b id="dx-pin-n">0</b> / 18개 체크</p>
 </div>
 <script>
 var FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbygeDwPXtwVaCzFGCY9L-1b3S7pPjPOOg-6610VG1WImwEC7XbqYieggFUxt0kqgkqY/exec';
@@ -1018,7 +1008,7 @@ var FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbygeDwPXtwVaCzFGCY9
   // 신청 폼 (메인 견적 폼과 같은 접수처, '블로그 진단 보고서 신청'으로 구분)
   var T0 = Date.now(), form = $('#dg-form'), sent = $('#dg-sent'), send = $('#dg-send'), fmsg = $('#dg-msg');
   var say = function (t) { fmsg.textContent = t; fmsg.hidden = false; };
-  send.addEventListener('click', function () {
+  if (send) send.addEventListener('click', function () {
     var f = function (n) { return $('[name=' + n + ']', form); }, bad = null;
     ['name', 'contact'].forEach(function (n) { var el = f(n), miss = !el.value.trim(); el.style.borderColor = miss ? '#C0392B' : ''; if (miss && !bad) bad = el; });
     if (bad) { say('필수 항목을 모두 입력해 주세요.'); bad.focus(); return; }
