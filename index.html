@@ -312,7 +312,7 @@ select.cw-input option{color:#0A0A0A}
 .cw2-row:hover .q{color:#fff}
 
 /* 4) 전담 크루: 모이는 모션 + 쌓이는 카드 */
-.cw2-conv{margin:40px auto 0;max-width:760px;text-align:center}
+.cw2-conv{margin:40px auto 0;max-width:760px;text-align:center;overflow:hidden;overflow:clip}
 .cw2-conv .stage{position:relative;height:300px}
 .cw2-conv svg{display:block}
 .cw2-conv .q{position:absolute;left:50%;top:50%;width:58px;height:58px;margin:-29px 0 0 -29px;border-radius:50%;background:#ECEBE6;display:flex;align-items:flex-end;justify-content:center;overflow:hidden;transform:translate(var(--x),var(--y));will-change:transform,opacity}
@@ -439,6 +439,9 @@ select.cw-input option{color:#0A0A0A}
   .cw2-track .cw-acc{scroll-snap-align:start}
   .cw2-hsbar{display:none}
 }
+
+/* 한국어 단어 중간 줄바꿈 방지 (h4·figcaption·b 포함) */
+.cw-numsec,#ch1,#pick,#ch2,#crew,#ch3,#review,#ch4,#contact,#faq{word-break:keep-all;overflow-wrap:break-word}
 </style>
 </head>
 <body>
