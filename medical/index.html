@@ -224,7 +224,7 @@ footer{padding-bottom:72px!important}
 .md2-story .d{margin:18px 0 0;font-size:17px;line-height:1.85;color:#5C5C5C;max-width:460px}
 
 /* S1-2 한 장의 글이 고쳐 써진다 */
-.md2-rw{position:relative;height:230vh;margin-top:60px}
+.md2-rw{position:relative;height:180vh;margin-top:40px}
 .md2-rw .pin{position:sticky;top:0;height:100vh;height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center}
 .md2-rw .ttl{margin:0 0 22px;font-size:14px;color:#8F8F8F}.md2-rw .ttl span{color:#BDBCB6}
 .md2-rw .paper{position:relative;width:min(760px,100%);border-radius:28px;background:#F6F5F1;border:1px solid #EEEDE8;padding:36px 44px 30px;transition:background .6s ease,border-color .6s ease,box-shadow .6s ease}
@@ -250,7 +250,7 @@ footer{padding-bottom:72px!important}
 
 /* S2 환자가 오는 길 */
 .md2-s2{background:#F6F5F1;padding:150px 32px 140px}
-.md2-path{position:relative;height:250vh;margin:0 -32px}
+.md2-path{position:relative;height:200vh;margin:0 -32px}
 .md2-path .pin{position:sticky;top:0;height:100vh;height:100svh;display:flex;flex-direction:column;justify-content:center;padding:70px 32px 0}
 .md2-path .sw{position:relative;display:inline-flex;padding:5px;border-radius:999px;background:#EAE9E4;font-size:15px;font-weight:700}
 .md2-path .sw span{position:relative;z-index:1;padding:10px 20px;border-radius:999px;color:#8F8F8F;transition:color .4s ease}
@@ -471,12 +471,12 @@ footer{padding-bottom:72px!important}
   .md2-story{margin-top:48px}
   .md2-story h3{font-size:24px}
   .md2-story .d{font-size:16px}
-  .md2-rw{height:220vh;margin-top:20px}
+  .md2-rw{height:175vh;margin-top:10px}
   .md2-rw .paper{padding:26px 22px 22px;border-radius:22px}
   .md2-rw .ln{font-size:16px}
   .md2-rw .foot span{white-space:normal}
   .md2-s2{padding:110px 20px 100px}
-  .md2-path{margin:0 -20px;height:260vh}
+  .md2-path{margin:0 -20px;height:210vh}
   .md2-path .pin{padding:64px 20px 0}
   .md2-path .sw{font-size:13px}.md2-path .sw span{padding:9px 13px}
   .md2-dept{margin-top:80px}
@@ -504,6 +504,17 @@ footer{padding-bottom:72px!important}
 /* 줄바꿈: 제목은 고르게, 문단 끝 한 글자 남지 않게 */
 .md2-h,.md2-h2,.md2-hx,.md2-hc,.md2-big,.md2-story h3,.md2-voice h3,.md2-pts h3,.md2-law h3{text-wrap:balance}
 .md2-lead,.md2-story .d,.md2-dept dd,.md2-dept .so strong,.md2-rules .fix,.md2-law p,.md2-voice .d,.md2-pts p,.md2-cred,.md2-score .msg{text-wrap:pretty}
+
+/* 한국어 단어 중간에서 줄이 꺾이지 않게 (strong·dd·b 등 기존 규칙에 없던 요소까지) */
+section[class*="md2-"],.md2-hero{word-break:keep-all;overflow-wrap:break-word}
+
+/* 모바일: 체크하는 동안에도 숫자가 보이게 (점수 카드는 목록 아래에 있으므로) */
+.md2-mini{display:none}
+@media (max-width:900px){
+  .md2-mini{display:inline-flex;position:sticky;top:84px;z-index:2;margin:28px 0 -12px;align-items:baseline;gap:4px;padding:9px 16px;border-radius:999px;background:#0A0A0A;color:#A3A3A3;font-size:14px;box-shadow:0 8px 24px rgba(0,0,0,.12)}
+  .md2-mini b{font-size:20px;color:#fff;font-variant-numeric:tabular-nums}
+  .md2-mini.hit b{color:#E95623}
+}
 </style>
 </head>
 <body>
@@ -615,6 +626,7 @@ footer{padding-bottom:72px!important}
 <div class="md2-w md2-chkw">
 <div class="l">
 <h2 class="md2-h2"><span>지금 병원 블로그,</span> 해당하는 것을 눌러 보세요<span class="dot">.</span></h2>
+<p class="md2-mini" aria-hidden="true"><b>0</b> / 5 해당</p>
 <div class="md2-chks"><button type="button" class="md-chk" aria-pressed="false" style="display:grid;grid-template-columns:26px minmax(0,1fr);gap:14px;align-items:center;width:100%;text-align:left;padding:20px 22px;border-radius:16px;border:1px solid #E0DFDA;background:#fff;font:inherit;font-size:16px;line-height:1.55;letter-spacing:-0.02em;color:#0A0A0A;cursor:pointer;transition:border-color .2s ease,background .2s ease"><span class="md-box" aria-hidden="true" style="width:26px;height:26px;border-radius:8px;border:1.5px solid #CFCDC6;display:flex;align-items:center;justify-content:center;transition:all .2s ease"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span><span>병원 이름을 다른 병원으로 바꿔도 글이 그대로 읽힌다</span></button><button type="button" class="md-chk" aria-pressed="false" style="display:grid;grid-template-columns:26px minmax(0,1fr);gap:14px;align-items:center;width:100%;text-align:left;padding:20px 22px;border-radius:16px;border:1px solid #E0DFDA;background:#fff;font:inherit;font-size:16px;line-height:1.55;letter-spacing:-0.02em;color:#0A0A0A;cursor:pointer;transition:border-color .2s ease,background .2s ease"><span class="md-box" aria-hidden="true" style="width:26px;height:26px;border-radius:8px;border:1.5px solid #CFCDC6;display:flex;align-items:center;justify-content:center;transition:all .2s ease"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span><span>원장님이 발행 전에 글을 확인한 적이 없다</span></button><button type="button" class="md-chk" aria-pressed="false" style="display:grid;grid-template-columns:26px minmax(0,1fr);gap:14px;align-items:center;width:100%;text-align:left;padding:20px 22px;border-radius:16px;border:1px solid #E0DFDA;background:#fff;font:inherit;font-size:16px;line-height:1.55;letter-spacing:-0.02em;color:#0A0A0A;cursor:pointer;transition:border-color .2s ease,background .2s ease"><span class="md-box" aria-hidden="true" style="width:26px;height:26px;border-radius:8px;border:1.5px solid #CFCDC6;display:flex;align-items:center;justify-content:center;transition:all .2s ease"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span><span>“최고”, “완치” 같은 표현이나 환자 후기 형식의 글이 올라가 있다</span></button><button type="button" class="md-chk" aria-pressed="false" style="display:grid;grid-template-columns:26px minmax(0,1fr);gap:14px;align-items:center;width:100%;text-align:left;padding:20px 22px;border-radius:16px;border:1px solid #E0DFDA;background:#fff;font:inherit;font-size:16px;line-height:1.55;letter-spacing:-0.02em;color:#0A0A0A;cursor:pointer;transition:border-color .2s ease,background .2s ease"><span class="md-box" aria-hidden="true" style="width:26px;height:26px;border-radius:8px;border:1.5px solid #CFCDC6;display:flex;align-items:center;justify-content:center;transition:all .2s ease"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span><span>글은 매주 올라가는데, 어느 글이 예약으로 이어졌는지 모른다</span></button><button type="button" class="md-chk" aria-pressed="false" style="display:grid;grid-template-columns:26px minmax(0,1fr);gap:14px;align-items:center;width:100%;text-align:left;padding:20px 22px;border-radius:16px;border:1px solid #E0DFDA;background:#fff;font:inherit;font-size:16px;line-height:1.55;letter-spacing:-0.02em;color:#0A0A0A;cursor:pointer;transition:border-color .2s ease,background .2s ease"><span class="md-box" aria-hidden="true" style="width:26px;height:26px;border-radius:8px;border:1.5px solid #CFCDC6;display:flex;align-items:center;justify-content:center;transition:all .2s ease"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span><span>담당자가 바뀔 때마다 병원 설명을 처음부터 다시 한다</span></button></div>
 </div>
 <div class="r">
@@ -753,6 +765,7 @@ footer{padding-bottom:72px!important}
   if (cnt && score && 'MutationObserver' in window) new MutationObserver(function () {
     cnt.classList.remove('bump'); void cnt.offsetWidth; cnt.classList.add('bump'); setTimeout(function () { cnt.classList.remove('bump'); }, 260);
     score.classList.toggle('hit', +cnt.textContent > 0);
+    var mini = $('.md2-mini'); if (mini) { $('b', mini).textContent = cnt.textContent; mini.classList.toggle('hit', +cnt.textContent > 0); }
   }).observe(cnt, { childList: true, characterData: true, subtree: true });
 
   var story = $('.md2-story'), figs = story ? $$('.fig', story) : [], sts = story ? $$('.st', story) : [];
