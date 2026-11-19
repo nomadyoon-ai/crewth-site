@@ -443,6 +443,74 @@ select.cw-input option{color:#0A0A0A}
 /* 한국어 단어 중간 줄바꿈 방지 (h4·figcaption·b 포함) */
 .cw-numsec,#ch1,#pick,#ch2,#crew,#ch3,#review,#ch4,#contact,#faq{word-break:keep-all;overflow-wrap:break-word}
 </style>
+<style id="cw-site-css">
+/* ── 사이트 공통: 모바일 메뉴 ── */
+.cw-mbtn,.cw-mnav,.cw-mdim{display:none}
+@media (max-width:860px){
+header>div:first-of-type{gap:6px!important;padding-left:20px!important;padding-right:14px!important}
+header>div:first-of-type>a[class*="-cta"]{margin-left:auto}
+.cw-mbtn{all:unset;box-sizing:border-box;display:inline-flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;width:44px;height:40px;flex-shrink:0;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.cw-mbtn span{display:block;width:20px;height:2px;border-radius:2px;background:#fff;transition:transform .32s cubic-bezier(.2,.7,.2,1)}
+.cw-mbtn[aria-expanded="true"] span:first-child{transform:translateY(4px) rotate(45deg)}
+.cw-mbtn[aria-expanded="true"] span:last-child{transform:translateY(-4px) rotate(-45deg)}
+.cw-mbtn:focus-visible{outline:2px solid #E95623;outline-offset:-6px;border-radius:12px}
+header.cw-mopen{background:#0A0A0A!important}
+.cw-mdim{display:block;position:absolute;left:0;right:0;top:100%;height:100vh;background:rgba(0,0,0,.56);opacity:0;visibility:hidden;transition:opacity .28s ease,visibility .28s}
+.cw-mnav{display:block;position:absolute;left:0;right:0;top:100%;max-height:calc(100vh - 160px);max-height:calc(100dvh - 160px);overflow-y:auto;overscroll-behavior:contain;padding:6px 20px 26px;background:#0A0A0A;border-radius:0 0 24px 24px;border-bottom:1px solid #1F1F1F;box-shadow:0 30px 60px rgba(0,0,0,.5);opacity:0;visibility:hidden;transform:translateY(-10px);transition:opacity .28s ease,transform .32s cubic-bezier(.2,.7,.2,1),visibility .32s;word-break:keep-all}
+header.cw-mopen .cw-mnav{opacity:1;visibility:visible;transform:none}
+header.cw-mopen .cw-mdim{opacity:1;visibility:visible}
+.cw-mnav .lb{margin:20px 0 2px;font-size:12px;font-weight:600;letter-spacing:.02em;color:#6E6E6E}
+.cw-mnav .rw{display:flex;align-items:baseline;gap:10px;padding:15px 0;border-bottom:1px solid #1C1C1C;color:#fff;font-size:19px;font-weight:700;letter-spacing:-0.03em;line-height:1.3;opacity:0;transform:translateY(8px);transition:opacity .3s ease,transform .36s cubic-bezier(.2,.7,.2,1)}
+.cw-mnav .rw small{font-size:13px;font-weight:400;letter-spacing:-0.01em;color:#8A8A8A}
+.cw-mnav .rw i{margin-left:auto;font-style:normal;font-weight:400;font-size:16px;color:#5A5A5A;transition:transform .25s ease,color .25s ease}
+.cw-mnav .rw:active i{color:#E95623;transform:translateX(3px)}
+.cw-mnav .rw[aria-current="page"]{color:#E95623}
+.cw-mnav .rw[aria-current="page"] i{visibility:hidden}
+.cw-mnav .sub{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;opacity:0;transform:translateY(8px);transition:opacity .3s ease,transform .36s cubic-bezier(.2,.7,.2,1)}
+.cw-mnav .sub a{padding:11px 16px;border-radius:999px;border:1px solid #2A2A2A;color:#D4D4D4;font-size:14px;font-weight:500;letter-spacing:-0.02em}
+header.cw-mopen .cw-mnav .rw,header.cw-mopen .cw-mnav .sub{opacity:1;transform:none;transition-delay:calc(60ms + var(--i,0) * 45ms)}
+}
+@media (max-width:340px){header>div:first-of-type{padding-left:16px!important;padding-right:8px!important}header>div:first-of-type>a[aria-label]>span:first-of-type{font-size:17px!important}header>div:first-of-type>a[class*="-cta"]{padding-left:12px!important;padding-right:12px!important;font-size:13px!important}}
+@media (prefers-reduced-motion:reduce){.cw-mnav,.cw-mnav .rw,.cw-mnav .sub,.cw-mdim,.cw-mbtn span{transition:none!important}}
+/* ── 다른 페이지에서 #위치로 들어올 때는 긴 스크롤 없이 바로 도착 ── */
+html.cw-jump,html.cw-jump *{scroll-behavior:auto!important}
+/* ── 좁은 화면(320px대) 가로 넘침 방지 ── */
+.cw-story>*{min-width:0}
+.dx-rvs{grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr))!important}
+@media (max-width:350px){.cw-numrow{gap:5px!important}.cw-numrow>div{padding-left:5px!important;padding-right:5px!important}}
+/* ── 메인 견적 구간: 모바일에서는 '견적 받기'를 누르면 폼이 첫 화면에 오도록 순서만 바꿈 ── */
+@media (max-width:860px){
+#contact .cw-split{gap:0!important}
+#contact .cw-split>div:first-child{display:contents}
+#contact .cw-split>div:first-child>*{order:4}
+#contact .cw-split>div:first-child>h2{order:1}
+#contact .cw-split>div:first-child>h2+p{order:2}
+#contact .cw-split>.cw-formcard{order:3;margin-top:36px;margin-bottom:20px}
+#contact .cw-split>div:first-child>a.cw-guide{order:5}
+#contact .cw-split>div:first-child>div:last-child{order:6}
+}
+.cw-mbar{transition:transform .38s cubic-bezier(.2,.7,.2,1),opacity .25s ease}
+.cw-mbar.cw-away{transform:translateY(140%);opacity:0;pointer-events:none}
+/* ── 사이트 공통: 푸터 ── */
+.cw-flinks a[aria-current="page"]{color:#fff!important}
+footer a[href^="tel:"]{color:inherit}
+@media (max-width:860px){
+footer{padding-left:20px!important;padding-right:20px!important}
+.cw-flinks{gap:0!important}
+.cw-flinks a{padding:5px 0}
+}
+/* ── 사이트 공통: 하단 구간(자주 묻는 질문 · 견적) 모바일 ── */
+@media (max-width:860px){
+.cw-tail{border-radius:32px 32px 0 0!important;margin-top:-32px!important}
+.cw-tail-faq{padding-top:100px!important;padding-bottom:132px!important}
+.cw-tail-cta{padding-top:104px!important;padding-bottom:112px!important}
+.cw2-spot .dots{margin-top:28px!important}
+.cw2-spot .dots button{height:44px!important}
+.cw-tap{position:relative}
+.cw-tap::before{content:"";position:absolute;left:-8px;right:-8px;top:-12px;bottom:-12px}
+}
+</style>
+<script id="cw-jump-js">if(location.hash.length>1){document.documentElement.classList.add("cw-jump");window.addEventListener("load",function(){setTimeout(function(){document.documentElement.classList.remove("cw-jump")},500)})}</script>
 </head>
 <body>
 
@@ -459,7 +527,19 @@ select.cw-input option{color:#0A0A0A}
 </a>
 <nav class="cw-nav-links" aria-label="주요 메뉴" style="display:flex;align-items:center;gap:6px;font-size:15px;color:#A3A3A3"><a href="#ch2" style="padding:8px 14px">일하는 방식</a><a href="#review" style="padding:8px 14px">고객 반응</a><a href="#ch4" style="padding:8px 14px">전략 설계</a><div class="cw-dd"><button type="button" class="cw-dd-btn" aria-haspopup="true">업종별 마케팅<span class="cw-dd-caret" aria-hidden="true">▾</span></button><div class="cw-dd-menu"><div><a href="/business/">기업·브랜드<small>공식 블로그·SNS 운영</small></a><a href="/medical/">병원·의원<small>검색부터 예약까지</small></a></div></div></div><a href="/guide/" style="padding:8px 14px">견적 가이드</a><a href="/diagnosis/" style="padding:8px 14px">블로그 진단</a></nav>
 <a href="#contact" class="cw-btn cw-cta" style="background:#E95623;color:#0A0A0A;font-size:14px;font-weight:700;padding:12px 20px;border-radius:999px">견적 받기</a>
+<button type="button" class="cw-mbtn" aria-label="메뉴 열기" aria-expanded="false" aria-controls="cw-mnav"><span></span><span></span></button>
 </div>
+<div class="cw-mdim" aria-hidden="true"></div>
+<nav class="cw-mnav" id="cw-mnav" aria-label="전체 메뉴" inert>
+<p class="lb">업종별 마케팅</p>
+<a class="rw" href="/business/" style="--i:0">기업·브랜드<small>공식 블로그·SNS 운영</small><i aria-hidden="true">→</i></a>
+<a class="rw" href="/medical/" style="--i:1">병원·의원<small>검색부터 예약까지</small><i aria-hidden="true">→</i></a>
+<p class="lb">견적 · 진단</p>
+<a class="rw" href="/guide/" style="--i:2">견적 가이드<i aria-hidden="true">→</i></a>
+<a class="rw" href="/diagnosis/" style="--i:3">블로그 진단 보고서<i aria-hidden="true">→</i></a>
+<p class="lb">크루스 스튜디오</p>
+<div class="sub" style="--i:4"><a href="#ch2">일하는 방식</a><a href="#review">고객 반응</a><a href="#ch4">전략 설계</a></div>
+</nav>
 </header>
 
 <!-- 히어로 -->
@@ -677,7 +757,7 @@ select.cw-input option{color:#0A0A0A}
 <div style="margin-top:120px"><div class="cw-story cw-story-rev" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;align-items:center"><div style="padding:40px 0 0"><figure class="cw-shot" style="margin:0;position:relative;border-radius:24px;overflow:visible;background:#B2C7D9;padding:14px"><img loading="lazy" decoding="async" width="762" height="454" src="assets/kakao_sales.webp" alt="크루스: 유입이나 검색량 데이터는 예상보다 잘 나왔지만 현장 반응이 중요하니 처방 항목, 전체 매출 변화 추이를 공유해주시면 보완할 점을 찾겠다. 고객사: 노출효과 좋았네요 시술환자랑 매출도 조금씩 늘고 있습니다" style="display:block;width:100%;height:auto;border-radius:14px"><span style="position:absolute;left:14px;right:14px;top:14px;bottom:14px"><span aria-hidden="true" style="position:absolute;left:12%;top:75.5%;width:82%;height:22%;border:2px solid #E95623;border-radius:16px;box-shadow:0 0 0 6px rgba(233,86,35,.18)"><span class="cw-shot-chip cw-shot-chip-up" style="position:absolute;bottom:calc(100% + 8px);left:0;white-space:nowrap;font-size:13px;font-weight:700;color:#fff;background:#E95623;padding:5px 11px;border-radius:999px">매출까지 함께 확인</span></span></span></figure></div><div><p style="margin:0;font-size:13px;color:#E95623;font-weight:700;font-family:ui-monospace,Menlo,monospace">02 <span style="font-family:inherit">· 숫자보다 매출</span></p>
 <h3 style="margin:16px 0 0;font-size:clamp(26px,2.7vw,38px);line-height:1.3;font-weight:700;letter-spacing:-0.035em">보여지는 숫자에서 멈추지 않고, <br>매출까지 함께 봅니다<span style="color:#E95623">.</span></h3>
 <p style="margin:18px 0 0;font-size:17px;line-height:1.85;color:#A3A3A3">노출과 유입이 잘 나와도 그건 중간 성적표일 뿐입니다. 크루스는 현장 반응과 매출 변화를 대표님과 함께 보고, 매출로 이어지지 않는 곳을 찾아 다음 달 전략을 고칩니다.</p>
-<div style="margin-top:30px"><div style="display:flex;align-items:stretch;gap:8px"><div style="flex:1;border-radius:14px;background:#1A1A1A;border:1px solid #2A2A2A;padding:14px 12px;text-align:center"><p style="margin:0;font-size:12px;color:#8A8A8A">보여지는 숫자</p><p style="margin:4px 0 0;font-size:16px;font-weight:600;color:#A3A3A3">노출</p></div><div style="flex:1;border-radius:14px;background:#1A1A1A;border:1px solid #2A2A2A;padding:14px 12px;text-align:center"><p style="margin:0;font-size:12px;color:#8A8A8A">보여지는 숫자</p><p style="margin:4px 0 0;font-size:16px;font-weight:600;color:#A3A3A3">유입</p></div><div style="flex:1;border-radius:14px;background:#1A1A1A;border:1px solid #2A2A2A;padding:14px 12px;text-align:center"><p style="margin:0;font-size:12px;color:#8A8A8A">보여지는 숫자</p><p style="margin:4px 0 0;font-size:16px;font-weight:600;color:#A3A3A3">검색량</p></div>
+<div style="margin-top:30px"><div class="cw-numrow" style="display:flex;align-items:stretch;gap:8px"><div style="flex:1;border-radius:14px;background:#1A1A1A;border:1px solid #2A2A2A;padding:14px 12px;text-align:center"><p style="margin:0;font-size:12px;color:#8A8A8A">보여지는 숫자</p><p style="margin:4px 0 0;font-size:16px;font-weight:600;color:#A3A3A3">노출</p></div><div style="flex:1;border-radius:14px;background:#1A1A1A;border:1px solid #2A2A2A;padding:14px 12px;text-align:center"><p style="margin:0;font-size:12px;color:#8A8A8A">보여지는 숫자</p><p style="margin:4px 0 0;font-size:16px;font-weight:600;color:#A3A3A3">유입</p></div><div style="flex:1;border-radius:14px;background:#1A1A1A;border:1px solid #2A2A2A;padding:14px 12px;text-align:center"><p style="margin:0;font-size:12px;color:#8A8A8A">보여지는 숫자</p><p style="margin:4px 0 0;font-size:16px;font-weight:600;color:#A3A3A3">검색량</p></div>
 <div aria-hidden="true" style="display:flex;align-items:center;color:#5A5A5A;font-size:18px">→</div>
 <div style="flex:1.5;border-radius:14px;background:#E95623;padding:14px 14px;text-align:center;box-shadow:0 0 40px rgba(233,86,35,.3)"><p style="margin:0;font-size:12px;color:rgba(255,255,255,.85)">끝까지 보는 숫자</p><p style="margin:4px 0 0;font-size:20px;font-weight:800;color:#fff;letter-spacing:-0.02em">매출</p></div></div></div></div></div></div>
 <div class="cw2-spot" aria-roledescription="carousel" aria-label="고객 후기"><div class="vs"><figure class="v on" data-n="0"><p>글 잘 쓰는 대행사 찾기 힘들었는데, 딱 마음에 듭니다! 감사합니다.</p><figcaption>성형외과 원장님 · 함께한 지 <b>3</b>개월</figcaption></figure><figure class="v" data-n="1"><p>첫 달에 바로 문의가 2배씩 오더니, 매출이 30%나 뛰었어요. 너무 신기합니다.</p><figcaption>시설 설비 업체 대표님 · 함께한 지 <b>10</b>개월</figcaption></figure><figure class="v" data-n="2"><p>다른 곳은 글이 뻔했는데, 여긴 저보다 저희 업장을 더 잘 아는 것 같습니다.</p><figcaption>패션 의류 브랜드 대표님 · 함께한 지 <b>6</b>개월</figcaption></figure></div><div class="dots"><button type="button" aria-label="후기 1" data-n="0"><i></i></button><button type="button" aria-label="후기 2" data-n="1"><i></i></button><button type="button" aria-label="후기 3" data-n="2"><i></i></button></div></div>
@@ -851,10 +931,10 @@ select.cw-input option{color:#0A0A0A}
 <div style="flex:1 1 300px;min-width:0">
 <h2 style="margin:0;font-size:clamp(30px,3.4vw,48px);line-height:1.3;font-weight:700;letter-spacing:-0.03em">자주 묻는 질문</h2>
 <p style="margin:20px 0 0;font-size:16px;line-height:1.8;color:#5C5C5C">여기 없는 질문은 견적을 요청하실 때 함께 적어주세요.</p>
-<a href="#contact" style="display:inline-block;margin-top:14px;font-size:15px;font-weight:600;border-bottom:1px solid #0A0A0A;padding-bottom:3px">위에서 바로 견적 받기 ↑</a>
+<a class="cw-tap" href="#contact" style="display:inline-block;margin-top:14px;font-size:15px;font-weight:600;border-bottom:1px solid #0A0A0A;padding-bottom:3px">위에서 바로 견적 받기 ↑</a>
 </div>
 <div style="flex:2 1 560px;min-width:0;border-top:1px solid #E6E5E0">
-<div class="cw-faq-item" style="border-bottom:1px solid #E6E5E0"><button type="button" class="cw-faq" aria-expanded="true"><span style="font-size:18px;font-weight:500;letter-spacing:-0.02em">맡기면 정말 매출이 늘까요?</span><span aria-hidden="true" class="cw-faq-ic" style="font-size:22px;font-weight:300;color:#6E6E6E;flex-shrink:0">−</span></button><p class="cw-fade cw-faq-a" style="margin:0;padding:0 48px 28px 0;font-size:16px;line-height:1.85;color:#5C5C5C">숫자를 미리 장담하지는 않습니다. 대신 노출·유입 같은 중간 숫자에서 멈추지 않고, 대표님과 현장 반응·매출 변화를 함께 보며 매출로 이어지지 않는 곳을 고쳐 나갑니다.</p></div><div class="cw-faq-item" style="border-bottom:1px solid #E6E5E0"><button type="button" class="cw-faq" aria-expanded="false"><span style="font-size:18px;font-weight:500;letter-spacing:-0.02em">다른 대행사와 뭐가 다른가요?</span><span aria-hidden="true" class="cw-faq-ic" style="font-size:22px;font-weight:300;color:#6E6E6E;flex-shrink:0">+</span></button><p class="cw-fade cw-faq-a" style="margin:0;padding:0 48px 28px 0;font-size:16px;line-height:1.85;color:#5C5C5C" hidden>건당 작가에게 나눠 맡기지 않습니다. 업종을 아는 전담 크루 한 명이 인터뷰부터 기획·제작·검수까지 맡고, 사람과 AI를 하나의 시스템으로 묶어 비용은 합리적으로, 콘텐츠는 더 깊게 만듭니다. 그리고 발행 숫자가 아니라 매출을 기준으로 다음 달을 고칩니다.</p></div><div class="cw-faq-item" style="border-bottom:1px solid #E6E5E0"><button type="button" class="cw-faq" aria-expanded="false"><span style="font-size:18px;font-weight:500;letter-spacing:-0.02em">AI로 만들면 티 나지 않나요?</span><span aria-hidden="true" class="cw-faq-ic" style="font-size:22px;font-weight:300;color:#6E6E6E;flex-shrink:0">+</span></button><p class="cw-fade cw-faq-a" style="margin:0;padding:0 48px 28px 0;font-size:16px;line-height:1.85;color:#5C5C5C" hidden>AI는 자료 정리와 초안처럼 빠르게 할 일만 맡습니다. 무엇을 말할지, 어떤 말투로 전할지는 전담 크루가 정하고 끝까지 확인합니다. AI가 만든 문장이 그대로 나가는 일은 없습니다.</p></div><div class="cw-faq-item" style="border-bottom:1px solid #E6E5E0"><button type="button" class="cw-faq" aria-expanded="false"><span style="font-size:18px;font-weight:500;letter-spacing:-0.02em">담당자가 자주 바뀌나요?</span><span aria-hidden="true" class="cw-faq-ic" style="font-size:22px;font-weight:300;color:#6E6E6E;flex-shrink:0">+</span></button><p class="cw-fade cw-faq-a" style="margin:0;padding:0 48px 28px 0;font-size:16px;line-height:1.85;color:#5C5C5C" hidden>업종을 아는 전담 크루 한 명이 맡습니다. 부득이하게 담당이 바뀌게 되더라도 그동안의 기록을 그대로 넘겨, 지난달 나눈 이야기를 다시 설명하실 필요가 없게 합니다.</p></div><div class="cw-faq-item" style="border-bottom:1px solid #E6E5E0"><button type="button" class="cw-faq" aria-expanded="false"><span style="font-size:18px;font-weight:500;letter-spacing:-0.02em">병원·전문직이라 광고 규정이 걱정돼요.</span><span aria-hidden="true" class="cw-faq-ic" style="font-size:22px;font-weight:300;color:#6E6E6E;flex-shrink:0">+</span></button><p class="cw-fade cw-faq-a" style="margin:0;padding:0 48px 28px 0;font-size:16px;line-height:1.85;color:#5C5C5C" hidden>의료·법률·세무 업종을 오래 맡아 왔습니다. 규정에 걸릴 수 있는 표현은 제작 단계에서 걸러내고, 모든 콘텐츠는 발행 전에 대표님께 먼저 보여드립니다. <a href="/medical/" style="color:#0A0A0A;font-weight:600;border-bottom:1px solid #0A0A0A;padding-bottom:1px;white-space:nowrap">병원·의원 마케팅 자세히 보기 →</a></p></div><div class="cw-faq-item" style="border-bottom:1px solid #E6E5E0"><button type="button" class="cw-faq" aria-expanded="false"><span style="font-size:18px;font-weight:500;letter-spacing:-0.02em">블로그 말고 다른 채널도 맡길 수 있나요?</span><span aria-hidden="true" class="cw-faq-ic" style="font-size:22px;font-weight:300;color:#6E6E6E;flex-shrink:0">+</span></button><p class="cw-fade cw-faq-a" style="margin:0;padding:0 48px 28px 0;font-size:16px;line-height:1.85;color:#5C5C5C" hidden>네. 블로그뿐 아니라 SNS, 플레이스, 숏폼·영상까지 고객이 찾아오는 길 전체를 보고 필요한 채널만 골라 설계합니다. 지금 하고 계신 것 중 살릴 것과 멈출 것부터 나눠 드립니다.</p></div><div class="cw2-faqmore" hidden><div class="cw-faq-item" style="border-bottom:1px solid #E6E5E0"><button type="button" class="cw-faq" aria-expanded="false"><span style="font-size:18px;font-weight:500;letter-spacing:-0.02em">기업 블로그 대행만 맡길 수도 있나요?</span><span aria-hidden="true" class="cw-faq-ic" style="font-size:22px;font-weight:300;color:#6E6E6E;flex-shrink:0">+</span></button><p class="cw-fade cw-faq-a" style="margin:0;padding:0 48px 28px 0;font-size:16px;line-height:1.85;color:#5C5C5C" hidden>네, 블로그만 맡기셔도 됩니다. 다만 글이 문의와 매출로 이어지려면 앞뒤가 함께 맞아야 해서, 블로그만 맡더라도 고객이 찾아오는 길 전체를 같이 보고 기획합니다. <a href="/business/" style="color:#0A0A0A;font-weight:600;border-bottom:1px solid #0A0A0A;padding-bottom:1px;white-space:nowrap">기업·브랜드 마케팅 자세히 보기 →</a></p></div><div class="cw-faq-item" style="border-bottom:1px solid #E6E5E0"><button type="button" class="cw-faq" aria-expanded="false"><span style="font-size:18px;font-weight:500;letter-spacing:-0.02em">제가 시간을 많이 내야 하나요?</span><span aria-hidden="true" class="cw-faq-ic" style="font-size:22px;font-weight:300;color:#6E6E6E;flex-shrink:0">+</span></button><p class="cw-fade cw-faq-a" style="margin:0;padding:0 48px 28px 0;font-size:16px;line-height:1.85;color:#5C5C5C" hidden>처음 인터뷰에 한두 시간이면 충분합니다. 그다음부터는 평소 상담하며 하시는 말씀, 메모, 사진을 편하게 보내주시면 저희가 콘텐츠로 옮깁니다.</p></div><div class="cw-faq-item" style="border-bottom:1px solid #E6E5E0"><button type="button" class="cw-faq" aria-expanded="false"><span style="font-size:18px;font-weight:500;letter-spacing:-0.02em">효과는 언제부터 보이나요?</span><span aria-hidden="true" class="cw-faq-ic" style="font-size:22px;font-weight:300;color:#6E6E6E;flex-shrink:0">+</span></button><p class="cw-fade cw-faq-a" style="margin:0;padding:0 48px 28px 0;font-size:16px;line-height:1.85;color:#5C5C5C" hidden>업종과 채널에 따라 달라서 시점을 미리 약속드리지는 않습니다. 다만 콘텐츠는 쌓이면서 힘이 붙기 때문에 첫 계약은 3개월 단위로 권해 드리고, 그 기간 동안 반응과 매출 변화를 함께 확인합니다.</p></div><div class="cw-faq-item" style="border-bottom:1px solid #E6E5E0"><button type="button" class="cw-faq" aria-expanded="false"><span style="font-size:18px;font-weight:500;letter-spacing:-0.02em">비용은 어떻게 정해지나요? 추가 비용도 있나요?</span><span aria-hidden="true" class="cw-faq-ic" style="font-size:22px;font-weight:300;color:#6E6E6E;flex-shrink:0">+</span></button><p class="cw-fade cw-faq-a" style="margin:0;padding:0 48px 28px 0;font-size:16px;line-height:1.85;color:#5C5C5C" hidden>상담 후 대표님 사업에 맞춘 범위와 비용을 견적서로 먼저 드립니다. 계약 전에 문서로 합의한 금액 외에 나중에 붙는 비용은 없습니다. <a href="/guide/" style="color:#0A0A0A;font-weight:600;border-bottom:1px solid #0A0A0A;padding-bottom:1px;white-space:nowrap">견적을 내는 다섯 단계 보기 →</a></p></div><div class="cw-faq-item" style="border-bottom:1px solid #E6E5E0"><button type="button" class="cw-faq" aria-expanded="false"><span style="font-size:18px;font-weight:500;letter-spacing:-0.02em">진행해보고 마음에 들지 않으면 어떻게 하나요?</span><span aria-hidden="true" class="cw-faq-ic" style="font-size:22px;font-weight:300;color:#6E6E6E;flex-shrink:0">+</span></button><p class="cw-fade cw-faq-a" style="margin:0;padding:0 48px 28px 0;font-size:16px;line-height:1.85;color:#5C5C5C" hidden>업종을 아는 사람이 직접, 다시 설명하실 일 없게, 광고 규정 검수까지. 이 세 가지 약속이 지켜지지 않았다면 진행 이후에도 100% 환불해 드립니다. 자세한 조건은 계약서에 적어 드립니다.</p></div><div class="cw-faq-item" style="border-bottom:1px solid #E6E5E0"><button type="button" class="cw-faq" aria-expanded="false"><span style="font-size:18px;font-weight:500;letter-spacing:-0.02em">계약이 끝나면 콘텐츠와 계정은 어떻게 되나요?</span><span aria-hidden="true" class="cw-faq-ic" style="font-size:22px;font-weight:300;color:#6E6E6E;flex-shrink:0">+</span></button><p class="cw-fade cw-faq-a" style="margin:0;padding:0 48px 28px 0;font-size:16px;line-height:1.85;color:#5C5C5C" hidden>콘텐츠와 계정은 처음부터 대표님 것입니다. 계약이 끝나도 그대로 대표님께 남고, 저희가 쌓은 것을 가져가거나 지우는 일은 없습니다.</p></div><div class="cw-faq-item" style="border-bottom:1px solid #E6E5E0"><button type="button" class="cw-faq" aria-expanded="false"><span style="font-size:18px;font-weight:500;letter-spacing:-0.02em">세금계산서 발행이 되나요?</span><span aria-hidden="true" class="cw-faq-ic" style="font-size:22px;font-weight:300;color:#6E6E6E;flex-shrink:0">+</span></button><p class="cw-fade cw-faq-a" style="margin:0;padding:0 48px 28px 0;font-size:16px;line-height:1.85;color:#5C5C5C" hidden>네, 세금계산서를 발행해 드립니다.</p></div></div><button type="button" class="cw2-more">질문 더 보기 <span>(7)</span></button>
+<div class="cw-faq-item" style="border-bottom:1px solid #E6E5E0"><button type="button" class="cw-faq" aria-expanded="true"><span style="font-size:18px;font-weight:500;letter-spacing:-0.02em">맡기면 정말 매출이 늘까요?</span><span aria-hidden="true" class="cw-faq-ic" style="font-size:22px;font-weight:300;color:#6E6E6E;flex-shrink:0">−</span></button><p class="cw-fade cw-faq-a" style="margin:0;padding:0 48px 28px 0;font-size:16px;line-height:1.85;color:#5C5C5C">숫자를 미리 장담하지는 않습니다. 대신 노출·유입 같은 중간 숫자에서 멈추지 않고, 대표님과 현장 반응·매출 변화를 함께 보며 매출로 이어지지 않는 곳을 고쳐 나갑니다.</p></div><div class="cw-faq-item" style="border-bottom:1px solid #E6E5E0"><button type="button" class="cw-faq" aria-expanded="false"><span style="font-size:18px;font-weight:500;letter-spacing:-0.02em">다른 대행사와 뭐가 다른가요?</span><span aria-hidden="true" class="cw-faq-ic" style="font-size:22px;font-weight:300;color:#6E6E6E;flex-shrink:0">+</span></button><p class="cw-fade cw-faq-a" style="margin:0;padding:0 48px 28px 0;font-size:16px;line-height:1.85;color:#5C5C5C" hidden>건당 작가에게 나눠 맡기지 않습니다. 업종을 아는 전담 크루 한 명이 인터뷰부터 기획·제작·검수까지 맡고, 사람과 AI를 하나의 시스템으로 묶어 비용은 합리적으로, 콘텐츠는 더 깊게 만듭니다. 그리고 발행 숫자가 아니라 매출을 기준으로 다음 달을 고칩니다.</p></div><div class="cw-faq-item" style="border-bottom:1px solid #E6E5E0"><button type="button" class="cw-faq" aria-expanded="false"><span style="font-size:18px;font-weight:500;letter-spacing:-0.02em">AI로 만들면 티 나지 않나요?</span><span aria-hidden="true" class="cw-faq-ic" style="font-size:22px;font-weight:300;color:#6E6E6E;flex-shrink:0">+</span></button><p class="cw-fade cw-faq-a" style="margin:0;padding:0 48px 28px 0;font-size:16px;line-height:1.85;color:#5C5C5C" hidden>AI는 자료 정리와 초안처럼 빠르게 할 일만 맡습니다. 무엇을 말할지, 어떤 말투로 전할지는 전담 크루가 정하고 끝까지 확인합니다. AI가 만든 문장이 그대로 나가는 일은 없습니다.</p></div><div class="cw-faq-item" style="border-bottom:1px solid #E6E5E0"><button type="button" class="cw-faq" aria-expanded="false"><span style="font-size:18px;font-weight:500;letter-spacing:-0.02em">담당자가 자주 바뀌나요?</span><span aria-hidden="true" class="cw-faq-ic" style="font-size:22px;font-weight:300;color:#6E6E6E;flex-shrink:0">+</span></button><p class="cw-fade cw-faq-a" style="margin:0;padding:0 48px 28px 0;font-size:16px;line-height:1.85;color:#5C5C5C" hidden>업종을 아는 전담 크루 한 명이 맡습니다. 부득이하게 담당이 바뀌게 되더라도 그동안의 기록을 그대로 넘겨, 지난달 나눈 이야기를 다시 설명하실 필요가 없게 합니다.</p></div><div class="cw-faq-item" style="border-bottom:1px solid #E6E5E0"><button type="button" class="cw-faq" aria-expanded="false"><span style="font-size:18px;font-weight:500;letter-spacing:-0.02em">병원·전문직이라 광고 규정이 걱정돼요.</span><span aria-hidden="true" class="cw-faq-ic" style="font-size:22px;font-weight:300;color:#6E6E6E;flex-shrink:0">+</span></button><p class="cw-fade cw-faq-a" style="margin:0;padding:0 48px 28px 0;font-size:16px;line-height:1.85;color:#5C5C5C" hidden>의료·법률·세무 업종을 오래 맡아 왔습니다. 규정에 걸릴 수 있는 표현은 제작 단계에서 걸러내고, 모든 콘텐츠는 발행 전에 대표님께 먼저 보여드립니다. <a href="/medical/" style="color:#0A0A0A;font-weight:600;border-bottom:1px solid #0A0A0A;padding-bottom:1px;white-space:nowrap">병원·의원 마케팅 자세히 보기 →</a></p></div><div class="cw-faq-item" style="border-bottom:1px solid #E6E5E0"><button type="button" class="cw-faq" aria-expanded="false"><span style="font-size:18px;font-weight:500;letter-spacing:-0.02em">블로그 말고 다른 채널도 맡길 수 있나요?</span><span aria-hidden="true" class="cw-faq-ic" style="font-size:22px;font-weight:300;color:#6E6E6E;flex-shrink:0">+</span></button><p class="cw-fade cw-faq-a" style="margin:0;padding:0 48px 28px 0;font-size:16px;line-height:1.85;color:#5C5C5C" hidden>네. 블로그뿐 아니라 SNS, 플레이스, 숏폼·영상까지 고객이 찾아오는 길 전체를 보고 필요한 채널만 골라 설계합니다. 지금 하고 계신 것 중 살릴 것과 멈출 것부터 나눠 드립니다.</p></div><div class="cw2-faqmore" hidden><div class="cw-faq-item" style="border-bottom:1px solid #E6E5E0"><button type="button" class="cw-faq" aria-expanded="false"><span style="font-size:18px;font-weight:500;letter-spacing:-0.02em">기업 블로그 대행만 맡길 수도 있나요?</span><span aria-hidden="true" class="cw-faq-ic" style="font-size:22px;font-weight:300;color:#6E6E6E;flex-shrink:0">+</span></button><p class="cw-fade cw-faq-a" style="margin:0;padding:0 48px 28px 0;font-size:16px;line-height:1.85;color:#5C5C5C" hidden>네, 블로그만 맡기셔도 됩니다. 다만 글이 문의와 매출로 이어지려면 앞뒤가 함께 맞아야 해서, 블로그만 맡더라도 고객이 찾아오는 길 전체를 같이 보고 기획합니다. <a href="/business/" style="color:#0A0A0A;font-weight:600;border-bottom:1px solid #0A0A0A;padding-bottom:1px;white-space:nowrap">기업·브랜드 마케팅 자세히 보기 →</a></p></div><div class="cw-faq-item" style="border-bottom:1px solid #E6E5E0"><button type="button" class="cw-faq" aria-expanded="false"><span style="font-size:18px;font-weight:500;letter-spacing:-0.02em">제가 시간을 많이 내야 하나요?</span><span aria-hidden="true" class="cw-faq-ic" style="font-size:22px;font-weight:300;color:#6E6E6E;flex-shrink:0">+</span></button><p class="cw-fade cw-faq-a" style="margin:0;padding:0 48px 28px 0;font-size:16px;line-height:1.85;color:#5C5C5C" hidden>처음 인터뷰에 한두 시간이면 충분합니다. 그다음부터는 평소 상담하며 하시는 말씀, 메모, 사진을 편하게 보내주시면 저희가 콘텐츠로 옮깁니다.</p></div><div class="cw-faq-item" style="border-bottom:1px solid #E6E5E0"><button type="button" class="cw-faq" aria-expanded="false"><span style="font-size:18px;font-weight:500;letter-spacing:-0.02em">효과는 언제부터 보이나요?</span><span aria-hidden="true" class="cw-faq-ic" style="font-size:22px;font-weight:300;color:#6E6E6E;flex-shrink:0">+</span></button><p class="cw-fade cw-faq-a" style="margin:0;padding:0 48px 28px 0;font-size:16px;line-height:1.85;color:#5C5C5C" hidden>업종과 채널에 따라 달라서 시점을 미리 약속드리지는 않습니다. 다만 콘텐츠는 쌓이면서 힘이 붙기 때문에 첫 계약은 3개월 단위로 권해 드리고, 그 기간 동안 반응과 매출 변화를 함께 확인합니다.</p></div><div class="cw-faq-item" style="border-bottom:1px solid #E6E5E0"><button type="button" class="cw-faq" aria-expanded="false"><span style="font-size:18px;font-weight:500;letter-spacing:-0.02em">비용은 어떻게 정해지나요? 추가 비용도 있나요?</span><span aria-hidden="true" class="cw-faq-ic" style="font-size:22px;font-weight:300;color:#6E6E6E;flex-shrink:0">+</span></button><p class="cw-fade cw-faq-a" style="margin:0;padding:0 48px 28px 0;font-size:16px;line-height:1.85;color:#5C5C5C" hidden>상담 후 대표님 사업에 맞춘 범위와 비용을 견적서로 먼저 드립니다. 계약 전에 문서로 합의한 금액 외에 나중에 붙는 비용은 없습니다. <a class="cw-tap" href="/guide/" style="color:#0A0A0A;font-weight:600;border-bottom:1px solid #0A0A0A;padding-bottom:1px;white-space:nowrap">견적을 내는 다섯 단계 보기 →</a></p></div><div class="cw-faq-item" style="border-bottom:1px solid #E6E5E0"><button type="button" class="cw-faq" aria-expanded="false"><span style="font-size:18px;font-weight:500;letter-spacing:-0.02em">진행해보고 마음에 들지 않으면 어떻게 하나요?</span><span aria-hidden="true" class="cw-faq-ic" style="font-size:22px;font-weight:300;color:#6E6E6E;flex-shrink:0">+</span></button><p class="cw-fade cw-faq-a" style="margin:0;padding:0 48px 28px 0;font-size:16px;line-height:1.85;color:#5C5C5C" hidden>업종을 아는 사람이 직접, 다시 설명하실 일 없게, 광고 규정 검수까지. 이 세 가지 약속이 지켜지지 않았다면 진행 이후에도 100% 환불해 드립니다. 자세한 조건은 계약서에 적어 드립니다.</p></div><div class="cw-faq-item" style="border-bottom:1px solid #E6E5E0"><button type="button" class="cw-faq" aria-expanded="false"><span style="font-size:18px;font-weight:500;letter-spacing:-0.02em">계약이 끝나면 콘텐츠와 계정은 어떻게 되나요?</span><span aria-hidden="true" class="cw-faq-ic" style="font-size:22px;font-weight:300;color:#6E6E6E;flex-shrink:0">+</span></button><p class="cw-fade cw-faq-a" style="margin:0;padding:0 48px 28px 0;font-size:16px;line-height:1.85;color:#5C5C5C" hidden>콘텐츠와 계정은 처음부터 대표님 것입니다. 계약이 끝나도 그대로 대표님께 남고, 저희가 쌓은 것을 가져가거나 지우는 일은 없습니다.</p></div><div class="cw-faq-item" style="border-bottom:1px solid #E6E5E0"><button type="button" class="cw-faq" aria-expanded="false"><span style="font-size:18px;font-weight:500;letter-spacing:-0.02em">세금계산서 발행이 되나요?</span><span aria-hidden="true" class="cw-faq-ic" style="font-size:22px;font-weight:300;color:#6E6E6E;flex-shrink:0">+</span></button><p class="cw-fade cw-faq-a" style="margin:0;padding:0 48px 28px 0;font-size:16px;line-height:1.85;color:#5C5C5C" hidden>네, 세금계산서를 발행해 드립니다.</p></div></div><button type="button" class="cw2-more">질문 더 보기 <span>(7)</span></button>
 </div>
 </div>
 </section>
@@ -869,14 +949,14 @@ select.cw-input option{color:#0A0A0A}
 <div>
 <p style="margin:0">상호 크루스 스튜디오 · 대표 신윤정</p>
 <p style="margin:0">사업자등록번호 116-07-97847</p>
-<p style="margin:0">전화 010-7778-2045</p>
+<p style="margin:0">전화 <a href="tel:01077782045">010-7778-2045</a></p>
 </div>
-<div style="display:flex;flex-direction:column;gap:4px">
+<div class="cw-flinks" style="display:flex;flex-direction:column;gap:4px">
 <a href="/business/" style="color:#D4D4D4;font-weight:600">기업·브랜드 마케팅</a>
 <a href="/medical/" style="color:#D4D4D4;font-weight:600">병원·의원 마케팅</a>
 <a href="/guide/" style="color:#D4D4D4;font-weight:600">견적 가이드</a>
 <a href="/diagnosis/" style="color:#D4D4D4;font-weight:600">블로그 진단 보고서</a>
-<a href="privacy.html" style="color:#D4D4D4;font-weight:600">개인정보처리방침</a>
+<a href="/privacy.html" style="color:#D4D4D4;font-weight:600">개인정보처리방침</a>
 <p style="margin:12px 0 0;font-size:12px">© 2026 Crewth Studio</p>
 </div>
 </div>
@@ -1208,6 +1288,24 @@ document.addEventListener('focusin',function(e){var t=e.target;if(window.__cwFul
   if (more && rest) more.addEventListener('click', function () { rest.hidden = false; more.remove(); });
 })();
 
+</script>
+<script id="cw-site-js">
+/* 모바일 메뉴 — 열기·닫기 */
+(function(){var b=document.querySelector('.cw-mbtn'),p=document.getElementById('cw-mnav');if(!b||!p)return;
+var h=b.closest('header'),d=h.querySelector('.cw-mdim');
+function set(o){b.setAttribute('aria-expanded',o?'true':'false');b.setAttribute('aria-label',o?'메뉴 닫기':'메뉴 열기');h.classList.toggle('cw-mopen',o);if(o)p.removeAttribute('inert');else p.setAttribute('inert','');
+try{if(o&&window.gtag)gtag('event','mobile_menu_open',{page:location.pathname})}catch(e){}}
+function isOpen(){return b.getAttribute('aria-expanded')==='true'}
+b.addEventListener('click',function(){set(!isOpen())});
+if(d)d.addEventListener('click',function(){set(false)});
+p.addEventListener('click',function(e){if(e.target.closest&&e.target.closest('a'))set(false)});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&isOpen()){set(false);b.focus()}});
+var mq=window.matchMedia('(min-width:861px)');var f=function(e){if(e.matches&&isOpen())set(false)};
+if(mq.addEventListener)mq.addEventListener('change',f);else if(mq.addListener)mq.addListener(f);
+})();
+/* 메인: 견적 폼을 쓰는 동안에는 하단 고정 바를 내려 폼을 가리지 않게 */
+(function(){var bar=document.querySelector('.cw-mbar'),card=document.querySelector('#contact .cw-formcard');if(!bar||!card||!('IntersectionObserver' in window))return;
+new IntersectionObserver(function(es){bar.classList.toggle('cw-away',es[0].isIntersecting)},{rootMargin:'-30% 0px -30% 0px'}).observe(card)})();
 </script>
 </body>
 </html>
