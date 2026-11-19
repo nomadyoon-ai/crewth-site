@@ -181,7 +181,200 @@ footer{padding-bottom:72px!important}
 .cw-dd-menu a::after{display:none!important}
 .cw-dd-menu a small{display:block;margin-top:2px;font-size:12px;font-weight:400;color:#8A8A8A}
 </style>
-<style id="cw-nav-fit">header nav a,header nav .cw-dd-btn,header>div>a{white-space:nowrap}@media (max-width:1180px){header nav{gap:0!important}header nav>a,header nav .cw-dd-btn{padding-left:10px!important;padding-right:10px!important}header>div>a[aria-label]>span:last-child{display:none!important}}@media (max-width:1000px){header>div{gap:14px!important}header nav{font-size:14px!important}header nav>a,header nav .cw-dd-btn{padding-left:7px!important;padding-right:7px!important}}</style>
+<style id="cw-nav-fit">header nav a,header nav .cw-dd-btn,header>div>a{white-space:nowrap}@media (max-width:1180px){header nav{gap:0!important}header nav>a,header nav .cw-dd-btn{padding-left:10px!important;padding-right:10px!important}header>div>a[aria-label]>span:last-child{display:none!important}}@media (max-width:1000px){header>div{gap:14px!important}header nav{font-size:14px!important}header nav>a,header nav .cw-dd-btn{padding-left:7px!important;padding-right:7px!important}}
+/* ════ 기업 v2 (11/19) ════ */
+.bz2-w{max-width:1160px;margin:0 auto}
+section[class*="bz2-"]{word-break:keep-all;overflow-wrap:break-word}
+[class*="bz2-h"],.bz2-fh,.bz2-why h3{text-wrap:balance}
+.bz2-lead,.bz2-why p,.bz2-say,.bz2-ck span,.bz2-start p{text-wrap:pretty}
+.bz2-lead{margin:24px 0 0;max-width:640px;font-size:17px;line-height:1.85;color:#5C5C5C}
+.bz2-lead.dk{color:#A3A3A3}.bz2-lead.c{margin-left:auto;margin-right:auto;text-align:center;max-width:720px}
+.bz2-rv{opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.bz2-rv.in{opacity:1;transform:none}
+.bz2-hero{padding-bottom:170px!important}
+.bz2-fact{margin:26px 0 0;font-size:14px;color:#A3A3A3}.bz2-fact b{color:#fff}
+
+/* S1 되풀이되는 세 장면 */
+.bz2-s1{position:relative;z-index:1;margin-top:-48px;background:#fff;border-radius:48px 48px 0 0;padding:140px 32px 150px}
+.bz2-h1{margin:0;font-size:clamp(34px,4.6vw,66px);line-height:1.18;font-weight:700;letter-spacing:-0.05em}
+.bz2-h1 em{font-style:normal;color:#E95623}.bz2-h1 b,.bz2-h2 b,.bz2-h3 b,.bz2-h4 b,.bz2-h5 b,.bz2-fh b{color:#E95623}
+.bz2-why{list-style:none;margin:72px 0 0;padding:0}
+.bz2-why li{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;align-items:center;padding:52px 0;border-top:1px solid #EAE9E4}
+.bz2-why li:nth-child(2) .t{order:2}
+.bz2-why .no{font-size:13px;font-family:ui-monospace,Menlo,monospace;color:#E95623}
+.bz2-why h3{margin:12px 0 0;font-size:clamp(26px,2.8vw,40px);line-height:1.28;font-weight:700;letter-spacing:-0.045em}
+.bz2-why .t p{margin:16px 0 0;font-size:17px;line-height:1.85;color:#5C5C5C;max-width:480px}
+.bz2-why .v{min-height:170px;display:flex;flex-direction:column;justify-content:center}
+.bz2-why .lb{margin:0 0 16px;font-size:13px;color:#8F8F8F}
+.bz2-why .ft{margin:16px 0 0;font-size:14px;color:#8F8F8F}
+.bz2-why .swap{position:relative;height:64px}
+.bz2-why .swap span{position:absolute;left:0;top:0;height:64px;display:inline-flex;align-items:center;padding:0 26px;border-radius:999px;border:1.5px solid #0A0A0A;font-size:22px;font-weight:700;letter-spacing:-0.03em;opacity:0;animation:bz2Swap 6s infinite}
+.bz2-why .swap span:nth-child(2){animation-delay:2s}.bz2-why .swap span:nth-child(3){animation-delay:4s;border-style:dashed;color:#8F8F8F;border-color:#BDBCB6}
+@keyframes bz2Swap{0%{opacity:0;transform:translateX(40px)}6%,28%{opacity:1;transform:none}34%,100%{opacity:0;transform:translateX(-40px)}}
+.bz2-why .tone{position:relative;height:96px}
+.bz2-why .tone p{position:absolute;left:0;top:0;margin:0;font-size:clamp(20px,2.2vw,30px);line-height:1.4;font-weight:600;letter-spacing:-0.03em;opacity:0;animation:bz2Tone 6s infinite}
+.bz2-why .tone p:nth-child(2){animation-delay:2s;font-weight:300}.bz2-why .tone p:nth-child(3){animation-delay:4s;font-weight:800;color:#E95623}
+.bz2-why .tone i{display:block;margin-bottom:6px;font-style:normal;font-size:12px;font-weight:600;color:#8F8F8F;letter-spacing:0}
+@keyframes bz2Tone{0%{opacity:0;filter:blur(6px)}6%,28%{opacity:1;filter:none}34%,100%{opacity:0;filter:blur(6px)}}
+.bz2-why .rep p{margin:0;display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid #EAE9E4;font-size:16px;color:#3A3A3A}
+.bz2-why .rep i{font-style:normal;font-size:13px;font-weight:700;color:#8F8F8F}
+.bz2-why .rep .no{font-family:inherit;font-size:16px;color:#0A0A0A;font-weight:700;border-bottom:0}
+.bz2-why .rep .no i{color:#E5484D;animation:bz2Blink 1.6s steps(2) infinite}
+@keyframes bz2Blink{50%{opacity:.25}}
+.bz2-say{margin:72px 0 0;padding-top:44px;border-top:1.5px solid #0A0A0A;font-size:clamp(20px,2vw,26px);line-height:1.6;letter-spacing:-0.03em;color:#6E6E6E;max-width:900px}
+.bz2-say strong{display:block;color:#0A0A0A}
+
+/* S2 아홉 가지 일이 나뉜다 */
+.bz2-s2{background:#F6F5F1;padding:150px 32px 150px}
+.bz2-h2{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:56px;align-items:end}
+.bz2-h2 h2{margin:0;font-size:clamp(34px,4.2vw,60px);line-height:1.2;font-weight:700;letter-spacing:-0.05em}
+.bz2-h2 p{margin:0;font-size:17px;line-height:1.85;color:#5C5C5C}
+.bz2-split{margin:72px auto 0;max-width:900px}
+.bz2-split .hd{position:sticky;top:73px;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:24px;padding:18px 0 14px;background:#F6F5F1;border-bottom:1px solid #DEDDD8}
+.bz2-split .hd p{margin:0;display:flex;align-items:baseline;justify-content:space-between;font-size:17px;font-weight:700;letter-spacing:-0.03em}
+.bz2-split .hd b{font-size:40px;font-weight:300;letter-spacing:-0.05em;font-variant-numeric:tabular-nums;line-height:1}
+.bz2-split .hd .cw b{color:#E95623}
+.bz2-split ol{list-style:none;margin:0;padding:18px 0 0}
+.bz2-split .rw{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:10px}
+.bz2-split .rw div{padding:18px 22px;border-radius:16px;background:#fff;transition:transform .7s cubic-bezier(.3,1.2,.4,1),background .5s ease,color .5s ease}
+.bz2-split .rw b{display:block;font-size:17px;letter-spacing:-0.025em}
+.bz2-split .rw span{display:block;margin-top:4px;font-size:14px;line-height:1.55;color:#6E6E6E;transition:color .5s ease}
+.bz2-split .rw.c.go div{transform:translateX(calc(100% + 24px));background:#0A0A0A;color:#fff}
+.bz2-split .rw.c.go span{color:#A3A3A3}
+.bz2-split .rw.m.stay div{box-shadow:inset 0 0 0 1.5px #0A0A0A}
+
+/* S3 흘러가는 것과 붙어 있는 것 */
+.bz2-s3{position:relative;z-index:3;margin-top:-48px;background:#0A0A0A;color:#fff;border-radius:48px 48px 0 0;padding:140px 32px 150px}
+.bz2-h3{margin:0;font-size:clamp(32px,4vw,58px);line-height:1.22;font-weight:700;letter-spacing:-0.05em}
+.bz2-h3 span{display:block;font-weight:300;color:#8A8A8A}
+.bz2-fit{margin-top:80px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;align-items:start}
+.bz2-fit .k,.bz2-start .k{margin:0;font-size:13px;font-weight:700;color:#8A8A8A}
+.bz2-fit .fix .k{color:#E95623}
+.bz2-fit ul{list-style:none;margin:0;padding:0}
+.bz2-fit .flow li{padding:44px 0;border-bottom:1px dashed #333}
+.bz2-fit .flow li:first-child{padding-top:28px}
+.bz2-fit .flow b{display:block;font-size:clamp(22px,2.2vw,30px);font-weight:300;letter-spacing:-0.04em;color:#C9C9C9}
+.bz2-fit .flow span{display:block;margin-top:8px;font-size:15px;color:#8A8A8A}
+.bz2-fit .fix{position:sticky;top:120px}
+.bz2-fit .fix .in{border-radius:28px;background:#fff;color:#0A0A0A;padding:32px 34px 14px;box-shadow:0 0 0 6px rgba(233,86,35,.14)}
+.bz2-fit .fix li{padding:18px 0;border-top:1px solid #EAE9E4}
+.bz2-fit .fix li:first-child{margin-top:18px}
+.bz2-fit .fix b{display:block;font-size:19px;letter-spacing:-0.03em}
+.bz2-fit .fix span{display:block;margin-top:4px;font-size:14px;color:#6E6E6E}
+.bz2-start{margin-top:110px;padding-top:36px;border-top:1px solid #262626}
+.bz2-start .two{margin-top:26px;display:grid;grid-template-columns:1fr 1fr}
+.bz2-start .two>div{padding-right:48px}
+.bz2-start .two>div+div{padding:0 0 0 48px;border-left:1px solid #262626}
+.bz2-start .c{margin:0;font-size:13px;font-weight:700;color:#E95623}
+.bz2-start h3{margin:10px 0 0;font-size:clamp(24px,2.4vw,32px);font-weight:700;letter-spacing:-0.04em}
+.bz2-start .two p:not(.c){margin:12px 0 0;font-size:16px;line-height:1.8;color:#A3A3A3}
+.bz2-start .nt{margin:36px 0 0;font-size:15px;color:#8A8A8A}
+.bz2-start .ai{margin:28px 0 0;display:flex;flex-wrap:wrap;gap:12px 40px;font-size:16px;color:#fff}
+.bz2-start .ai i{display:block;margin-bottom:4px;font-style:normal;font-size:12px;color:#8A8A8A}
+.bz2-start .ai span+span i{color:#E95623}
+
+/* S4 채워지는 보고서 */
+.bz2-s4{position:relative;z-index:4;margin-top:-48px;background:#fff;border-radius:48px 48px 0 0;padding:140px 32px 150px}
+.bz2-h4{margin:0;text-align:center;font-size:clamp(32px,4.2vw,60px);line-height:1.25;font-weight:700;letter-spacing:-0.05em}
+.bz2-h4 .chip{display:inline-block;padding:0 .3em;border-radius:.25em;background:#EFEEE9;color:#8F8F8F;font-weight:500}
+.bz2-rep{margin:64px auto 0;max-width:980px;border:1.5px solid #0A0A0A;border-radius:24px;padding:28px 32px 24px}
+.bz2-rep .ph{margin:0;display:flex;justify-content:space-between;gap:12px;font-size:15px;font-weight:700}
+.bz2-rep .ph span+span{font-weight:500;color:#8F8F8F}.bz2-rep .ph b{color:#E95623}
+.bz2-rep .th,.bz2-rep li{display:grid;grid-template-columns:1.1fr 1.3fr .8fr;gap:24px}
+.bz2-rep .th{margin:22px 0 0;padding-bottom:10px;border-bottom:1px solid #0A0A0A;font-size:12px;color:#8F8F8F}
+.bz2-rep ul{list-style:none;margin:0;padding:0}
+.bz2-rep li{padding:20px 0;border-bottom:1px solid #EAE9E4;align-items:center;font-size:16px;letter-spacing:-0.02em}
+.bz2-rep .a{font-weight:700}
+.bz2-rep .a i{display:inline-block;margin-left:10px;padding:3px 8px;border-radius:6px;background:#EFEEE9;font-style:normal;font-size:11px;font-weight:600;color:#8F8F8F;transition:opacity .4s ease}
+.bz2-rep .b,.bz2-rep .c{opacity:0;transform:translateX(-10px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.2,1)}
+.bz2-rep .b{color:#3A3A3A}.bz2-rep .c{font-weight:700;color:#E95623}
+.bz2-rep li.in .a i{opacity:0}
+.bz2-rep li.in .b{opacity:1;transform:none;transition-delay:.2s}.bz2-rep li.in .c{opacity:1;transform:none;transition-delay:.5s}
+.bz2-rep .pf{margin:18px 0 0;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px 24px;font-size:14px;color:#8F8F8F}
+.bz2-rep .tags{display:flex;flex-wrap:wrap;gap:6px}
+.bz2-rep .tags i{font-style:normal;font-size:13px;padding:6px 11px;border-radius:999px;border:1px solid #DEDDD8;color:#3A3A3A}
+.bz2-rep .to em{font-style:normal;margin:0 6px}.bz2-rep .to b{color:#E95623}
+.bz2-voices{margin:96px auto 0;max-width:980px}
+.bz2-voices .k{margin:0 0 8px;font-size:13px;font-weight:700;color:#8F8F8F}
+.bz2-voices .q{margin:0;padding:26px 0;border-bottom:1px solid #EAE9E4;font-size:clamp(20px,2.1vw,28px);line-height:1.5;font-weight:600;letter-spacing:-0.035em}
+.bz2-voices .q span{display:block;margin-top:8px;font-size:14px;font-weight:500;color:#8F8F8F;letter-spacing:0}
+.bz2-voices a{display:inline-block;margin-top:22px;font-size:15px;font-weight:600;color:#0A0A0A;border-bottom:1px solid #0A0A0A;padding-bottom:2px}
+
+/* S5 체크되는 확인 목록 */
+.bz2-s5{position:relative;z-index:5;margin-top:-48px;background:#F6F5F1;border-radius:48px 48px 0 0;padding:140px 32px 150px}
+.bz2-s5w{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:80px;align-items:start}
+.bz2-s5w .l{position:sticky;top:120px}
+.bz2-h5,.bz2-fh{margin:0;font-size:clamp(32px,3.8vw,52px);line-height:1.26;font-weight:700;letter-spacing:-0.045em}
+.bz2-h5 span,.bz2-fh span{display:block;font-size:.5em;font-weight:600;letter-spacing:-0.02em;color:#E95623;margin-bottom:14px}
+.bz2-fh{margin-bottom:48px}
+.bz2-three{margin-top:44px;padding-top:26px;border-top:1.5px solid #0A0A0A}
+.bz2-three .k{margin:0;font-size:13px;font-weight:700;color:#8F8F8F}
+.bz2-three ol{margin:14px 0 0;padding:0;list-style:none;counter-reset:n}
+.bz2-three li{counter-increment:n;padding:6px 0;font-size:19px;font-weight:700;letter-spacing:-0.03em}
+.bz2-three li:before{content:"0" counter(n);margin-right:12px;font-size:12px;font-family:ui-monospace,Menlo,monospace;font-weight:400;color:#E95623}
+.bz2-three .rf{margin:20px 0 0;font-size:17px;line-height:1.7;font-weight:600;letter-spacing:-0.02em}
+.bz2-three mark{color:#E95623;background:linear-gradient(transparent 64%,rgba(233,86,35,.22) 64%)}
+.bz2-three .rf span{display:block;margin-top:6px;font-size:13px;font-weight:400;color:#8F8F8F}
+.bz2-ck{list-style:none;margin:0;padding:0}
+.bz2-ck li{display:grid;grid-template-columns:28px minmax(0,1fr);gap:18px;padding:24px 0;border-bottom:1px solid #DEDDD8}
+.bz2-ck li:first-child{padding-top:0}
+.bz2-ck i{position:relative;width:26px;height:26px;margin-top:1px;border-radius:8px;border:1.5px solid #BDBCB6;transition:background .3s ease,border-color .3s ease}
+.bz2-ck i:after{content:"";position:absolute;left:7px;top:7px;width:10px;height:6px;border-left:2.5px solid #fff;border-bottom:2.5px solid #fff;transform:rotate(-45deg) scale(0);transition:transform .35s cubic-bezier(.3,1.6,.4,1) .1s}
+.bz2-ck li.in i{background:#0A0A0A;border-color:#0A0A0A}
+.bz2-ck li.in i:after{transform:rotate(-45deg) scale(1)}
+.bz2-ck b{display:block;font-size:19px;letter-spacing:-0.03em}
+.bz2-ck span{display:block;margin-top:6px;font-size:15px;line-height:1.7;color:#5C5C5C}
+.bz2-ck a{color:#0A0A0A;font-weight:600;border-bottom:1px solid #0A0A0A;white-space:nowrap}
+.bz2-edu{margin-top:72px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px 24px;padding-top:26px;border-top:1px solid #DEDDD8;color:#0A0A0A;font-size:15px}
+.bz2-edu span{color:#5C5C5C}.bz2-edu b{display:block;margin-bottom:4px;font-size:18px;color:#0A0A0A;letter-spacing:-0.03em}
+.bz2-edu em{font-style:normal;font-weight:600;border-bottom:1px solid #0A0A0A;padding-bottom:1px}
+.bz2-more[hidden]{display:none}
+.bz2-moreb{margin-top:28px;font:inherit;font-size:15px;font-weight:700;color:#0A0A0A;background:none;border:1px solid #DEDDD8;border-radius:999px;padding:13px 22px;cursor:pointer}
+.bz2-moreb span{color:#8F8F8F;font-weight:500}
+
+@media (max-width:900px){
+  .bz2-why li{grid-template-columns:1fr;gap:28px;padding:40px 0}
+  .bz2-why li:nth-child(2) .t{order:0}
+  .bz2-why .v{min-height:0}
+  .bz2-h2{grid-template-columns:1fr;gap:20px}
+  .bz2-split .hd,.bz2-split .rw{gap:10px}
+  .bz2-split .rw.c.go div{transform:translateX(calc(100% + 10px))}
+  .bz2-split .rw span{display:none}
+  .bz2-split .rw div{padding:14px 14px}.bz2-split .rw b{font-size:14px}
+  .bz2-split .hd p{font-size:13px}.bz2-split .hd b{font-size:30px}
+  .bz2-fit{grid-template-columns:1fr;gap:40px}
+  .bz2-fit .fix{position:static}
+  .bz2-fit .flow li{padding:22px 0}
+  .bz2-start .two{grid-template-columns:1fr;gap:32px}
+  .bz2-start .two>div,.bz2-start .two>div+div{padding:0;border:0}
+  .bz2-rep .th{display:none}
+  .bz2-rep li{grid-template-columns:1fr;gap:6px}
+  .bz2-s5w{grid-template-columns:1fr;gap:48px}
+  .bz2-s5w .l{position:static}
+}
+@media (max-width:700px){
+  .bz2-hero{padding-bottom:130px!important}
+  .bz2-s1,.bz2-s4,.bz2-s5{padding:100px 20px 110px;border-radius:32px 32px 0 0}
+  .bz2-s2{padding:110px 20px}
+  .bz2-s3{padding:100px 20px 110px;border-radius:32px 32px 0 0}
+  .bz2-h1{font-size:34px}
+  .bz2-why{margin-top:44px}.bz2-why .t p{font-size:16px}
+  .bz2-why .swap span{font-size:18px;height:54px}.bz2-why .swap{height:54px}
+  .bz2-say{margin-top:44px;padding-top:32px}
+  .bz2-split{margin-top:44px}
+  .bz2-fit{margin-top:48px}.bz2-start{margin-top:72px}
+  .bz2-rep{padding:22px 18px 18px;border-radius:18px;margin-top:44px}
+  .bz2-voices{margin-top:64px}
+  .bz2-ck b{font-size:17px}
+}
+@media (prefers-reduced-motion:reduce){
+  .bz2-rv{opacity:1;transform:none}
+  .bz2-why .swap,.bz2-why .tone{height:auto;display:flex;flex-direction:column;gap:10px}
+  .bz2-why .swap span,.bz2-why .tone p{position:static;opacity:1;animation:none;align-self:flex-start}
+  .bz2-why .rep .no i{animation:none}
+  .bz2-rep .b,.bz2-rep .c{opacity:1;transform:none}
+}
+</style>
 </head>
 <body>
 <div style="font-family:'Pretendard Variable',Pretendard,-apple-system,sans-serif;color:#0A0A0A;letter-spacing:-0.01em;-webkit-font-smoothing:antialiased;background:#0A0A0A;width:100%">
@@ -197,7 +390,7 @@ footer{padding-bottom:72px!important}
 </div>
 </header>
 
-<section class="hq-ruled" style="position:relative;padding:96px 32px 130px;color:#fff">
+<section class="hq-ruled bz2-hero" style="position:relative;padding:96px 32px 130px;color:#fff">
 <div aria-hidden="true" style="position:absolute;inset:0;overflow:hidden;pointer-events:none"><picture><source media="(max-width:700px)" type="image/avif" srcset="/assets/hero-business-m.avif"><source media="(max-width:700px)" type="image/webp" srcset="/assets/hero-business-m.webp"><source type="image/avif" srcset="/assets/hero-business.avif"><source type="image/webp" srcset="/assets/hero-business.webp"><img class="hq-bg" src="/assets/hero-business.webp" alt="" width="1600" height="900" fetchpriority="low" decoding="async"></picture><div class="hq-bg-veil"></div><div style="position:absolute;left:50%;top:220px;width:900px;height:560px;transform:translate(-50%,-50%);background:radial-gradient(closest-side,rgba(233,86,35,.11),rgba(233,86,35,0))"></div></div>
 <div style="position:relative;max-width:1160px;margin:0 auto">
 <div class="hq-hero" style="display:grid;grid-template-columns:minmax(0,1fr) 420px;gap:56px;align-items:center">
@@ -207,110 +400,87 @@ footer{padding-bottom:72px!important}
 <span class="hq-rise" style="display:block;font-size:clamp(26px,3.2vw,42px);line-height:1.25;font-weight:200;color:#6E6E6E">대행사가 바뀔 때마다 처음부터 설명하셨나요.</span>
 <span class="hq-rise" style="display:block;margin-top:16px;font-size:clamp(32px,4.4vw,60px);line-height:1.22;font-weight:700;color:#fff;animation-delay:.16s">브랜드 설명은, <br>처음 한 번이면 <br>됩니다<span class="hq-period" style="color:#E95623">.</span></span>
 </h1>
-<p class="hq-rise" style="margin:30px 0 0;max-width:520px;font-size:17px;line-height:1.8;color:#C9C9C9;animation-delay:.28s">브랜드를 처음 한 번 깊이 익힌 전담 크루 한 명이 기획부터 제작, 검수, 보고까지 끝까지 맡고, 보여지는 숫자에서 멈추지 않고 매출까지 함께 봅니다. 담당자님의 시간은 방향을 정하고 컨펌하는 데만 쓰시면 됩니다.</p>
+
 <div class="hq-rise" style="margin-top:36px;display:flex;flex-wrap:wrap;align-items:center;gap:20px;animation-delay:.36s">
 <a href="/#contact" class="hq-btn hq-cta" style="background:#E95623;color:#0A0A0A;font-size:17px;font-weight:700;padding:19px 30px;border-radius:14px">우리 브랜드 맞춤 견적 받기</a>
 <a href="/assets/crewth-studio-intro.pdf" download style="font-size:15px;color:#fff;font-weight:600;border-bottom:1px solid #E95623;padding-bottom:2px">회사소개서 받기 (PDF) ↓</a>
 </div>
+<p class="hq-rise bz2-fact" style="animation-delay:.44s"><b>95%</b>가 첫 계약 뒤에도 계속 맡기십니다</p>
 </div>
 <p class="hq-cap hq-rise" aria-hidden="true" style="margin:0;animation-delay:.3s"><i></i>브랜드를 직접 듣고 시작합니다</p>
 </div>
-<div class="hq-rise bz-stats" style="margin-top:72px;padding-top:32px;border-top:1px solid #232323;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;animation-delay:.45s"><div><p style="margin:0;font-size:clamp(34px,3.6vw,48px);font-weight:700;letter-spacing:-0.04em;line-height:1.1;color:#fff">95<span style="font-size:.5em;font-weight:600;color:#E95623;margin-left:2px">%</span></p><p style="margin:10px 0 0;font-size:14px;color:#A3A3A3">첫 계약 뒤에도 계속 맡기신 비율</p></div><div><p style="margin:0;font-size:clamp(34px,3.6vw,48px);font-weight:700;letter-spacing:-0.04em;line-height:1.1;color:#fff">300<span style="font-size:.5em;font-weight:600;color:#E95623;margin-left:2px">명+</span></p><p style="margin:10px 0 0;font-size:14px;color:#A3A3A3">블로그·마케팅 교육 누적 수강생</p></div><div><p style="margin:0;font-size:clamp(34px,3.6vw,48px);font-weight:700;letter-spacing:-0.04em;line-height:1.1;color:#fff">2009<span style="font-size:.5em;font-weight:600;color:#E95623;margin-left:2px">년~</span></p><p style="margin:10px 0 0;font-size:14px;color:#A3A3A3">대표가 네이버 블로그와 함께 해온 시간</p></div></div>
-<p class="hq-rise" style="margin:22px 0 0;font-size:13px;color:#6E6E6E;animation-delay:.5s">위 숫자가 거짓이라면, 그에 합당한 처벌을 받겠습니다.</p>
+
 </div>
 </section>
 
-<section aria-label="대행사를 써도 일이 줄지 않는 이유" style="position:relative;z-index:1;margin-top:-48px;background:#fff;border-radius:48px 48px 0 0;padding:130px 32px 170px">
-<div style="max-width:1160px;margin:0 auto">
-<h2 style="margin:0;font-size:clamp(32px,3.8vw,52px);line-height:1.28;letter-spacing:-0.04em"><span style="display:block;font-weight:200;color:#8A8A8A">대행사를 쓰는데도</span> <span style="display:block;font-weight:700">일이 줄지 않는 이유<span class="hq-period" style="color:#E95623">.</span></span></h2>
-<div style="margin-top:56px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px">
-<article class="hq-card" style="background:#F6F5F1;border:1px solid #EEEDE8;border-radius:24px;padding:24px;display:flex;flex-direction:column"><div aria-hidden="true" style="height:176px;border-radius:16px;background:#fff;border:1px solid #EEEDE8;padding:16px 20px 18px;display:flex;flex-direction:column"><span style="font-size:12px;color:#8F8F8F">담당자 교체</span><div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:9px;min-height:0"><div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px"><span class="hq-strike2" style="--x:0"><span style="display:inline-block;padding:7px 12px;border-radius:10px;border:1px solid #E0DFDA;font-size:13px">A 담당</span></span><span style="color:#CFCDC6">→</span><span class="hq-strike2" style="--x:0"><span style="display:inline-block;padding:7px 12px;border-radius:10px;border:1px solid #E0DFDA;font-size:13px">B 담당</span></span><span style="color:#CFCDC6">→</span><span style="display:inline-block;padding:7px 12px;border-radius:10px;border:1px dashed #E95623;font-size:13px;color:#E95623">다음 담당?</span></div><span style="font-size:13px;color:#8F8F8F">바뀔 때마다 브랜드 설명은 처음부터</span></div></div><h3 style="margin:22px 0 0;font-size:21px;font-weight:700;letter-spacing:-0.03em;line-height:1.4">맡은 사람이 자꾸 바뀝니다</h3><p style="margin:10px 0 0;font-size:16px;line-height:1.75;color:#5C5C5C">기록이 넘어오지 않아, 새 담당자가 올 때마다 브랜드와 지난 경과를 처음부터 다시 설명하게 됩니다.</p></article><article class="hq-card" style="background:#F6F5F1;border:1px solid #EEEDE8;border-radius:24px;padding:24px;display:flex;flex-direction:column"><div aria-hidden="true" style="height:176px;border-radius:16px;background:#fff;border:1px solid #EEEDE8;padding:16px 20px 18px;display:flex;flex-direction:column"><span style="font-size:12px;color:#8F8F8F">편마다 다른 말투</span><div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:9px;min-height:0"><div style="display:flex;align-items:baseline;gap:10px"><span style="flex-shrink:0;width:44px;font-size:11px;color:#A3A3A3">작가 A</span><span style="font-size:14px;color:#3A3A3A;">안녕하세요~ 오늘은요!</span></div><div style="display:flex;align-items:baseline;gap:10px"><span style="flex-shrink:0;width:44px;font-size:11px;color:#A3A3A3">작가 B</span><span style="font-size:14px;color:#3A3A3A;letter-spacing:0">당사는 금번 신제품을 출시하였으며</span></div><div style="display:flex;align-items:baseline;gap:10px"><span style="flex-shrink:0;width:44px;font-size:11px;color:#A3A3A3">작가 C</span><span style="font-size:14px;color:#3A3A3A;font-weight:700">이거 모르면 손해 ㅎㅎ</span></div></div></div><h3 style="margin:22px 0 0;font-size:21px;font-weight:700;letter-spacing:-0.03em;line-height:1.4">글이 우리 브랜드 같지 않습니다</h3><p style="margin:10px 0 0;font-size:16px;line-height:1.75;color:#5C5C5C">글마다 바뀌는 건당 작가가 나눠 쓰면 편마다 말투가 달라지고, 고쳐 쓰는 일은 담당자님 몫으로 돌아옵니다.</p></article><article class="hq-card" style="background:#F6F5F1;border:1px solid #EEEDE8;border-radius:24px;padding:24px;display:flex;flex-direction:column"><div aria-hidden="true" style="height:176px;border-radius:16px;background:#fff;border:1px solid #EEEDE8;padding:16px 20px 18px;display:flex;flex-direction:column"><span style="font-size:12px;color:#8F8F8F">발행 목록뿐인 보고</span><div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:9px;min-height:0"><div style="display:flex;justify-content:space-between;align-items:center;font-size:13px;color:#8F8F8F;padding-bottom:8px;border-bottom:1px solid #F0EFEA"><span>11월 1주 · 글 2건</span><span>발행 완료</span></div><div style="display:flex;justify-content:space-between;align-items:center;font-size:13px;color:#8F8F8F;padding-bottom:8px;border-bottom:1px solid #F0EFEA"><span>11월 2주 · 글 2건</span><span>발행 완료</span></div><div style="display:flex;justify-content:space-between;align-items:center;font-size:13px"><span style="color:#3A3A3A;font-weight:600">왜 이 글이었는지</span><span style="color:#E95623;font-weight:600">없음</span></div></div></div><h3 style="margin:22px 0 0;font-size:21px;font-weight:700;letter-spacing:-0.03em;line-height:1.4">보고가 “올렸습니다”로 끝납니다</h3><p style="margin:10px 0 0;font-size:16px;line-height:1.75;color:#5C5C5C">노출 숫자만 있고 왜 이 콘텐츠였는지, 매출에는 어땠는지가 빠져 있어 내부 보고 자료는 담당자님이 다시 쓰게 됩니다.</p></article>
-</div>
-<p style="margin:80px 0 0;max-width:860px;font-size:clamp(23px,2.5vw,34px);line-height:1.5;font-weight:700;letter-spacing:-0.035em">저희는 브랜드 채널을 연습장으로 쓰지 않습니다. <span style="color:#8F8F8F;font-weight:400">2009년부터 직접 써왔고, 그 경험으로 300명 넘는 분들을 가르쳐 왔습니다.</span></p>
+<section class="bz2-s1" aria-label="대행사를 써도 일이 줄지 않는 이유">
+<div class="bz2-w">
+<h2 class="bz2-h1">대행사를 쓰는데도<br>일이 <em>줄지 않는</em> 이유<b>.</b></h2>
+<ol class="bz2-why">
+<li><div class="t"><span class="no">01</span><h3>맡은 사람이 자꾸 바뀝니다</h3><p>기록이 넘어오지 않아, 새 담당자가 올 때마다 브랜드와 지난 경과를 처음부터 다시 설명하게 됩니다.</p></div>
+<div class="v v1" aria-hidden="true"><p class="lb">담당자 교체</p><div class="swap"><span>A 담당</span><span>B 담당</span><span>다음 담당?</span></div><p class="ft">바뀔 때마다 브랜드 설명은 처음부터</p></div></li>
+<li><div class="t"><span class="no">02</span><h3>글이 우리 브랜드 같지 않습니다</h3><p>글마다 바뀌는 건당 작가가 나눠 쓰면 편마다 말투가 달라지고, 고쳐 쓰는 일은 담당자님 몫으로 돌아옵니다.</p></div>
+<div class="v v2" aria-hidden="true"><p class="lb">편마다 다른 말투</p><div class="tone"><p><i>작가 A</i>안녕하세요~ 오늘은요!</p><p><i>작가 B</i>당사는 금번 신제품을 출시하였으며</p><p><i>작가 C</i>이거 모르면 손해 ㅎㅎ</p></div></div></li>
+<li><div class="t"><span class="no">03</span><h3>보고가 “올렸습니다”로 끝납니다</h3><p>노출 숫자만 있고 왜 이 콘텐츠였는지, 매출에는 어땠는지가 빠져 있어 내부 보고 자료는 담당자님이 다시 쓰게 됩니다.</p></div>
+<div class="v v3" aria-hidden="true"><p class="lb">발행 목록뿐인 보고</p><div class="rep"><p>11월 1주 · 글 2건<i>발행 완료</i></p><p>11월 2주 · 글 2건<i>발행 완료</i></p><p class="no">왜 이 글이었는지<i>없음</i></p></div></div></li>
+</ol>
+<p class="bz2-say"><strong>저희는 브랜드 채널을 연습장으로 쓰지 않습니다.</strong> 2009년부터 직접 써왔고, 그 경험으로 300명 넘는 분들을 가르쳐 왔습니다.</p>
 </div>
 </section>
-
-<section aria-label="담당자님의 일과 크루스의 일" style="position:relative;z-index:2;margin-top:-48px;background:#F6F5F1;border-radius:48px 48px 0 0;padding:130px 32px 170px">
-<div style="max-width:1160px;margin:0 auto">
-<h2 style="margin:0;font-size:clamp(32px,3.8vw,52px);line-height:1.28;letter-spacing:-0.04em"><span style="display:block;font-weight:200;color:#8A8A8A">담당자님의 일과</span> <span style="display:block;font-weight:700">크루스의 일을 나눕니다<span class="hq-period" style="color:#E95623">.</span></span></h2>
-<p style="margin:24px 0 0;max-width:640px;font-size:17px;line-height:1.8;color:#5C5C5C">맡기는 것 자체가 또 하나의 일이 되지 않도록, 누가 무엇을 하는지부터 정하고 시작합니다.</p>
-<div class="bz-2col" style="margin-top:56px;display:grid;grid-template-columns:minmax(0,1fr) 44px minmax(0,1.35fr);align-items:stretch">
-<div style="background:#fff;border:1px solid #EEEDE8;border-radius:24px;padding:30px;display:flex;flex-direction:column">
-<p style="margin:0 0 18px;font-size:13px;color:#8F8F8F">담당자님</p>
-<ul style="list-style:none;margin:0;padding:0"><li style="padding:18px 0;border-top:1px solid #E6E5E0"><span style="display:block;font-size:18px;font-weight:700;letter-spacing:-0.03em">방향과 우선순위</span><span style="display:block;margin-top:4px;font-size:14px;color:#5C5C5C">이번 분기에 무엇이 중요한지</span></li><li style="padding:18px 0;border-top:1px solid #E6E5E0"><span style="display:block;font-size:18px;font-weight:700;letter-spacing:-0.03em">사실 확인과 컨펌</span><span style="display:block;margin-top:4px;font-size:14px;color:#5C5C5C">제품·서비스 정보가 맞는지</span></li><li style="padding:18px 0;border-top:1px solid #E6E5E0"><span style="display:block;font-size:18px;font-weight:700;letter-spacing:-0.03em">내부 보고</span><span style="display:block;margin-top:4px;font-size:14px;color:#5C5C5C">크루스가 드린 보고를 그대로</span></li></ul>
-<div style="margin-top:auto;padding-top:22px;border-top:1px solid #E6E5E0;display:flex;justify-content:space-between;align-items:baseline;gap:12px"><span style="font-size:14px;color:#5C5C5C">그 밖의 일은</span><span style="font-size:17px;font-weight:700;letter-spacing:-0.03em;color:#E95623">전담 크루가 맡습니다 →</span></div>
-</div>
-<div class="bz-vs" aria-hidden="true" style="display:flex;align-items:center;justify-content:center;color:#CFCDC6;font-size:18px">+</div>
-<div style="background:#0A0A0A;border-radius:24px;padding:30px 30px 14px;box-shadow:0 0 0 1px rgba(233,86,35,.55)">
-<p style="margin:0 0 18px;font-size:13px;color:#E95623;display:inline-flex;align-items:center;gap:8px"><span class="hq-live" style="width:6px;height:6px;border-radius:50%;background:#E95623"></span>크루스 전담 크루</p>
-<ul style="list-style:none;margin:0;padding:0"><li style="display:grid;grid-template-columns:34px minmax(0,1fr);gap:8px;padding:15px 0;border-top:1px solid #262626"><span style="font-size:12px;color:#E95623;font-weight:600;padding-top:4px">01</span><span><span style="display:block;font-size:17px;font-weight:700;letter-spacing:-0.03em;color:#fff">브랜드 가이드와 금지 표현 정리</span><span style="display:block;margin-top:3px;font-size:14px;color:#A3A3A3">착수 미팅에서 함께, 처음 한 번</span></span></li><li style="display:grid;grid-template-columns:34px minmax(0,1fr);gap:8px;padding:15px 0;border-top:1px solid #262626"><span style="font-size:12px;color:#E95623;font-weight:600;padding-top:4px">02</span><span><span style="display:block;font-size:17px;font-weight:700;letter-spacing:-0.03em;color:#fff">인터뷰와 기획</span><span style="display:block;margin-top:3px;font-size:14px;color:#A3A3A3">직접 듣고, 고객이 찾아오는 길을 보고, 무엇을 왜 만들지</span></span></li><li style="display:grid;grid-template-columns:34px minmax(0,1fr);gap:8px;padding:15px 0;border-top:1px solid #262626"><span style="font-size:12px;color:#E95623;font-weight:600;padding-top:4px">03</span><span><span style="display:block;font-size:17px;font-weight:700;letter-spacing:-0.03em;color:#fff">브랜드 콘텐츠 제작</span><span style="display:block;margin-top:3px;font-size:14px;color:#A3A3A3">블로그, SNS, 필요한 채널만 골라서</span></span></li><li style="display:grid;grid-template-columns:34px minmax(0,1fr);gap:8px;padding:15px 0;border-top:1px solid #262626"><span style="font-size:12px;color:#E95623;font-weight:600;padding-top:4px">04</span><span><span style="display:block;font-size:17px;font-weight:700;letter-spacing:-0.03em;color:#fff">게시 전 표현 검수</span><span style="display:block;margin-top:3px;font-size:14px;color:#A3A3A3">광고 규정이 있는 업종은 더 꼼꼼하게</span></span></li><li style="display:grid;grid-template-columns:34px minmax(0,1fr);gap:8px;padding:15px 0;border-top:1px solid #262626"><span style="font-size:12px;color:#E95623;font-weight:600;padding-top:4px">05</span><span><span style="display:block;font-size:17px;font-weight:700;letter-spacing:-0.03em;color:#fff">발행과 운영</span><span style="display:block;margin-top:3px;font-size:14px;color:#A3A3A3">브랜드 소유 계정에서, 발행 전에 먼저 보여드리고</span></span></li><li style="display:grid;grid-template-columns:34px minmax(0,1fr);gap:8px;padding:15px 0;border-top:1px solid #262626"><span style="font-size:12px;color:#E95623;font-weight:600;padding-top:4px">06</span><span><span style="display:block;font-size:17px;font-weight:700;letter-spacing:-0.03em;color:#fff">주간·월간 보고</span><span style="display:block;margin-top:3px;font-size:14px;color:#A3A3A3">콘텐츠마다 이유와 역할, 매출 변화까지 함께</span></span></li></ul>
-</div>
+<section class="bz2-s2" aria-label="담당자님의 일과 크루스의 일">
+<div class="bz2-w">
+<div class="bz2-h2"><h2>담당자님의 일과<br>크루스의 일을 나눕니다<b>.</b></h2><p>맡기는 것 자체가 또 하나의 일이 되지 않도록, 누가 무엇을 하는지부터 정하고 시작합니다.</p></div>
+<div class="bz2-split" role="img" aria-label="아홉 가지 일 가운데 여섯 가지는 크루스 전담 크루가 맡고, 담당자님께는 방향과 우선순위, 사실 확인과 컨펌, 내부 보고 세 가지가 남습니다.">
+<div class="hd"><p class="me">담당자님<b>9</b></p><p class="cw">크루스 전담 크루<b>0</b></p></div>
+<ol><li class="rw c"><div><b>브랜드 가이드와 금지 표현 정리</b><span>착수 미팅에서 함께, 처음 한 번</span></div></li><li class="rw m"><div><b>방향과 우선순위</b><span>이번 분기에 무엇이 중요한지</span></div></li><li class="rw c"><div><b>인터뷰와 기획</b><span>직접 듣고, 고객이 찾아오는 길을 보고, 무엇을 왜 만들지</span></div></li><li class="rw c"><div><b>브랜드 콘텐츠 제작</b><span>블로그, SNS, 필요한 채널만 골라서</span></div></li><li class="rw m"><div><b>사실 확인과 컨펌</b><span>제품·서비스 정보가 맞는지</span></div></li><li class="rw c"><div><b>게시 전 표현 검수</b><span>광고 규정이 있는 업종은 더 꼼꼼하게</span></div></li><li class="rw c"><div><b>발행과 운영</b><span>브랜드 소유 계정에서, 발행 전에 먼저 보여드리고</span></div></li><li class="rw m"><div><b>내부 보고</b><span>크루스가 드린 보고를 그대로</span></div></li><li class="rw c"><div><b>주간·월간 보고</b><span>콘텐츠마다 이유와 역할, 매출 변화까지 함께</span></div></li></ol>
 </div>
 </div>
 </section>
-
-<section aria-label="절차는 회사 방식에 맞추고 기준은 지킵니다" style="position:relative;z-index:3;margin-top:-48px;background:#0A0A0A;color:#fff;border-radius:48px 48px 0 0;padding:130px 32px 170px">
-<div style="max-width:1160px;margin:0 auto">
-<h2 style="margin:0;font-size:clamp(32px,3.8vw,52px);line-height:1.28;letter-spacing:-0.04em"><span style="display:block;font-weight:200;color:#8A8A8A">절차는 회사 방식에 맞추고,</span> <span style="display:block;font-weight:700">만드는 기준은 저희가 지킵니다<span class="hq-period" style="color:#E95623">.</span></span></h2>
-<p style="margin:24px 0 0;max-width:660px;font-size:17px;line-height:1.8;color:#A3A3A3">이미 정해진 일정과 컨펌 절차, 보고 양식이 있으실 겁니다. 저희가 그 안으로 들어갑니다. 바꾸지 않는 건 콘텐츠를 만드는 기준뿐입니다.</p>
-<div class="bz-fit" style="margin-top:56px;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:14px;align-items:stretch">
-<div style="border-radius:24px;background:#121212;border:1px solid #232323;padding:30px 30px 14px">
-<p style="margin:0 0 18px;font-size:13px;color:#8A8A8A">담당자님 회사에 맞춥니다</p>
-<ul style="list-style:none;margin:0;padding:0"><li style="padding:15px 0;border-top:1px solid #262626"><span style="display:block;font-size:17px;font-weight:700;letter-spacing:-0.03em;color:#fff">일정과 발행 주기</span><span style="display:block;margin-top:3px;font-size:14px;color:#A3A3A3">캠페인과 시즌 일정에 맞춰서</span></li><li style="padding:15px 0;border-top:1px solid #262626"><span style="display:block;font-size:17px;font-weight:700;letter-spacing:-0.03em;color:#fff">컨펌 라인과 결재 절차</span><span style="display:block;margin-top:3px;font-size:14px;color:#A3A3A3">누가 언제 보시는지 착수 미팅에서 정리</span></li><li style="padding:15px 0;border-top:1px solid #262626"><span style="display:block;font-size:17px;font-weight:700;letter-spacing:-0.03em;color:#fff">보고 양식과 주기</span><span style="display:block;margin-top:3px;font-size:14px;color:#A3A3A3">내부 보고에 그대로 쓰실 수 있게</span></li><li style="padding:15px 0;border-top:1px solid #262626"><span style="display:block;font-size:17px;font-weight:700;letter-spacing:-0.03em;color:#fff">과제 범위와 목표</span><span style="display:block;margin-top:3px;font-size:14px;color:#A3A3A3">정해진 과제가 있다면 거기서부터</span></li><li style="padding:15px 0;border-top:1px solid #262626"><span style="display:block;font-size:17px;font-weight:700;letter-spacing:-0.03em;color:#fff">브랜드 가이드와 기존 자료</span><span style="display:block;margin-top:3px;font-size:14px;color:#A3A3A3">먼저 받아 읽고, 빈 곳만 여쭙니다</span></li></ul>
+<section class="bz2-s3" aria-label="절차는 회사 방식에 맞추고 기준은 지킵니다">
+<div class="bz2-w">
+<h2 class="bz2-h3"><span>절차는 회사 방식에 맞추고,</span> 만드는 기준은 저희가 지킵니다<b>.</b></h2>
+<p class="bz2-lead dk">이미 정해진 일정과 컨펌 절차, 보고 양식이 있으실 겁니다. 저희가 그 안으로 들어갑니다. 바꾸지 않는 건 콘텐츠를 만드는 기준뿐입니다.</p>
+<div class="bz2-fit">
+<div class="flow"><p class="k">담당자님 회사에 맞춥니다</p><ul><li><b>일정과 발행 주기</b><span>캠페인과 시즌 일정에 맞춰서</span></li><li><b>컨펌 라인과 결재 절차</b><span>누가 언제 보시는지 착수 미팅에서 정리</span></li><li><b>보고 양식과 주기</b><span>내부 보고에 그대로 쓰실 수 있게</span></li><li><b>과제 범위와 목표</b><span>정해진 과제가 있다면 거기서부터</span></li><li><b>브랜드 가이드와 기존 자료</b><span>먼저 받아 읽고, 빈 곳만 여쭙니다</span></li></ul></div>
+<div class="fix"><div class="in"><p class="k">크루스가 지킵니다</p><ul><li><b>브랜드를 직접 듣고 시작합니다</b><span>다른 브랜드와 다른 진짜 이유는 대화에서 나옵니다</span></li><li><b>발행 전에 검수합니다</b><span>광고 규정에 걸릴 표현은 저희가 먼저 걸러냅니다</span></li><li><b>전담 크루 한 명이 맡습니다</b><span>부득이하게 담당이 바뀌더라도 기록을 그대로 넘깁니다</span></li><li><b>매출까지 보는 보고를 드립니다</b><span>콘텐츠마다 이유와 역할을 적어서</span></li></ul></div></div>
 </div>
-<div style="border-radius:24px;background:#fff;color:#0A0A0A;padding:30px 30px 14px;box-shadow:0 0 0 1px rgba(233,86,35,.55)">
-<p style="margin:0 0 18px;font-size:13px;color:#E95623;font-weight:600">크루스가 지킵니다</p>
-<ul style="list-style:none;margin:0;padding:0"><li style="padding:15px 0;border-top:1px solid #E6E5E0"><span style="display:block;font-size:17px;font-weight:700;letter-spacing:-0.03em">브랜드를 직접 듣고 시작합니다</span><span style="display:block;margin-top:3px;font-size:14px;color:#5C5C5C">다른 브랜드와 다른 진짜 이유는 대화에서 나옵니다</span></li><li style="padding:15px 0;border-top:1px solid #E6E5E0"><span style="display:block;font-size:17px;font-weight:700;letter-spacing:-0.03em">발행 전에 검수합니다</span><span style="display:block;margin-top:3px;font-size:14px;color:#5C5C5C">광고 규정에 걸릴 표현은 저희가 먼저 걸러냅니다</span></li><li style="padding:15px 0;border-top:1px solid #E6E5E0"><span style="display:block;font-size:17px;font-weight:700;letter-spacing:-0.03em">전담 크루 한 명이 맡습니다</span><span style="display:block;margin-top:3px;font-size:14px;color:#5C5C5C">부득이하게 담당이 바뀌더라도 기록을 그대로 넘깁니다</span></li><li style="padding:15px 0;border-top:1px solid #E6E5E0"><span style="display:block;font-size:17px;font-weight:700;letter-spacing:-0.03em">매출까지 보는 보고를 드립니다</span><span style="display:block;margin-top:3px;font-size:14px;color:#5C5C5C">콘텐츠마다 이유와 역할을 적어서</span></li></ul>
-</div>
-</div>
-<p style="margin:64px 0 0;font-size:13px;color:#8A8A8A">어디서 시작하든</p>
-<div class="bz-fit" style="margin-top:14px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px">
-<div style="border-radius:20px;border:1px solid #232323;padding:24px 26px"><p style="margin:0;font-size:13px;color:#E95623;font-weight:600">과제가 이미 정해져 있다면</p><p style="margin:10px 0 0;font-size:21px;font-weight:700;letter-spacing:-0.03em;color:#fff">제작부터 들어갑니다</p><p style="margin:8px 0 0;font-size:15px;line-height:1.75;color:#A3A3A3">브랜드 가이드와 기존 자료를 먼저 받고, 정해진 일정에 맞춰 바로 만듭니다.</p></div><div style="border-radius:20px;border:1px solid #232323;padding:24px 26px"><p style="margin:0;font-size:13px;color:#E95623;font-weight:600">방향부터 잡아야 한다면</p><p style="margin:10px 0 0;font-size:21px;font-weight:700;letter-spacing:-0.03em;color:#fff">진단부터 시작합니다</p><p style="margin:8px 0 0;font-size:15px;line-height:1.75;color:#A3A3A3">운영 중인 채널에서 살릴 것과 멈출 것을 나누고, 고객이 찾아오는 길을 보고 필요한 콘텐츠만 고릅니다.</p></div>
-</div>
-<p style="margin:18px 0 0;font-size:15px;line-height:1.75;color:#A3A3A3">어느 쪽이든 첫 자리는 착수 미팅(화상·방문)입니다. 일정과 컨펌 절차부터 맞추고 시작합니다.</p>
-<div class="bz-ai" style="margin-top:72px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:12px">
-<div style="border-radius:20px;background:#121212;border:1px solid #232323;padding:24px 26px"><p style="margin:0;font-size:13px;color:#8A8A8A">AI가 맡는 일</p><p style="margin:10px 0 0;font-size:18px;font-weight:600;letter-spacing:-0.03em;line-height:1.5;color:#C9C9C9">자료 정리와 초안</p></div>
-<div style="border-radius:20px;background:#fff;color:#0A0A0A;padding:24px 26px"><p style="margin:0;font-size:13px;color:#E95623;font-weight:600">전담 크루가 맡는 일</p><p style="margin:10px 0 0;font-size:18px;font-weight:700;letter-spacing:-0.03em;line-height:1.5">무엇을, 어떤 말투로 전할지. 그리고 게시 전 마지막 검수.</p></div>
+<div class="bz2-start">
+<p class="k">어디서 시작하든</p>
+<div class="two"><div><p class="c">과제가 이미 정해져 있다면</p><h3>제작부터 들어갑니다</h3><p>브랜드 가이드와 기존 자료를 먼저 받고, 정해진 일정에 맞춰 바로 만듭니다.</p></div><div><p class="c">방향부터 잡아야 한다면</p><h3>진단부터 시작합니다</h3><p>운영 중인 채널에서 살릴 것과 멈출 것을 나누고, 고객이 찾아오는 길을 보고 필요한 콘텐츠만 고릅니다.</p></div></div>
+<p class="nt">어느 쪽이든 첫 자리는 착수 미팅(화상·방문)입니다. 일정과 컨펌 절차부터 맞추고 시작합니다.</p>
+<p class="ai"><span><i>AI가 맡는 일</i>자료 정리와 초안</span><span><i>전담 크루가 맡는 일</i>무엇을, 어떤 말투로 전할지. 그리고 게시 전 마지막 검수.</span></p>
 </div>
 </div>
 </section>
-
-<section aria-label="매출까지 보는 보고" style="position:relative;z-index:4;margin-top:-48px;background:#fff;border-radius:48px 48px 0 0;padding:130px 32px 170px">
-<div style="max-width:1160px;margin:0 auto">
-<h2 style="margin:0;font-size:clamp(32px,3.8vw,52px);line-height:1.28;letter-spacing:-0.04em"><span style="display:block;font-weight:200;color:#8A8A8A">“올렸습니다”가 아니라,</span> <span style="display:block;font-weight:700">매출까지 보는 보고를 드립니다<span class="hq-period" style="color:#E95623">.</span></span></h2>
-<p style="margin:24px 0 0;max-width:640px;font-size:17px;line-height:1.8;color:#5C5C5C">노출과 유입이 잘 나와도 그건 중간 성적표일 뿐입니다. 콘텐츠마다 왜 만들었고 어떤 역할을 맡는지 적고, 현장 반응과 매출 변화를 담당자님과 함께 보며 다음 달 전략을 고칩니다. 내부 보고에 그대로 쓰실 수 있게요.</p>
-<div style="margin-top:48px;border-radius:28px;background:#0A0A0A;color:#fff;padding:30px 32px 26px;box-shadow:0 0 0 1px rgba(233,86,35,.55)">
-<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;padding-bottom:16px;border-bottom:1px solid #262626"><span style="font-size:16px;font-weight:700;letter-spacing:-0.03em">Crewth Studio<span style="color:#E95623">.</span> 월간 보고</span><span style="font-size:12px;color:#8A8A8A">OO브랜드 (예시)</span></div>
-<div class="bz-rhead" style="display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1.3fr) minmax(0,1fr);gap:16px;padding:14px 0 4px;font-size:12px;color:#8A8A8A"><span>콘텐츠</span><span>왜 만들었나</span><span>맡은 역할</span></div>
-<div class="bz-rrow" style="display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1.3fr) minmax(0,1fr);gap:16px;padding:16px 0;font-size:15px;line-height:1.6"><span style="color:#fff;font-weight:600"><span class="bz-ml">콘텐츠</span>처음 쓰는 분을 위한 선택 가이드</span><span style="color:#C9C9C9"><span class="bz-ml">왜 만들었나</span>구매 직전에 비교해 보는 검색이 많아서</span><span style="color:#E95623;font-weight:600"><span class="bz-ml">맡은 역할</span>고르는 이유를 줌</span></div><div class="bz-rrow" style="display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1.3fr) minmax(0,1fr);gap:16px;padding:16px 0;border-top:1px solid #262626;font-size:15px;line-height:1.6"><span style="color:#fff;font-weight:600"><span class="bz-ml">콘텐츠</span>자주 받는 질문을 모은 글</span><span style="color:#C9C9C9"><span class="bz-ml">왜 만들었나</span>같은 질문이 반복해서 들어와서</span><span style="color:#E95623;font-weight:600"><span class="bz-ml">맡은 역할</span>망설임을 줄임</span></div><div class="bz-rrow" style="display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1.3fr) minmax(0,1fr);gap:16px;padding:16px 0;border-top:1px solid #262626;font-size:15px;line-height:1.6"><span style="color:#fff;font-weight:600"><span class="bz-ml">콘텐츠</span>만드는 사람들 인터뷰</span><span style="color:#C9C9C9"><span class="bz-ml">왜 만들었나</span>브랜드가 낯선 분께 사람을 먼저 보여드리려고</span><span style="color:#E95623;font-weight:600"><span class="bz-ml">맡은 역할</span>믿음을 쌓음</span></div>
-<div style="display:flex;flex-wrap:wrap;gap:8px;padding-top:18px;border-top:1px solid #262626"><span style="padding:7px 12px;border-radius:999px;border:1px solid #2A2A2A;font-size:13px;color:#C9C9C9">발행한 콘텐츠 링크</span><span style="padding:7px 12px;border-radius:999px;border:1px solid #2A2A2A;font-size:13px;color:#C9C9C9">관리 키워드 노출 (PC·모바일)</span><span style="padding:7px 12px;border-radius:999px;border:1px solid #2A2A2A;font-size:13px;color:#C9C9C9">다음 달 기획 공유</span><span style="margin-left:auto;display:inline-flex;align-items:center;gap:10px;font-size:13px;color:#8A8A8A">노출 · 유입 · 검색량<span aria-hidden="true">→</span><b style="color:#E95623;font-size:15px">끝까지 보는 숫자, 매출</b></span></div>
+<section class="bz2-s4" aria-label="매출까지 보는 보고">
+<div class="bz2-w">
+<h2 class="bz2-h4"><span class="chip">“올렸습니다”</span>가 아니라,<br>매출까지 보는 보고를 드립니다<b>.</b></h2>
+<p class="bz2-lead c">노출과 유입이 잘 나와도 그건 중간 성적표일 뿐입니다. 콘텐츠마다 왜 만들었고 어떤 역할을 맡는지 적고, 현장 반응과 매출 변화를 담당자님과 함께 보며 다음 달 전략을 고칩니다. 내부 보고에 그대로 쓰실 수 있게요.</p>
+<div class="bz2-rep">
+<p class="ph"><span>Crewth Studio<b>.</b> 월간 보고</span><span>OO브랜드 (예시)</span></p>
+<p class="th" aria-hidden="true"><span>콘텐츠</span><span>왜 만들었나</span><span>맡은 역할</span></p>
+<ul><li><span class="a">처음 쓰는 분을 위한 선택 가이드<i>발행 완료</i></span><span class="b">구매 직전에 비교해 보는 검색이 많아서</span><span class="c">고르는 이유를 줌</span></li><li><span class="a">자주 받는 질문을 모은 글<i>발행 완료</i></span><span class="b">같은 질문이 반복해서 들어와서</span><span class="c">망설임을 줄임</span></li><li><span class="a">만드는 사람들 인터뷰<i>발행 완료</i></span><span class="b">브랜드가 낯선 분께 사람을 먼저 보여드리려고</span><span class="c">믿음을 쌓음</span></li></ul>
+<p class="pf"><span class="tags"><i>발행한 콘텐츠 링크</i><i>관리 키워드 노출 (PC·모바일)</i><i>다음 달 기획 공유</i></span><span class="to">노출 · 유입 · 검색량 <em>→</em> <b>끝까지 보는 숫자, 매출</b></span></p>
 </div>
-<p style="margin:72px 0 0;font-size:14px;color:#8F8F8F">먼저 맡기신 분들의 말</p>
-<div style="margin-top:16px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px"><figure style="margin:0;background:#F6F5F1;border:1px solid #EEEDE8;border-radius:24px;padding:28px"><blockquote style="margin:0;font-size:clamp(18px,1.8vw,22px);line-height:1.6;font-weight:600;letter-spacing:-0.03em">“다른 곳은 글이 뻔했는데, 여긴 저보다 저희 업장을 더 잘 아는 것 같습니다.”</blockquote><figcaption style="margin-top:18px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:14px;color:#5C5C5C"><span>패션 의류 브랜드 대표님</span><span style="color:#E95623;font-weight:600">함께한 지 6개월</span></figcaption></figure><figure style="margin:0;background:#F6F5F1;border:1px solid #EEEDE8;border-radius:24px;padding:28px"><blockquote style="margin:0;font-size:clamp(18px,1.8vw,22px);line-height:1.6;font-weight:600;letter-spacing:-0.03em">“첫 달에 바로 문의가 2배씩 오더니, 매출이 30%나 뛰었어요. 너무 신기합니다.”</blockquote><figcaption style="margin-top:18px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:14px;color:#5C5C5C"><span>시설 설비 업체 대표님</span><span style="color:#E95623;font-weight:600">함께한 지 10개월</span></figcaption></figure></div>
-<p style="margin:20px 0 0;font-size:15px"><a href="/#review" style="color:#0A0A0A;font-weight:600;border-bottom:1px solid #0A0A0A;padding-bottom:1px">다른 고객 반응 보기 →</a></p>
-</div>
-</section>
-
-<section aria-label="계약 전에 확인하실 것" style="position:relative;z-index:5;margin-top:-48px;background:#F6F5F1;border-radius:48px 48px 0 0;padding:130px 32px 170px">
-<div style="max-width:1160px;margin:0 auto">
-<h2 style="margin:0;font-size:clamp(32px,3.8vw,52px);line-height:1.28;letter-spacing:-0.04em"><span style="display:block;font-weight:200;color:#8A8A8A">내부 보고에 필요한 것부터</span> <span style="display:block;font-weight:700">먼저 드립니다<span class="hq-period" style="color:#E95623">.</span></span></h2>
-<p style="margin:24px 0 0;max-width:640px;font-size:17px;line-height:1.8;color:#5C5C5C">대행사를 정하려면 담당자님도 안에서 설명하셔야 합니다. 그때 필요한 것들을 미리 적어 둡니다.</p>
-<div style="margin-top:48px;border-radius:24px;background:#0A0A0A;color:#fff;padding:30px 32px;box-shadow:0 0 0 1px rgba(233,86,35,.55)">
-<p style="margin:0 0 16px;font-size:13px;color:#E95623;font-weight:600">전담 크루가 지키는 세 가지</p>
-<div style="display:flex;flex-wrap:wrap;gap:8px"><span style="display:inline-flex;align-items:baseline;gap:8px;padding:10px 16px;border-radius:999px;border:1px solid #2A2A2A;font-size:15px;font-weight:600"><span style="font-size:12px;color:#E95623">01</span>업종을 아는 사람이 직접</span><span style="display:inline-flex;align-items:baseline;gap:8px;padding:10px 16px;border-radius:999px;border:1px solid #2A2A2A;font-size:15px;font-weight:600"><span style="font-size:12px;color:#E95623">02</span>다시 설명하실 일 없게</span><span style="display:inline-flex;align-items:baseline;gap:8px;padding:10px 16px;border-radius:999px;border:1px solid #2A2A2A;font-size:15px;font-weight:600"><span style="font-size:12px;color:#E95623">03</span>광고 규정 검수까지</span></div>
-<p style="margin:22px 0 0;font-size:clamp(19px,2vw,24px);line-height:1.55;font-weight:700;letter-spacing:-0.03em">이 세 가지가 지켜지지 않았다면, 진행 이후에도 <span style="color:#E95623">100% 환불</span> 도와드리겠습니다.</p>
-<p style="margin:8px 0 0;font-size:14px;color:#8A8A8A">자세한 조건은 계약서에 적어 드립니다.</p>
-</div>
-<div style="margin-top:14px;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px">
-<div style="background:#fff;border:1px solid #EEEDE8;border-radius:20px;padding:22px 22px 24px"><span aria-hidden="true" style="display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:#E95623"><svg width="12" height="12" viewBox="0 0 12 12"><path d="M2.5 6.2l2.3 2.3 4.7-5" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 style="margin:16px 0 0;font-size:18px;font-weight:700;letter-spacing:-0.03em">회사소개서</h3><p style="margin:8px 0 0;font-size:15px;line-height:1.7;color:#5C5C5C">내부 보고에 그대로 쓰실 수 있습니다. <a href="/assets/crewth-studio-intro.pdf" download style="color:#0A0A0A;font-weight:600;border-bottom:1px solid #0A0A0A">PDF 내려받기 ↓</a></p></div><div style="background:#fff;border:1px solid #EEEDE8;border-radius:20px;padding:22px 22px 24px"><span aria-hidden="true" style="display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:#E95623"><svg width="12" height="12" viewBox="0 0 12 12"><path d="M2.5 6.2l2.3 2.3 4.7-5" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 style="margin:16px 0 0;font-size:18px;font-weight:700;letter-spacing:-0.03em">비밀유지계약(NDA)</h3><p style="margin:8px 0 0;font-size:15px;line-height:1.7;color:#5C5C5C">요청하시면 자료를 받기 전에 먼저 체결합니다.</p></div><div style="background:#fff;border:1px solid #EEEDE8;border-radius:20px;padding:22px 22px 24px"><span aria-hidden="true" style="display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:#E95623"><svg width="12" height="12" viewBox="0 0 12 12"><path d="M2.5 6.2l2.3 2.3 4.7-5" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 style="margin:16px 0 0;font-size:18px;font-weight:700;letter-spacing:-0.03em">계약과 결재 절차</h3><p style="margin:8px 0 0;font-size:15px;line-height:1.7;color:#5C5C5C">회사 계약서 양식과 견적서, 결제 일정에 맞춥니다. 세금계산서를 발행해 드립니다.</p></div><div style="background:#fff;border:1px solid #EEEDE8;border-radius:20px;padding:22px 22px 24px"><span aria-hidden="true" style="display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:#E95623"><svg width="12" height="12" viewBox="0 0 12 12"><path d="M2.5 6.2l2.3 2.3 4.7-5" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 style="margin:16px 0 0;font-size:18px;font-weight:700;letter-spacing:-0.03em">콘텐츠와 계정의 소유</h3><p style="margin:8px 0 0;font-size:15px;line-height:1.7;color:#5C5C5C">콘텐츠와 계정은 처음부터 브랜드의 것입니다. 계약이 끝나도 그대로 남습니다.</p></div><div style="background:#fff;border:1px solid #EEEDE8;border-radius:20px;padding:22px 22px 24px"><span aria-hidden="true" style="display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:#E95623"><svg width="12" height="12" viewBox="0 0 12 12"><path d="M2.5 6.2l2.3 2.3 4.7-5" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 style="margin:16px 0 0;font-size:18px;font-weight:700;letter-spacing:-0.03em">첫 계약은 3개월부터</h3><p style="margin:8px 0 0;font-size:15px;line-height:1.7;color:#5C5C5C">콘텐츠는 쌓이면서 힘이 붙습니다. 그 기간 동안 반응과 변화를 함께 확인합니다.</p></div><div style="background:#fff;border:1px solid #EEEDE8;border-radius:20px;padding:22px 22px 24px"><span aria-hidden="true" style="display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:#E95623"><svg width="12" height="12" viewBox="0 0 12 12"><path d="M2.5 6.2l2.3 2.3 4.7-5" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 style="margin:16px 0 0;font-size:18px;font-weight:700;letter-spacing:-0.03em">나중에 붙는 비용 없음</h3><p style="margin:8px 0 0;font-size:15px;line-height:1.7;color:#5C5C5C">계약 전에 문서로 합의한 금액 외에 추가로 청구하지 않습니다.</p></div><div style="background:#fff;border:1px solid #EEEDE8;border-radius:20px;padding:22px 22px 24px"><span aria-hidden="true" style="display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:#E95623"><svg width="12" height="12" viewBox="0 0 12 12"><path d="M2.5 6.2l2.3 2.3 4.7-5" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 style="margin:16px 0 0;font-size:18px;font-weight:700;letter-spacing:-0.03em">영업일 2일 안에 회신</h3><p style="margin:8px 0 0;font-size:15px;line-height:1.7;color:#5C5C5C">상황을 남겨주시면 브랜드 전용 기획·견적 페이지로 보내드립니다.</p></div><div style="background:#fff;border:1px solid #EEEDE8;border-radius:20px;padding:22px 22px 24px"><span aria-hidden="true" style="display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:#E95623"><svg width="12" height="12" viewBox="0 0 12 12"><path d="M2.5 6.2l2.3 2.3 4.7-5" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 style="margin:16px 0 0;font-size:18px;font-weight:700;letter-spacing:-0.03em">금액이 정해지는 기준 공개</h3><p style="margin:8px 0 0;font-size:15px;line-height:1.7;color:#5C5C5C">맡는 채널, 콘텐츠의 양과 깊이, 맡는 구간으로 정해집니다. <a href="/guide/" style="color:#0A0A0A;font-weight:600;border-bottom:1px solid #0A0A0A">견적 가이드 →</a></p></div>
-</div>
-<a href="/#contact" class="hq-card" style="margin-top:14px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;background:#fff;border:1px solid #EEEDE8;border-radius:20px;padding:22px 24px;color:#0A0A0A"><span><span style="display:block;font-size:18px;font-weight:700;letter-spacing:-0.03em">사내 교육과 단기 프로젝트도 따로 맡습니다</span><span style="display:block;margin-top:6px;font-size:15px;color:#5C5C5C">블로그·콘텐츠 마케팅 교육이나 단기 프로젝트도 대상과 일정에 맞춰 따로 구성해 드려요.</span></span><span style="font-size:15px;font-weight:600;border-bottom:1px solid #0A0A0A;padding-bottom:1px">교육·프로젝트 문의 →</span></a>
+<div class="bz2-voices"><p class="k">먼저 맡기신 분들의 말</p>
+<p class="q">다른 곳은 글이 뻔했는데, 여긴 저보다 저희 업장을 더 잘 아는 것 같습니다.<span>패션 의류 브랜드 대표님 · 함께한 지 6개월</span></p>
+<p class="q">첫 달에 바로 문의가 2배씩 오더니, 매출이 30%나 뛰었어요. 너무 신기합니다.<span>시설 설비 업체 대표님 · 함께한 지 10개월</span></p>
+<a href="/#review">다른 고객 반응 보기 →</a></div>
 </div>
 </section>
-
+<section class="bz2-s5" aria-label="계약 전에 확인하실 것">
+<div class="bz2-w bz2-s5w">
+<div class="l"><h2 class="bz2-h5"><span>내부 보고에 필요한 것부터</span> 먼저 드립니다<b>.</b></h2>
+<p class="bz2-lead">대행사를 정하려면 담당자님도 안에서 설명하셔야 합니다. 그때 필요한 것들을 미리 적어 둡니다.</p>
+<div class="bz2-three"><p class="k">전담 크루가 지키는 세 가지</p><ol><li>업종을 아는 사람이 직접</li><li>다시 설명하실 일 없게</li><li>광고 규정 검수까지</li></ol>
+<p class="rf">이 세 가지가 지켜지지 않았다면, 진행 이후에도 <mark>100% 환불</mark> 도와드리겠습니다.<span>자세한 조건은 계약서에 적어 드립니다.</span></p></div></div>
+<ul class="bz2-ck"><li><i aria-hidden="true"></i><div><b>회사소개서</b><span>내부 보고에 그대로 쓰실 수 있습니다. <a href="/assets/crewth-studio-intro.pdf" download>PDF 내려받기 ↓</a></span></div></li><li><i aria-hidden="true"></i><div><b>비밀유지계약(NDA)</b><span>요청하시면 자료를 받기 전에 먼저 체결합니다.</span></div></li><li><i aria-hidden="true"></i><div><b>계약과 결재 절차</b><span>회사 계약서 양식과 견적서, 결제 일정에 맞춥니다. 세금계산서를 발행해 드립니다.</span></div></li><li><i aria-hidden="true"></i><div><b>콘텐츠와 계정의 소유</b><span>콘텐츠와 계정은 처음부터 브랜드의 것입니다. 계약이 끝나도 그대로 남습니다.</span></div></li><li><i aria-hidden="true"></i><div><b>첫 계약은 3개월부터</b><span>콘텐츠는 쌓이면서 힘이 붙습니다. 그 기간 동안 반응과 변화를 함께 확인합니다.</span></div></li><li><i aria-hidden="true"></i><div><b>나중에 붙는 비용 없음</b><span>계약 전에 문서로 합의한 금액 외에 추가로 청구하지 않습니다.</span></div></li><li><i aria-hidden="true"></i><div><b>영업일 2일 안에 회신</b><span>상황을 남겨주시면 브랜드 전용 기획·견적 페이지로 보내드립니다.</span></div></li><li><i aria-hidden="true"></i><div><b>금액이 정해지는 기준 공개</b><span>맡는 채널, 콘텐츠의 양과 깊이, 맡는 구간으로 정해집니다. <a href="/guide/">견적 가이드 →</a></span></div></li></ul>
+</div>
+<div class="bz2-w"><a href="/#contact" class="bz2-edu"><span><b>사내 교육과 단기 프로젝트도 따로 맡습니다</b>블로그·콘텐츠 마케팅 교육이나 단기 프로젝트도 대상과 일정에 맞춰 따로 구성해 드려요.</span><em>교육·프로젝트 문의 →</em></a></div>
+</section>
 <section aria-label="자주 묻는 질문" style="position:relative;z-index:6;margin-top:-48px;background:#fff;border-radius:48px 48px 0 0;padding:130px 32px 170px">
 <div style="max-width:920px;margin:0 auto">
-<h2 style="margin:0 0 48px;font-size:clamp(32px,3.8vw,52px);line-height:1.28;letter-spacing:-0.04em"><span style="display:block;font-weight:200;color:#8A8A8A">담당자님들이</span> <span style="display:block;font-weight:700">자주 물으시는 것<span class="hq-period" style="color:#E95623">.</span></span></h2>
+<h2 class="bz2-fh"><span>담당자님들이</span> 자주 물으시는 것<b>.</b></h2>
 <div style="border-bottom:1px solid #E0DFDA"><details class="md-faq" style="border-top:1px solid #E0DFDA" open>
 <summary style="display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 4px;cursor:pointer;font-size:18px;font-weight:600;letter-spacing:-0.02em;list-style:none">맡기면 정말 매출이 늘까요?<span class="md-plus" aria-hidden="true" style="flex-shrink:0;font-size:22px;font-weight:300;color:#8F8F8F;transition:transform .3s ease">+</span></summary>
 <p style="margin:0;padding:0 4px 26px;font-size:16px;line-height:1.8;color:#5C5C5C;max-width:760px">숫자를 미리 장담하지는 않습니다. 대신 노출·유입 같은 중간 숫자에서 멈추지 않고, 담당자님과 현장 반응·매출 변화를 함께 보며 매출로 이어지지 않는 곳을 고쳐 나갑니다.</p>
@@ -329,7 +499,7 @@ footer{padding-bottom:72px!important}
 </details><details class="md-faq" style="border-top:1px solid #E0DFDA">
 <summary style="display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 4px;cursor:pointer;font-size:18px;font-weight:600;letter-spacing:-0.02em;list-style:none">브랜드 가이드와 금지 표현이 있는데 반영되나요?<span class="md-plus" aria-hidden="true" style="flex-shrink:0;font-size:22px;font-weight:300;color:#8F8F8F;transition:transform .3s ease">+</span></summary>
 <p style="margin:0;padding:0 4px 26px;font-size:16px;line-height:1.8;color:#5C5C5C;max-width:760px">착수 미팅에서 브랜드 가이드와 쓰지 않는 표현을 함께 정리하고 시작합니다. 정리한 내용은 기록으로 남겨, 담당이 바뀌더라도 다시 설명하실 일이 없게 합니다.</p>
-</details><details class="md-faq" style="border-top:1px solid #E0DFDA">
+</details><div class="bz2-more" hidden><details class="md-faq" style="border-top:1px solid #E0DFDA">
 <summary style="display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 4px;cursor:pointer;font-size:18px;font-weight:600;letter-spacing:-0.02em;list-style:none">컨펌은 어떻게 진행하나요?<span class="md-plus" aria-hidden="true" style="flex-shrink:0;font-size:22px;font-weight:300;color:#8F8F8F;transition:transform .3s ease">+</span></summary>
 <p style="margin:0;padding:0 4px 26px;font-size:16px;line-height:1.8;color:#5C5C5C;max-width:760px">컨펌 단계와 일정은 착수 미팅에서 회사 내부 절차에 맞춰 정합니다. 모든 콘텐츠는 발행 전에 담당자님께 먼저 보여드리고, 광고 규정에 걸릴 수 있는 표현은 그 전에 저희가 먼저 걸러냅니다.</p>
 </details><details class="md-faq" style="border-top:1px solid #E0DFDA">
@@ -341,7 +511,7 @@ footer{padding-bottom:72px!important}
 </details><details class="md-faq" style="border-top:1px solid #E0DFDA">
 <summary style="display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 4px;cursor:pointer;font-size:18px;font-weight:600;letter-spacing:-0.02em;list-style:none">비밀유지계약이나 우리 회사 계약서 양식으로 진행할 수 있나요?<span class="md-plus" aria-hidden="true" style="flex-shrink:0;font-size:22px;font-weight:300;color:#8F8F8F;transition:transform .3s ease">+</span></summary>
 <p style="margin:0;padding:0 4px 26px;font-size:16px;line-height:1.8;color:#5C5C5C;max-width:760px">네. 요청하시면 자료를 받기 전에 비밀유지계약(NDA)을 먼저 체결하고, 계약서 양식과 견적서, 결제 일정은 회사 절차에 맞춥니다. 세금계산서를 발행해 드립니다.</p>
-</details></div>
+</details></div></div><button type="button" class="bz2-moreb">질문 더 보기 <span>(4)</span></button>
 <p style="margin:28px 0 0;font-size:15px;line-height:1.7;color:#5C5C5C">병원·의원이라면 <a href="/medical/" style="color:#0A0A0A;font-weight:600;border-bottom:1px solid #0A0A0A;padding-bottom:1px">병원·의원 마케팅 안내</a>를 보세요.</p>
 </div>
 </section>
@@ -398,6 +568,38 @@ footer{padding-bottom:72px!important}
     else track('cta_click', { cta_location: where });
   });
 })();
+</script>
+<script>
+/* 기업 v2 — 일이 나뉘는 스크롤, 채워지는 보고서, 체크되는 확인 목록, FAQ 더 보기 */
+(function () {
+  var doc = document, $ = function (q, r) { return (r || doc).querySelector(q); }, $$ = function (q, r) { return [].slice.call((r || doc).querySelectorAll(q)); };
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var seen = function (els, fn, opt) {
+    if (!('IntersectionObserver' in window) || reduce) { els.forEach(fn); return; }
+    var o = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { o.unobserve(e.target); fn(e.target); } }); }, opt || { threshold: .2, rootMargin: '0px 0px -8% 0px' });
+    els.forEach(function (el) { o.observe(el); });
+  };
+  var rv = $$('.bz2-h1, .bz2-why li, .bz2-say, .bz2-h2, .bz2-h3, .bz2-s3 .bz2-lead, .bz2-start, .bz2-h4, .bz2-s4 .bz2-lead, .bz2-rep, .bz2-voices .q, .bz2-s5w .l, .bz2-edu, .bz2-fh');
+  if (!reduce) rv.forEach(function (el) { el.classList.add('bz2-rv'); });
+  seen(rv, function (el) { el.classList.add('in'); });
+  seen($$('.bz2-rep li, .bz2-ck li'), function (el) { el.classList.add('in'); }, { threshold: .7, rootMargin: '0px 0px -12% 0px' });
+  var mb = $('.bz2-moreb'), more = $('.bz2-more'); if (mb && more) mb.addEventListener('click', function () { more.hidden = false; mb.remove(); });
+
+  /* 아홉 가지 일: 화면 가운데를 지나면 크루스 몫은 오른쪽으로 건너가고, 담당자님 몫은 제자리에 남는다 */
+  var sp = $('.bz2-split'); if (!sp) return;
+  var rows = $$('.rw', sp), me = $('.hd .me b', sp), cw = $('.hd .cw b', sp), tick = false;
+  function frame() {
+    tick = false; var h = window.innerHeight || doc.documentElement.clientHeight, gone = 0;
+    rows.forEach(function (r) {
+      var pass = reduce || r.getBoundingClientRect().top < h * 0.62;
+      if (r.classList.contains('c')) { r.classList.toggle('go', pass); if (pass) gone++; } else r.classList.toggle('stay', pass);
+    });
+    me.textContent = rows.length - gone; cw.textContent = gone;
+  }
+  window.addEventListener('scroll', function () { if (!tick) { tick = true; requestAnimationFrame(frame); } }, { passive: true });
+  window.addEventListener('resize', frame); frame();
+})();
+
 </script>
 </body>
 </html>
