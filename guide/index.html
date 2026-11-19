@@ -256,23 +256,23 @@ section[class*="gd2-"]{word-break:keep-all;overflow-wrap:break-word}
 .gd2-sh b{color:#E95623}
 .gd2-sl{margin:24px auto 0;max-width:620px;text-align:center;font-size:17px;line-height:1.85;color:#5C5C5C}
 .gd2-sl strong{color:#0A0A0A}
-.gd2-chart{margin:72px auto 0;max-width:900px;border-radius:32px;background:#fff;padding:36px 40px 26px}
-.gd2-chart .lg{display:flex;flex-wrap:wrap;gap:8px 24px;font-size:14px;color:#5C5C5C}
+.gd2-chart{margin:64px auto 0;max-width:760px;padding:0}
+.gd2-chart .lg{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 28px;font-size:13px;color:#8F8F8F}
 .gd2-chart .lg span{display:inline-flex;align-items:center;gap:8px}
-.gd2-chart .lg i{display:inline-block;width:14px;height:14px;border-radius:4px}
-.gd2-chart .lg .ad{background:#CFCDC6}.gd2-chart .lg .cb{background:#E95623}
-.gd2-chart .mos{position:relative;margin-top:30px;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px;align-items:end;height:280px;border-bottom:1.5px solid #0A0A0A}
+.gd2-chart .lg i{display:inline-block;width:10px;height:10px;border-radius:50%}
+.gd2-chart .lg .ad{background:none;border:1.5px solid #BDBCB6}.gd2-chart .lg .cb{background:#E95623;height:10px;opacity:1;transform:none}
+.gd2-chart .mos{position:relative;margin-top:40px;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:0;align-items:end;height:200px;border-bottom:1px solid #DEDDD8}
 .gd2-chart .mo{position:relative;height:100%;display:flex;flex-direction:column;justify-content:flex-end}
-.gd2-chart .col{display:flex;align-items:flex-end;justify-content:center;gap:6px;height:100%}
-.gd2-chart .col>i.ad{width:30%;height:34%;border-radius:6px 6px 0 0;background:#CFCDC6;transform:scaleY(0);transform-origin:bottom;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
-.gd2-chart .col>i.ad.off{background:repeating-linear-gradient(-45deg,#E6E5E0 0 4px,transparent 4px 8px);height:4px}
-.gd2-chart .cs{width:46%;display:flex;flex-direction:column-reverse;gap:4px}
-.gd2-chart .cb{display:block;height:34px;border-radius:6px;background:#E95623;opacity:0;transform:translateY(-40px)}
-.gd2-chart .ml{position:absolute;left:0;right:0;bottom:-30px;text-align:center;font-size:13px;color:#8F8F8F}
-.gd2-chart .stop{position:absolute;left:50%;top:0;bottom:0;border-left:1.5px dashed #BDBCB6;padding:0 0 0 8px;font-size:12px;font-weight:700;color:#8F8F8F;margin-left:-8px}
-.gd2-chart .nt{margin:50px 0 0;font-size:12px;color:#BDBCB6;text-align:right}
+.gd2-chart .col{display:flex;align-items:flex-end;justify-content:center;gap:10px;height:100%}
+.gd2-chart .col>i.ad{width:14px;height:72px;border-radius:3px 3px 0 0;border:1.5px solid #BDBCB6;border-bottom:0;background:none;transform:scaleY(0);transform-origin:bottom;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.gd2-chart .col>i.ad.off{height:0;border:0;border-top:1.5px dashed #CFCDC6;width:16px}
+.gd2-chart .cs{width:14px;display:flex;flex-direction:column-reverse;gap:3px}
+.gd2-chart .cb{display:block;height:5px;border-radius:1.5px;background:#E95623;opacity:0;transform:translateY(-14px)}
+.gd2-chart .ml{position:absolute;left:0;right:0;bottom:-28px;text-align:center;font-size:12px;color:#A3A3A3}
+.gd2-chart .stop{position:absolute;left:50%;top:-6px;bottom:0;border-left:1px dashed #CFCDC6;padding:0 0 0 8px;font-size:11px;color:#A3A3A3}
+.gd2-chart .nt{margin:48px 0 0;font-size:11px;color:#BDBCB6;text-align:center}
 .gd2-chart.in .col>i.ad{transform:none}
-.gd2-chart.in .cb{opacity:1;transform:none;transition:opacity .35s ease,transform .5s cubic-bezier(.3,1.4,.4,1);transition-delay:var(--d)}
+.gd2-chart.in .cb{opacity:1;transform:none;transition:opacity .3s ease,transform .45s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d)}
 .gd2-loop{margin:44px auto 0;max-width:760px;text-align:center;font-size:16px;line-height:1.8;color:#5C5C5C}
 .gd2-loop b{display:block;margin-bottom:6px;font-size:13px;color:#E95623}
 
@@ -318,9 +318,11 @@ section[class*="gd2-"]{word-break:keep-all;overflow-wrap:break-word}
   .gd2-lock{padding:100px 20px 110px;border-radius:32px 32px 0 0}
   .gd2-lock .paper{padding:24px 20px 20px}
   .gd2-stack{padding:100px 20px 120px;border-radius:32px 32px 0 0}
-  .gd2-chart{padding:26px 18px 20px;border-radius:24px}
-  .gd2-chart .mos{height:220px;gap:8px}
-  .gd2-chart .cb{height:24px}
+  .gd2-chart .mos{height:190px}
+  .gd2-chart .cb{height:4px}
+  .gd2-chart .col>i.ad{height:58px;width:11px}
+  .gd2-chart .cs{width:11px}
+  .gd2-chart .col{gap:6px}
   .gd2-chart .ml{font-size:11px}
 }
 @media (prefers-reduced-motion:reduce){
@@ -505,7 +507,7 @@ section[class*="gd2-"]{word-break:keep-all;overflow-wrap:break-word}
 <p class="gd2-sl">크루스가 만드는 건 한 달짜리 노출이 아니라, <strong>매출로 이어지는 길</strong>입니다. 한 번 만든 길은 다음 달에도 고객을 데려옵니다.</p>
 <div class="gd2-chart" role="img" aria-label="광고비는 멈추면 바로 0이 되고, 콘텐츠는 달마다 쌓이는 흐름을 보여주는 그림">
 <div class="lg"><span><i class="ad"></i>광고비 · 멈추면 바로 0</span><span><i class="cb"></i>콘텐츠 · 검색에 남아 계속 일함</span></div>
-<div class="mos"><div class="mo"><div class="col"><i class="ad"></i><span class="cs"><i class="cb" style="--d:0.00s"></i></span></div><span class="ml">1개월</span></div><div class="mo"><div class="col"><i class="ad"></i><span class="cs"><i class="cb" style="--d:0.12s"></i><i class="cb" style="--d:0.17s"></i></span></div><span class="ml">2개월</span></div><div class="mo"><div class="col"><i class="ad"></i><span class="cs"><i class="cb" style="--d:0.24s"></i><i class="cb" style="--d:0.29s"></i><i class="cb" style="--d:0.34s"></i></span></div><span class="ml">3개월</span></div><div class="mo"><div class="col"><i class="ad off"></i><span class="cs"><i class="cb" style="--d:0.36s"></i><i class="cb" style="--d:0.41s"></i><i class="cb" style="--d:0.46s"></i><i class="cb" style="--d:0.51s"></i></span></div><span class="ml">4개월</span></div><div class="mo"><div class="col"><i class="ad off"></i><span class="cs"><i class="cb" style="--d:0.48s"></i><i class="cb" style="--d:0.53s"></i><i class="cb" style="--d:0.58s"></i><i class="cb" style="--d:0.63s"></i><i class="cb" style="--d:0.68s"></i></span></div><span class="ml">5개월</span></div><div class="mo"><div class="col"><i class="ad off"></i><span class="cs"><i class="cb" style="--d:0.60s"></i><i class="cb" style="--d:0.65s"></i><i class="cb" style="--d:0.70s"></i><i class="cb" style="--d:0.75s"></i><i class="cb" style="--d:0.80s"></i><i class="cb" style="--d:0.85s"></i></span></div><span class="ml">6개월</span></div><span class="stop" aria-hidden="true">광고 중단</span></div>
+<div class="mos"><div class="mo"><div class="col"><i class="ad"></i><span class="cs"><i class="cb" style="--d:0.000s"></i><i class="cb" style="--d:0.025s"></i><i class="cb" style="--d:0.050s"></i></span></div><span class="ml">1개월</span></div><div class="mo"><div class="col"><i class="ad"></i><span class="cs"><i class="cb" style="--d:0.140s"></i><i class="cb" style="--d:0.165s"></i><i class="cb" style="--d:0.190s"></i><i class="cb" style="--d:0.215s"></i><i class="cb" style="--d:0.240s"></i><i class="cb" style="--d:0.265s"></i></span></div><span class="ml">2개월</span></div><div class="mo"><div class="col"><i class="ad"></i><span class="cs"><i class="cb" style="--d:0.280s"></i><i class="cb" style="--d:0.305s"></i><i class="cb" style="--d:0.330s"></i><i class="cb" style="--d:0.355s"></i><i class="cb" style="--d:0.380s"></i><i class="cb" style="--d:0.405s"></i><i class="cb" style="--d:0.430s"></i><i class="cb" style="--d:0.455s"></i><i class="cb" style="--d:0.480s"></i></span></div><span class="ml">3개월</span></div><div class="mo"><div class="col"><i class="ad off"></i><span class="cs"><i class="cb" style="--d:0.420s"></i><i class="cb" style="--d:0.445s"></i><i class="cb" style="--d:0.470s"></i><i class="cb" style="--d:0.495s"></i><i class="cb" style="--d:0.520s"></i><i class="cb" style="--d:0.545s"></i><i class="cb" style="--d:0.570s"></i><i class="cb" style="--d:0.595s"></i><i class="cb" style="--d:0.620s"></i><i class="cb" style="--d:0.645s"></i><i class="cb" style="--d:0.670s"></i><i class="cb" style="--d:0.695s"></i></span></div><span class="ml">4개월</span></div><div class="mo"><div class="col"><i class="ad off"></i><span class="cs"><i class="cb" style="--d:0.560s"></i><i class="cb" style="--d:0.585s"></i><i class="cb" style="--d:0.610s"></i><i class="cb" style="--d:0.635s"></i><i class="cb" style="--d:0.660s"></i><i class="cb" style="--d:0.685s"></i><i class="cb" style="--d:0.710s"></i><i class="cb" style="--d:0.735s"></i><i class="cb" style="--d:0.760s"></i><i class="cb" style="--d:0.785s"></i><i class="cb" style="--d:0.810s"></i><i class="cb" style="--d:0.835s"></i><i class="cb" style="--d:0.860s"></i><i class="cb" style="--d:0.885s"></i><i class="cb" style="--d:0.910s"></i></span></div><span class="ml">5개월</span></div><div class="mo"><div class="col"><i class="ad off"></i><span class="cs"><i class="cb" style="--d:0.700s"></i><i class="cb" style="--d:0.725s"></i><i class="cb" style="--d:0.750s"></i><i class="cb" style="--d:0.775s"></i><i class="cb" style="--d:0.800s"></i><i class="cb" style="--d:0.825s"></i><i class="cb" style="--d:0.850s"></i><i class="cb" style="--d:0.875s"></i><i class="cb" style="--d:0.900s"></i><i class="cb" style="--d:0.925s"></i><i class="cb" style="--d:0.950s"></i><i class="cb" style="--d:0.975s"></i><i class="cb" style="--d:1.000s"></i><i class="cb" style="--d:1.025s"></i><i class="cb" style="--d:1.050s"></i><i class="cb" style="--d:1.075s"></i><i class="cb" style="--d:1.100s"></i><i class="cb" style="--d:1.125s"></i></span></div><span class="ml">6개월</span></div><span class="stop" aria-hidden="true">광고 중단</span></div>
 <p class="nt">흐름을 설명하기 위한 그림이며 실제 수치가 아닙니다.</p>
 </div>
 <p class="gd2-loop"><b>매출로 이어지는 선순환</b> 기획된 브랜드 콘텐츠 → 발견과 믿음 → 예약·방문, 매출 → 진짜 후기. 후기에서 나온 질문이 다음 달 콘텐츠가 되어 다시 처음으로 돌아갑니다.</p>
