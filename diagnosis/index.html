@@ -699,7 +699,35 @@ mark.hl{background-size:100% 100%;transition:none}.od>span{transition:none}
 /* 오픈 전 안내 */
 .dx-soon{display:inline-block;padding:18px 34px;border-radius:14px;background:rgba(255,255,255,.08);color:#F4F2EC;font-size:var(--md);font-weight:600;letter-spacing:-0.02em}
 </style>
-<style id="cw-nav-fit">header nav a,header nav .cw-dd-btn,header>div>a{white-space:nowrap}@media (max-width:1180px){header nav{gap:0!important}header nav>a,header nav .cw-dd-btn{padding-left:10px!important;padding-right:10px!important}header>div>a[aria-label]>span:last-child{display:none!important}}@media (max-width:1000px){header>div{gap:14px!important}header nav{font-size:14px!important}header nav>a,header nav .cw-dd-btn{padding-left:7px!important;padding-right:7px!important}}</style>
+<style id="cw-nav-fit">header nav a,header nav .cw-dd-btn,header>div>a{white-space:nowrap}@media (max-width:1180px){header nav{gap:0!important}header nav>a,header nav .cw-dd-btn{padding-left:10px!important;padding-right:10px!important}header>div>a[aria-label]>span:last-child{display:none!important}}@media (max-width:1000px){header>div{gap:14px!important}header nav{font-size:14px!important}header nav>a,header nav .cw-dd-btn{padding-left:7px!important;padding-right:7px!important}}
+/* ════ 첫 화면 v3 (11/19): 첫 화면엔 프롬프트 박스만, 답은 스크롤을 따라 아래에 이어서 ════ */
+.dx .dx-hero{display:block;min-height:0;padding:0 24px 190px}
+.dx .dx-hero:after{background:radial-gradient(ellipse 80% 38% at 50% 22%,rgba(10,10,10,.3),rgba(10,10,10,.92) 75%)}
+.dx .dx-hero-in{max-width:900px;margin:0 auto}
+.dx-intro{position:relative;width:100%;min-height:calc(100vh - 73px);min-height:calc(100svh - 73px);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 0 64px}
+.dx-intro .dx-pb{margin:0 auto}
+.dx-cue{position:absolute;left:50%;bottom:40px;transform:translateX(-50%);font-size:14px;color:#8A8A8A;letter-spacing:-0.01em;white-space:nowrap;opacity:0;transition:opacity .8s ease,color .2s ease}
+.dx-cue span{display:inline-block;margin-left:4px;animation:dxBob 1.8s ease-in-out infinite}
+.dx-cue:hover{color:#fff}
+.dx-hero.cue .dx-cue{opacity:1}
+.dx-hero.cue.away .dx-cue{opacity:0;pointer-events:none}
+.dx-ans{display:flex;flex-direction:column;align-items:center;padding-top:40px;scroll-margin-top:90px}
+.dx .dx-ans h1{margin-top:0}
+/* 답은 화면에 들어올 때 하나씩 선명해진다 */
+.js .dx-ans .dx-un{opacity:0;visibility:visible;filter:blur(8px);transform:translateY(28px);transition:opacity .9s ease,filter .9s ease,transform 1s cubic-bezier(.2,.7,.2,1)}
+.js .dx-ans .dx-un.in{opacity:1;filter:none;transform:none}
+.js .dx-hero.pre .dx-un{visibility:visible}
+@media (max-width:700px){
+  .dx .dx-hero{padding:0 20px 150px}
+  .dx-intro{min-height:calc(100vh - 73px);min-height:calc(100svh - 73px);padding:32px 0 72px}
+  .dx-cue{bottom:28px;font-size:13px}
+  .dx-ans{padding-top:24px}
+}
+@media (prefers-reduced-motion:reduce){
+  .js .dx-ans .dx-un{opacity:1;filter:none;transform:none;transition:none}
+  .dx-cue span{animation:none}
+}
+</style>
 </head>
 <body>
 <div class="dx" style="font-family:'Pretendard Variable',Pretendard,-apple-system,sans-serif;color:#0A0A0A;letter-spacing:-0.01em;-webkit-font-smoothing:antialiased;background:#0A0A0A;width:100%">
@@ -719,7 +747,11 @@ mark.hl{background-size:100% 100%;transition:none}.od>span{transition:none}
 <section class="dx-hero pre" aria-label="블로그 진단 보고서">
 <div class="dx-paint" aria-hidden="true"><i style="--i:0"></i><i style="--i:1"></i><i style="--i:2"></i><i style="--i:3"></i><i style="--i:4"></i><i style="--i:5"></i><i style="--i:6"></i><i style="--i:7"></i><i style="--i:8"></i><i style="--i:9"></i><i style="--i:10"></i><i style="--i:11"></i><i style="--i:12"></i><i style="--i:13"></i></div>
 <div class="dx-hero-in">
+<div class="dx-intro">
 <div class="dx-pb" role="img" aria-label="블로그는 꾸준히 하고 있는데 문의가 없어서 막막해. 지금 내가 뭘 잘못하고 있는 걸까?"><p class="st" aria-hidden="true"><i></i><span data-think="7개 분야 31개 항목으로 진단하는 중" data-done="진단 완료 · 7개 분야 31개 항목"></span></p><div class="row"><p class="tx" aria-hidden="true"><span class="ty">블로그는 꾸준히 하고 있는데 문의가 없어서 막막해. 지금 내가 뭘 잘못하고 있는 걸까?</span><span class="ph">블로그 고민을 적어 보세요</span><span class="ca"></span></p><span class="bt" aria-hidden="true"><svg class="a" viewBox="0 0 24 24"><path d="M12 19V5M5.5 11.5L12 5l6.5 6.5"/></svg><i class="s"></i><svg class="c" viewBox="0 0 24 24"><path d="M5.5 12.5l4.5 4.5 8.5-9.5"/></svg></span></div></div>
+<a href="#dx-ans" class="dx-cue" aria-label="진단 결과 보기">진단 결과 보기 <span aria-hidden="true">↓</span></a>
+</div>
+<div class="dx-ans" id="dx-ans">
 <h1 class="dx-un">지금 잘못하고 있는 것들을,<br>분야별로 <mark class="hl hl-d">짚어드립니다</mark><span class="hq-period">.</span></h1>
 <p class="dx-lead dx-un">네이버 블로그 16년, 30곳 넘는 업체의 매출을 올린 대표가 직접 진단합니다.</p>
 <div class="dx-offer dx-un">
@@ -728,6 +760,7 @@ mark.hl{background-size:100% 100%;transition:none}.od>span{transition:none}
 <div class="b"><p class="lm"><span class="hq-live"></span>매월 <b>10개 업체</b>에만</p><a href="#apply" class="dx-cta hq-btn hq-cta">곧 오픈합니다</a></div>
 </div>
 <a href="#check" class="dx-down dx-un" aria-label="아래로">내 블로그도 해당되는지 체크해 보기 <span aria-hidden="true">↓</span></a>
+</div>
 </div>
 </section>
 
@@ -881,57 +914,32 @@ var FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbygeDwPXtwVaCzFGCY9
     var heroEl = $('.dx-hero'), pb = $('.dx-pb'); if (!heroEl || !pb) return;
     var ty = $('.ty', pb), st = $('.st', pb), bt = $('.bt', pb), uns = $$('.dx-un', heroEl), full = ty.textContent, ended = false, timers = [];
     function later(fn, ms) { timers.push(setTimeout(fn, ms)); }
+    var opened = false;
     function open() {
-      heroEl.classList.remove('pre'); heroEl.classList.add('open');
-      $$('mark.hl', heroEl).forEach(function (m) { setTimeout(function () { m.classList.add('on'); }, 500); });
+      if (opened) return; opened = true; heroEl.classList.remove('pre'); heroEl.classList.add('open');
     }
-    function finish() {   // 끝 상태로 바로
+    // 답(제목·설명·가격 카드)은 스크롤해서 화면에 들어올 때 차례로 선명해진다
+    function showUn(el) { if (el.classList.contains('in')) return; el.classList.add('in'); open(); $$('mark.hl', el).forEach(function (m) { setTimeout(function () { m.classList.add('on'); }, 450); }); }
+    if ('IntersectionObserver' in window && !calm) {
+      var uio = new IntersectionObserver(function (es) {
+        es.forEach(function (e) { if (e.isIntersecting) { var el = e.target; el.style.transitionDelay = (uns.indexOf(el) === 0 ? 0 : .08) + 's'; showUn(el); uio.unobserve(el); } });
+      }, { threshold: .25, rootMargin: '0px 0px -8% 0px' });
+      uns.forEach(function (el) { uio.observe(el); });
+    } else { uns.forEach(showUn); }
+    function finish() {   // 박스를 끝 상태로 바로
       if (ended) return; ended = true; timers.forEach(clearTimeout);
       ty.textContent = full; pb.className = 'dx-pb done'; pb.style.transform = ''; st.style.height = '34px'; st.style.opacity = 1; bt.style.transform = '';
-      uns.forEach(function (el) { el.style.transition = ''; el.style.filter = ''; el.style.visibility = 'visible'; el.style.opacity = 1; el.style.transform = ''; }); open();
+      heroEl.classList.add('cue');
     }
     if (calm) { finish(); return; }
-    setTimeout(finish, 15000);   // 어떤 경우에도 첫 화면이 가려진 채로 남지 않게
-    // 이미 아래에 있거나(새로고침·#링크로 들어옴) 처음부터 아래로 가는 경우엔 연출 없이 끝 상태로
+    // 페이지 중간으로 들어오면(새로고침·#링크) 박스 연출은 생략
     if ((window.scrollY || window.pageYOffset) > 4 || /^#.+/.test(location.hash)) { finish(); return; }
-    // 연출 중에 스크롤하면: 화면은 맨 위에 붙잡아 둔 채로 남은 연출을 짧게 빨리 감는다.
-    // (예전엔 끝 상태로 '툭' 바뀌면서 동시에 내려가 버려, 프롬프트 박스와 위 여백이 메뉴 밑으로 사라졌다)
-    var skipping = false, holdTo = 0, SCROLL_KEYS = { ArrowDown: 1, ArrowUp: 1, PageDown: 1, PageUp: 1, End: 1, Home: 1, ' ': 1, Spacebar: 1 };
-    function skip() {
-      if (ended || skipping) return; skipping = true; ended = true; timers.forEach(clearTimeout); timers = [];
-      holdTo = performance.now() + 700; if ((window.scrollY || window.pageYOffset) > 0) window.scrollTo(0, 0);
-      var y0 = 0; try { y0 = new DOMMatrixReadOnly(getComputedStyle(pb).transform).m42 || 0; } catch (e) {}
-      var h0 = parseFloat(st.style.height) || 0, sp = $('span', st);
-      ty.textContent = full; pb.className = 'dx-pb done'; bt.style.transform = ''; if (sp) { sp.style.transition = ''; sp.style.opacity = 1; }
-      spring(SP.morph, h0, 34, .3, function (x) { st.style.height = Math.max(0, x) + 'px'; st.style.opacity = Math.min(1, Math.max(0, x / 34)); });
-      spring(SP.settle, y0, 0, .3, function (y) { pb.style.transform = Math.abs(y) < .5 ? '' : 'translateY(' + y + 'px)'; });
-      var k = 0;
-      uns.forEach(function (el) {
-        if (el.style.visibility === 'visible') { el.style.opacity = 1; el.style.filter = 'none'; el.style.transform = 'none'; return; }
-        var d = 90 + (k++) * 70;
-        el.style.transition = 'none'; el.style.visibility = 'visible'; el.style.opacity = 0; el.style.filter = 'blur(6px)'; el.style.transform = 'translateY(16px)';
-        setTimeout(function () {
-          el.style.transition = 'opacity .55s ease, filter .55s ease, transform .6s cubic-bezier(.2,.7,.2,1)';
-          requestAnimationFrame(function () { el.style.opacity = 1; el.style.filter = 'none'; el.style.transform = 'none'; });
-        }, d);
-      });
-      setTimeout(open, 120);
-      setTimeout(function () { uns.forEach(function (e) { e.style.transition = ''; e.style.filter = ''; e.style.transform = ''; }); }, 1400);
-    }
-    function guard(e) {
-      var now = performance.now();
-      if (ended && !(skipping && now < holdTo)) { ['wheel', 'touchmove', 'keydown'].forEach(function (ev) { window.removeEventListener(ev, guard, { passive: false }); }); return; }
-      if (e.type === 'keydown' && !SCROLL_KEYS[e.key]) { skip(); return; }
-      if (!ended || (skipping && now < holdTo)) { if (e.cancelable) e.preventDefault(); skip(); }
-    }
-    ['wheel', 'touchmove', 'keydown'].forEach(function (ev) { window.addEventListener(ev, guard, { passive: false }); });
-    // 스크롤바를 끌거나 메뉴의 #링크로 이동하면 붙잡지 않고 끝 상태로
-    window.addEventListener('scroll', function () { if (!ended && (window.scrollY || window.pageYOffset) > 4) finish(); }, { passive: true });
-    // 처음에는 박스만 화면 가운데에
-    var hr = heroEl.getBoundingClientRect(), br = pb.getBoundingClientRect();
-    var off = Math.max(0, Math.min(window.innerHeight, hr.bottom) / 2 - (br.top + br.height / 2) + 10);
-    pb.style.transform = 'translateY(' + off + 'px)'; ty.textContent = ''; pb.classList.add('empty', 'live');
-    spring(SP.settle, .94, 1, .002, function (x) { if (!ended) pb.style.transform = 'translateY(' + off + 'px) scale(' + x + ')'; });
+    // 박스가 화면에서 거의 다 벗어나면 연출을 끝 상태로 (돌아왔을 때 다시 기다리지 않게)
+    window.addEventListener('scroll', function () { if (!ended && pb.getBoundingClientRect().bottom < 90) finish(); }, { passive: true });
+    // 스크롤을 시작하면 '진단 결과 보기' 안내는 조용히 사라진다
+    window.addEventListener('scroll', function () { heroEl.classList.toggle('away', (window.scrollY || window.pageYOffset) > 60); }, { passive: true });
+    ty.textContent = ''; pb.classList.add('empty', 'live');
+    spring(SP.settle, .94, 1, .002, function (x) { if (!ended) pb.style.transform = 'scale(' + x + ')'; });
     var i = 0;
     function type() {
       if (ended) return; pb.classList.remove('empty'); i++; ty.textContent = full.slice(0, i);
@@ -945,26 +953,14 @@ var FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbygeDwPXtwVaCzFGCY9
       spring(SP.morph, 0, 34, .3, function (x) { if (!ended) { st.style.height = Math.max(0, x) + 'px'; st.style.opacity = Math.min(1, Math.max(0, x / 34)); } });
       later(answer, 1900);
     }
-    function answer() {   // 진단 완료 → 잠깐 머문 뒤, 박스가 천천히 올라가고 나머지가 한 줄씩 선명해진다
+    function answer() {   // 진단 완료 → 아래로 이어지는 결과 안내
       if (ended) return; var sp = $('span', st);
       sp.style.transition = 'opacity .25s ease'; sp.style.opacity = 0;
       later(function () {
         if (ended) return; pb.classList.remove('think'); pb.classList.add('done'); sp.style.opacity = 1;
         spring(SP.pop, .85, 1, .003, function (x) { if (!ended) bt.style.transform = 'scale(' + x + ')'; });
+        later(function () { ended = true; pb.style.transform = ''; heroEl.classList.add('cue'); }, 500);
       }, 260);
-      later(function () {
-        if (ended) return;
-        spring([95, 20], off, 0, .3, function (y) { if (!ended) pb.style.transform = 'translateY(' + y + 'px)'; });   // 넘치지 않게 천천히
-        uns.forEach(function (el, n) {
-          later(function () {
-            if (ended) return; el.style.visibility = 'visible'; el.style.filter = 'blur(10px)'; el.style.transform = 'translateY(28px)';
-            el.style.transition = 'opacity 1s ease, filter 1s ease, transform 1.1s cubic-bezier(.2,.7,.2,1)';
-            requestAnimationFrame(function () { requestAnimationFrame(function () { el.style.opacity = 1; el.style.filter = 'none'; el.style.transform = 'none'; }); });
-            if (n === uns.length - 1) later(function () { ended = true; uns.forEach(function (e) { e.style.transition = ''; e.style.filter = ''; e.style.transform = ''; }); }, 1300);
-          }, 520 + n * 240);
-        });
-        later(open, 520 + 2 * 240);
-      }, 1150);
     }
     later(type, 650);
   })();
