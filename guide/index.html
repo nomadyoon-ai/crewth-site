@@ -346,6 +346,67 @@ section[class*="gd2-"]{word-break:keep-all;overflow-wrap:break-word}
 .gd2-end .y{display:block;font-weight:700;color:#fff}
 .gd2-end b{color:#E95623}
 @media (prefers-reduced-motion:reduce){.gd2-end s span{background-size:100% 3px}.gd2-sh .fade{opacity:.3}}
+
+/* 쌓이는 구조: 스크롤 = 시간. 왼쪽 광고는 끄는 순간 꺼지고, 오른쪽 콘텐츠는 달마다 한 장씩 쌓인다 */
+.gd2-vs{position:relative;height:290vh;margin:40px -32px 0}
+.gd2-vs .pin{position:sticky;top:0;height:100vh;height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:84px 32px 24px}
+.gd2-vs .mo{margin:0;font-size:15px;color:#8F8F8F;letter-spacing:-0.01em}
+.gd2-vs .mo b{display:inline-block;min-width:1.2em;text-align:right;margin-right:4px;font-size:44px;font-weight:300;color:#0A0A0A;letter-spacing:-0.05em;font-variant-numeric:tabular-nums}
+.gd2-vs .sides{margin-top:24px;width:min(980px,100%);display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.gd2-vs .sd{position:relative;border-radius:28px;padding:28px 30px 30px;display:flex;flex-direction:column;align-items:center;transition:background .6s ease}
+.gd2-vs .ad{background:#fff}
+.gd2-vs .ad.dark{background:#E9E8E3}
+.gd2-vs .ct{background:#fff}
+.gd2-vs .cap{align-self:flex-start;margin:0;font-size:17px;font-weight:700;letter-spacing:-0.03em}
+.gd2-vs .cap span{display:block;margin-top:3px;font-size:13px;font-weight:500;color:#8F8F8F}
+.gd2-vs .obj{position:relative;height:200px;width:100%;display:flex;align-items:flex-end;justify-content:center;margin-top:8px}
+/* 광고: 켜진 간판 → 꺼진 간판 */
+.gd2-vs .sign{display:flex;align-items:center;justify-content:center;width:180px;height:96px;margin-bottom:40px;border-radius:18px;border:2px solid #0A0A0A;background:#0A0A0A;box-shadow:0 0 0 8px rgba(233,86,35,.10),0 0 60px rgba(233,86,35,.35);transition:all .35s ease}
+.gd2-vs .sign span{font-size:34px;font-weight:800;letter-spacing:-0.04em;color:#fff;text-shadow:0 0 18px rgba(255,190,160,.9);transition:all .35s ease}
+.gd2-vs .ad.dark .sign{background:#D6D5CF;border-color:#C9C7C0;box-shadow:none}
+.gd2-vs .ad.dark .sign span{color:#B5B3AC;text-shadow:none}
+.gd2-vs .ad.flick .sign{animation:gd2Flick .5s steps(2) 1}
+@keyframes gd2Flick{0%,100%{opacity:1}25%{opacity:.3}50%{opacity:1}75%{opacity:.2}}
+.gd2-vs .stamp{position:absolute;white-space:nowrap;left:50%;top:18px;transform:translateX(-50%) rotate(-6deg) scale(1.3);padding:6px 12px;border:2px solid #E5484D;border-radius:8px;color:#E5484D;font-style:normal;font-size:14px;font-weight:800;opacity:0;transition:opacity .25s ease,transform .35s cubic-bezier(.3,1.6,.4,1)}
+.gd2-vs .ad.dark .stamp{opacity:1;transform:translateX(-50%) rotate(-6deg) scale(1)}
+/* 콘텐츠: 한 장씩 쌓이는 종이 */
+.gd2-vs .pile{position:relative;width:140px;height:100%}
+.gd2-vs .pile i{position:absolute;left:calc(10px + var(--x,0px));bottom:calc(var(--k) * 10px);width:120px;height:78px;border-radius:9px;background:#fff;border:1px solid #E6E5E0;box-shadow:0 4px 12px rgba(0,0,0,.06);transform:translateY(-70px) rotate(var(--r));opacity:0;transition:transform .5s cubic-bezier(.3,1.4,.4,1),opacity .3s ease}
+.gd2-vs .pile i:before{content:"";position:absolute;left:12px;right:40px;top:12px;height:6px;border-radius:3px;background:#E95623}
+.gd2-vs .pile i:after{content:"";position:absolute;left:12px;right:16px;top:28px;height:4px;border-radius:2px;background:#EAE9E4;box-shadow:0 10px 0 #EAE9E4,0 20px 0 #F0EFEA}
+.gd2-vs .pile i.on{transform:rotate(var(--r));opacity:1}
+/* 찾아오는 고객 */
+.gd2-vs .pl{align-self:flex-start;margin:22px 0 10px;font-size:12px;color:#8F8F8F}
+.gd2-vs .ppl{align-self:stretch;display:grid;grid-template-columns:repeat(12,1fr);gap:8px;min-height:56px;align-content:start}
+.gd2-vs .ppl i{width:14px;height:14px;border-radius:50%;justify-self:center;background:#0A0A0A;opacity:0;transform:scale(.3);transition:opacity .35s ease,transform .45s cubic-bezier(.3,1.5,.4,1)}
+.gd2-vs .ad .ppl i{background:#8F8F8F}
+.gd2-vs .ct .ppl i{background:#E95623}
+.gd2-vs .ppl i.on{opacity:1;transform:none}
+.gd2-vs .ad .ppl i.gone{opacity:0;transform:translateY(18px) scale(.6);transition:opacity .4s ease,transform .5s ease}
+.gd2-vs .nt{margin:22px 0 0;font-size:11px;color:#BDBCB6}
+@media (max-width:700px){
+  .gd2-vs{margin:24px -20px 0;height:280vh}
+  .gd2-vs .pin{padding:76px 20px 16px}
+  .gd2-vs .mo b{font-size:34px}
+  .gd2-vs .sides{margin-top:14px;grid-template-columns:1fr;gap:10px}
+  .gd2-vs .sd{padding:16px 18px 18px;border-radius:20px;display:grid;grid-template-columns:96px minmax(0,1fr);grid-template-areas:"cap cap" "obj ppl";column-gap:14px;align-items:end}
+  .gd2-vs .cap{grid-area:cap;font-size:15px}
+  .gd2-vs .cap span{display:inline;margin-left:6px;font-size:12px}
+  .gd2-vs .obj{grid-area:obj;height:118px;margin-top:10px}
+  .gd2-vs .sign{width:90px;height:52px;margin-bottom:28px;border-radius:12px}
+  .gd2-vs .sign span{font-size:20px}
+  .gd2-vs .stamp{top:6px;font-size:11px;padding:4px 7px}
+  .gd2-vs .pile{width:76px}
+  .gd2-vs .pile i{left:calc(4px + var(--x,0px) / 2);width:66px;height:42px;bottom:calc(var(--k) * 6px);border-radius:6px}
+  .gd2-vs .pile i:before{left:7px;right:22px;top:7px;height:4px}
+  .gd2-vs .pile i:after{left:7px;right:9px;top:17px;height:3px;box-shadow:0 7px 0 #EAE9E4,0 14px 0 #F0EFEA}
+  .gd2-vs .pl{display:none}
+  .gd2-vs .ppl{grid-area:ppl;grid-template-columns:repeat(8,1fr);gap:6px;min-height:0}
+  .gd2-vs .ppl i{width:11px;height:11px}
+}
+@media (prefers-reduced-motion:reduce){
+  .gd2-vs{height:auto}.gd2-vs .pin{position:static;height:auto;padding:40px 0}
+}
 </style>
 </head>
 <body>
@@ -505,10 +566,15 @@ section[class*="gd2-"]{word-break:keep-all;overflow-wrap:break-word}
 <div class="gd2-w">
 <h2 class="gd2-sh">광고비는 끄면 <span class="fade">사라지고,</span><br>콘텐츠는 <em>쌓입니다</em><b>.</b></h2>
 <p class="gd2-sl">크루스가 만드는 건 한 달짜리 노출이 아니라, <strong>매출로 이어지는 길</strong>입니다. 한 번 만든 길은 다음 달에도 고객을 데려옵니다.</p>
-<div class="gd2-chart" role="img" aria-label="광고비는 멈추면 바로 0이 되고, 콘텐츠는 달마다 쌓이는 흐름을 보여주는 그림">
-<div class="lg"><span><i class="ad"></i>광고비 · 멈추면 바로 0</span><span><i class="cb"></i>콘텐츠 · 검색에 남아 계속 일함</span></div>
-<div class="mos"><div class="mo"><div class="col"><i class="ad"></i><span class="cs"><i class="cb" style="--d:0.000s"></i><i class="cb" style="--d:0.025s"></i><i class="cb" style="--d:0.050s"></i></span></div><span class="ml">1개월</span></div><div class="mo"><div class="col"><i class="ad"></i><span class="cs"><i class="cb" style="--d:0.140s"></i><i class="cb" style="--d:0.165s"></i><i class="cb" style="--d:0.190s"></i><i class="cb" style="--d:0.215s"></i><i class="cb" style="--d:0.240s"></i><i class="cb" style="--d:0.265s"></i></span></div><span class="ml">2개월</span></div><div class="mo"><div class="col"><i class="ad"></i><span class="cs"><i class="cb" style="--d:0.280s"></i><i class="cb" style="--d:0.305s"></i><i class="cb" style="--d:0.330s"></i><i class="cb" style="--d:0.355s"></i><i class="cb" style="--d:0.380s"></i><i class="cb" style="--d:0.405s"></i><i class="cb" style="--d:0.430s"></i><i class="cb" style="--d:0.455s"></i><i class="cb" style="--d:0.480s"></i></span></div><span class="ml">3개월</span></div><div class="mo"><div class="col"><i class="ad off"></i><span class="cs"><i class="cb" style="--d:0.420s"></i><i class="cb" style="--d:0.445s"></i><i class="cb" style="--d:0.470s"></i><i class="cb" style="--d:0.495s"></i><i class="cb" style="--d:0.520s"></i><i class="cb" style="--d:0.545s"></i><i class="cb" style="--d:0.570s"></i><i class="cb" style="--d:0.595s"></i><i class="cb" style="--d:0.620s"></i><i class="cb" style="--d:0.645s"></i><i class="cb" style="--d:0.670s"></i><i class="cb" style="--d:0.695s"></i></span></div><span class="ml">4개월</span></div><div class="mo"><div class="col"><i class="ad off"></i><span class="cs"><i class="cb" style="--d:0.560s"></i><i class="cb" style="--d:0.585s"></i><i class="cb" style="--d:0.610s"></i><i class="cb" style="--d:0.635s"></i><i class="cb" style="--d:0.660s"></i><i class="cb" style="--d:0.685s"></i><i class="cb" style="--d:0.710s"></i><i class="cb" style="--d:0.735s"></i><i class="cb" style="--d:0.760s"></i><i class="cb" style="--d:0.785s"></i><i class="cb" style="--d:0.810s"></i><i class="cb" style="--d:0.835s"></i><i class="cb" style="--d:0.860s"></i><i class="cb" style="--d:0.885s"></i><i class="cb" style="--d:0.910s"></i></span></div><span class="ml">5개월</span></div><div class="mo"><div class="col"><i class="ad off"></i><span class="cs"><i class="cb" style="--d:0.700s"></i><i class="cb" style="--d:0.725s"></i><i class="cb" style="--d:0.750s"></i><i class="cb" style="--d:0.775s"></i><i class="cb" style="--d:0.800s"></i><i class="cb" style="--d:0.825s"></i><i class="cb" style="--d:0.850s"></i><i class="cb" style="--d:0.875s"></i><i class="cb" style="--d:0.900s"></i><i class="cb" style="--d:0.925s"></i><i class="cb" style="--d:0.950s"></i><i class="cb" style="--d:0.975s"></i><i class="cb" style="--d:1.000s"></i><i class="cb" style="--d:1.025s"></i><i class="cb" style="--d:1.050s"></i><i class="cb" style="--d:1.075s"></i><i class="cb" style="--d:1.100s"></i><i class="cb" style="--d:1.125s"></i></span></div><span class="ml">6개월</span></div><span class="stop" aria-hidden="true">광고 중단</span></div>
+<div class="gd2-vs" role="img" aria-label="스크롤을 내리면 달이 지나갑니다. 광고는 끄는 순간 찾아오는 고객이 0이 되고, 콘텐츠는 달마다 한 장씩 쌓이며 찾아오는 고객이 계속 늘어납니다.">
+<div class="pin">
+<p class="mo"><b>1</b>개월</p>
+<div class="sides">
+<div class="sd ad"><p class="cap">광고비<span>멈추면 바로 0</span></p><div class="obj"><div class="sign"><span>광고</span></div><em class="stamp">광고 중단</em></div><p class="pl">찾아오는 고객</p><div class="ppl"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+<div class="sd ct"><p class="cap">콘텐츠<span>검색에 남아 계속 일함</span></p><div class="obj"><div class="pile"><i style="--k:0;--r:0.6deg;--x:0px"></i><i style="--k:1;--r:-1.1deg;--x:5px"></i><i style="--k:2;--r:1.6deg;--x:-4px"></i><i style="--k:3;--r:-0.6deg;--x:3px"></i><i style="--k:4;--r:1.1deg;--x:-6px"></i><i style="--k:5;--r:-1.6deg;--x:4px"></i><i style="--k:6;--r:0.6deg;--x:-2px"></i><i style="--k:7;--r:-1.1deg;--x:6px"></i><i style="--k:8;--r:1.6deg;--x:-5px"></i><i style="--k:9;--r:-0.6deg;--x:2px"></i><i style="--k:10;--r:1.1deg;--x:-3px"></i><i style="--k:11;--r:-1.6deg;--x:5px"></i></div></div><p class="pl">찾아오는 고객</p><div class="ppl"><i style="--k:0"></i><i style="--k:1"></i><i style="--k:2"></i><i style="--k:3"></i><i style="--k:4"></i><i style="--k:5"></i><i style="--k:6"></i><i style="--k:7"></i><i style="--k:8"></i><i style="--k:9"></i><i style="--k:10"></i><i style="--k:11"></i><i style="--k:12"></i><i style="--k:13"></i><i style="--k:14"></i><i style="--k:15"></i><i style="--k:16"></i><i style="--k:17"></i><i style="--k:18"></i><i style="--k:19"></i><i style="--k:20"></i><i style="--k:21"></i><i style="--k:22"></i><i style="--k:23"></i></div></div>
+</div>
 <p class="nt">흐름을 설명하기 위한 그림이며 실제 수치가 아닙니다.</p>
+</div>
 </div>
 <p class="gd2-loop"><b>매출로 이어지는 선순환</b> 기획된 브랜드 콘텐츠 → 발견과 믿음 → 예약·방문, 매출 → 진짜 후기. 후기에서 나온 질문이 다음 달 콘텐츠가 되어 다시 처음으로 돌아갑니다.</p>
 </div>
@@ -656,6 +722,36 @@ section[class*="gd2-"]{word-break:keep-all;overflow-wrap:break-word}
   function on() { if (!tick) { tick = true; requestAnimationFrame(frame); } }
   window.addEventListener('scroll', on, { passive: true });
   window.addEventListener('resize', on);
+  frame();
+})();
+
+/* 쌓이는 구조 — 스크롤로 달을 넘긴다. 6개월에 광고를 끄면 간판이 꺼지고 손님이 사라진다 */
+(function () {
+  var doc = document, reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var vs = doc.querySelector('.gd2-vs'); if (!vs) return;
+  var mo = vs.querySelector('.mo b'), ad = vs.querySelector('.sd.ad'), sheets = [].slice.call(vs.querySelectorAll('.pile i'));
+  var adP = [].slice.call(ad.querySelectorAll('.ppl i')), ctP = [].slice.call(vs.querySelectorAll('.ct .ppl i'));
+  var STOP = 6, last = -1, wasDark = false;
+  function show(m) {
+    if (m === last) return; last = m;
+    mo.textContent = m;
+    var dark = m > STOP;
+    if (dark && !wasDark) { ad.classList.add('flick'); setTimeout(function () { ad.classList.remove('flick'); }, 520); }
+    wasDark = dark; ad.classList.toggle('dark', dark);
+    adP.forEach(function (p, k) { p.classList.toggle('on', !dark && k < 4 + Math.min(m, 6)); p.classList.toggle('gone', dark); });
+    sheets.forEach(function (s, k) { s.classList.toggle('on', k < m); });
+    var n = Math.min(ctP.length, m * 2);
+    ctP.forEach(function (p, k) { p.classList.toggle('on', k < n); });
+  }
+  if (reduce) { show(12); return; }
+  var tick = false;
+  function frame() {
+    tick = false; var r = vs.getBoundingClientRect(), h = window.innerHeight || doc.documentElement.clientHeight;
+    var p = Math.max(0, Math.min(1, -r.top / Math.max(1, r.height - h)));
+    show(Math.min(12, 1 + Math.floor(p * 12 * 0.999)));
+  }
+  window.addEventListener('scroll', function () { if (!tick) { tick = true; requestAnimationFrame(frame); } }, { passive: true });
+  window.addEventListener('resize', frame);
   frame();
 })();
 
