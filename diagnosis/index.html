@@ -687,6 +687,14 @@ mark.hl{background-size:100% 100%;transition:none}.od>span{transition:none}
 .dx .dx-bar{padding:12px 12px 12px 18px;gap:14px;border-radius:18px}.dx .dx-bar a{padding:14px 18px}.dx .dx-bar .s{margin-top:5px}
 .dx .dx-offer{padding:22px 18px}.dx .dx-hero h1{margin-top:28px}
 }
+
+/* 마지막 신청: 가볍게 */
+.dx-lform{max-width:520px;margin:var(--gap) auto 0;text-align:left}
+.dx .dx-apply .dx-pill{margin-bottom:18px}
+.dx-next{list-style:none;counter-reset:nx;margin:18px 0 0;padding:0}
+.dx-next li{counter-increment:nx;position:relative;padding:14px 0 14px 38px;border-top:1px solid #EEECE5;font-size:var(--sm);line-height:1.7;color:#5C5C5C}
+.dx-next li:before{content:counter(nx);position:absolute;left:0;top:15px;width:24px;height:24px;border-radius:50%;background:#0A0A0A;color:#E95623;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.dx-next b{display:block;font-size:var(--md);color:#0A0A0A}
 </style>
 <style id="cw-nav-fit">header nav a,header nav .cw-dd-btn,header>div>a{white-space:nowrap}@media (max-width:1180px){header nav{gap:0!important}header nav>a,header nav .cw-dd-btn{padding-left:10px!important;padding-right:10px!important}header>div>a[aria-label]>span:last-child{display:none!important}}@media (max-width:1000px){header>div{gap:14px!important}header nav{font-size:14px!important}header nav>a,header nav .cw-dd-btn{padding-left:7px!important;padding-right:7px!important}}</style>
 </head>
@@ -801,40 +809,23 @@ mark.hl{background-size:100% 100%;transition:none}.od>span{transition:none}
 </section>
 
 <section id="apply" class="dx-sec dx-dark dx-apply" aria-label="진단 신청">
-<div class="dx-w dg-two" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:64px;align-items:start">
-<div class="rv">
-<p class="dx-pill">매월 10개 업체 한정</p>
-<h2 class="dx-h2l">1:1 컨설팅급의 진단 보고서를,<br><mark class="hl">단돈 99,000원</mark>으로<span class="hq-period">.</span></h2>
-<p class="dx-fsub">99만 원 상당의 1:1 컨설팅을 보고서 한 권으로. 대표가 한 곳씩 직접 검수해서 매월 10개 업체만 받습니다.</p>
-<ul class="dx-fgot"><li><b>7개 분야 31항목 정밀 진단</b>분야마다 지금 상태 판정과 소견</li><li><b>매출 전환 키워드</b>검색량 · 상위 노출 현황 · 전환 등급</li><li><b>바로 쓰는 수정 문안</b>대표님 글에서 뽑은 문장을 고쳐서</li><li><b>우선순위별 실행안</b>걸리는 시간까지 적은 할 일 순서</li><li><b>블로그 전문 크루 코멘트</b>대표가 직접 남기는 총평</li></ul>
-<p class="dx-flow"><span>신청</span><span>결제 안내</span><span>진단·검수</span><span>영업일 5일 안에 전달</span></p>
-<p class="dx-fnote">블로그 주소만 남겨주시면 됩니다. 신청만으로는 결제되지 않고, 진단이 도움이 되지 않겠다고 판단되면 결제 전에 솔직하게 말씀드립니다.</p>
-</div>
-<div class="rv" style="--d:1">
-<div class="dg-form" id="dg-form">
-<div class="dg-fg">
-<label>블로그 주소<em>*</em><input class="dg-in" name="channel" required inputmode="url" autocomplete="url" placeholder="blog.naver.com/아이디"></label>
-<div class="dg-f2">
-<label>업체명<em>*</em><input class="dg-in" name="company" required autocomplete="organization" placeholder="예: OO인테리어"></label>
-<label>업종<em>*</em><input class="dg-in" name="industry" required placeholder="예: 인테리어 시공"></label>
-</div>
-<div class="dg-f2">
-<label>이름<em>*</em><input class="dg-in" name="name" required autocomplete="name" placeholder="홍길동"></label>
-<label>연락처<em>*</em><input class="dg-in" name="contact" required placeholder="전화번호 또는 이메일"></label>
-</div>
-<label>지금 가장 답답한 점<small>선택</small><textarea class="dg-in" name="problem" placeholder="예: 주 2회씩 올리는데 문의 전화가 없어요."></textarea></label>
-<label class="dg-ck"><input type="checkbox" name="stats"><span>블로그 통계까지 함께 보는 정밀 진단을 원합니다. <span style="color:#8F8F8F">(신청 후 안전한 전달 방법을 따로 안내드립니다)</span></span></label>
+<div class="dx-w dx-narrow" style="text-align:center">
+<div class="rv"><p class="dx-pill">매월 10개 업체 한정</p>
+<h2 class="dx-h2l" style="margin-top:0">1:1 컨설팅급의 진단 보고서를,<br><mark class="hl">단돈 99,000원</mark>으로<span class="hq-period">.</span></h2>
+<p class="dx-sub">이름과 연락처만 남겨주세요. 결제 방법과 다음 순서를 바로 안내드립니다.</p></div>
+<div class="rv dx-lform" style="--d:1">
+<div class="dg-form" id="dg-form"><div class="dg-fg">
+<div class="dg-f2"><label>이름<em>*</em><input class="dg-in" name="name" required autocomplete="name" placeholder="홍길동"></label><label>연락처<em>*</em><input class="dg-in" name="contact" required placeholder="전화번호 또는 이메일"></label></div>
+<label>블로그 주소<small>선택 · 지금 적어주시면 더 빨라요</small><input class="dg-in" name="channel" inputmode="url" placeholder="blog.naver.com/아이디"></label>
 <label class="dg-ck"><input type="checkbox" name="agree" required><span>개인정보 수집·이용에 동의합니다. <a href="/privacy.html" target="_blank" rel="noopener" style="text-decoration:underline;color:#0A0A0A">전문 보기</a></span></label>
 <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
 <button type="button" class="dg-send hq-btn hq-cta" id="dg-send">선착순 신청하기</button>
-<p id="dg-msg" role="alert" hidden style="margin:-4px 0 0;text-align:center;font-size:13.5px;color:#C0392B"></p>
-<p style="margin:-4px 0 0;text-align:center;font-size:13px;line-height:1.7;color:#8F8F8F">신청만으로는 결제되지 않습니다. 이번 달 10개 업체가 차면 다음 달 순서로 안내드립니다.</p>
-</div>
-</div>
-<div class="dg-form" id="dg-sent" hidden style="text-align:center;padding-top:56px;padding-bottom:56px">
-<span aria-hidden="true" style="display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:50%;background:#E95623"><svg width="22" height="22" viewBox="0 0 12 12"><path d="M2.5 6.2l2.3 2.3 4.7-5" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-<h3 style="margin:22px 0 0;font-size:24px;font-weight:700;letter-spacing:-0.03em">신청이 접수됐습니다</h3>
-<p style="margin:12px auto 0;max-width:380px;font-size:16px;line-height:1.8;color:#5C5C5C">블로그를 먼저 살펴보고, 영업일 기준 1일 안에 남겨주신 연락처로 결제 안내를 드리겠습니다.</p>
+<p id="dg-msg" role="alert" hidden style="margin:-4px 0 0;text-align:center;color:#C0392B"></p>
+<p style="margin:-4px 0 0;text-align:center;line-height:1.7;color:#8F8F8F">신청만으로는 결제되지 않습니다.</p>
+</div></div>
+<div class="dg-form" id="dg-sent" hidden style="text-align:left">
+<h3 style="margin:0;font-weight:700;letter-spacing:-0.03em">신청이 접수됐습니다</h3>
+<ol class="dx-next"><li><b>연락을 기다려 주세요</b>영업일 1일 안에 남겨주신 연락처로 결제 방법을 안내드립니다.</li><li><b>블로그 주소를 준비해 주세요</b>아직 안 적으셨다면 안내 연락에 답으로 보내주시면 됩니다.</li><li><b>결제 후 영업일 5일 안에 받으세요</b>전용 링크로 보고서를 보내드립니다.</li></ol>
 </div>
 </div>
 </div>
@@ -1030,14 +1021,14 @@ var FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbygeDwPXtwVaCzFGCY9
   var say = function (t) { fmsg.textContent = t; fmsg.hidden = false; };
   send.addEventListener('click', function () {
     var f = function (n) { return $('[name=' + n + ']', form); }, bad = null;
-    ['channel', 'company', 'industry', 'name', 'contact'].forEach(function (n) { var el = f(n), miss = !el.value.trim(); el.style.borderColor = miss ? '#C0392B' : ''; if (miss && !bad) bad = el; });
+    ['name', 'contact'].forEach(function (n) { var el = f(n), miss = !el.value.trim(); el.style.borderColor = miss ? '#C0392B' : ''; if (miss && !bad) bad = el; });
     if (bad) { say('필수 항목을 모두 입력해 주세요.'); bad.focus(); return; }
     if (!f('agree').checked) { say('개인정보 수집·이용에 동의해 주세요.'); return; }
     if (f('website').value) { form.hidden = true; sent.hidden = false; return; }
     var ticked = picked().map(function (b) { return '- ' + b.textContent.trim(); });
     var data = new URLSearchParams();
-    data.append('company', f('company').value); data.append('industry', f('industry').value);
-    data.append('problem', '[블로그 진단 보고서 신청] 통계 정밀 진단 희망: ' + (f('stats').checked ? '예' : '아니오') + (f('problem').value.trim() ? ' / ' + f('problem').value.trim() : '') + (ticked.length ? '\n셀프 체크 ' + ticked.length + '개:\n' + ticked.join('\n') : ''));
+    data.append('company', f('name').value + ' (블로그 진단)'); data.append('industry', '');
+    data.append('problem', '[블로그 진단 보고서 신청]' + (ticked.length ? '\n셀프 체크 ' + ticked.length + '개:\n' + ticked.join('\n') : ''));
     data.append('budget', ''); data.append('start', '');
     data.append('name', f('name').value); data.append('contact', f('contact').value); data.append('channel', f('channel').value);
     data.append('topic', '블로그 진단 보고서 신청'); data.append('page', location.href); data.append('t', String(Date.now() - T0));
