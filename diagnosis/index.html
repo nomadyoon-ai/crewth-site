@@ -564,6 +564,109 @@ mark.hl{background-size:100% 100%;transition:none}.od>span{transition:none}
 @media (prefers-reduced-motion:reduce){.dx-offer .was:after{width:108%;animation:none}.dx-offer .now{animation:none}.dx-offer .sl i{opacity:1;animation:none}}
 .dx-hero{padding-top:76px;align-items:flex-start}.dx-q{margin-top:22px}.dx-offer{margin-top:30px;padding-top:26px}.dx-offer .b{margin-top:18px;padding-top:18px}
 @media (max-width:700px){.dx-hero{padding-top:64px}}
+
+/* ════ 크기·위계 정리 (한 벌의 단계만 쓴다) ════
+   제목: d1(첫 화면) > h2(구간) > h3(카드) / 본문: lg > md > sm > xs / 가격: p1(첫 화면) > p2(그 외)
+   굵기는 700(제목·강조) · 600(라벨) · 400(본문) 세 가지만. 보고서 속지 안의 작은 글씨는 '문서 그림'이라 그대로 둔다. */
+.dx{--d1:clamp(32px,4.5vw,58px);--h2:clamp(27px,3.3vw,42px);--h3:clamp(19px,1.7vw,22px);--lg:18px;--md:16px;--sm:14px;--xs:13px;--p1:clamp(58px,6.6vw,88px);--p2:clamp(44px,4.4vw,56px);--gap:56px;--sec:124px}
+@media (max-width:700px){.dx{--lg:16.5px;--md:15.5px;--gap:40px;--sec:88px}}
+/* 구간 간격 */
+.dx .dx-sec{padding:var(--sec) 0}.dx .dx-sheet{padding:calc(var(--sec) - 14px) 0 var(--sec)}
+.dx .dx-cgs,.dx .dg-areas,.dx .dg-peek,.dx .dx-rvs,.dx .dx-offer-sec .dg-offer,.dx .dx-stats{margin-top:var(--gap)}
+/* 구간 머리 */
+.dx .dx-hd{max-width:760px}
+.dx .dx-hd h2,.dx .dx-h2l{font-size:var(--h2);line-height:1.34;letter-spacing:-0.04em;font-weight:700}
+.dx .dx-pill{margin-bottom:18px;padding:5px 13px;font-size:var(--xs);font-weight:600}
+.dx .dx-mark{margin-bottom:16px;font-size:var(--xs)}
+.dx .dx-sub{margin-top:18px;max-width:560px;font-size:var(--lg);line-height:1.75}
+.dx .dx-note{margin-top:22px;font-size:var(--sm)}
+/* 첫 화면 */
+.dx .dx-lim{font-size:var(--xs);padding:6px 14px}
+.dx .dx-q{margin-top:22px;font-size:clamp(17px,1.9vw,22px);font-weight:400;color:#A3A3A3}
+.dx .dx-hero h1{margin-top:12px;font-size:var(--d1);line-height:1.24}
+.dx .dx-lead{margin-top:18px;font-size:var(--lg);line-height:1.7}
+.dx .dx-offer{margin-top:32px;width:min(700px,100%);padding:28px 34px 24px}
+.dx .dx-offer .t{font-size:var(--lg)}
+.dx .dx-offer .pr{margin-top:10px;gap:4px 20px}
+.dx .dx-offer .was{font-size:clamp(22px,2.4vw,30px);font-weight:400}.dx .dx-offer .ar{font-size:22px;font-weight:400}
+.dx .dx-offer .now{font-size:var(--p1)}.dx .dx-offer .now small,.dx .dx-offer .was small{font-size:.36em}
+.dx .dx-offer .lm{font-size:var(--lg)}
+.dx .dx-offer .s{margin-top:16px;font-size:var(--xs)}
+.dx .dx-cta,.dx .dx-offer .dx-cta,.dx .dg-send{font-size:17px;padding:18px 32px;border-radius:14px}
+.dx .dx-down{margin-top:22px;font-size:var(--sm)}
+/* 숫자 */
+.dx .dx-st .n{margin:12px 0 8px;font-size:clamp(40px,4.6vw,56px)}.dx .dx-st .n small{font-size:.3em}
+.dx .dx-st .l,.dx .dx-st .s{font-size:var(--sm);font-weight:400;color:#77756F}.dx .dx-st .s{margin-top:0}
+/* 셀프 체크 */
+.dx .dx-cg-h{font-size:var(--lg)}.dx .dx-cg-h b{font-size:12px;font-weight:700}
+.dx .dx-ck{font-size:var(--md)}
+.dx .dx-res{margin-top:var(--gap)}.dx .dx-res .n{font-size:var(--md)}.dx .dx-res .n b{font-size:var(--p2)}.dx .dx-res .m{font-size:var(--lg)}
+/* 분야별 진단 */
+.dx .dg-at .nm{font-size:var(--lg);font-weight:600}.dx .dg-at[aria-pressed="true"] .nm{font-weight:700}
+.dx .dg-at .no,.dx .dg-at .ct{font-size:var(--xs)}
+.dx .dg-ap .dg-run,.dx .dg-ap-it .lb,.dx .dg-ap-rx>span,.dx .dg-ap-now .k,.dx .dg-ap-now .k .dg-vd{font-size:var(--xs)}
+.dx .dg-ap-it div span{font-size:var(--xs);padding:3px 11px}
+.dx .dg-ap-now .t{font-size:var(--h3);line-height:1.55}
+.dx .dg-ap-rx p{font-size:var(--md)}.dx .dg-ap-rx .old{font-size:var(--sm)}.dx .dg-ap-rx .new{font-size:var(--lg)}.dx .dg-ap-rx .why{font-size:var(--sm)}
+/* 보고서 미리보기 (속지 바깥 글씨만) */
+.dx .dg-fig figcaption b{font-size:var(--lg)}.dx .dg-fig figcaption span{font-size:var(--sm)}
+.dx .dg-toc li{font-size:var(--sm)}.dx .dg-toc li b{font-weight:400}.dx .dg-toc small{font-size:var(--xs)}
+/* 후기 */
+.dx .dx-rv .w{font-size:var(--sm);font-weight:600}.dx .dx-rv .h{font-size:var(--h3);line-height:1.5}
+.dx .dx-rv blockquote{font-size:var(--md);line-height:1.8}
+/* 가격 */
+.dx .dg-offer>div{padding:36px 36px 38px}
+.dx .dg-offer>div>p:first-child,.dx .dx-offer-r>p{font-size:var(--sm)!important}
+.dx .dg-got li{font-size:var(--sm)}.dx .dg-got b{font-size:var(--lg)}
+.dx .dx-big{font-size:var(--p2)!important;margin-top:4px}.dx .dx-big small{font-size:.38em}
+.dx .dx-terms{font-size:var(--sm);margin:20px 0 26px}
+/* 자주 묻는 질문 */
+.dx .md-faq summary{font-size:var(--lg)!important;padding:22px 4px!important}.dx .md-faq p{font-size:var(--md)!important}
+/* 신청 */
+.dx .dx-fprice{margin-top:20px}.dx .dx-fprice span{font-size:var(--md)}.dx .dx-fprice b{font-size:var(--p2)}
+.dx .dx-fgot{margin-top:24px}.dx .dx-fgot li{font-size:var(--sm)}.dx .dx-fgot b{font-size:var(--lg)}
+.dx .dx-flow,.dx .dx-fnote{font-size:var(--sm)}
+.dx .dg-form label{font-size:var(--sm)}.dx .dg-form .dg-ck{font-size:var(--sm)!important}.dx .dg-in{font-size:16px}
+.dx .dg-form p{font-size:var(--xs)!important}.dx #dg-sent h3{font-size:var(--h3)!important}.dx #dg-sent p{font-size:var(--md)!important}
+/* 하단 바 */
+.dx .dx-bar .p{font-size:var(--lg)}.dx .dx-bar .p small,.dx .dx-bar .s{font-size:var(--xs)}.dx .dx-bar a{font-size:16px;padding:14px 26px}
+@media (max-width:700px){
+.dx .dx-offer{padding:22px 18px 20px}.dx .dg-offer>div{padding:28px 22px 30px}
+.dx .dx-cta,.dx .dx-offer .dx-cta{padding:17px 24px}
+.dx .dx-bar .p{font-size:17px}.dx .dx-bar a{padding:13px 20px;font-size:15px}
+}
+
+/* ════ 첫 화면 프롬프트 박스 (designbookmark.com/motion 의 Prompt box를 크루스 색·글꼴로 다시 만듦) ════
+   스프링 값은 원본 토큰 그대로: settle 280/22 · pop 520/16 · fade 420/32 · input-morph 300/20 */
+.dx-pb{position:relative;z-index:2;width:min(660px,100%);margin:0 auto;padding:8px 8px 8px 24px;border-radius:30px;background:rgba(26,26,26,.94);border:1px solid rgba(255,255,255,.13);box-shadow:0 24px 70px rgba(0,0,0,.5);text-align:left;-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);will-change:transform}
+.dx-pb .st{margin:0;height:0;overflow:hidden;opacity:0;display:flex;align-items:center;gap:9px;font-size:13px;font-weight:600;color:#A3A3A3;letter-spacing:-0.01em}
+.dx-pb .st i{flex-shrink:0;width:7px;height:7px;border-radius:50%;background:#8A8A8A;transition:background .3s ease}
+.dx-pb .st span:before{content:attr(data-think)}.dx-pb.done .st span:before{content:attr(data-done)}
+.dx-pb.think .st span{background:linear-gradient(90deg,#8A8A8A 0%,#fff 45%,#8A8A8A 90%) 0 0/200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:dxShim 1.3s linear infinite}
+@keyframes dxShim{from{background-position:120% 0}to{background-position:-80% 0}}
+.dx-pb.done .st{color:#fff}.dx-pb.done .st i{background:#E95623}
+.dx-pb .row{display:flex;align-items:center;gap:14px;min-height:46px}
+.dx-pb .tx{flex:1;min-width:0;margin:0;padding:8px 0;font-size:17px;line-height:1.55;letter-spacing:-0.02em;color:#fff}
+.dx-pb .ph{display:none;color:#6E6E6E}.dx-pb.empty .ph{display:inline}
+.dx-pb .ca{display:none;width:2px;height:1.15em;margin-left:2px;vertical-align:-.2em;background:#E95623;border-radius:1px;animation:dxCa 1s steps(2) infinite}.dx-pb.live .ca{display:inline-block}
+@keyframes dxCa{50%{opacity:0}}
+.dx-pb .bt{flex-shrink:0;align-self:flex-end;width:46px;height:46px;border-radius:50%;background:#333;color:#8A8A8A;display:flex;align-items:center;justify-content:center;transition:background .25s ease,color .25s ease;will-change:transform}
+.dx-pb .bt svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.dx-pb .bt .s{display:none;width:13px;height:13px;border-radius:3px;background:#0A0A0A}.dx-pb .bt .c{display:none}
+.dx-pb.ready .bt{background:#E95623;color:#0A0A0A}
+.dx-pb.think .bt{background:#fff}.dx-pb.think .bt .a{display:none}.dx-pb.think .bt .s{display:block}
+.dx-pb.done .bt{background:#E95623;color:#0A0A0A}.dx-pb.done .bt .a{display:none}.dx-pb.done .bt .c{display:block}
+.dx .dx-hero .dx-lim{margin-top:30px}.dx .dx-hero h1{margin-top:16px}
+.js .dx-hero.pre .dx-un{opacity:0;visibility:hidden}
+.dx-un{will-change:transform,opacity}
+/* 오퍼 카드의 움직임은 펼쳐진 뒤에 시작 */
+.dx-offer .was:after{width:108%;animation:none}.dx-offer .now{animation:none}.dx-offer .sl i{opacity:1;animation:none}
+.js .dx-hero:not(.open) .dx-offer .was:after{width:0}.js .dx-hero:not(.open) .dx-offer .sl i{opacity:0}
+.js .dx-hero.open .dx-offer .was:after{width:0;animation:dxStrike .6s cubic-bezier(.6,.1,.2,1) .7s forwards}
+.js .dx-hero.open .dx-offer .now{animation:dxNow .7s cubic-bezier(.3,1.5,.4,1) 1s both}
+.js .dx-hero.open .dx-offer .sl i{opacity:0;animation:dxSl .4s cubic-bezier(.3,1.5,.4,1) forwards;animation-delay:calc(var(--i)*.07s + 1.4s)}
+@media (max-width:700px){.dx-pb{padding:8px 8px 8px 18px;border-radius:24px}.dx-pb .tx{font-size:16px}.dx-pb .bt{width:42px;height:42px}}
+@media (prefers-reduced-motion:reduce){.dx-pb.think .st span{animation:none;color:#A3A3A3;background:none}.js .dx-hero .dx-offer .was:after{width:108%!important;animation:none!important}.js .dx-hero .dx-offer .sl i{opacity:1!important;animation:none!important}.js .dx-hero .dx-offer .now{animation:none!important}}
 </style>
 <style id="cw-nav-fit">header nav a,header nav .cw-dd-btn,header>div>a{white-space:nowrap}@media (max-width:1180px){header nav{gap:0!important}header nav>a,header nav .cw-dd-btn{padding-left:10px!important;padding-right:10px!important}header>div>a[aria-label]>span:last-child{display:none!important}}@media (max-width:1000px){header>div{gap:14px!important}header nav{font-size:14px!important}header nav>a,header nav .cw-dd-btn{padding-left:7px!important;padding-right:7px!important}}</style>
 </head>
@@ -582,20 +685,20 @@ mark.hl{background-size:100% 100%;transition:none}.od>span{transition:none}
 </header>
 
 
-<section class="dx-hero" aria-label="블로그 진단 보고서">
+<section class="dx-hero pre" aria-label="블로그 진단 보고서">
 <div class="dx-paint" aria-hidden="true"><i style="--i:0"></i><i style="--i:1"></i><i style="--i:2"></i><i style="--i:3"></i><i style="--i:4"></i><i style="--i:5"></i><i style="--i:6"></i><i style="--i:7"></i><i style="--i:8"></i><i style="--i:9"></i><i style="--i:10"></i><i style="--i:11"></i><i style="--i:12"></i><i style="--i:13"></i></div>
 <div class="dx-hero-in">
-<p class="dx-lim hq-rise">1:1 컨설팅급 블로그 진단 보고서</p>
-<p class="dx-q hq-rise" style="animation-delay:.1s">“블로그 꾸준히 하고는 있는데, 문의가 없어 막막합니다.”</p>
-<h1 class="hq-rise" style="animation-delay:.2s">지금 잘못하고 있는 것들을,<br>분야별로 <mark class="hl hl-d">짚어드립니다</mark><span class="hq-period">.</span></h1>
-<p class="dx-lead hq-rise" style="animation-delay:.3s">네이버 블로그 16년, 30곳 넘는 업체의 매출을 올린 대표가<br class="dx-br"> 직접 보고 쓰는 <b>1:1 컨설팅급 진단 보고서</b>입니다.</p>
-<div class="dx-offer hq-rise" style="animation-delay:.4s">
+<div class="dx-pb" role="img" aria-label="블로그는 꾸준히 하고 있는데 문의가 없어서 막막해. 지금 내가 뭘 잘못하고 있는 걸까?"><p class="st" aria-hidden="true"><i></i><span data-think="7개 분야 31개 항목으로 진단하는 중" data-done="진단 완료 · 7개 분야 31개 항목"></span></p><div class="row"><p class="tx" aria-hidden="true"><span class="ty">블로그는 꾸준히 하고 있는데 문의가 없어서 막막해. 지금 내가 뭘 잘못하고 있는 걸까?</span><span class="ph">블로그 고민을 적어 보세요</span><span class="ca"></span></p><span class="bt" aria-hidden="true"><svg class="a" viewBox="0 0 24 24"><path d="M12 19V5M5.5 11.5L12 5l6.5 6.5"/></svg><i class="s"></i><svg class="c" viewBox="0 0 24 24"><path d="M5.5 12.5l4.5 4.5 8.5-9.5"/></svg></span></div></div>
+<p class="dx-lim dx-un">1:1 컨설팅급 블로그 진단 보고서</p>
+<h1 class="dx-un">지금 잘못하고 있는 것들을,<br>분야별로 <mark class="hl hl-d">짚어드립니다</mark><span class="hq-period">.</span></h1>
+<p class="dx-lead dx-un">네이버 블로그 16년, 30곳 넘는 업체의 매출을 올린 대표가<br class="dx-br"> 직접 보고 쓰는 <b>1:1 컨설팅급 진단 보고서</b>입니다.</p>
+<div class="dx-offer dx-un">
 <p class="t"><b>99만 원 상당</b>의 1:1 컨설팅급 진단 보고서를</p>
 <p class="pr"><span class="was">990,000<small>원</small></span><span class="ar" aria-hidden="true">→</span><span class="now">99,000<small>원</small></span></p>
 <div class="b"><div><p class="lm"><span class="hq-live"></span>매월 <b>10개 업체</b>에만</p><div class="sl" aria-hidden="true"><i style="--i:0"></i><i style="--i:1"></i><i style="--i:2"></i><i style="--i:3"></i><i style="--i:4"></i><i style="--i:5"></i><i style="--i:6"></i><i style="--i:7"></i><i style="--i:8"></i><i style="--i:9"></i></div></div><a href="#apply" class="dx-cta hq-btn hq-cta">진단 신청하기</a></div>
 <p class="s">7개 분야 31항목 정밀 진단 · 매출 전환 키워드 · 바로 쓰는 수정 문안 · 대표 직접 검수</p>
 </div>
-<a href="#check" class="dx-down" aria-label="아래로">내 블로그도 해당되는지 체크해 보기 <span aria-hidden="true">↓</span></a>
+<a href="#check" class="dx-down dx-un" aria-label="아래로">내 블로그도 해당되는지 체크해 보기 <span aria-hidden="true">↓</span></a>
 </div>
 </section>
 
@@ -784,7 +887,71 @@ var FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbygeDwPXtwVaCzFGCY9
     rvs.forEach(function (el) { io.observe(el); });
     $$('mark.hl').forEach(function (m) { if (!m.closest('.rv')) io.observe(m); });
   } else { rvs.forEach(reveal); $$('mark.hl').forEach(function (m) { m.classList.add('on'); }); }
-  setTimeout(function () { $$('.dx-hero mark.hl').forEach(function (m) { m.classList.add('on'); }); }, 700);
+
+  // ── 첫 화면 프롬프트 박스: 고민이 타이핑되고 → 보내지고 → 진단 중 → 답(첫 화면)이 펼쳐진다
+  // 스프링은 designbookmark 토큰 값 그대로 (stiffness, damping)
+  var SP = { settle: [280, 22], pop: [520, 16], fade: [420, 32], morph: [300, 20] }, STAGGER = 45;
+  function spring(kc, from, to, eps, on, done) {
+    var x = from, v = 0, last = null, k = kc[0], c = kc[1];
+    (function f(t) {
+      if (last == null) last = t; var dt = Math.min((t - last) / 1000, 1 / 30); last = t;
+      for (var i = 0; i < 4; i++) { var h = dt / 4; v += (-k * (x - to) - c * v) * h; x += v * h; }
+      if (Math.abs(x - to) < eps && Math.abs(v) < eps * 4) { on(to); if (done) done(); } else { on(x); requestAnimationFrame(f); }
+    })(performance.now());
+  }
+  (function () {
+    var heroEl = $('.dx-hero'), pb = $('.dx-pb'); if (!heroEl || !pb) return;
+    var ty = $('.ty', pb), st = $('.st', pb), bt = $('.bt', pb), uns = $$('.dx-un', heroEl), full = ty.textContent, ended = false, timers = [];
+    function later(fn, ms) { timers.push(setTimeout(fn, ms)); }
+    function open() {
+      heroEl.classList.remove('pre'); heroEl.classList.add('open');
+      $$('mark.hl', heroEl).forEach(function (m) { setTimeout(function () { m.classList.add('on'); }, 500); });
+    }
+    function finish() {   // 끝 상태로 바로
+      if (ended) return; ended = true; timers.forEach(clearTimeout);
+      ty.textContent = full; pb.className = 'dx-pb done'; pb.style.transform = ''; st.style.height = '34px'; st.style.opacity = 1; bt.style.transform = '';
+      uns.forEach(function (el) { el.style.visibility = 'visible'; el.style.opacity = 1; el.style.transform = ''; }); open();
+    }
+    if (calm) { finish(); return; }
+    setTimeout(finish, 9000);   // 어떤 경우에도 첫 화면이 가려진 채로 남지 않게
+    ['wheel', 'touchmove', 'keydown'].forEach(function (ev) { window.addEventListener(ev, finish, { once: true, passive: true }); });
+    // 처음에는 박스만 화면 가운데에
+    var hr = heroEl.getBoundingClientRect(), br = pb.getBoundingClientRect();
+    var off = Math.max(0, Math.min(window.innerHeight, hr.bottom) / 2 - (br.top + br.height / 2) + 10);
+    pb.style.transform = 'translateY(' + off + 'px)'; ty.textContent = ''; pb.classList.add('empty', 'live');
+    spring(SP.settle, .94, 1, .002, function (x) { if (!ended) pb.style.transform = 'translateY(' + off + 'px) scale(' + x + ')'; });
+    var i = 0;
+    function type() {
+      if (ended) return; pb.classList.remove('empty'); i++; ty.textContent = full.slice(0, i);
+      if (i < full.length) later(type, /[.,?]/.test(full[i - 1]) ? 170 : 26 + Math.random() * 22);
+      else { pb.classList.add('ready'); later(sendIt, 420); }
+    }
+    function sendIt() {   // 보내기 버튼이 눌렸다 튀어 오름
+      if (ended) return; pb.classList.remove('live');
+      spring(SP.pop, .8, 1, .003, function (x) { if (!ended) bt.style.transform = 'scale(' + x + ')'; });
+      pb.classList.remove('ready'); pb.classList.add('think');
+      spring(SP.morph, 0, 34, .3, function (x) { if (!ended) { st.style.height = Math.max(0, x) + 'px'; st.style.opacity = Math.min(1, Math.max(0, x / 34)); } });
+      later(answer, 1150);
+    }
+    function answer() {   // 진단 완료 → 박스가 제자리로 올라가고 나머지가 차례로 펼쳐짐
+      if (ended) return; pb.classList.remove('think'); pb.classList.add('done');
+      spring(SP.pop, .85, 1, .003, function (x) { if (!ended) bt.style.transform = 'scale(' + x + ')'; });
+      later(function () {
+        if (ended) return;
+        spring(SP.settle, off, 0, .3, function (y) { if (!ended) pb.style.transform = 'translateY(' + y + 'px)'; });
+        uns.forEach(function (el, n) {
+          later(function () {
+            if (ended) return; el.style.visibility = 'visible';
+            spring(SP.fade, 0, 1, .004, function (o) { if (!ended) el.style.opacity = Math.max(0, Math.min(1, o)); });
+            spring(SP.settle, 36, 0, .3, function (y) { if (!ended) el.style.transform = 'translateY(' + y + 'px)'; }, n === uns.length - 1 ? function () { ended = true; } : null);
+          }, 120 + n * STAGGER * 2);
+        });
+        open();
+      }, 380);
+    }
+    later(type, 650);
+  })();
+
 
   // 단어 굴림: 폭도 단어에 맞춰 줄었다 늘었다
   $$('.dx-roll').forEach(function (r) {
