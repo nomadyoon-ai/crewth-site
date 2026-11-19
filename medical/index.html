@@ -163,7 +163,348 @@ footer{padding-bottom:72px!important}
 .cw-dd-menu a::after{display:none!important}
 .cw-dd-menu a small{display:block;margin-top:2px;font-size:12px;font-weight:400;color:#8A8A8A}
 </style>
-<style id="cw-nav-fit">header nav a,header nav .cw-dd-btn,header>div>a{white-space:nowrap}@media (max-width:1180px){header nav{gap:0!important}header nav>a,header nav .cw-dd-btn{padding-left:10px!important;padding-right:10px!important}header>div>a[aria-label]>span:last-child{display:none!important}}@media (max-width:1000px){header>div{gap:14px!important}header nav{font-size:14px!important}header nav>a,header nav .cw-dd-btn{padding-left:7px!important;padding-right:7px!important}}</style>
+<style id="cw-nav-fit">header nav a,header nav .cw-dd-btn,header>div>a{white-space:nowrap}@media (max-width:1180px){header nav{gap:0!important}header nav>a,header nav .cw-dd-btn{padding-left:10px!important;padding-right:10px!important}header>div>a[aria-label]>span:last-child{display:none!important}}@media (max-width:1000px){header>div{gap:14px!important}header nav{font-size:14px!important}header nav>a,header nav .cw-dd-btn{padding-left:7px!important;padding-right:7px!important}}
+/* ════ 병원·의원 v2 (11/19) — 구간마다 다른 연출, 회색+굵은 제목 틀 반복 줄이기 ════ */
+.md2-w{max-width:1160px;margin:0 auto}
+.md2-h2{margin:0;font-size:clamp(32px,3.8vw,54px);line-height:1.26;font-weight:700;letter-spacing:-0.045em}
+.md2-h2>span:first-child{display:block;font-size:.5em;font-weight:600;letter-spacing:-0.02em;color:#E95623;margin-bottom:14px}
+.md2-h2 .dot,.md2-h .dot,.md2-big .dot{color:#E95623}
+.md2-h2.dk{color:#fff}
+.md2-lead{margin:26px 0 0;max-width:640px;font-size:17px;line-height:1.85;color:#5C5C5C}
+.md2-lead b{color:#0A0A0A}
+.md2-lead.dk{color:#A3A3A3}.md2-lead.dk b{color:#fff}
+.md2-rv{opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.md2-rv.in{opacity:1;transform:none}
+
+/* 첫 화면: 글은 줄이고 사진이 숨 쉬게 */
+.md2-hero{padding-bottom:170px!important}
+
+/* S1 어려운 이유 — 왼쪽 그림 고정, 오른쪽 이야기가 지나간다 */
+.md2-s1{position:relative;z-index:1;margin-top:-48px;background:#fff;border-radius:48px 48px 0 0;padding:140px 32px 120px}
+.md2-h{margin:0;font-size:clamp(34px,4.6vw,66px);line-height:1.18;font-weight:700;letter-spacing:-0.05em}
+.md2-h em{font-style:normal;color:#E95623}
+.md2-story{margin-top:80px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:80px}
+.md2-story .figs{position:sticky;top:calc(50vh - 210px);height:420px;border-radius:32px;background:#F6F5F1;overflow:hidden}
+.md2-story .fig{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:44px;opacity:0;transform:scale(.96);transition:opacity .6s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.md2-story .fig.on{opacity:1;transform:none}
+.md2-story .fig .cap{position:absolute;left:30px;top:26px;margin:0;font-size:13px;color:#8F8F8F}
+.md2-story svg{width:100%;max-width:400px}
+.md2-story .lk line{stroke:#CFCDC6;stroke-width:1.2;stroke-dasharray:4 6;animation:md2Flow 1.4s linear infinite}
+.md2-story .nd circle{fill:#fff;stroke:#0A0A0A;stroke-width:1.6}.md2-story .nd circle.f{fill:#0A0A0A}
+.md2-story .ping{fill:none;stroke:#E95623;stroke-width:1.6;transform-origin:center;transform-box:fill-box;animation:md2Ping 2.4s ease-out infinite}
+.md2-story text{font-size:13px;font-weight:700;fill:#E95623}
+@keyframes md2Flow{to{stroke-dashoffset:-20}}
+@keyframes md2Ping{0%{transform:scale(.7);opacity:1}100%{transform:scale(2.4);opacity:0}}
+.md2-story .bars{width:100%;max-width:400px;display:flex;flex-direction:column;gap:22px}
+.md2-story .bars>div{display:grid;grid-template-columns:96px minmax(0,1fr);align-items:center;gap:14px}
+.md2-story .bars span{font-size:15px;font-weight:600;color:#3A3A3A}
+.md2-story .bars i{position:relative;height:10px;border-radius:999px;background:#E6E5E0;overflow:hidden}
+.md2-story .bars i:after{content:"";position:absolute;left:0;top:0;bottom:0;width:var(--w);border-radius:999px;background:#0A0A0A;transform:scaleX(0);transform-origin:left;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.md2-story .bars>div:first-child i:after{background:#E95623}
+.md2-story .bars>div:nth-child(3) i:after{background:#BDBCB6}
+.md2-story .fig.on .bars i:after,.md2-story .st.on .bars i:after{transform:none}
+.md2-story .bars>div:nth-child(2) i:after{transition-delay:.15s}.md2-story .bars>div:nth-child(3) i:after{transition-delay:.3s}
+.md2-story .bars p{display:none}
+.md2-story .docs{display:flex;align-items:flex-end;gap:14px}
+.md2-story .docs span{width:62px;height:84px;border-radius:10px;background:#fff;border:1px solid #E6E5E0;box-shadow:0 8px 20px rgba(0,0,0,.04);position:relative}
+.md2-story .docs span:before{content:"";position:absolute;left:10px;right:10px;top:14px;height:4px;border-radius:2px;background:#E6E5E0;box-shadow:0 10px 0 #E6E5E0,0 20px 0 #E6E5E0,0 30px 0 #EFEEE9}
+.md2-story .docs .me{width:92px;height:124px;border:2px solid #E95623;box-shadow:0 20px 40px rgba(233,86,35,.18);display:flex;align-items:flex-end;justify-content:center;padding-bottom:12px}
+.md2-story .docs .me:before{background:#F2D2C4;box-shadow:0 10px 0 #F2D2C4,0 20px 0 #F2D2C4,0 30px 0 #F7E3DA;top:16px}
+.md2-story .docs .me b{font-size:12px;color:#E95623}
+.md2-story .fig.on .docs .me{animation:md2Pop .7s cubic-bezier(.3,1.5,.4,1) .2s both}
+@keyframes md2Pop{from{transform:translateY(16px) scale(.9);opacity:0}}
+.md2-story .st{min-height:62vh;display:flex;flex-direction:column;justify-content:center;opacity:.22;transition:opacity .5s ease}
+.md2-story .st.on{opacity:1}
+.md2-story .st:first-child{min-height:48vh;justify-content:flex-start;padding-top:60px}
+.md2-story .st:last-child{min-height:48vh}
+.md2-story .m-fig{display:none}
+.md2-story .no{margin:0;font-size:13px;font-family:ui-monospace,Menlo,monospace;color:#E95623}
+.md2-story .no span{color:#BDBCB6}
+.md2-story h3{margin:16px 0 0;font-size:clamp(26px,2.6vw,38px);line-height:1.3;font-weight:700;letter-spacing:-0.045em}
+.md2-story .d{margin:18px 0 0;font-size:17px;line-height:1.85;color:#5C5C5C;max-width:460px}
+
+/* S1-2 한 장의 글이 고쳐 써진다 */
+.md2-rw{position:relative;height:230vh;margin-top:60px}
+.md2-rw .pin{position:sticky;top:0;height:100vh;height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.md2-rw .ttl{margin:0 0 22px;font-size:14px;color:#8F8F8F}.md2-rw .ttl span{color:#BDBCB6}
+.md2-rw .paper{position:relative;width:min(760px,100%);border-radius:28px;background:#F6F5F1;border:1px solid #EEEDE8;padding:36px 44px 30px;transition:background .6s ease,border-color .6s ease,box-shadow .6s ease}
+.md2-rw.done .paper{background:#fff;border-color:#E95623;box-shadow:0 30px 80px rgba(233,86,35,.14)}
+.md2-rw .tag,.md2-rw .foot{position:relative;margin:0;height:22px}
+.md2-rw .tag span,.md2-rw .foot span{position:absolute;left:0;top:0;transition:opacity .4s ease,transform .4s ease;white-space:nowrap}
+.md2-rw .tag{font-size:13px;font-weight:700}
+.md2-rw .tag .t0{color:#8F8F8F}.md2-rw .tag .t1{color:#E95623;opacity:0;transform:translateY(8px)}
+.md2-rw .foot{margin-top:26px;padding-top:16px;border-top:1px solid #E6E5E0;height:auto;min-height:38px;font-size:14px}
+.md2-rw .foot span{top:16px}
+.md2-rw .foot .t0{color:#8F8F8F}.md2-rw .foot .t1{color:#0A0A0A;font-weight:600;opacity:0;transform:translateY(8px)}
+.md2-rw.done .t0{opacity:0;transform:translateY(-8px)}.md2-rw.done .t1{opacity:1;transform:none}
+.md2-rw .body{margin-top:24px;display:flex;flex-direction:column;gap:14px}
+.md2-rw .ln{position:relative;margin:0;display:grid;font-size:clamp(17px,1.5vw,19px);line-height:1.65;letter-spacing:-0.02em;min-height:1.65em}
+.md2-rw .ln>span{grid-area:1 / 1;transition:opacity .5s ease,transform .5s cubic-bezier(.2,.7,.2,1),filter .5s ease}
+.md2-rw .g{color:#8A8A8A;background:linear-gradient(#E5484D,#E5484D) 0 55%/0 1.5px no-repeat;transition:background-size .45s ease,opacity .5s ease .35s!important}
+.md2-rw .r{color:#2A2A2A;opacity:0;transform:translateY(10px);filter:blur(6px)}
+.md2-rw .r b{color:#0A0A0A}
+.md2-rw .ln.x .g{background-size:100% 1.5px;opacity:0}
+.md2-rw .ln.x .r{opacity:1;transform:none;filter:none;transition-delay:.45s}
+.md2-rw .hint{margin:22px 0 0;font-size:13px;color:#BDBCB6;transition:opacity .4s ease}
+.md2-rw.done .hint{opacity:0}
+
+/* S2 환자가 오는 길 */
+.md2-s2{background:#F6F5F1;padding:150px 32px 140px}
+.md2-path{position:relative;height:250vh;margin:0 -32px}
+.md2-path .pin{position:sticky;top:0;height:100vh;height:100svh;display:flex;flex-direction:column;justify-content:center;padding:70px 32px 0}
+.md2-path .sw{position:relative;display:inline-flex;padding:5px;border-radius:999px;background:#EAE9E4;font-size:15px;font-weight:700}
+.md2-path .sw span{position:relative;z-index:1;padding:10px 20px;border-radius:999px;color:#8F8F8F;transition:color .4s ease}
+.md2-path .sw i{position:absolute;top:5px;bottom:5px;left:5px;width:calc(50% - 5px);border-radius:999px;background:#0A0A0A;transition:transform .5s cubic-bezier(.2,.7,.2,1),background .4s ease}
+.md2-path .sw .s0{color:#fff}
+.md2-path.b .sw .s0{color:#8F8F8F}.md2-path.b .sw .s1{color:#fff}
+.md2-path.b .sw i{transform:translateX(100%);background:#E95623}
+.md2-path .sgs{position:relative;list-style:none;margin:48px 0 0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}
+.md2-path .sg{position:relative;z-index:1;display:flex;flex-direction:column;padding-top:44px}
+.md2-path .sg:before{content:"";position:absolute;left:0;top:10px;width:16px;height:16px;border-radius:50%;background:#F6F5F1;border:2px solid #BDBCB6;transition:border-color .4s ease,background .4s ease;transition-delay:calc(var(--k) * .06s)}
+.md2-path .nm{font-size:13px;font-family:ui-monospace,Menlo,monospace;color:#8F8F8F}
+.md2-path .sg b{margin-top:6px;font-size:clamp(22px,2vw,28px);font-weight:700;letter-spacing:-0.04em}
+.md2-path .act{margin-top:10px;font-size:14px;line-height:1.6;color:#6E6E6E;min-height:3.2em}
+.md2-path .who{position:relative;display:grid;margin-top:18px;min-height:96px}
+.md2-path .who>span{grid-area:1 / 1;border-radius:16px;padding:14px 16px;font-size:14px;line-height:1.55;transition:opacity .45s ease,transform .5s cubic-bezier(.2,.7,.2,1)}
+.md2-path .w0{align-self:start;justify-self:start;background:#fff;border:1px dashed #CFCDC6;color:#5C5C5C;font-weight:700;transform:rotate(calc((var(--k) - 2) * 1.2deg))}
+.md2-path .w0.none{color:#E5484D;border-color:#F0B7B8}
+.md2-path .w1{background:#0A0A0A;color:#fff;font-weight:600;opacity:0;transform:translateY(14px)}
+.md2-path .sg.on:before{border-color:#E95623;background:#E95623}
+.md2-path .sg.on .w0{opacity:0;transform:translateY(-10px)}
+.md2-path .sg.on .w1{opacity:1;transform:none}
+.md2-path .line{position:absolute;left:8px;right:8px;top:17px;height:2px;z-index:0;background-image:linear-gradient(90deg,#CFCDC6 50%,transparent 50%);background-size:12px 2px}
+.md2-path .line i{position:absolute;inset:0;background:#E95623;transform:scaleX(var(--p,0));transform-origin:left}
+.md2-path .out{position:relative;margin-top:36px;display:grid;min-height:76px}
+.md2-path .out>p{grid-area:1 / 1;margin:0;transition:opacity .5s ease,transform .5s ease}
+.md2-path .o0{font-size:16px;color:#6E6E6E;align-self:center}
+.md2-path .o1{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:22px 28px;border-radius:20px;background:#0A0A0A;color:#fff;opacity:0;transform:translateY(12px)}
+.md2-path .o1 b{font-size:18px;letter-spacing:-0.02em}.md2-path .o1 span{font-size:14px;color:#A3A3A3}
+.md2-path.c .o0{opacity:0}.md2-path.c .o1{opacity:1;transform:none}
+.md2-path .loop{margin:22px 0 0;font-size:16px;color:#5C5C5C;opacity:0;transition:opacity .6s ease .2s}
+.md2-path .loop b{color:#E95623}
+.md2-path.c .loop{opacity:1}
+.md2-dept{margin-top:120px}
+.md2-dept h3{margin:0;font-size:clamp(24px,2.4vw,32px);font-weight:700;letter-spacing:-0.04em}
+.md2-dept .tabs{position:relative;margin-top:30px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-bottom:1px solid #DEDDD8}
+.md2-dept .tabs button{font:inherit;background:none;border:0;padding:0 0 18px;text-align:left;cursor:pointer;color:#8F8F8F;transition:color .3s ease}
+.md2-dept .tabs button b{display:block;font-size:20px;letter-spacing:-0.03em}
+.md2-dept .tabs button span{display:block;margin-top:4px;font-size:13px}
+.md2-dept .tabs button[aria-selected="true"]{color:#0A0A0A}
+.md2-dept .tabs .ind{position:absolute;left:0;bottom:-1px;width:calc(100% / 3);height:2px;background:#E95623;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.md2-dept .pn{margin-top:36px;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:48px;align-items:start;animation:md2Pn .5s ease}
+
+.md2-dept .pn[hidden]{display:none}
+@keyframes md2Pn{from{opacity:0;transform:translateY(10px)}}
+.md2-dept dl{margin:0}
+.md2-dept dl>div{display:grid;grid-template-columns:150px minmax(0,1fr);gap:16px;padding:18px 0;border-bottom:1px solid #E6E5E0}
+.md2-dept dl>div:first-child{padding-top:0}
+.md2-dept dt{font-size:14px;color:#8F8F8F}
+.md2-dept dd{margin:0;font-size:17px;line-height:1.6;color:#0A0A0A;letter-spacing:-0.02em}
+.md2-dept .so{border-radius:24px;background:#0A0A0A;color:#fff;padding:30px 30px 32px}
+.md2-dept .so p{margin:0;font-size:13px;font-weight:700;color:#E95623}
+.md2-dept .so strong{display:block;margin-top:12px;font-size:19px;line-height:1.6;font-weight:600;letter-spacing:-0.025em}
+
+/* 제목 변주: 좌우 나눈 제목(S3), 가운데 형광펜 제목(S4) */
+.md2-s3hd{max-width:none!important;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:64px;align-items:end}
+.md2-hx{margin:0;font-size:clamp(36px,4.4vw,64px);line-height:1.18;font-weight:700;letter-spacing:-0.05em;color:#fff}
+.md2-hx em{font-style:normal;color:#E95623}.md2-hx .dot{color:#E95623}
+.md2-s3hd .md2-lead{margin:0}
+.md2-hc{margin:0 auto;text-align:center;font-size:clamp(34px,4.2vw,60px);line-height:1.25;font-weight:700;letter-spacing:-0.05em}
+.md2-hc mark{color:inherit;background:linear-gradient(transparent 64%,rgba(233,86,35,.32) 64%) 0 0/0 100% no-repeat;transition:background-size 1.1s cubic-bezier(.6,.1,.2,1) .3s}
+.md2-hc.in mark{background-size:100% 100%}
+.md2-hc .dot{color:#E95623}
+.md2-lc{margin-left:auto!important;margin-right:auto!important;text-align:center}
+
+/* S3 걸러내는 표현 — 빨간 펜 */
+.md2-s3{position:relative;z-index:3;margin-top:-48px;background:#0A0A0A;color:#fff;border-radius:48px 48px 0 0;padding:140px 32px 150px}
+.md2-s3hd{max-width:760px}
+.md2-rules{margin-top:64px}
+.md2-rules .hd{margin:0;display:grid;grid-template-columns:200px minmax(0,1fr) minmax(0,1.15fr);gap:28px;padding:0 0 14px;border-bottom:1px solid #262626;font-size:13px;color:#6E6E6E}
+.md2-rules ul{list-style:none;margin:0;padding:0}
+.md2-rules .rl{display:grid;grid-template-columns:200px minmax(0,1fr) minmax(0,1.15fr);gap:28px;align-items:center;padding:24px 0;border-bottom:1px solid #1E1E1E}
+.md2-rules .ty{font-size:17px;font-weight:700;letter-spacing:-0.03em}
+.md2-rules .ty i{display:block;font-style:normal;font-size:12px;font-family:ui-monospace,Menlo,monospace;color:#E95623;margin-bottom:4px}
+.md2-rules .bad{display:flex;flex-direction:column;gap:4px;font-size:16px;color:#8A8A8A}
+.md2-rules s{text-decoration:none}
+.md2-rules s span{background:linear-gradient(#E5484D,#E5484D) 0 56%/0 2px no-repeat;transition:background-size .55s cubic-bezier(.6,.1,.2,1),color .4s ease}
+.md2-rules .fix{position:relative;padding-left:30px;font-size:17px;font-weight:600;line-height:1.55;letter-spacing:-0.02em;opacity:0;transform:translateX(-12px);transition:opacity .6s ease .45s,transform .6s cubic-bezier(.2,.7,.2,1) .45s}
+.md2-rules .fix:before{content:"";position:absolute;left:0;top:.35em;width:16px;height:9px;border-left:2.5px solid #E95623;border-bottom:2.5px solid #E95623;transform:rotate(-45deg)}
+.md2-rules .rl.in s span{background-size:100% 2px;color:#5C5C5C}
+.md2-rules .rl.in .fix{opacity:1;transform:none}
+.md2-law{margin-top:80px;display:grid;grid-template-columns:1fr 1fr;gap:0}
+.md2-law>div{padding:0 48px 0 0}
+.md2-law>div+div{padding:0 0 0 48px;border-left:1px solid #262626}
+.md2-law .k{margin:0;font-size:13px;font-weight:700;color:#E95623}
+.md2-law h3{margin:12px 0 0;font-size:22px;line-height:1.4;font-weight:700;letter-spacing:-0.03em}
+.md2-law p:not(.k){margin:12px 0 0;font-size:15px;line-height:1.8;color:#A3A3A3}
+.md2-note{margin:56px 0 0;font-size:13px;line-height:1.7;color:#6E6E6E}
+
+/* S4 원장님 목소리 — 네 단계가 한 줄로 차오른다 */
+.md2-s4{background:#fff;padding:150px 32px 150px}
+.md2-voice{position:relative;list-style:none;margin:80px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px}
+.md2-voice .rail{position:absolute;left:0;right:0;top:7px;height:2px;background:#EAE9E4}
+.md2-voice .rail i{position:absolute;inset:0;background:#E95623;transform:scaleX(var(--p,0));transform-origin:left}
+.md2-voice .vc{position:relative;padding-top:40px}
+.md2-voice .dt{position:absolute;left:0;top:0;width:16px;height:16px;border-radius:50%;background:#fff;border:2px solid #CFCDC6;transition:all .4s ease}
+.md2-voice .vc.on .dt{background:#E95623;border-color:#E95623;box-shadow:0 0 0 6px rgba(233,86,35,.15)}
+.md2-voice .no{margin:0;font-size:13px;font-weight:700;color:#E95623}
+.md2-voice h3{margin:10px 0 0;font-size:21px;line-height:1.4;font-weight:700;letter-spacing:-0.035em}
+.md2-voice .d{margin:12px 0 0;font-size:15px;line-height:1.75;color:#5C5C5C}
+.md2-voice .vz{margin-top:24px;min-height:150px;border-radius:20px;background:#F6F5F1;padding:20px;display:flex;align-items:center}
+.md2-voice .vz>div{width:100%}
+.md2-voice .chat p{margin:0;max-width:92%;padding:10px 14px;border-radius:14px;font-size:14px;line-height:1.5}
+.md2-voice .chat .q{background:#fff;border:1px solid #E6E5E0;color:#3A3A3A}
+.md2-voice .chat .a{margin:10px 0 0 auto;background:#0A0A0A;color:#fff}
+.md2-voice .words p{margin:0 0 8px;font-size:12px;color:#8F8F8F}
+.md2-voice .words div{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.md2-voice .words div:last-child{margin-bottom:0}
+.md2-voice .words span{font-size:13px;padding:6px 12px;border-radius:999px}
+.md2-voice .words .y{background:#0A0A0A;color:#fff}
+.md2-voice .words .n{border:1px solid #DEDDD8;color:#8F8F8F;text-decoration:line-through}
+.md2-voice .edit p{margin:0;display:flex;align-items:baseline;gap:10px;font-size:14px;line-height:1.5}
+.md2-voice .edit p+p{margin-top:12px}
+.md2-voice .edit span{flex-shrink:0;width:44px;font-size:12px;color:#8F8F8F}
+.md2-voice .edit s{color:#8F8F8F;text-decoration-color:#E5484D}
+.md2-voice .edit b{color:#0A0A0A}
+.md2-voice .checks p{margin:0;display:flex;align-items:center;gap:10px;font-size:14px;color:#2A2A2A}
+.md2-voice .checks p+p{margin-top:12px}
+.md2-voice .checks p:before{content:"";width:18px;height:18px;flex-shrink:0;border-radius:6px;background:#E95623 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5 9-10'/%3E%3C/svg%3E") center/12px no-repeat}
+
+/* S5 검수하는 사람 */
+.md2-s5{background:#0A0A0A;color:#fff;padding:160px 32px 150px}
+.md2-big{margin:0;font-size:clamp(38px,5.4vw,80px);line-height:1.16;font-weight:700;letter-spacing:-0.055em}
+.md2-cred{margin:34px 0 0;max-width:700px;font-size:clamp(18px,1.6vw,21px);line-height:1.75;color:#A3A3A3}
+.md2-cred mark{color:#fff;font-weight:700;background:linear-gradient(transparent 62%,rgba(233,86,35,.6) 62%) 0 0/0 100% no-repeat;transition:background-size 1.1s cubic-bezier(.6,.1,.2,1) .2s}
+.md2-cred.in mark{background-size:100% 100%}
+.md2-flow{position:relative;margin-top:72px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.md2-flow:before{content:"";position:absolute;left:12%;right:12%;top:50%;height:1px;background:#2E2E2E}
+.md2-flow>span{position:relative;z-index:1;justify-self:center;display:flex;flex-direction:column;align-items:center;gap:4px;min-width:150px;padding:16px 18px;border-radius:18px;background:#151515;border:1px solid #2A2A2A;font-size:16px;font-weight:700}
+.md2-flow small{font-size:12px;font-weight:500;color:#8A8A8A}
+.md2-flow .me{background:#E95623;border-color:#E95623;color:#0A0A0A;box-shadow:0 0 50px rgba(233,86,35,.35)}
+.md2-flow .me small{color:rgba(10,10,10,.7)}
+.md2-flow .run{position:absolute;z-index:0;top:calc(50% - 4px);left:12%;width:8px;height:8px;border-radius:50%;background:#E95623;box-shadow:0 0 14px #E95623;animation:md2Run 4.2s cubic-bezier(.5,0,.5,1) infinite}
+@keyframes md2Run{0%{left:12%;opacity:0}8%{opacity:1}92%{opacity:1}100%{left:88%;opacity:0}}
+.md2-pts{list-style:none;margin:96px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:56px 72px}
+.md2-pts li{padding-top:26px;border-top:1px solid #262626}
+.md2-pts span{font-size:13px;font-family:ui-monospace,Menlo,monospace;color:#E95623}
+.md2-pts h3{margin:12px 0 0;font-size:clamp(22px,2vw,28px);line-height:1.35;font-weight:700;letter-spacing:-0.04em}
+.md2-pts p{margin:12px 0 0;font-size:16px;line-height:1.8;color:#A3A3A3;max-width:460px}
+.md2-voice1{margin:96px 0 0;padding-left:24px;border-left:3px solid #E95623;font-size:clamp(20px,2vw,26px);line-height:1.5;font-weight:600;letter-spacing:-0.03em}
+.md2-voice1 span{display:block;margin-top:10px;font-size:14px;font-weight:500;color:#8A8A8A}
+.md2-keep{margin-top:96px;padding-top:30px;border-top:1px solid #262626}
+.md2-keep .k{margin:0;font-size:14px;color:#8A8A8A}
+.md2-keep ul{list-style:none;margin:20px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
+.md2-keep li{font-size:15px;line-height:1.7;color:#A3A3A3}
+.md2-keep b{display:block;margin-bottom:6px;font-size:17px;color:#fff;letter-spacing:-0.02em}
+.md2-clinics{margin:56px 0 0;font-size:15px;color:#C9C9C9;line-height:1.8}
+.md2-clinics span{margin-right:16px;font-size:13px;color:#6E6E6E}
+
+/* S6 점검 — 크게 올라가는 숫자 */
+.md2-s6{position:relative;z-index:6;margin-top:-48px;background:#F6F5F1;border-radius:48px 48px 0 0;padding:140px 32px 170px}
+.md2-chkw{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:64px;align-items:start}
+.md2-chks{margin-top:48px;display:flex;flex-direction:column;gap:10px}
+.md2-chkw .r{position:sticky;top:120px;display:flex;flex-direction:column;gap:16px}
+.md2-score{border-radius:28px;background:#0A0A0A;color:#fff;padding:34px 34px 30px}
+.md2-score .n{margin:0;display:flex;align-items:baseline;gap:10px;font-size:clamp(84px,8vw,124px);font-weight:250;letter-spacing:-0.06em;line-height:1;font-variant-numeric:tabular-nums}
+.md2-score .n span{display:inline-block;transition:transform .35s cubic-bezier(.3,1.6,.4,1),color .3s ease}
+.md2-score .n span.bump{transform:scale(1.18)}
+.md2-score .n small{font-size:.28em;font-weight:500;color:#6E6E6E;letter-spacing:-0.02em}
+.md2-score.hit .n span{color:#E95623}
+.md2-score .msg{margin:16px 0 0;font-size:16px;line-height:1.6;color:#C9C9C9;min-height:3.2em}
+.md2-cta{display:block;margin-top:22px;text-align:center;background:#E95623;color:#0A0A0A;font-size:17px;font-weight:700;padding:18px 24px;border-radius:14px}
+.md2-no{border-radius:24px;border:1px solid #E0DFDA;background:#fff;padding:26px 28px}
+.md2-no .k{margin:0;font-size:13px;font-weight:700;color:#E95623}
+.md2-no h3{margin:8px 0 0;font-size:19px;letter-spacing:-0.03em}
+.md2-no ul{margin:14px 0 0;padding:0 0 0 18px;font-size:15px;line-height:1.8;color:#3A3A3A}
+.md2-no .s{margin:14px 0 0;font-size:13px;line-height:1.6;color:#8F8F8F}
+
+/* 태블릿·모바일 */
+@media (max-width:900px){
+  .md2-story{grid-template-columns:1fr;gap:0}
+  .md2-story .figs{display:none}
+  .md2-story .st,.md2-story .st:first-child,.md2-story .st:last-child{min-height:0;opacity:1;padding:0 0 64px}
+  .md2-story .m-fig{display:flex;align-items:center;justify-content:center;height:230px;margin-bottom:28px;border-radius:24px;background:#F6F5F1;padding:24px}
+  .md2-story>*{min-width:0}
+  .md2-story .m-fig{overflow:hidden}
+  .md2-story .m-fig svg{max-width:100%}
+  .md2-story .m-fig .bars{max-width:100%}
+  .md2-story .m-fig .docs{gap:10px}
+  .md2-story .m-fig .docs span{width:46px;height:62px}
+  .md2-story .m-fig .docs .me{width:70px;height:94px}
+  .md2-story .m-fig .docs .me{animation:none}
+  .md2-path .sgs{grid-template-columns:1fr;gap:0;margin-top:30px}
+  .md2-path .sg{display:grid;grid-template-columns:46px minmax(0,1fr);grid-template-areas:"nm b" ". who";column-gap:10px;padding:0 0 14px 34px}
+  .md2-path .sg:before{top:4px}
+  .md2-path .nm{grid-area:nm;padding-top:6px}
+  .md2-path .sg b{grid-area:b;margin:0;font-size:20px}
+  .md2-path .act{display:none}
+  .md2-path .who{grid-area:who;margin-top:8px;min-height:0}
+  .md2-path .who>span{padding:10px 14px;font-size:13px}
+  .md2-path .w0{transform:none}
+  .md2-path .line{left:7px;right:auto;top:12px;bottom:28px;width:2px;height:auto;background-image:linear-gradient(180deg,#CFCDC6 50%,transparent 50%);background-size:2px 12px}
+  .md2-path .line i{transform:scaleY(var(--p,0));transform-origin:top}
+  .md2-path .out{margin-top:18px}
+  .md2-path .o1{padding:16px 18px}.md2-path .o1 b{font-size:16px}
+  .md2-dept .pn{grid-template-columns:1fr;gap:24px}
+  .md2-s3hd{grid-template-columns:1fr;gap:24px}
+  .md2-rules .hd{display:none}
+  .md2-rules .rl{grid-template-columns:1fr;gap:10px;padding:22px 0}
+  .md2-law{grid-template-columns:1fr;gap:36px}
+  .md2-law>div,.md2-law>div+div{padding:0;border:0}
+  .md2-voice{grid-template-columns:1fr;gap:44px;padding-left:34px}
+  .md2-voice .rail{left:7px;right:auto;top:8px;bottom:0;width:2px;height:auto}
+  .md2-voice .rail i{transform:scaleY(var(--p,0));transform-origin:top}
+  .md2-voice .vc{padding-top:0}
+  .md2-voice .dt{left:-34px}
+  .md2-flow{grid-template-columns:1fr 1fr;gap:12px}
+  .md2-flow:before,.md2-flow .run{display:none}
+  .md2-flow>span{min-width:0;width:100%}
+  .md2-pts{grid-template-columns:1fr;gap:40px}
+  .md2-keep ul{grid-template-columns:1fr;gap:20px}
+  .md2-chkw{grid-template-columns:1fr;gap:32px}
+  .md2-chkw .r{position:static}
+}
+@media (max-width:700px){
+  .md2-hero{padding-bottom:130px!important}
+  .md2-s1{padding:100px 20px 80px;border-radius:32px 32px 0 0}
+  .md2-h{font-size:34px}
+  .md2-story{margin-top:48px}
+  .md2-story h3{font-size:24px}
+  .md2-story .d{font-size:16px}
+  .md2-rw{height:220vh;margin-top:20px}
+  .md2-rw .paper{padding:26px 22px 22px;border-radius:22px}
+  .md2-rw .ln{font-size:16px}
+  .md2-rw .foot span{white-space:normal}
+  .md2-s2{padding:110px 20px 100px}
+  .md2-path{margin:0 -20px;height:260vh}
+  .md2-path .pin{padding:64px 20px 0}
+  .md2-path .sw{font-size:13px}.md2-path .sw span{padding:9px 13px}
+  .md2-dept{margin-top:80px}
+  .md2-dept .tabs button b{font-size:15px}.md2-dept .tabs button span{font-size:11px}
+  .md2-dept dl>div{grid-template-columns:1fr;gap:4px}
+  .md2-dept dd{font-size:16px}
+  .md2-s3{padding:100px 20px 110px;border-radius:32px 32px 0 0}
+  .md2-rules{margin-top:44px}
+  .md2-s4{padding:110px 20px}
+  .md2-voice{margin-top:52px}
+  .md2-s5{padding:110px 20px}
+  .md2-big{font-size:36px}
+  .md2-flow{margin-top:48px}
+  .md2-pts,.md2-voice1,.md2-keep{margin-top:64px}
+  .md2-s6{padding:100px 20px 130px;border-radius:32px 32px 0 0}
+  .md2-score{padding:26px 24px}
+}
+@media (prefers-reduced-motion:reduce){
+  .md2-rv{opacity:1;transform:none}
+  .md2-rw{height:auto}.md2-rw .pin{position:static;height:auto;padding:40px 0}
+  .md2-path{height:auto}.md2-path .pin{position:static;height:auto;padding-bottom:40px}
+  .md2-story .lk line,.md2-story .ping,.md2-flow .run{animation:none}
+}
+
+/* 줄바꿈: 제목은 고르게, 문단 끝 한 글자 남지 않게 */
+.md2-h,.md2-h2,.md2-hx,.md2-hc,.md2-big,.md2-story h3,.md2-voice h3,.md2-pts h3,.md2-law h3{text-wrap:balance}
+.md2-lead,.md2-story .d,.md2-dept dd,.md2-dept .so strong,.md2-rules .fix,.md2-law p,.md2-voice .d,.md2-pts p,.md2-cred,.md2-score .msg{text-wrap:pretty}
+</style>
 </head>
 <body>
 <div style="font-family:'Pretendard Variable',Pretendard,-apple-system,sans-serif;color:#0A0A0A;letter-spacing:-0.01em;-webkit-font-smoothing:antialiased;background:#0A0A0A;width:100%">
@@ -178,7 +519,7 @@ footer{padding-bottom:72px!important}
 <a href="/#contact" class="hq-btn hq-cta" style="background:#E95623;color:#0A0A0A;font-size:14px;font-weight:700;padding:12px 20px;border-radius:999px">견적 받기</a>
 </div>
 </header>
-<section class="hq-ruled" style="position:relative;padding:96px 32px 130px;color:#fff">
+<section class="hq-ruled md2-hero" style="position:relative;padding:96px 32px 130px;color:#fff">
 <div aria-hidden="true" style="position:absolute;inset:0;overflow:hidden;pointer-events:none"><picture><source media="(max-width:700px)" type="image/avif" srcset="/assets/hero-medical-m.avif"><source media="(max-width:700px)" type="image/webp" srcset="/assets/hero-medical-m.webp"><source type="image/avif" srcset="/assets/hero-medical.avif"><source type="image/webp" srcset="/assets/hero-medical.webp"><img class="hq-bg" src="/assets/hero-medical.webp" alt="" width="1600" height="900" fetchpriority="low" decoding="async"></picture><div class="hq-bg-veil"></div><div style="position:absolute;left:50%;top:220px;width:900px;height:560px;transform:translate(-50%,-50%);background:radial-gradient(closest-side,rgba(233,86,35,.11),rgba(233,86,35,0))"></div></div>
 <div style="position:relative;max-width:1160px;margin:0 auto">
 <div class="hq-hero" style="display:grid;grid-template-columns:minmax(0,1fr) 420px;gap:56px;align-items:center">
@@ -188,205 +529,103 @@ footer{padding-bottom:72px!important}
 <span class="hq-rise" style="display:block;font-size:clamp(26px,3.2vw,42px);line-height:1.25;font-weight:200;color:#6E6E6E">글만 잘 써서는 환자가 오지 않습니다.</span>
 <span class="hq-rise" style="display:block;margin-top:16px;font-size:clamp(32px,4.4vw,60px);line-height:1.22;font-weight:700;color:#fff;animation-delay:.16s">검색부터 예약까지, <br>병원을 아는 한 팀이 <br>전체를 맡습니다<span class="hq-period" style="color:#E95623">.</span></span>
 </h1>
-<p class="hq-rise" style="margin:30px 0 0;max-width:520px;font-size:17px;line-height:1.8;color:#C9C9C9;animation-delay:.28s">환자가 병원을 알게 되는 순간부터 예약하고 다시 찾아오기까지. 구간마다 따로 맡기지 않고, 하나의 기획과 하나의 검수 기준으로 전체 흐름을 설계하고 운영합니다.</p>
-<div class="hq-rise" style="margin-top:36px;display:flex;flex-wrap:wrap;align-items:center;gap:20px;animation-delay:.36s">
+
+<div class="hq-rise" style="margin-top:44px;display:flex;flex-wrap:wrap;align-items:center;gap:20px;animation-delay:.32s">
 <a href="/#contact" class="hq-btn hq-cta" style="background:#E95623;color:#0A0A0A;font-size:17px;font-weight:700;padding:19px 30px;border-radius:14px">내 병원 맞춤 견적 받기</a>
 <a href="/guide/" style="font-size:15px;color:#A3A3A3;border-bottom:1px solid #3A3A3A;padding-bottom:2px">견적은 어떻게 내나요? →</a>
 </div>
 </div>
 <p class="hq-cap hq-rise" aria-hidden="true" style="margin:0;animation-delay:.3s"><i></i>원장님 이야기를 직접 듣고 시작합니다</p>
 </div>
-<div class="hq-rise" style="margin-top:72px;padding-top:28px;border-top:1px solid #232323;display:flex;flex-wrap:wrap;align-items:center;gap:10px 12px;animation-delay:.45s"><span style="display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:#fff;color:#0A0A0A;font-size:13px;font-weight:700;margin-right:14px"><span style="width:6px;height:6px;border-radius:50%;background:#E95623"></span>대학병원 간호사 출신 대표가 검수 기준을 만듭니다</span><span style="font-size:13px;color:#8A8A8A;margin-right:8px">함께해 온 병의원</span><span style="padding:8px 14px;border-radius:999px;border:1px solid #2A2A2A;font-size:13px;color:#C9C9C9">정형외과·내과 의원</span><span style="padding:8px 14px;border-radius:999px;border:1px solid #2A2A2A;font-size:13px;color:#C9C9C9">요양병원</span><span style="padding:8px 14px;border-radius:999px;border:1px solid #2A2A2A;font-size:13px;color:#C9C9C9">탈모·피부 클리닉</span><span style="padding:8px 14px;border-radius:999px;border:1px solid #2A2A2A;font-size:13px;color:#C9C9C9">성형외과</span></div>
+
 </div>
 </section>
 
-<section aria-label="병원 마케팅이 어려운 이유" style="position:relative;z-index:1;margin-top:-48px;background:#fff;border-radius:48px 48px 0 0;padding:130px 32px 170px">
-<div style="max-width:1160px;margin:0 auto">
-<h2 style="margin:0;font-size:clamp(32px,3.8vw,52px);line-height:1.28;letter-spacing:-0.04em"><span style="display:block;font-weight:200;color:#8A8A8A">병원 마케팅이</span> <span style="display:block;font-weight:700">유독 어려운 이유<span class="hq-period" style="color:#E95623">.</span></span></h2>
-<div style="margin-top:56px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px"><article class="hq-card" style="background:#F6F5F1;border:1px solid #EEEDE8;border-radius:24px;padding:24px;display:flex;flex-direction:column"><div style="height:176px;border-radius:16px;background:#fff;border:1px solid #EEEDE8;padding:16px 20px 18px;display:flex;flex-direction:column"><span style="font-size:12px;color:#8F8F8F">주변 병원의 눈</span><div style="flex:1;display:flex;align-items:center;justify-content:center;min-height:0"><svg aria-hidden="true" viewBox="0 0 320 130" style="width:100%;max-width:320px;height:auto"><line class="hq-flow" x1="60" y1="34" x2="160" y2="68" stroke="#CFCDC6" stroke-width="1"/><line class="hq-flow" x1="118" y1="70" x2="160" y2="68" stroke="#CFCDC6" stroke-width="1"/><line class="hq-flow" x1="214" y1="30" x2="160" y2="68" stroke="#CFCDC6" stroke-width="1"/><line class="hq-flow" x1="262" y1="78" x2="160" y2="68" stroke="#CFCDC6" stroke-width="1"/><line class="hq-flow" x1="86" y1="104" x2="160" y2="68" stroke="#CFCDC6" stroke-width="1"/><line class="hq-flow" x1="238" y1="116" x2="160" y2="68" stroke="#CFCDC6" stroke-width="1"/><circle class="hq-ping" cx="160" cy="68" r="10" fill="none" stroke="#E95623" stroke-width="1.5"/><circle cx="160" cy="68" r="7" fill="#E95623"/><circle cx="60" cy="34" r="6" fill="#fff" stroke="#0A0A0A" stroke-width="1.5"/><circle cx="118" cy="70" r="6" fill="#0A0A0A"/><circle cx="214" cy="30" r="6" fill="#fff" stroke="#0A0A0A" stroke-width="1.5"/><circle cx="262" cy="78" r="6" fill="#0A0A0A"/><circle cx="86" cy="104" r="6" fill="#fff" stroke="#0A0A0A" stroke-width="1.5"/><circle cx="238" cy="116" r="6" fill="#fff" stroke="#0A0A0A" stroke-width="1.5"/><text x="160" y="96" text-anchor="middle" font-size="11" fill="#E95623" font-weight="700">우리 병원</text></svg></div></div><h3 style="margin:24px 0 0;font-size:21px;font-weight:700;letter-spacing:-0.03em">표현 하나가 신고로 이어집니다</h3><p style="margin:10px 0 0;font-size:15px;line-height:1.75;color:#5C5C5C">병의원은 주변 병원끼리 서로의 광고를 지켜보는 업종입니다. 글 한 줄이 신고로 이어지면 글을 내리는 것으로 끝나지 않고, 책임은 원장님께 돌아옵니다.</p></article><article class="hq-card" style="background:#F6F5F1;border:1px solid #EEEDE8;border-radius:24px;padding:24px;display:flex;flex-direction:column"><div style="height:176px;border-radius:16px;background:#fff;border:1px solid #EEEDE8;padding:16px 20px 18px;display:flex;flex-direction:column"><span style="font-size:12px;color:#8F8F8F">원장님이 내시는 시간</span><div style="flex:1;display:flex;align-items:center;justify-content:center;min-height:0"><div style="width:100%;display:flex;flex-direction:column;gap:14px"><div style="display:grid;grid-template-columns:92px minmax(0,1fr);align-items:center;gap:10px"><span style="font-size:12px;color:#0A0A0A;font-weight:700">첫 인터뷰</span><span style="height:6px;border-radius:999px;background:#EFEEE9;overflow:hidden"><span class="hq-fill" style="--w:100%;display:block;height:100%;border-radius:999px;background:#E95623;animation-delay:0s"></span></span></div><div style="display:grid;grid-template-columns:92px minmax(0,1fr);align-items:center;gap:10px"><span style="font-size:12px;color:#5C5C5C">둘째 달</span><span style="height:6px;border-radius:999px;background:#EFEEE9;overflow:hidden"><span class="hq-fill" style="--w:34%;display:block;height:100%;border-radius:999px;background:#0A0A0A;animation-delay:0.2s"></span></span></div><div style="display:grid;grid-template-columns:92px minmax(0,1fr);align-items:center;gap:10px"><span style="font-size:12px;color:#5C5C5C">셋째 달</span><span style="height:6px;border-radius:999px;background:#EFEEE9;overflow:hidden"><span class="hq-fill" style="--w:26%;display:block;height:100%;border-radius:999px;background:#CFCDC6;animation-delay:0.4s"></span></span></div></div></div></div><h3 style="margin:24px 0 0;font-size:21px;font-weight:700;letter-spacing:-0.03em">원장님은 진료만으로도 바쁩니다</h3><p style="margin:10px 0 0;font-size:15px;line-height:1.75;color:#5C5C5C">처음 인터뷰에 한두 시간이면 충분합니다. 그다음부터는 진료하며 하시는 말씀, 메모, 사진을 편하게 보내주시면 저희가 브랜드 콘텐츠로 옮깁니다.</p></article><article class="hq-card" style="background:#F6F5F1;border:1px solid #EEEDE8;border-radius:24px;padding:24px;display:flex;flex-direction:column"><div style="height:176px;border-radius:16px;background:#fff;border:1px solid #EEEDE8;padding:16px 20px 18px;display:flex;flex-direction:column"><span style="font-size:12px;color:#8F8F8F">비슷한 글 사이에서</span><div style="flex:1;display:flex;align-items:center;justify-content:center;min-height:0"><div style="width:100%;display:flex;align-items:center;justify-content:center;gap:10px"><span class="hq-in2" style="--d:0s;width:54px;height:72px;border-radius:8px;border:1px solid #E6E5E0;background:#FBFAF7;padding:10px 8px;display:flex;flex-direction:column;gap:6px"><span style="height:4px;border-radius:2px;background:#DAD8D1;width:90%"></span><span style="height:4px;border-radius:2px;background:#DAD8D1;width:70%"></span><span style="height:4px;border-radius:2px;background:#DAD8D1;width:82%"></span><span style="height:4px;border-radius:2px;background:#DAD8D1;width:56%"></span></span><span class="hq-in2" style="--d:0.15s;width:54px;height:72px;border-radius:8px;border:1px solid #E6E5E0;background:#FBFAF7;padding:10px 8px;display:flex;flex-direction:column;gap:6px"><span style="height:4px;border-radius:2px;background:#DAD8D1;width:90%"></span><span style="height:4px;border-radius:2px;background:#DAD8D1;width:70%"></span><span style="height:4px;border-radius:2px;background:#DAD8D1;width:82%"></span><span style="height:4px;border-radius:2px;background:#DAD8D1;width:56%"></span></span><span class="hq-in2" style="--d:0.3s;width:54px;height:72px;border-radius:8px;border:1px solid #E6E5E0;background:#FBFAF7;padding:10px 8px;display:flex;flex-direction:column;gap:6px"><span style="height:4px;border-radius:2px;background:#DAD8D1;width:90%"></span><span style="height:4px;border-radius:2px;background:#DAD8D1;width:70%"></span><span style="height:4px;border-radius:2px;background:#DAD8D1;width:82%"></span><span style="height:4px;border-radius:2px;background:#DAD8D1;width:56%"></span></span><span style="width:28px;height:1px;background:#CFCDC6;margin:0 4px"></span><span class="hq-in2" style="--d:.7s;width:54px;height:72px;border-radius:8px;border:1.5px solid #E95623;background:#fff;padding:10px 8px;display:flex;flex-direction:column;gap:6px"><span style="height:4px;border-radius:2px;background:#0A0A0A;width:90%"></span><span style="height:4px;border-radius:2px;background:#0A0A0A;width:62%"></span><span style="height:4px;border-radius:2px;background:#E95623;width:78%"></span><span style="height:4px;border-radius:2px;background:#0A0A0A;width:50%"></span></span></div></div></div><h3 style="margin:24px 0 0;font-size:21px;font-weight:700;letter-spacing:-0.03em">어느 병원에나 붙는 글은 선택받지 못합니다</h3><p style="margin:10px 0 0;font-size:15px;line-height:1.75;color:#5C5C5C">증상과 치료법을 정리한 글은 어디에나 있습니다. 환자는 정보가 아니라 원장님을 보고 병원을 고릅니다.</p></article></div>
-<p style="margin:72px 0 0;font-size:14px;color:#8F8F8F;font-family:ui-monospace,Menlo,monospace">같은 주제, 두 개의 글 <span style="font-family:inherit">(예시 · 정형외과)</span></p>
-<div class="md-cmp" style="margin-top:16px;display:grid;grid-template-columns:minmax(0,1fr) 40px minmax(0,1.15fr);gap:0;align-items:stretch">
-<div style="border-radius:24px;background:#F6F5F1;border:1px solid #EEEDE8;padding:28px;display:flex;flex-direction:column;gap:10px">
-<span style="font-size:12px;color:#8F8F8F">검색어만 채운 글</span>
-<p style="margin:0;font-size:15px;line-height:1.75;color:#8F8F8F">무릎 통증으로 고생하시는 분들이 많습니다.</p><p style="margin:0;font-size:15px;line-height:1.75;color:#8F8F8F">오늘은 무릎 통증의 원인과 치료 방법에 대해 알아보겠습니다.</p><p style="margin:0;font-size:15px;line-height:1.75;color:#8F8F8F">무릎 통증이란 무릎 관절 주변에 생기는 통증으로…</p>
-<span style="margin-top:auto;padding-top:14px;border-top:1px solid #E6E5E0;font-size:13px;color:#8F8F8F">어느 정형외과 블로그에 붙여도 똑같은 글</span>
+<section class="md2-s1" aria-label="병원 마케팅이 어려운 이유">
+<div class="md2-w">
+<h2 class="md2-h">병원 마케팅이 <em>유독</em> 어려운 이유<span class="dot">.</span></h2>
+<div class="md2-story"><div class="figs" aria-hidden="true"><div class="fig on" data-n="0"><p class="cap">주변 병원의 눈</p><svg aria-hidden="true" viewBox="0 0 320 200"><g class="lk"><line x1="52" y1="44" x2="160" y2="100"/><line x1="104" y1="118" x2="160" y2="100"/><line x1="226" y1="38" x2="160" y2="100"/><line x1="274" y1="112" x2="160" y2="100"/><line x1="78" y1="164" x2="160" y2="100"/><line x1="236" y1="172" x2="160" y2="100"/></g><circle class="ping" cx="160" cy="100" r="16"/><circle cx="160" cy="100" r="11" fill="#E95623"/><g class="nd"><circle cx="52" cy="44" r="8"/><circle cx="104" cy="118" r="8" class="f"/><circle cx="226" cy="38" r="8"/><circle cx="274" cy="112" r="8" class="f"/><circle cx="78" cy="164" r="8"/><circle cx="236" cy="172" r="8"/></g><text x="160" y="136" text-anchor="middle">우리 병원</text></svg></div><div class="fig" data-n="1"><p class="cap">원장님이 내시는 시간</p><div class="bars"><div><span>첫 인터뷰</span><i style="--w:100%"></i></div><div><span>둘째 달</span><i style="--w:34%"></i></div><div><span>셋째 달</span><i style="--w:26%"></i></div><p>원장님이 내시는 시간</p></div></div><div class="fig" data-n="2"><p class="cap">비슷한 글 사이에서</p><div class="docs"><span></span><span></span><span></span><span></span><span class="me"><b>원장님</b></span></div></div></div><div class="sts"><div class="st on" data-n="0"><div class="m-fig" aria-hidden="true"><svg aria-hidden="true" viewBox="0 0 320 200"><g class="lk"><line x1="52" y1="44" x2="160" y2="100"/><line x1="104" y1="118" x2="160" y2="100"/><line x1="226" y1="38" x2="160" y2="100"/><line x1="274" y1="112" x2="160" y2="100"/><line x1="78" y1="164" x2="160" y2="100"/><line x1="236" y1="172" x2="160" y2="100"/></g><circle class="ping" cx="160" cy="100" r="16"/><circle cx="160" cy="100" r="11" fill="#E95623"/><g class="nd"><circle cx="52" cy="44" r="8"/><circle cx="104" cy="118" r="8" class="f"/><circle cx="226" cy="38" r="8"/><circle cx="274" cy="112" r="8" class="f"/><circle cx="78" cy="164" r="8"/><circle cx="236" cy="172" r="8"/></g><text x="160" y="136" text-anchor="middle">우리 병원</text></svg></div><p class="no">01 <span>/ 03</span></p><h3>표현 하나가 신고로 이어집니다</h3><p class="d">병의원은 주변 병원끼리 서로의 광고를 지켜보는 업종입니다. 글 한 줄이 신고로 이어지면 글을 내리는 것으로 끝나지 않고, 책임은 원장님께 돌아옵니다.</p></div><div class="st" data-n="1"><div class="m-fig" aria-hidden="true"><div class="bars"><div><span>첫 인터뷰</span><i style="--w:100%"></i></div><div><span>둘째 달</span><i style="--w:34%"></i></div><div><span>셋째 달</span><i style="--w:26%"></i></div><p>원장님이 내시는 시간</p></div></div><p class="no">02 <span>/ 03</span></p><h3>원장님은 진료만으로도 바쁩니다</h3><p class="d">처음 인터뷰에 한두 시간이면 충분합니다. 그다음부터는 진료하며 하시는 말씀, 메모, 사진을 편하게 보내주시면 저희가 브랜드 콘텐츠로 옮깁니다.</p></div><div class="st" data-n="2"><div class="m-fig" aria-hidden="true"><div class="docs"><span></span><span></span><span></span><span></span><span class="me"><b>원장님</b></span></div></div><p class="no">03 <span>/ 03</span></p><h3>어느 병원에나 붙는 글은 선택받지 못합니다</h3><p class="d">증상과 치료법을 정리한 글은 어디에나 있습니다. 환자는 정보가 아니라 원장님을 보고 병원을 고릅니다.</p></div></div></div>
+<div class="md2-rw" aria-label="같은 주제, 두 개의 글 (예시 · 정형외과)">
+<div class="pin">
+<p class="ttl">같은 주제, 두 개의 글 <span>(예시 · 정형외과)</span></p>
+<div class="paper">
+<p class="tag"><span class="t0">검색어만 채운 글</span><span class="t1">원장님 인터뷰에서 시작한 글</span></p>
+<div class="body"><p class="ln" data-n="0"><span class="g">무릎 통증으로 고생하시는 분들이 많습니다.</span><span class="r">진료실에서 가장 많이 듣는 말은 <b>“수술해야 하나요?”</b>입니다.</span></p><p class="ln" data-n="1"><span class="g">오늘은 무릎 통증의 원인과 치료 방법에 대해 알아보겠습니다.</span><span class="r">그 질문을 꺼내기까지 몇 달을 참다 오시는 분이 대부분입니다.</span></p><p class="ln" data-n="2"><span class="g">무릎 통증이란 무릎 관절 주변에 생기는 통증으로…</span><span class="r">그래서 저는 검사 결과보다 먼저, 언제부터 어떻게 불편하셨는지를 여쭙니다.</span></p><p class="ln" data-n="3"><span class="g"></span><span class="r">오늘은 그 질문에 제가 어떻게 답하는지 말씀드리려 합니다.</span></p></div>
+<p class="foot"><span class="t0">어느 정형외과 블로그에 붙여도 똑같은 글</span><span class="t1">이 원장님만 쓸 수 있는 글</span></p>
 </div>
-<div class="md-arrow" aria-hidden="true" style="display:flex;align-items:center;justify-content:center;color:#CFCDC6;font-size:18px">→</div>
-<div style="border-radius:24px;background:#0A0A0A;color:#fff;padding:28px;display:flex;flex-direction:column;gap:10px;box-shadow:0 0 0 1px rgba(233,86,35,.55)">
-<span style="font-size:12px;color:#E95623;display:inline-flex;align-items:center;gap:8px"><span class="hq-live" style="width:6px;height:6px;border-radius:50%;background:#E95623"></span>원장님 인터뷰에서 시작한 글</span>
-<p style="margin:0;font-size:15px;line-height:1.75;color:#E5E5E5">진료실에서 가장 많이 듣는 말은 “수술해야 하나요?”입니다.</p><p style="margin:0;font-size:15px;line-height:1.75;color:#E5E5E5">그 질문을 꺼내기까지 몇 달을 참다 오시는 분이 대부분입니다.</p><p style="margin:0;font-size:15px;line-height:1.75;color:#E5E5E5">그래서 저는 검사 결과보다 먼저, 언제부터 어떻게 불편하셨는지를 여쭙니다.</p><p style="margin:0;font-size:15px;line-height:1.75;color:#E5E5E5">오늘은 그 질문에 제가 어떻게 답하는지 말씀드리려 합니다.</p>
-<span style="margin-top:auto;padding-top:14px;border-top:1px solid #262626;font-size:13px;color:#A3A3A3">이 원장님만 쓸 수 있는 글</span>
+<p class="hint" aria-hidden="true">스크롤하면 글이 고쳐 써집니다</p>
 </div>
 </div>
 </div>
 </section>
-
-<section aria-label="환자가 오는 길 전체" style="position:relative;z-index:2;margin-top:-48px;background:#F6F5F1;border-radius:48px 48px 0 0;padding:130px 32px 170px">
-<div style="max-width:1160px;margin:0 auto">
-<h2 style="margin:0;font-size:clamp(32px,3.8vw,52px);line-height:1.28;letter-spacing:-0.04em"><span style="display:block;font-weight:200;color:#8A8A8A">글 한 편이 아니라,</span> <span style="display:block;font-weight:700">환자가 오는 길 전체를 맡습니다<span class="hq-period" style="color:#E95623">.</span></span></h2>
-<p style="margin:24px 0 0;max-width:660px;font-size:17px;line-height:1.8;color:#5C5C5C">검색에서 예약, 다시 찾아오기까지 다섯 구간을 하나의 기획으로 잇는 것을 풀퍼널 마케팅이라고 합니다. 한 구간이라도 비면 앞에서 쓴 비용이 거기서 샙니다. 크루스는 다섯 구간을 한 팀이 설계하고 운영합니다.</p>
-<p style="margin:56px 0 0;font-size:14px;color:#8F8F8F;font-family:ui-monospace,Menlo,monospace">구간마다 <span style="font-family:inherit">따로 맡기면</span></p>
-<div class="md-split" style="margin-top:14px;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px"><div style="border-radius:14px;border:1px dashed #CFCDC6;padding:14px 12px;text-align:center"><span style="display:block;font-size:14px;font-weight:600;color:#5C5C5C">검색</span><span style="display:block;margin-top:4px;font-size:12px;color:#8F8F8F">A 업체</span></div><div style="border-radius:14px;border:1px dashed #CFCDC6;padding:14px 12px;text-align:center"><span style="display:block;font-size:14px;font-weight:600;color:#5C5C5C">신뢰</span><span style="display:block;margin-top:4px;font-size:12px;color:#8F8F8F">B 업체</span></div><div style="border-radius:14px;border:1px dashed #CFCDC6;padding:14px 12px;text-align:center"><span style="display:block;font-size:14px;font-weight:600;color:#5C5C5C">확인</span><span style="display:block;margin-top:4px;font-size:12px;color:#8F8F8F">C 업체</span></div><div style="border-radius:14px;border:1px dashed #CFCDC6;padding:14px 12px;text-align:center"><span style="display:block;font-size:14px;font-weight:600;color:#5C5C5C">예약</span><span style="display:block;margin-top:4px;font-size:12px;color:#8F8F8F">병원 직원</span></div><div style="border-radius:14px;border:1px dashed #CFCDC6;padding:14px 12px;text-align:center"><span style="display:block;font-size:14px;font-weight:600;color:#5C5C5C">다시 찾기</span><span style="display:block;margin-top:4px;font-size:12px;color:#E5484D">아무도 안 봄</span></div></div>
-<p style="margin:14px 0 0;font-size:14px;line-height:1.7;color:#5C5C5C">구간마다 말이 달라지고, 환자가 어디서 돌아서는지는 아무도 보지 않습니다.</p>
-<p style="margin:48px 0 0;font-size:14px;color:#E95623;font-weight:700;font-family:ui-monospace,Menlo,monospace">크루스가 <span style="font-family:inherit">전체를 맡으면</span></p>
-<div class="hq-card" style="margin-top:14px;border-radius:28px;background:#fff;border:1px solid #EEEDE8;padding:44px 28px 28px">
-<div class="md-path" style="position:relative;display:grid;grid-template-columns:repeat(5,minmax(0,1fr))">
-<svg class="md-line" aria-hidden="true" style="position:absolute;left:10%;top:8px;width:80%;height:4px;overflow:visible" viewBox="0 0 100 4" preserveAspectRatio="none"><line class="hq-flow" x1="0" y1="2" x2="100" y2="2" stroke="#E95623" stroke-width="1.5" vector-effect="non-scaling-stroke"/></svg>
-<div class="md-node" style="position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 10px">
-<span style="position:relative;width:18px;height:18px;border-radius:50%;background:#fff;border:1.5px solid #0A0A0A"></span>
-<span style="margin-top:16px;font-size:12px;color:#E95623;font-family:ui-monospace,Menlo,monospace">01</span>
-<h3 style="margin:6px 0 0;font-size:19px;font-weight:700;letter-spacing:-0.03em">검색</h3>
-<p style="margin:12px 0 0;font-size:14px;line-height:1.65;color:#5C5C5C">증상과 지역으로<br>병원을 찾습니다</p>
-<p style="margin:14px 0 0;padding-top:12px;border-top:1px solid #E6E5E0;font-size:13px;line-height:1.65;color:#0A0A0A;font-weight:600;width:100%">환자가 실제로 묻는 질문부터 주제를 정합니다</p>
-</div><div class="md-node" style="position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 10px">
-<span style="position:relative;width:18px;height:18px;border-radius:50%;background:#0A0A0A"></span>
-<span style="margin-top:16px;font-size:12px;color:#E95623;font-family:ui-monospace,Menlo,monospace">02</span>
-<h3 style="margin:6px 0 0;font-size:19px;font-weight:700;letter-spacing:-0.03em">신뢰</h3>
-<p style="margin:12px 0 0;font-size:14px;line-height:1.65;color:#5C5C5C">이 병원, 이 의사가<br>믿을 만한지 봅니다</p>
-<p style="margin:14px 0 0;padding-top:12px;border-top:1px solid #E6E5E0;font-size:13px;line-height:1.65;color:#0A0A0A;font-weight:600;width:100%">인터뷰에서 시작한 브랜드 콘텐츠를 만듭니다</p>
-</div><div class="md-node" style="position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 10px">
-<span style="position:relative;width:18px;height:18px;border-radius:50%;background:#0A0A0A"></span>
-<span style="margin-top:16px;font-size:12px;color:#E95623;font-family:ui-monospace,Menlo,monospace">03</span>
-<h3 style="margin:6px 0 0;font-size:19px;font-weight:700;letter-spacing:-0.03em">확인</h3>
-<p style="margin:12px 0 0;font-size:14px;line-height:1.65;color:#5C5C5C">위치, 진료 시간,<br>후기를 확인합니다</p>
-<p style="margin:14px 0 0;padding-top:12px;border-top:1px solid #E6E5E0;font-size:13px;line-height:1.65;color:#0A0A0A;font-weight:600;width:100%">어디서 보든 같은 말투, 같은 정보로 맞춥니다</p>
-</div><div class="md-node" style="position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 10px">
-<span style="position:relative;width:18px;height:18px;border-radius:50%;background:#fff;border:1.5px solid #0A0A0A"></span>
-<span style="margin-top:16px;font-size:12px;color:#E95623;font-family:ui-monospace,Menlo,monospace">04</span>
-<h3 style="margin:6px 0 0;font-size:19px;font-weight:700;letter-spacing:-0.03em">예약</h3>
-<p style="margin:12px 0 0;font-size:14px;line-height:1.65;color:#5C5C5C">예약하고<br>방문합니다</p>
-<p style="margin:14px 0 0;padding-top:12px;border-top:1px solid #E6E5E0;font-size:13px;line-height:1.65;color:#0A0A0A;font-weight:600;width:100%">어디서 끊기는지 원장님과 함께 보고 고칩니다</p>
-</div><div class="md-node" style="position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 10px">
-<span style="position:relative;width:18px;height:18px;border-radius:50%;background:#E95623"></span>
-<span style="margin-top:16px;font-size:12px;color:#E95623;font-family:ui-monospace,Menlo,monospace">05</span>
-<h3 style="margin:6px 0 0;font-size:19px;font-weight:700;letter-spacing:-0.03em">다시 찾기</h3>
-<p style="margin:12px 0 0;font-size:14px;line-height:1.65;color:#5C5C5C">다녀간 환자의 후기가<br>다음 환자를 부릅니다</p>
-<p style="margin:14px 0 0;padding-top:12px;border-top:1px solid #E6E5E0;font-size:13px;line-height:1.65;color:#0A0A0A;font-weight:600;width:100%">후기가 다시 예약으로 이어지게 연결합니다</p>
+<section class="md2-s2" aria-label="환자가 오는 길 전체">
+<div class="md2-w">
+<h2 class="md2-h2"><span>글 한 편이 아니라,</span> 환자가 오는 길 전체를 맡습니다<span class="dot">.</span></h2>
+<p class="md2-lead">검색에서 예약, 다시 찾아오기까지 다섯 구간을 하나의 기획으로 잇는 것을 <b>풀퍼널 마케팅</b>이라고 합니다. 한 구간이라도 비면 앞에서 쓴 비용이 거기서 샙니다. 크루스는 다섯 구간을 한 팀이 설계하고 운영합니다.</p>
+</div>
+<div class="md2-path">
+<div class="pin">
+<div class="md2-w">
+<div class="sw" aria-hidden="true"><span class="s0">구간마다 따로 맡기면</span><span class="s1">크루스가 전체를 맡으면</span><i></i></div>
+<ol class="sgs"><li class="sg" style="--k:0"><span class="nm">01</span><b>검색</b><span class="act">증상과 지역으로<br>병원을 찾습니다</span><span class="who"><span class="w0">A 업체</span><span class="w1">환자가 실제로 묻는 질문부터 주제를 정합니다</span></span></li><li class="sg" style="--k:1"><span class="nm">02</span><b>신뢰</b><span class="act">이 병원, 이 의사가<br>믿을 만한지 봅니다</span><span class="who"><span class="w0">B 업체</span><span class="w1">인터뷰에서 시작한 브랜드 콘텐츠를 만듭니다</span></span></li><li class="sg" style="--k:2"><span class="nm">03</span><b>확인</b><span class="act">위치, 진료 시간,<br>후기를 확인합니다</span><span class="who"><span class="w0">C 업체</span><span class="w1">어디서 보든 같은 말투, 같은 정보로 맞춥니다</span></span></li><li class="sg" style="--k:3"><span class="nm">04</span><b>예약</b><span class="act">예약하고<br>방문합니다</span><span class="who"><span class="w0">병원 직원</span><span class="w1">어디서 끊기는지 원장님과 함께 보고 고칩니다</span></span></li><li class="sg" style="--k:4"><span class="nm">05</span><b>다시 찾기</b><span class="act">다녀간 환자의 후기가<br>다음 환자를 부릅니다</span><span class="who"><span class="w0 none">아무도 안 봄</span><span class="w1">후기가 다시 예약으로 이어지게 연결합니다</span></span></li><li class="line" aria-hidden="true"><i></i></li></ol>
+<div class="out"><p class="o0">구간마다 말이 달라지고, 환자가 어디서 돌아서는지는 아무도 보지 않습니다.</p><p class="o1"><b>다섯 구간 전체를, 전담 크루 한 명이 끝까지 봅니다</b><span>하나의 기획 · 하나의 말투 · 하나의 검수 기준</span></p></div>
+<p class="loop"><b>05에서 다시 01로.</b> 광고를 멈춰도 돌아가는 길을 처음부터 이렇게 잇습니다.</p>
 </div>
 </div>
-<div style="margin-top:32px;border-radius:16px;background:#0A0A0A;color:#fff;padding:18px 22px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 24px">
-<span style="font-size:15px;font-weight:700;letter-spacing:-0.02em">다섯 구간 전체를, 전담 크루 한 명이 끝까지 봅니다</span>
-<span style="font-size:13px;color:#A3A3A3">하나의 기획 <span style="color:#E95623">·</span> 하나의 말투 <span style="color:#E95623">·</span> 하나의 검수 기준</span>
 </div>
-<p style="margin:20px 0 0;font-size:14px;color:#5C5C5C;text-align:center">05에서 다시 01로. <b style="color:#0A0A0A">광고를 멈춰도 돌아가는 길</b>을 처음부터 이렇게 잇습니다.</p>
-</div>
-<p style="margin:72px 0 0;font-size:14px;color:#8F8F8F;font-family:ui-monospace,Menlo,monospace">같은 길도, <span style="font-family:inherit">진료과에 따라 이렇게 다르게 설계합니다</span></p>
-<div style="margin-top:20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;align-items:start"><article class="hq-card" style="background:#fff;border:1px solid #EEEDE8;border-radius:24px;padding:28px 28px 12px;display:flex;flex-direction:column"><span style="font-size:12px;color:#E95623;font-family:ui-monospace,Menlo,monospace">01</span><h3 style="margin:10px 0 0;font-size:24px;font-weight:700;letter-spacing:-0.035em">통증·생활 진료</h3><p style="margin:4px 0 20px;font-size:14px;color:#8F8F8F">정형외과 · 내과 · 재활의학과</p><dl style="margin:0"><div style="padding:16px 0;border-top:1px solid #EEEDE8"><dt style="font-size:12px;color:#8F8F8F;">찾는 사람</dt><dd style="margin:6px 0 0;font-size:15px;line-height:1.7;color:#3A3A3A;">지금 아프고, 가까운 곳에서 바로 해결하고 싶은 환자</dd></div><div style="padding:16px 0;border-top:1px solid #EEEDE8"><dt style="font-size:12px;color:#8F8F8F;">검색하는 말</dt><dd style="margin:6px 0 0;font-size:15px;line-height:1.7;color:#3A3A3A;">동네 이름 + 증상이나 시술 이름</dd></div><div style="padding:16px 0;border-top:1px solid #EEEDE8"><dt style="font-size:12px;color:#8F8F8F;">예약 직전에 보는 것</dt><dd style="margin:6px 0 0;font-size:15px;line-height:1.7;color:#3A3A3A;">진료 시간, 보험이 되는지, 주사나 시술이 아픈지</dd></div><div style="padding:16px 0;border-top:1px solid #EEEDE8"><dt style="font-size:12px;color:#E95623;font-weight:700">그래서 콘텐츠는</dt><dd style="margin:6px 0 0;font-size:15px;line-height:1.7;color:#0A0A0A;font-weight:600">진료를 권하기보다 판단을 돕습니다. 비용과 보험을 투명하게 안내하고, 지역 이름을 원장님 말 속에 자연스럽게 넣습니다</dd></div></dl></article><article class="hq-card" style="background:#fff;border:1px solid #EEEDE8;border-radius:24px;padding:28px 28px 12px;display:flex;flex-direction:column"><span style="font-size:12px;color:#E95623;font-family:ui-monospace,Menlo,monospace">02</span><h3 style="margin:10px 0 0;font-size:24px;font-weight:700;letter-spacing:-0.035em">비급여 클리닉</h3><p style="margin:4px 0 20px;font-size:14px;color:#8F8F8F">피부 · 탈모 · 성형</p><dl style="margin:0"><div style="padding:16px 0;border-top:1px solid #EEEDE8"><dt style="font-size:12px;color:#8F8F8F;">찾는 사람</dt><dd style="margin:6px 0 0;font-size:15px;line-height:1.7;color:#3A3A3A;">여러 병원을 오래 비교하는 환자</dd></div><div style="padding:16px 0;border-top:1px solid #EEEDE8"><dt style="font-size:12px;color:#8F8F8F;">검색하는 말</dt><dd style="margin:6px 0 0;font-size:15px;line-height:1.7;color:#3A3A3A;">시술 이름 + 가격, 부작용, 후기</dd></div><div style="padding:16px 0;border-top:1px solid #EEEDE8"><dt style="font-size:12px;color:#8F8F8F;">예약 직전에 보는 것</dt><dd style="margin:6px 0 0;font-size:15px;line-height:1.7;color:#3A3A3A;">원장이 어떤 사람인지, 부작용, 가격</dd></div><div style="padding:16px 0;border-top:1px solid #EEEDE8"><dt style="font-size:12px;color:#E95623;font-weight:700">그래서 콘텐츠는</dt><dd style="margin:6px 0 0;font-size:15px;line-height:1.7;color:#0A0A0A;font-weight:600">원장님의 판단 기준을 보여줍니다. 부작용을 정직하게 적고, 할인 대신 가격을 있는 그대로 안내합니다</dd></div></dl></article><article class="hq-card" style="background:#fff;border:1px solid #EEEDE8;border-radius:24px;padding:28px 28px 12px;display:flex;flex-direction:column"><span style="font-size:12px;color:#E95623;font-family:ui-monospace,Menlo,monospace">03</span><h3 style="margin:10px 0 0;font-size:24px;font-weight:700;letter-spacing:-0.035em">요양병원</h3><p style="margin:4px 0 20px;font-size:14px;color:#8F8F8F">요양 · 재활</p><dl style="margin:0"><div style="padding:16px 0;border-top:1px solid #EEEDE8"><dt style="font-size:12px;color:#8F8F8F;">찾는 사람</dt><dd style="margin:6px 0 0;font-size:15px;line-height:1.7;color:#3A3A3A;">환자 본인이 아니라 보호자</dd></div><div style="padding:16px 0;border-top:1px solid #EEEDE8"><dt style="font-size:12px;color:#8F8F8F;">검색하는 말</dt><dd style="margin:6px 0 0;font-size:15px;line-height:1.7;color:#3A3A3A;">지역 이름 + 요양병원 비용, 면회, 재활</dd></div><div style="padding:16px 0;border-top:1px solid #EEEDE8"><dt style="font-size:12px;color:#8F8F8F;">입원 직전에 보는 것</dt><dd style="margin:6px 0 0;font-size:15px;line-height:1.7;color:#3A3A3A;">돌봄 방식, 시설, 면회, 비용. 대부분 직접 방문해 확인합니다</dd></div><div style="padding:16px 0;border-top:1px solid #EEEDE8"><dt style="font-size:12px;color:#E95623;font-weight:700">그래서 콘텐츠는</dt><dd style="margin:6px 0 0;font-size:15px;line-height:1.7;color:#0A0A0A;font-weight:600">보호자의 질문에 답합니다. 하루 일과와 돌봄 방식을 보여주고, 방문 상담으로 이어지게 합니다</dd></div></dl></article></div>
+<div class="md2-w md2-dept">
+<h3>같은 길도, 진료과에 따라 이렇게 다르게 설계합니다</h3>
+<div class="tabs" role="tablist" aria-label="진료과"><button type="button" role="tab" id="md2-t0" aria-controls="md2-p0" aria-selected="true" tabindex="0"><b>통증·생활 진료</b><span>정형외과 · 내과 · 재활의학과</span></button><button type="button" role="tab" id="md2-t1" aria-controls="md2-p1" aria-selected="false" tabindex="-1"><b>비급여 클리닉</b><span>피부 · 탈모 · 성형</span></button><button type="button" role="tab" id="md2-t2" aria-controls="md2-p2" aria-selected="false" tabindex="-1"><b>요양병원</b><span>요양 · 재활</span></button><i class="ind" aria-hidden="true"></i></div>
+<div class="pns"><div class="pn" role="tabpanel" id="md2-p0" aria-labelledby="md2-t0"><dl><div><dt>찾는 사람</dt><dd>지금 아프고, 가까운 곳에서 바로 해결하고 싶은 환자</dd></div><div><dt>검색하는 말</dt><dd>동네 이름 + 증상이나 시술 이름</dd></div><div><dt>예약 직전에 보는 것</dt><dd>진료 시간, 보험이 되는지, 주사나 시술이 아픈지</dd></div></dl><div class="so"><p>그래서 콘텐츠는</p><strong>진료를 권하기보다 판단을 돕습니다. 비용과 보험을 투명하게 안내하고, 지역 이름을 원장님 말 속에 자연스럽게 넣습니다</strong></div></div><div class="pn" role="tabpanel" id="md2-p1" aria-labelledby="md2-t1" hidden><dl><div><dt>찾는 사람</dt><dd>여러 병원을 오래 비교하는 환자</dd></div><div><dt>검색하는 말</dt><dd>시술 이름 + 가격, 부작용, 후기</dd></div><div><dt>예약 직전에 보는 것</dt><dd>원장이 어떤 사람인지, 부작용, 가격</dd></div></dl><div class="so"><p>그래서 콘텐츠는</p><strong>원장님의 판단 기준을 보여줍니다. 부작용을 정직하게 적고, 할인 대신 가격을 있는 그대로 안내합니다</strong></div></div><div class="pn" role="tabpanel" id="md2-p2" aria-labelledby="md2-t2" hidden><dl><div><dt>찾는 사람</dt><dd>환자 본인이 아니라 보호자</dd></div><div><dt>검색하는 말</dt><dd>지역 이름 + 요양병원 비용, 면회, 재활</dd></div><div><dt>입원 직전에 보는 것</dt><dd>돌봄 방식, 시설, 면회, 비용. 대부분 직접 방문해 확인합니다</dd></div></dl><div class="so"><p>그래서 콘텐츠는</p><strong>보호자의 질문에 답합니다. 하루 일과와 돌봄 방식을 보여주고, 방문 상담으로 이어지게 합니다</strong></div></div></div>
 </div>
 </section>
-
-<section aria-label="게시 전에 걸러내는 표현" style="position:relative;z-index:3;margin-top:-48px;background:#0A0A0A;color:#fff;border-radius:48px 48px 0 0;padding:130px 32px 170px">
-<div style="max-width:1160px;margin:0 auto">
-<h2 style="margin:0;font-size:clamp(32px,3.8vw,52px);line-height:1.28;letter-spacing:-0.04em"><span style="display:block;font-weight:200;color:#8A8A8A">병원 글에서</span> <span style="display:block;font-weight:700">게시 전에 걸러내는 표현<span class="hq-period" style="color:#E95623">.</span></span></h2>
-<p style="margin:24px 0 0;max-width:640px;font-size:17px;line-height:1.8;color:#C9C9C9">의료법은 거짓·과장, 치료 경험담, 비교·비방 광고를 금지하고(제56조), 대가를 건 환자 유인도 금지합니다(제27조). 초안에 흔히 들어가는 표현을 이렇게 바꿉니다. <b style="color:#fff">검수 기준은 대학병원 간호사 출신 대표가 직접 만듭니다.</b></p>
-<div class="md-reghead" style="margin-top:56px;display:grid;grid-template-columns:150px minmax(0,1fr) 28px minmax(0,1.15fr);gap:20px;padding:0 16px 14px;font-size:12px;color:#8A8A8A"><span>유형</span><span>초안에 흔한 표현</span><span></span><span>크루스가 바꾸는 방향</span></div>
-<ol style="margin:0;padding:0;list-style:none;border-bottom:1px solid #232323"><li class="hq-row md-reg" style="display:grid;grid-template-columns:150px minmax(0,1fr) 28px minmax(0,1.15fr);gap:8px 20px;align-items:center;padding:24px 16px;border-top:1px solid #232323;border-radius:4px">
-<span style="font-size:15px;font-weight:700;letter-spacing:-0.02em;color:#fff"><span style="display:block;font-size:12px;font-weight:400;color:#E95623;font-family:ui-monospace,Menlo,monospace;margin-bottom:4px">01</span>효과 단정·보장</span>
-<span class="hq-s2" style="--d:0.40s;font-size:15px;line-height:1.6"><span>“한 번이면 낫습니다”<br>“100% 효과를 보장합니다”</span></span>
-<span class="md-arrow" aria-hidden="true" style="color:#5A5A5A;text-align:center">→</span>
-<span style="font-size:15px;line-height:1.6;color:#fff;font-weight:600;display:flex;gap:10px;align-items:baseline"><span style="flex-shrink:0;position:relative;top:1px"><svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#E95623" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span><span>“도움이 될 수 있습니다. 상태에 따라 결과는 다릅니다”</span></span>
-</li><li class="hq-row md-reg" style="display:grid;grid-template-columns:150px minmax(0,1fr) 28px minmax(0,1.15fr);gap:8px 20px;align-items:center;padding:24px 16px;border-top:1px solid #232323;border-radius:4px">
-<span style="font-size:15px;font-weight:700;letter-spacing:-0.02em;color:#fff"><span style="display:block;font-size:12px;font-weight:400;color:#E95623;font-family:ui-monospace,Menlo,monospace;margin-bottom:4px">02</span>최고·유일 표현</span>
-<span class="hq-s2" style="--d:0.75s;font-size:15px;line-height:1.6"><span>“지역 최고”, “유일한 치료”</span></span>
-<span class="md-arrow" aria-hidden="true" style="color:#5A5A5A;text-align:center">→</span>
-<span style="font-size:15px;line-height:1.6;color:#fff;font-weight:600;display:flex;gap:10px;align-items:baseline"><span style="flex-shrink:0;position:relative;top:1px"><svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#E95623" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span><span>전문의 자격, 장비, 진료 시간처럼 확인되는 사실만 적습니다</span></span>
-</li><li class="hq-row md-reg" style="display:grid;grid-template-columns:150px minmax(0,1fr) 28px minmax(0,1.15fr);gap:8px 20px;align-items:center;padding:24px 16px;border-top:1px solid #232323;border-radius:4px">
-<span style="font-size:15px;font-weight:700;letter-spacing:-0.02em;color:#fff"><span style="display:block;font-size:12px;font-weight:400;color:#E95623;font-family:ui-monospace,Menlo,monospace;margin-bottom:4px">03</span>치료 후기 형식</span>
-<span class="hq-s2" style="--d:1.10s;font-size:15px;line-height:1.6"><span>“3회 만에 통증이 사라진 환자분”</span></span>
-<span class="md-arrow" aria-hidden="true" style="color:#5A5A5A;text-align:center">→</span>
-<span style="font-size:15px;line-height:1.6;color:#fff;font-weight:600;display:flex;gap:10px;align-items:baseline"><span style="flex-shrink:0;position:relative;top:1px"><svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#E95623" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span><span>후기 대신 원장님이 진료 과정과 판단 기준을 직접 설명합니다</span></span>
-</li><li class="hq-row md-reg" style="display:grid;grid-template-columns:150px minmax(0,1fr) 28px minmax(0,1.15fr);gap:8px 20px;align-items:center;padding:24px 16px;border-top:1px solid #232323;border-radius:4px">
-<span style="font-size:15px;font-weight:700;letter-spacing:-0.02em;color:#fff"><span style="display:block;font-size:12px;font-weight:400;color:#E95623;font-family:ui-monospace,Menlo,monospace;margin-bottom:4px">04</span>다른 병원과 비교</span>
-<span class="hq-s2" style="--d:1.45s;font-size:15px;line-height:1.6"><span>“다른 병원에서 못 고친 통증”</span></span>
-<span class="md-arrow" aria-hidden="true" style="color:#5A5A5A;text-align:center">→</span>
-<span style="font-size:15px;line-height:1.6;color:#fff;font-weight:600;display:flex;gap:10px;align-items:baseline"><span style="flex-shrink:0;position:relative;top:1px"><svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#E95623" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span><span>다른 곳 이야기는 빼고, 우리 병원의 진료 방식만 말합니다</span></span>
-</li><li class="hq-row md-reg" style="display:grid;grid-template-columns:150px minmax(0,1fr) 28px minmax(0,1.15fr);gap:8px 20px;align-items:center;padding:24px 16px;border-top:1px solid #232323;border-radius:4px">
-<span style="font-size:15px;font-weight:700;letter-spacing:-0.02em;color:#fff"><span style="display:block;font-size:12px;font-weight:400;color:#E95623;font-family:ui-monospace,Menlo,monospace;margin-bottom:4px">05</span>할인·이벤트</span>
-<span class="hq-s2" style="--d:1.80s;font-size:15px;line-height:1.6"><span>“이번 달만 반값”<br>“후기 쓰면 할인”</span></span>
-<span class="md-arrow" aria-hidden="true" style="color:#5A5A5A;text-align:center">→</span>
-<span style="font-size:15px;line-height:1.6;color:#fff;font-weight:600;display:flex;gap:10px;align-items:baseline"><span style="flex-shrink:0;position:relative;top:1px"><svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#E95623" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span><span>가격과 보험 적용 여부를 있는 그대로 안내합니다</span></span>
-</li><li class="hq-row md-reg" style="display:grid;grid-template-columns:150px minmax(0,1fr) 28px minmax(0,1.15fr);gap:8px 20px;align-items:center;padding:24px 16px;border-top:1px solid #232323;border-radius:4px">
-<span style="font-size:15px;font-weight:700;letter-spacing:-0.02em;color:#fff"><span style="display:block;font-size:12px;font-weight:400;color:#E95623;font-family:ui-monospace,Menlo,monospace;margin-bottom:4px">06</span>부작용 누락</span>
-<span class="hq-s2" style="--d:2.15s;font-size:15px;line-height:1.6"><span>장점만 나열한 시술 소개</span></span>
-<span class="md-arrow" aria-hidden="true" style="color:#5A5A5A;text-align:center">→</span>
-<span style="font-size:15px;line-height:1.6;color:#fff;font-weight:600;display:flex;gap:10px;align-items:baseline"><span style="flex-shrink:0;position:relative;top:1px"><svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#E95623" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span><span>부작용과 주의할 점을 함께 적습니다</span></span>
-</li><li class="hq-row md-reg" style="display:grid;grid-template-columns:150px minmax(0,1fr) 28px minmax(0,1.15fr);gap:8px 20px;align-items:center;padding:24px 16px;border-top:1px solid #232323;border-radius:4px">
-<span style="font-size:15px;font-weight:700;letter-spacing:-0.02em;color:#fff"><span style="display:block;font-size:12px;font-weight:400;color:#E95623;font-family:ui-monospace,Menlo,monospace;margin-bottom:4px">07</span>불안 조장</span>
-<span class="hq-s2" style="--d:2.50s;font-size:15px;line-height:1.6"><span>“방치하면 큰일 납니다”</span></span>
-<span class="md-arrow" aria-hidden="true" style="color:#5A5A5A;text-align:center">→</span>
-<span style="font-size:15px;line-height:1.6;color:#fff;font-weight:600;display:flex;gap:10px;align-items:baseline"><span style="flex-shrink:0;position:relative;top:1px"><svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#E95623" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span><span>“2주 넘게 이어지면 진료로 원인을 확인해 보세요”</span></span>
-</li></ol>
-<div style="margin-top:40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px">
-<div style="border-radius:24px;background:#121212;border:1px solid #232323;padding:28px"><span style="font-size:12px;color:#E95623;font-family:ui-monospace,Menlo,monospace">사전심의</span><h3 style="margin:10px 0 0;font-size:20px;font-weight:700;letter-spacing:-0.03em;line-height:1.4">병원이 올리는 글도 심의 대상이 될 수 있습니다</h3><p style="margin:10px 0 0;font-size:15px;line-height:1.75;color:#A3A3A3">기준은 병원 계정의 방문자 수가 아니라 플랫폼의 규모입니다. 병원을 알리는 글인지, 의학 정보를 전하는 글인지에 따라 달라지기 때문에 기획 단계에서 글의 성격부터 나눕니다.</p></div>
-<div style="border-radius:24px;background:#121212;border:1px solid #232323;padding:28px"><span style="font-size:12px;color:#E95623;font-family:ui-monospace,Menlo,monospace">금지 규정</span><h3 style="margin:10px 0 0;font-size:20px;font-weight:700;letter-spacing:-0.03em;line-height:1.4">심의 대상이 아니어도 금지 규정은 그대로 적용됩니다</h3><p style="margin:10px 0 0;font-size:15px;line-height:1.75;color:#A3A3A3">심의는 광고물 하나에 대한 확인입니다. 매일 쌓이는 글 전체를 지켜주지는 않습니다. 그래서 글마다 표현을 확인합니다.</p></div>
+<section class="md2-s3" aria-label="게시 전에 걸러내는 표현">
+<div class="md2-w">
+<div class="md2-s3hd">
+<h2 class="md2-hx">병원 글에서<br>게시 전에 <em>걸러내는</em> 표현<span class="dot">.</span></h2>
+<p class="md2-lead dk">의료법은 거짓·과장, 치료 경험담, 비교·비방 광고를 금지하고(제56조), 대가를 건 환자 유인도 금지합니다(제27조). 초안에 흔히 들어가는 표현을 이렇게 바꿉니다. <b>검수 기준은 대학병원 간호사 출신 대표가 직접 만듭니다.</b></p>
 </div>
-<p style="margin:28px 0 0;font-size:13px;line-height:1.7;color:#6E6E6E">법령 해석과 심의 기준은 바뀔 수 있습니다. 판단이 갈리는 표현은 원장님께 먼저 말씀드리고, 필요하면 의료광고 심의 기구나 관할 보건소 확인을 권해 드립니다.</p>
+<div class="md2-rules"><p class="hd" aria-hidden="true"><span>유형</span><span>초안에 흔한 표현</span><span>크루스가 바꾸는 방향</span></p><ul><li class="rl"><span class="ty"><i>01</i>효과 단정·보장</span><span class="bad"><s><span>“한 번이면 낫습니다”</span></s><s><span>“100% 효과를 보장합니다”</span></s></span><span class="fix">“도움이 될 수 있습니다. 상태에 따라 결과는 다릅니다”</span></li><li class="rl"><span class="ty"><i>02</i>최고·유일 표현</span><span class="bad"><s><span>“지역 최고”, “유일한 치료”</span></s></span><span class="fix">전문의 자격, 장비, 진료 시간처럼 확인되는 사실만 적습니다</span></li><li class="rl"><span class="ty"><i>03</i>치료 후기 형식</span><span class="bad"><s><span>“3회 만에 통증이 사라진 환자분”</span></s></span><span class="fix">후기 대신 원장님이 진료 과정과 판단 기준을 직접 설명합니다</span></li><li class="rl"><span class="ty"><i>04</i>다른 병원과 비교</span><span class="bad"><s><span>“다른 병원에서 못 고친 통증”</span></s></span><span class="fix">다른 곳 이야기는 빼고, 우리 병원의 진료 방식만 말합니다</span></li><li class="rl"><span class="ty"><i>05</i>할인·이벤트</span><span class="bad"><s><span>“이번 달만 반값”</span></s><s><span>“후기 쓰면 할인”</span></s></span><span class="fix">가격과 보험 적용 여부를 있는 그대로 안내합니다</span></li><li class="rl"><span class="ty"><i>06</i>부작용 누락</span><span class="bad"><s><span>장점만 나열한 시술 소개</span></s></span><span class="fix">부작용과 주의할 점을 함께 적습니다</span></li><li class="rl"><span class="ty"><i>07</i>불안 조장</span><span class="bad"><s><span>“방치하면 큰일 납니다”</span></s></span><span class="fix">“2주 넘게 이어지면 진료로 원인을 확인해 보세요”</span></li></ul></div>
+<div class="md2-law">
+<div><p class="k">사전심의</p><h3>병원이 올리는 글도 심의 대상이 될 수 있습니다</h3><p>기준은 병원 계정의 방문자 수가 아니라 플랫폼의 규모입니다. 병원을 알리는 글인지, 의학 정보를 전하는 글인지에 따라 달라지기 때문에 기획 단계에서 글의 성격부터 나눕니다.</p></div>
+<div><p class="k">금지 규정</p><h3>심의 대상이 아니어도 금지 규정은 그대로 적용됩니다</h3><p>심의는 광고물 하나에 대한 확인입니다. 매일 쌓이는 글 전체를 지켜주지는 않습니다. 그래서 글마다 표현을 확인합니다.</p></div>
+</div>
+<p class="md2-note">법령 해석과 심의 기준은 바뀔 수 있습니다. 판단이 갈리는 표현은 원장님께 먼저 말씀드리고, 필요하면 의료광고 심의 기구나 관할 보건소 확인을 권해 드립니다.</p>
 </div>
 </section>
-
-<section aria-label="원장님 목소리를 지키는 방법" style="position:relative;z-index:4;margin-top:-48px;background:#fff;border-radius:48px 48px 0 0;padding:130px 32px 170px">
-<div style="max-width:1160px;margin:0 auto">
-<h2 style="margin:0;font-size:clamp(32px,3.8vw,52px);line-height:1.28;letter-spacing:-0.04em"><span style="display:block;font-weight:200;color:#8A8A8A">대신 써도,</span> <span style="display:block;font-weight:700">원장님이 쓴 글이어야 합니다<span class="hq-period" style="color:#E95623">.</span></span></h2>
-<p style="margin:24px 0 0;max-width:640px;font-size:17px;line-height:1.8;color:#5C5C5C">환자는 글에서 의사를 봅니다. 그래서 병원마다 원장님의 말투와 진료 철학을 따로 정리해 두고, 그 기준으로 씁니다.</p>
-<div style="margin-top:56px;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px"><article class="hq-card" style="background:#F6F5F1;border:1px solid #EEEDE8;border-radius:24px;padding:22px;display:flex;flex-direction:column"><div style="height:150px;border-radius:16px;background:#fff;border:1px solid #EEEDE8;padding:16px 18px;display:flex;align-items:center;justify-content:center"><div style="width:100%;display:flex;flex-direction:column;gap:8px"><span class="hq-in" style="--d:.2s;align-self:flex-start;max-width:86%;padding:8px 12px;border-radius:12px 12px 12px 4px;background:#F6F5F1;border:1px solid #E6E5E0;font-size:12px;line-height:1.5;color:#3A3A3A">환자분들이 제일 많이 묻는 게 뭔가요?</span><span class="hq-in" style="--d:.9s;align-self:flex-end;max-width:86%;padding:8px 12px;border-radius:12px 12px 4px 12px;background:#0A0A0A;font-size:12px;line-height:1.5;color:#fff">“수술해야 하나요?”를 제일 많이 들어요</span></div></div><span style="margin-top:22px;font-size:12px;color:#E95623;font-family:ui-monospace,Menlo,monospace">01 · 인터뷰</span><h3 style="margin:8px 0 0;font-size:19px;font-weight:700;letter-spacing:-0.03em;line-height:1.4">원장님 말을 그대로 받아 적습니다</h3><p style="margin:10px 0 0;font-size:14px;line-height:1.75;color:#5C5C5C">진료실에서 환자에게 하시는 설명이 가장 좋은 재료입니다. 환자가 실제로 묻는 말도 함께 모읍니다.</p></article><article class="hq-card" style="background:#F6F5F1;border:1px solid #EEEDE8;border-radius:24px;padding:22px;display:flex;flex-direction:column"><div style="height:150px;border-radius:16px;background:#fff;border:1px solid #EEEDE8;padding:16px 18px;display:flex;align-items:center;justify-content:center"><div style="width:100%;display:flex;flex-direction:column;gap:10px"><span style="font-size:11px;color:#8F8F8F">자주 쓰시는 말</span><div style="display:flex;flex-wrap:wrap;gap:6px"><span style="padding:5px 10px;border-radius:999px;font-size:12px;background:#0A0A0A;color:#fff">쉽게 말씀드리면</span><span style="padding:5px 10px;border-radius:999px;font-size:12px;background:#0A0A0A;color:#fff">우선은</span></div><span style="font-size:11px;color:#8F8F8F">쓰지 않으시는 말</span><div style="display:flex;flex-wrap:wrap;gap:6px"><span style="padding:5px 10px;border-radius:999px;font-size:12px;background:#fff;border:1px solid #E0DFDA;color:#A3A3A3;text-decoration:line-through">획기적인</span><span style="padding:5px 10px;border-radius:999px;font-size:12px;background:#fff;border:1px solid #E0DFDA;color:#A3A3A3;text-decoration:line-through">완치</span></div></div></div><span style="margin-top:22px;font-size:12px;color:#E95623;font-family:ui-monospace,Menlo,monospace">02 · 말투 정리</span><h3 style="margin:8px 0 0;font-size:19px;font-weight:700;letter-spacing:-0.03em;line-height:1.4">자주 쓰시는 말과 쓰지 않는 말을 나눕니다</h3><p style="margin:10px 0 0;font-size:14px;line-height:1.75;color:#5C5C5C">원장님마다 입에 붙은 표현이 있습니다. 병원별로 정리해 두고 모든 글에 같은 목소리를 씁니다.</p></article><article class="hq-card" style="background:#F6F5F1;border:1px solid #EEEDE8;border-radius:24px;padding:22px;display:flex;flex-direction:column"><div style="height:150px;border-radius:16px;background:#fff;border:1px solid #EEEDE8;padding:16px 18px;display:flex;align-items:center;justify-content:center"><div style="width:100%;display:flex;flex-direction:column;gap:10px"><div style="display:grid;grid-template-columns:36px minmax(0,1fr);gap:8px;align-items:baseline"><span style="font-size:11px;color:#8F8F8F">초안</span><span class="hq-strike2" style="font-size:13px;line-height:1.5"><span>치료가 필요합니다</span></span></div><div style="height:1px;background:#E6E5E0"></div><div class="hq-fix" style="display:grid;grid-template-columns:36px minmax(0,1fr);gap:8px;align-items:baseline"><span style="font-size:11px;color:#E95623">원장님</span><span style="font-size:13px;line-height:1.5;font-weight:600;color:#0A0A0A">먼저 원인부터 확인해 보시죠</span></div></div></div><span style="margin-top:22px;font-size:12px;color:#E95623;font-family:ui-monospace,Menlo,monospace">03 · 수정 기록</span><h3 style="margin:8px 0 0;font-size:19px;font-weight:700;letter-spacing:-0.03em;line-height:1.4">원장님이 고치신 곳을 다음 글에 반영합니다</h3><p style="margin:10px 0 0;font-size:14px;line-height:1.75;color:#5C5C5C">초안과 최종본을 비교해 어디를 어떻게 고치셨는지 남깁니다. 같은 수정을 두 번 하시지 않도록.</p></article><article class="hq-card" style="background:#F6F5F1;border:1px solid #EEEDE8;border-radius:24px;padding:22px;display:flex;flex-direction:column"><div style="height:150px;border-radius:16px;background:#fff;border:1px solid #EEEDE8;padding:16px 18px;display:flex;align-items:center;justify-content:center"><div style="width:100%;display:flex;flex-direction:column;gap:10px"><div class="hq-in" style="--d:0.2s;display:flex;align-items:center;gap:8px;font-size:13px;color:#0A0A0A"><svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#E95623" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>의학 정보 사실 확인</div><div class="hq-in" style="--d:0.7s;display:flex;align-items:center;gap:8px;font-size:13px;color:#0A0A0A"><svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#E95623" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>광고 표현 확인</div><div class="hq-in" style="--d:1.2s;display:flex;align-items:center;gap:8px;font-size:13px;color:#0A0A0A"><svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#E95623" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>원장님 말투 확인</div></div></div><span style="margin-top:22px;font-size:12px;color:#E95623;font-family:ui-monospace,Menlo,monospace">04 · 발행 전 검수</span><h3 style="margin:8px 0 0;font-size:19px;font-weight:700;letter-spacing:-0.03em;line-height:1.4">세 가지를 따로 확인합니다</h3><p style="margin:10px 0 0;font-size:14px;line-height:1.75;color:#5C5C5C">쓰는 일과 검수하는 일을 나눕니다. 마지막에는 원장님께 먼저 보여드린 뒤 발행합니다.</p></article></div>
+<section class="md2-s4" aria-label="원장님 목소리를 지키는 방법">
+<div class="md2-w">
+<h2 class="md2-hc">대신 써도,<br><mark>원장님이 쓴 글</mark>이어야 합니다<span class="dot">.</span></h2>
+<p class="md2-lead md2-lc">환자는 글에서 의사를 봅니다. 그래서 병원마다 원장님의 말투와 진료 철학을 따로 정리해 두고, 그 기준으로 씁니다.</p>
+<ol class="md2-voice"><li class="rail" aria-hidden="true"><i></i></li><li class="vc" style="--k:0"><span class="dt" aria-hidden="true"></span><p class="no">01 · 인터뷰</p><h3>원장님 말을 그대로 받아 적습니다</h3><p class="d">진료실에서 환자에게 하시는 설명이 가장 좋은 재료입니다. 환자가 실제로 묻는 말도 함께 모읍니다.</p><div class="vz" aria-hidden="true"><div class="chat"><p class="q">환자분들이 제일 많이 묻는 게 뭔가요?</p><p class="a">“수술해야 하나요?”를 제일 많이 들어요</p></div></div></li><li class="vc" style="--k:1"><span class="dt" aria-hidden="true"></span><p class="no">02 · 말투 정리</p><h3>자주 쓰시는 말과 쓰지 않는 말을 나눕니다</h3><p class="d">원장님마다 입에 붙은 표현이 있습니다. 병원별로 정리해 두고 모든 글에 같은 목소리를 씁니다.</p><div class="vz" aria-hidden="true"><div class="words"><p>자주 쓰시는 말</p><div><span class="y">쉽게 말씀드리면</span><span class="y">우선은</span></div><p>쓰지 않으시는 말</p><div><span class="n">획기적인</span><span class="n">완치</span></div></div></div></li><li class="vc" style="--k:2"><span class="dt" aria-hidden="true"></span><p class="no">03 · 수정 기록</p><h3>원장님이 고치신 곳을 다음 글에 반영합니다</h3><p class="d">초안과 최종본을 비교해 어디를 어떻게 고치셨는지 남깁니다. 같은 수정을 두 번 하시지 않도록.</p><div class="vz" aria-hidden="true"><div class="edit"><p><span>초안</span><s>치료가 필요합니다</s></p><p><span>원장님</span><b>먼저 원인부터 확인해 보시죠</b></p></div></div></li><li class="vc" style="--k:3"><span class="dt" aria-hidden="true"></span><p class="no">04 · 발행 전 검수</p><h3>세 가지를 따로 확인합니다</h3><p class="d">쓰는 일과 검수하는 일을 나눕니다. 마지막에는 원장님께 먼저 보여드린 뒤 발행합니다.</p><div class="vz" aria-hidden="true"><div class="checks"><p>의학 정보 사실 확인</p><p>광고 표현 확인</p><p>원장님 말투 확인</p></div></div></li></ol>
 </div>
 </section>
-
-<section aria-label="병원에서 일해본 대표" style="position:relative;z-index:5;margin-top:-48px;background:#0A0A0A;color:#fff;border-radius:48px 48px 0 0;padding:130px 32px 170px">
-<div style="max-width:1160px;margin:0 auto">
-<div class="hq-promise" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:72px">
-<div style="position:sticky;top:110px;align-self:start;display:flex;flex-direction:column;gap:26px">
-<h2 style="margin:0;font-size:clamp(32px,3.8vw,52px);line-height:1.28;letter-spacing:-0.04em"><span style="display:block;font-weight:200;color:#8A8A8A">병원에서 일해본 사람이</span> <span style="display:block;font-weight:700">검수 기준을 만듭니다<span class="hq-period" style="color:#E95623">.</span></span></h2>
-<p style="margin:0;font-size:17px;line-height:1.8;color:#C9C9C9">크루스 스튜디오 대표는 <b style="color:#fff">대학병원 간호사 출신</b>입니다. 병의원 콘텐츠의 검수 기준을 직접 만들고, 판단이 갈리는 글은 직접 확인합니다.</p>
-<div style="display:flex;align-items:center;gap:8px;padding:18px;border-radius:20px;background:#121212;border:1px solid #232323"><span style="display:flex;flex-direction:column;align-items:center;gap:2px;padding:10px 14px;border-radius:12px;border:1px solid #2A2A2A;color:#E5E5E5;font-size:13px;font-weight:700;white-space:nowrap">전담 크루<span style="font-size:11px;font-weight:400;color:#8A8A8A">작성</span></span><span aria-hidden="true" style="flex:1;min-width:10px;height:1px;background:#3A3A3A"></span><span style="display:flex;flex-direction:column;align-items:center;gap:2px;padding:10px 14px;border-radius:12px;background:#E95623;color:#0A0A0A;font-size:13px;font-weight:700;white-space:nowrap">대표 기준<span style="font-size:11px;font-weight:400;color:#0A0A0A">검수</span></span><span aria-hidden="true" style="flex:1;min-width:10px;height:1px;background:#3A3A3A"></span><span style="display:flex;flex-direction:column;align-items:center;gap:2px;padding:10px 14px;border-radius:12px;border:1px solid #2A2A2A;color:#E5E5E5;font-size:13px;font-weight:700;white-space:nowrap">원장님<span style="font-size:11px;font-weight:400;color:#8A8A8A">확인</span></span><span aria-hidden="true" style="flex:1;min-width:10px;height:1px;background:#3A3A3A"></span><span style="display:flex;flex-direction:column;align-items:center;gap:2px;padding:10px 14px;border-radius:12px;border:1px solid #2A2A2A;color:#E5E5E5;font-size:13px;font-weight:700;white-space:nowrap">발행<span style="font-size:11px;font-weight:400;color:#8A8A8A"></span></span></div>
-<blockquote style="margin:0;padding:24px 26px;border-radius:20px;background:#121212;border:1px solid #232323"><p style="margin:0;font-size:17px;line-height:1.7;color:#fff;letter-spacing:-0.02em">“글 잘 쓰는 대행사 찾기 힘들었는데, 딱 마음에 듭니다! 감사합니다.”</p><footer style="margin:14px 0 0;padding:0;background:none;font-size:13px;color:#8A8A8A">성형외과 원장님 · 함께한 지 3개월</footer></blockquote>
-</div>
-<ol style="margin:0;padding:0;list-style:none;border-bottom:1px solid #232323"><li class="hq-row" style="display:grid;grid-template-columns:72px minmax(0,1fr);gap:6px 20px;padding:30px 16px;border-top:1px solid #232323;border-radius:4px">
-<span style="grid-row:span 2;font-size:15px;color:#E95623;font-family:ui-monospace,Menlo,monospace;padding-top:6px">01</span>
-<h3 style="margin:0;font-size:clamp(22px,2vw,27px);font-weight:700;letter-spacing:-0.035em">의학 정보를 그냥 넘기지 않습니다</h3>
-<p style="margin:0;font-size:15px;line-height:1.75;color:#A3A3A3">용어, 수치, 시술 설명이 실제 진료와 어긋나지 않는지 봅니다. 그럴듯하지만 틀린 문장은 임상을 아는 눈에 먼저 걸립니다.</p>
-</li><li class="hq-row" style="display:grid;grid-template-columns:72px minmax(0,1fr);gap:6px 20px;padding:30px 16px;border-top:1px solid #232323;border-radius:4px">
-<span style="grid-row:span 2;font-size:15px;color:#E95623;font-family:ui-monospace,Menlo,monospace;padding-top:6px">02</span>
-<h3 style="margin:0;font-size:clamp(22px,2vw,27px);font-weight:700;letter-spacing:-0.035em">환자와 보호자의 말을 압니다</h3>
-<p style="margin:0;font-size:15px;line-height:1.75;color:#A3A3A3">병원에서 환자가 실제로 묻는 말, 불안해하는 지점을 압니다. 주제는 그 말에서 잡습니다.</p>
-</li><li class="hq-row" style="display:grid;grid-template-columns:72px minmax(0,1fr);gap:6px 20px;padding:30px 16px;border-top:1px solid #232323;border-radius:4px">
-<span style="grid-row:span 2;font-size:15px;color:#E95623;font-family:ui-monospace,Menlo,monospace;padding-top:6px">03</span>
-<h3 style="margin:0;font-size:clamp(22px,2vw,27px);font-weight:700;letter-spacing:-0.035em">원장님과 같은 말로 이야기합니다</h3>
-<p style="margin:0;font-size:15px;line-height:1.75;color:#A3A3A3">진료 흐름과 용어를 처음부터 설명하실 필요가 없습니다. 인터뷰는 짧아지고, 질문은 깊어집니다.</p>
-</li><li class="hq-row" style="display:grid;grid-template-columns:72px minmax(0,1fr);gap:6px 20px;padding:30px 16px;border-top:1px solid #232323;border-radius:4px">
-<span style="grid-row:span 2;font-size:15px;color:#E95623;font-family:ui-monospace,Menlo,monospace;padding-top:6px">04</span>
-<h3 style="margin:0;font-size:clamp(22px,2vw,27px);font-weight:700;letter-spacing:-0.035em">문제가 생기면 바로 대응합니다</h3>
-<p style="margin:0;font-size:15px;line-height:1.75;color:#A3A3A3">수정 요청이나 신고가 들어오면 해당 표현을 바로 확인하고 고칩니다. 원장님 혼자 대응하시게 두지 않습니다.</p>
-</li></ol>
-</div>
-<div style="margin-top:72px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:8px 32px"><p style="grid-column:1/-1;margin:0 0 14px;font-size:13px;color:#8A8A8A">그리고 어느 업종이든 똑같이 지키는 것</p><div style="padding:22px 4px 0;border-top:1px solid #232323"><h3 style="margin:0;font-size:17px;font-weight:700;letter-spacing:-0.03em">다시 설명하실 일 없게</h3><p style="margin:6px 0 0;font-size:14px;line-height:1.7;color:#A3A3A3">담당이 바뀌더라도 기록을 그대로 넘깁니다</p></div><div style="padding:22px 4px 0;border-top:1px solid #232323"><h3 style="margin:0;font-size:17px;font-weight:700;letter-spacing:-0.03em">기준은 매출</h3><p style="margin:6px 0 0;font-size:14px;line-height:1.7;color:#A3A3A3">노출·유입에서 멈추지 않고 매출까지 함께 봅니다</p></div><div style="padding:22px 4px 0;border-top:1px solid #232323"><h3 style="margin:0;font-size:17px;font-weight:700;letter-spacing:-0.03em">콘텐츠와 계정은 원장님 것</h3><p style="margin:6px 0 0;font-size:14px;line-height:1.7;color:#A3A3A3">계약이 끝나도 그대로 남습니다</p></div></div>
+<section class="md2-s5" aria-label="병원에서 일해본 대표">
+<div class="md2-w">
+<h2 class="md2-big">병원에서 일해본 사람이<br>검수 기준을 만듭니다<span class="dot">.</span></h2>
+<p class="md2-cred">크루스 스튜디오 대표는 <mark>대학병원 간호사 출신</mark>입니다. 병의원 콘텐츠의 검수 기준을 직접 만들고, 판단이 갈리는 글은 직접 확인합니다.</p>
+<div class="md2-flow" aria-label="전담 크루 작성, 대표 기준 검수, 원장님 확인, 발행"><span>전담 크루<small>작성</small></span><span class="me">대표 기준<small>검수</small></span><span>원장님<small>확인</small></span><span>발행</span><i class="run" aria-hidden="true"></i></div>
+<ul class="md2-pts"><li><span>01</span><h3>의학 정보를 그냥 넘기지 않습니다</h3><p>용어, 수치, 시술 설명이 실제 진료와 어긋나지 않는지 봅니다. 그럴듯하지만 틀린 문장은 임상을 아는 눈에 먼저 걸립니다.</p></li><li><span>02</span><h3>환자와 보호자의 말을 압니다</h3><p>병원에서 환자가 실제로 묻는 말, 불안해하는 지점을 압니다. 주제는 그 말에서 잡습니다.</p></li><li><span>03</span><h3>원장님과 같은 말로 이야기합니다</h3><p>진료 흐름과 용어를 처음부터 설명하실 필요가 없습니다. 인터뷰는 짧아지고, 질문은 깊어집니다.</p></li><li><span>04</span><h3>문제가 생기면 바로 대응합니다</h3><p>수정 요청이나 신고가 들어오면 해당 표현을 바로 확인하고 고칩니다. 원장님 혼자 대응하시게 두지 않습니다.</p></li></ul>
+<p class="md2-voice1">글 잘 쓰는 대행사 찾기 힘들었는데, 딱 마음에 듭니다! 감사합니다.<span>성형외과 원장님 · 함께한 지 3개월</span></p>
+<div class="md2-keep"><p class="k">그리고 어느 업종이든 똑같이 지키는 것</p><ul><li><b>다시 설명하실 일 없게</b>담당이 바뀌더라도 기록을 그대로 넘깁니다</li><li><b>기준은 매출</b>노출·유입에서 멈추지 않고 매출까지 함께 봅니다</li><li><b>콘텐츠와 계정은 원장님 것</b>계약이 끝나도 그대로 남습니다</li></ul></div>
+<p class="md2-clinics"><span>함께해 온 병의원</span>정형외과·내과 의원 · 요양병원 · 탈모·피부 클리닉 · 성형외과</p>
 </div>
 </section>
-
-<section aria-label="우리 병원 블로그 점검" style="position:relative;z-index:6;margin-top:-48px;background:#F6F5F1;border-radius:48px 48px 0 0;padding:130px 32px 170px">
-<div style="max-width:1160px;margin:0 auto">
-<h2 style="margin:0;font-size:clamp(32px,3.8vw,52px);line-height:1.28;letter-spacing:-0.04em"><span style="display:block;font-weight:200;color:#8A8A8A">지금 병원 블로그,</span> <span style="display:block;font-weight:700">해당하는 것을 눌러 보세요<span class="hq-period" style="color:#E95623">.</span></span></h2>
-<div class="hq-promise" style="margin-top:56px;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:24px;align-items:start">
-<div>
-<div style="display:flex;flex-direction:column;gap:10px"><button type="button" class="md-chk" aria-pressed="false" style="display:grid;grid-template-columns:26px minmax(0,1fr);gap:14px;align-items:center;width:100%;text-align:left;padding:20px 22px;border-radius:16px;border:1px solid #E0DFDA;background:#fff;font:inherit;font-size:16px;line-height:1.55;letter-spacing:-0.02em;color:#0A0A0A;cursor:pointer;transition:border-color .2s ease,background .2s ease"><span class="md-box" aria-hidden="true" style="width:26px;height:26px;border-radius:8px;border:1.5px solid #CFCDC6;display:flex;align-items:center;justify-content:center;transition:all .2s ease"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span><span>병원 이름을 다른 병원으로 바꿔도 글이 그대로 읽힌다</span></button><button type="button" class="md-chk" aria-pressed="false" style="display:grid;grid-template-columns:26px minmax(0,1fr);gap:14px;align-items:center;width:100%;text-align:left;padding:20px 22px;border-radius:16px;border:1px solid #E0DFDA;background:#fff;font:inherit;font-size:16px;line-height:1.55;letter-spacing:-0.02em;color:#0A0A0A;cursor:pointer;transition:border-color .2s ease,background .2s ease"><span class="md-box" aria-hidden="true" style="width:26px;height:26px;border-radius:8px;border:1.5px solid #CFCDC6;display:flex;align-items:center;justify-content:center;transition:all .2s ease"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span><span>원장님이 발행 전에 글을 확인한 적이 없다</span></button><button type="button" class="md-chk" aria-pressed="false" style="display:grid;grid-template-columns:26px minmax(0,1fr);gap:14px;align-items:center;width:100%;text-align:left;padding:20px 22px;border-radius:16px;border:1px solid #E0DFDA;background:#fff;font:inherit;font-size:16px;line-height:1.55;letter-spacing:-0.02em;color:#0A0A0A;cursor:pointer;transition:border-color .2s ease,background .2s ease"><span class="md-box" aria-hidden="true" style="width:26px;height:26px;border-radius:8px;border:1.5px solid #CFCDC6;display:flex;align-items:center;justify-content:center;transition:all .2s ease"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span><span>“최고”, “완치” 같은 표현이나 환자 후기 형식의 글이 올라가 있다</span></button><button type="button" class="md-chk" aria-pressed="false" style="display:grid;grid-template-columns:26px minmax(0,1fr);gap:14px;align-items:center;width:100%;text-align:left;padding:20px 22px;border-radius:16px;border:1px solid #E0DFDA;background:#fff;font:inherit;font-size:16px;line-height:1.55;letter-spacing:-0.02em;color:#0A0A0A;cursor:pointer;transition:border-color .2s ease,background .2s ease"><span class="md-box" aria-hidden="true" style="width:26px;height:26px;border-radius:8px;border:1.5px solid #CFCDC6;display:flex;align-items:center;justify-content:center;transition:all .2s ease"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span><span>글은 매주 올라가는데, 어느 글이 예약으로 이어졌는지 모른다</span></button><button type="button" class="md-chk" aria-pressed="false" style="display:grid;grid-template-columns:26px minmax(0,1fr);gap:14px;align-items:center;width:100%;text-align:left;padding:20px 22px;border-radius:16px;border:1px solid #E0DFDA;background:#fff;font:inherit;font-size:16px;line-height:1.55;letter-spacing:-0.02em;color:#0A0A0A;cursor:pointer;transition:border-color .2s ease,background .2s ease"><span class="md-box" aria-hidden="true" style="width:26px;height:26px;border-radius:8px;border:1.5px solid #CFCDC6;display:flex;align-items:center;justify-content:center;transition:all .2s ease"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span><span>담당자가 바뀔 때마다 병원 설명을 처음부터 다시 한다</span></button></div>
-<div style="margin-top:16px;padding:22px 24px;border-radius:16px;background:#fff;border:1px solid #E0DFDA;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px">
-<p style="margin:0;font-size:16px;line-height:1.6;color:#0A0A0A"><b id="md-count" style="font-size:22px;font-family:ui-monospace,Menlo,monospace;color:#E95623;margin-right:8px">0</b><span id="md-msg">해당하는 항목을 눌러 보세요.</span></p>
-<a href="/#contact" class="hq-btn hq-cta" style="background:#E95623;color:#0A0A0A;font-size:15px;font-weight:700;padding:14px 22px;border-radius:12px;white-space:nowrap">내 병원 맞춤 견적 받기</a>
+<section class="md2-s6" aria-label="우리 병원 블로그 점검">
+<div class="md2-w md2-chkw">
+<div class="l">
+<h2 class="md2-h2"><span>지금 병원 블로그,</span> 해당하는 것을 눌러 보세요<span class="dot">.</span></h2>
+<div class="md2-chks"><button type="button" class="md-chk" aria-pressed="false" style="display:grid;grid-template-columns:26px minmax(0,1fr);gap:14px;align-items:center;width:100%;text-align:left;padding:20px 22px;border-radius:16px;border:1px solid #E0DFDA;background:#fff;font:inherit;font-size:16px;line-height:1.55;letter-spacing:-0.02em;color:#0A0A0A;cursor:pointer;transition:border-color .2s ease,background .2s ease"><span class="md-box" aria-hidden="true" style="width:26px;height:26px;border-radius:8px;border:1.5px solid #CFCDC6;display:flex;align-items:center;justify-content:center;transition:all .2s ease"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span><span>병원 이름을 다른 병원으로 바꿔도 글이 그대로 읽힌다</span></button><button type="button" class="md-chk" aria-pressed="false" style="display:grid;grid-template-columns:26px minmax(0,1fr);gap:14px;align-items:center;width:100%;text-align:left;padding:20px 22px;border-radius:16px;border:1px solid #E0DFDA;background:#fff;font:inherit;font-size:16px;line-height:1.55;letter-spacing:-0.02em;color:#0A0A0A;cursor:pointer;transition:border-color .2s ease,background .2s ease"><span class="md-box" aria-hidden="true" style="width:26px;height:26px;border-radius:8px;border:1.5px solid #CFCDC6;display:flex;align-items:center;justify-content:center;transition:all .2s ease"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span><span>원장님이 발행 전에 글을 확인한 적이 없다</span></button><button type="button" class="md-chk" aria-pressed="false" style="display:grid;grid-template-columns:26px minmax(0,1fr);gap:14px;align-items:center;width:100%;text-align:left;padding:20px 22px;border-radius:16px;border:1px solid #E0DFDA;background:#fff;font:inherit;font-size:16px;line-height:1.55;letter-spacing:-0.02em;color:#0A0A0A;cursor:pointer;transition:border-color .2s ease,background .2s ease"><span class="md-box" aria-hidden="true" style="width:26px;height:26px;border-radius:8px;border:1.5px solid #CFCDC6;display:flex;align-items:center;justify-content:center;transition:all .2s ease"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span><span>“최고”, “완치” 같은 표현이나 환자 후기 형식의 글이 올라가 있다</span></button><button type="button" class="md-chk" aria-pressed="false" style="display:grid;grid-template-columns:26px minmax(0,1fr);gap:14px;align-items:center;width:100%;text-align:left;padding:20px 22px;border-radius:16px;border:1px solid #E0DFDA;background:#fff;font:inherit;font-size:16px;line-height:1.55;letter-spacing:-0.02em;color:#0A0A0A;cursor:pointer;transition:border-color .2s ease,background .2s ease"><span class="md-box" aria-hidden="true" style="width:26px;height:26px;border-radius:8px;border:1.5px solid #CFCDC6;display:flex;align-items:center;justify-content:center;transition:all .2s ease"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span><span>글은 매주 올라가는데, 어느 글이 예약으로 이어졌는지 모른다</span></button><button type="button" class="md-chk" aria-pressed="false" style="display:grid;grid-template-columns:26px minmax(0,1fr);gap:14px;align-items:center;width:100%;text-align:left;padding:20px 22px;border-radius:16px;border:1px solid #E0DFDA;background:#fff;font:inherit;font-size:16px;line-height:1.55;letter-spacing:-0.02em;color:#0A0A0A;cursor:pointer;transition:border-color .2s ease,background .2s ease"><span class="md-box" aria-hidden="true" style="width:26px;height:26px;border-radius:8px;border:1.5px solid #CFCDC6;display:flex;align-items:center;justify-content:center;transition:all .2s ease"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span><span>담당자가 바뀔 때마다 병원 설명을 처음부터 다시 한다</span></button></div>
 </div>
-</div>
-<div style="border-radius:24px;background:#0A0A0A;color:#fff;padding:32px 30px 20px">
-<span style="font-size:12px;color:#E95623;font-family:ui-monospace,Menlo,monospace">솔직하게</span>
-<h3 style="margin:10px 0 18px;font-size:24px;font-weight:700;letter-spacing:-0.035em;line-height:1.35">이런 경우에는 <br>권하지 않습니다</h3>
-<ul style="margin:0;padding:0;list-style:none;border-bottom:1px solid #232323"><li style="display:grid;grid-template-columns:20px minmax(0,1fr);gap:12px;padding:16px 0;border-top:1px solid #232323;font-size:16px;line-height:1.6;color:#E5E5E5"><span aria-hidden="true" style="color:#6E6E6E">—</span><span>검색 순위나 후기 개수만 빠르게 늘리고 싶으실 때</span></li><li style="display:grid;grid-template-columns:20px minmax(0,1fr);gap:12px;padding:16px 0;border-top:1px solid #232323;font-size:16px;line-height:1.6;color:#E5E5E5"><span aria-hidden="true" style="color:#6E6E6E">—</span><span>원장님 확인 없이 알아서 올려주길 원하실 때</span></li><li style="display:grid;grid-template-columns:20px minmax(0,1fr);gap:12px;padding:16px 0;border-top:1px solid #232323;font-size:16px;line-height:1.6;color:#E5E5E5"><span aria-hidden="true" style="color:#6E6E6E">—</span><span>오직 가격만 비교하실 때</span></li></ul>
-<p style="margin:18px 0 12px;font-size:14px;line-height:1.7;color:#A3A3A3">함께 성과를 내기 어렵다고 판단되면 상담에서 솔직하게 말씀드립니다.</p>
-</div>
+<div class="r">
+<div class="md2-score"><p class="n"><span id="md-count">0</span><small>/ 5</small></p><p class="msg" id="md-msg" aria-live="polite">해당하는 항목을 눌러 보세요.</p><a href="/#contact" class="hq-btn hq-cta md2-cta">내 병원 맞춤 견적 받기</a></div>
+<div class="md2-no"><p class="k">솔직하게</p><h3>이런 경우에는 권하지 않습니다</h3><ul><li>검색 순위나 후기 개수만 빠르게 늘리고 싶으실 때</li><li>원장님 확인 없이 알아서 올려주길 원하실 때</li><li>오직 가격만 비교하실 때</li></ul><p class="s">함께 성과를 내기 어렵다고 판단되면 상담에서 솔직하게 말씀드립니다.</p></div>
 </div>
 </div>
 </section>
-
 <section aria-label="자주 묻는 질문" style="position:relative;z-index:7;margin-top:-48px;background:#fff;border-radius:48px 48px 0 0;padding:130px 32px 170px">
 <div style="max-width:920px;margin:0 auto">
-<h2 style="margin:0 0 48px;font-size:clamp(32px,3.8vw,52px);line-height:1.28;letter-spacing:-0.04em"><span style="display:block;font-weight:200;color:#8A8A8A">원장님들이</span> <span style="display:block;font-weight:700">자주 물으시는 것<span class="hq-period" style="color:#E95623">.</span></span></h2>
+<h2 class="md2-h2" style="margin:0 0 48px"><span>원장님들이</span> 자주 물으시는 것<span class="dot">.</span></h2>
 <div style="border-bottom:1px solid #E0DFDA"><details class="md-faq" style="border-top:1px solid #E0DFDA" open>
 <summary style="display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 4px;cursor:pointer;font-size:18px;font-weight:600;letter-spacing:-0.02em;list-style:none">블로그 글도 사전심의를 받아야 하나요?<span class="md-plus" aria-hidden="true" style="flex-shrink:0;font-size:22px;font-weight:300;color:#8F8F8F;transition:transform .3s ease">+</span></summary>
 <p style="margin:0;padding:0 4px 26px;font-size:16px;line-height:1.8;color:#5C5C5C;max-width:760px">글의 성격에 따라 다릅니다. 병원을 알리는 글은 심의 대상이 될 수 있고, 의학 정보 중심의 글은 일률적으로 광고로 보지 않는다는 해석이 있습니다. 기획 단계에서 글의 성격을 먼저 나누고, 판단이 필요한 글은 원장님께 미리 말씀드립니다.</p>
@@ -475,6 +714,97 @@ footer{padding-bottom:72px!important}
     b.addEventListener('click', function () { b.setAttribute('aria-pressed', b.getAttribute('aria-pressed') === 'true' ? 'false' : 'true'); update(); });
   });
 })();
+</script>
+<script>
+/* 병원·의원 v2 — 고정 그림 이야기, 고쳐 써지는 글, 이어지는 다섯 구간, 진료과 탭, 빨간 펜, 차오르는 네 단계, 점검 숫자 */
+(function () {
+  var doc = document, $ = function (q, r) { return (r || doc).querySelector(q); }, $$ = function (q, r) { return [].slice.call((r || doc).querySelectorAll(q)); };
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var clamp = function (v, a, b) { return Math.max(a, Math.min(b, v)); };
+  var H = function () { return window.innerHeight || doc.documentElement.clientHeight; };
+  var seen = function (els, fn, opt) {
+    if (!('IntersectionObserver' in window) || reduce) { els.forEach(fn); return; }
+    var o = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { o.unobserve(e.target); fn(e.target); } }); }, opt || { threshold: .25, rootMargin: '0px 0px -8% 0px' });
+    els.forEach(function (el) { o.observe(el); });
+  };
+
+  /* 기본 등장: 제목·리드·묶음이 화면에 들어올 때 */
+  var rv = $$('.md2-h, .md2-h2, .md2-hx, .md2-hc, .md2-lead, .md2-big, .md2-flow, .md2-pts li, .md2-voice1, .md2-keep, .md2-clinics, .md2-law>div, .md2-note, .md2-dept h3, .md2-dept .tabs, .md2-chks, .md2-chkw .r');
+  if (!reduce) rv.forEach(function (el) { el.classList.add('md2-rv'); });
+  seen(rv, function (el) { el.classList.add('in'); });
+  seen($$('.md2-cred'), function (el) { el.classList.add('in'); }, { threshold: .6 });
+  /* 빨간 펜: 줄마다 차례로 긋고 바꾼다 */
+  seen($$('.md2-rules .rl'), function (el) { el.classList.add('in'); }, { threshold: .6 });
+
+  /* 진료과 탭 */
+  var tabs = $$('.md2-dept [role="tab"]'), pns = $$('.md2-dept [role="tabpanel"]'), ind = $('.md2-dept .ind');
+  function pick(n, focus) {
+    tabs.forEach(function (t, k) { var on = k === n; t.setAttribute('aria-selected', on ? 'true' : 'false'); t.tabIndex = on ? 0 : -1; if (on && focus) t.focus(); });
+    pns.forEach(function (p, k) { p.hidden = k !== n; });
+    if (ind) ind.style.transform = 'translateX(' + (n * 100) + '%)';
+  }
+  tabs.forEach(function (t, k) {
+    t.addEventListener('click', function () { pick(k); });
+    t.addEventListener('keydown', function (e) { if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') { e.preventDefault(); pick((k + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length, true); } });
+  });
+
+  /* 점검 숫자: 바뀔 때 튀어 오르게 (카운트 자체는 기존 스크립트가 올림) */
+  var cnt = $('#md-count'), score = $('.md2-score');
+  if (cnt && score && 'MutationObserver' in window) new MutationObserver(function () {
+    cnt.classList.remove('bump'); void cnt.offsetWidth; cnt.classList.add('bump'); setTimeout(function () { cnt.classList.remove('bump'); }, 260);
+    score.classList.toggle('hit', +cnt.textContent > 0);
+  }).observe(cnt, { childList: true, characterData: true, subtree: true });
+
+  var story = $('.md2-story'), figs = story ? $$('.fig', story) : [], sts = story ? $$('.st', story) : [];
+  var rw = $('.md2-rw'), rls = rw ? $$('.ln', rw) : [];
+  var path = $('.md2-path'), sgs = path ? $$('.sg', path) : [], pline = path && $('.line', path);
+  var voice = $('.md2-voice'), vcs = voice ? $$('.vc', voice) : [];
+
+  if (reduce) {
+    rls.forEach(function (l) { l.classList.add('x'); }); if (rw) rw.classList.add('done');
+    sgs.forEach(function (g) { g.classList.add('on'); }); if (path) { path.classList.add('b', 'c'); pline.style.setProperty('--p', 1); }
+    vcs.forEach(function (v) { v.classList.add('on'); }); if (voice) voice.style.setProperty('--p', 1);
+    return;
+  }
+
+  var tick = false;
+  function frame() {
+    tick = false; var h = H();
+    // 어려운 이유: 화면 가운데를 지나는 이야기의 그림을 왼쪽에 띄운다
+    if (story) {
+      var cur = 0;
+      sts.forEach(function (s, k) { if (s.getBoundingClientRect().top < h * 0.55) cur = k; });
+      sts.forEach(function (s, k) { s.classList.toggle('on', k === cur); });
+      figs.forEach(function (f, k) { f.classList.toggle('on', k === cur); });
+    }
+    // 고쳐 써지는 글: 고정된 동안 한 줄씩 바뀐다
+    if (rw) {
+      var r = rw.getBoundingClientRect(), p = clamp(-r.top / Math.max(1, r.height - h), 0, 1);
+      rls.forEach(function (l, k) { l.classList.toggle('x', p > 0.12 + k * 0.17); });
+      rw.classList.toggle('done', p > 0.82);
+    }
+    // 다섯 구간: 따로 → 이어짐 → 한 팀
+    if (path) {
+      var pr = path.getBoundingClientRect(), pp = clamp(-pr.top / Math.max(1, pr.height - h), 0, 1);
+      var fill = clamp((pp - 0.22) / 0.55, 0, 1);
+      path.classList.toggle('b', pp > 0.2);
+      pline.style.setProperty('--p', fill.toFixed(3));
+      sgs.forEach(function (g, k) { g.classList.toggle('on', fill >= k / 4 - 0.001 && pp > 0.2); });
+      path.classList.toggle('c', pp > 0.8);
+    }
+    // 원장님 목소리: 화면을 내려가는 만큼 선이 차오르고 점이 켜진다
+    if (voice) {
+      var vr = voice.getBoundingClientRect(), vp = clamp((h * 0.7 - vr.top) / (vr.height * 0.9), 0, 1);
+      voice.style.setProperty('--p', vp.toFixed(3));
+      vcs.forEach(function (v, k) { v.classList.toggle('on', vp >= k / Math.max(1, vcs.length - 1) - 0.02); });
+    }
+  }
+  function on() { if (!tick) { tick = true; requestAnimationFrame(frame); } }
+  window.addEventListener('scroll', on, { passive: true });
+  window.addEventListener('resize', on);
+  frame();
+})();
+
 </script>
 </body>
 </html>
