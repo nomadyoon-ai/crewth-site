@@ -184,6 +184,18 @@ section[style*="border-radius:48px"]{border-radius:32px 32px 0 0!important}
 footer{padding-left:20px!important;padding-right:20px!important}
 }
 @media (max-width:359px){.cw-orbit-m{zoom:.86}}
+/* 1119 — 메인 히어로 사진 */
+.cw-hero-photo{min-height:min(860px,calc(100vh - 72px));display:flex;align-items:center;box-sizing:border-box}
+.cw-hero-photo>.cw-hero-grid{width:100%}
+.cw-hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:right center;opacity:0;animation:cwHeroIn 1.6s ease .1s forwards}
+@keyframes cwHeroIn{to{opacity:var(--cw-hero-o,1)}}
+.cw-hero-veil{position:absolute;inset:0;background:linear-gradient(90deg,#0A0A0A 0%,rgba(10,10,10,.94) 30%,rgba(10,10,10,.6) 48%,rgba(10,10,10,.12) 70%,rgba(10,10,10,0) 100%),linear-gradient(180deg,rgba(10,10,10,.5) 0%,rgba(10,10,10,0) 20%,rgba(10,10,10,0) 72%,#0A0A0A 100%)}
+@media (max-width:860px){
+#top.cw-hero-photo{min-height:0;display:block;padding-bottom:calc(62vw + 20px)!important}
+.cw-hero-img{top:auto;bottom:0;height:auto;aspect-ratio:800/628;object-position:center}
+.cw-hero-veil{top:auto;bottom:0;height:calc(78.5vw + 2px);background:linear-gradient(180deg,#0A0A0A 0%,rgba(10,10,10,.55) 22%,rgba(10,10,10,0) 46%,rgba(10,10,10,0) 80%,#0A0A0A 100%)}
+}
+@media (prefers-reduced-motion:reduce){.cw-hero-img{animation:none;opacity:var(--cw-hero-o,1)}}
 /* 1118d — first impression, motion on view, rewrite demo */
 #top h1.cw-rise{animation:none}
 #top h1>span{animation:cwRise 1s cubic-bezier(.2,.7,.2,1) both}
@@ -266,14 +278,14 @@ select.cw-input option{color:#0A0A0A}
 </header>
 
 <!-- 히어로 -->
-<section id="top" class="cw-ruled" style="position:relative;padding:80px 32px 96px">
+<section id="top" class="cw-ruled cw-hero-photo" style="position:relative;padding:80px 32px 96px">
 <div aria-hidden="true" style="position:absolute;inset:0;overflow:hidden;pointer-events:none">
-<div style="position:absolute;right:8%;top:380px;width:760px;height:560px;transform:translateY(-50%);background:radial-gradient(closest-side,rgba(233,86,35,.10),rgba(233,86,35,0))"></div>
+<picture><source media="(max-width:860px)" type="image/avif" srcset="/assets/hero-main-m.avif"><source media="(max-width:860px)" type="image/webp" srcset="/assets/hero-main-m.webp"><source type="image/avif" srcset="/assets/hero-main.avif"><source type="image/webp" srcset="/assets/hero-main.webp"><img class="cw-hero-img" src="/assets/hero-main.webp" alt="" width="1600" height="900" decoding="async" fetchpriority="low"></picture><div class="cw-hero-veil"></div>
 </div>
-<div class="cw-hero-grid" style="position:relative;max-width:1180px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) 500px;gap:48px;align-items:center">
+<div class="cw-hero-grid" style="position:relative;max-width:1180px;margin:0 auto;display:grid;grid-template-columns:minmax(0,660px);gap:48px;align-items:center">
 <div>
 <p class="cw-rise" style="margin:0 0 28px;font-size:15px;color:#A3A3A3;letter-spacing:0.02em">기업·병원 브랜딩 • 마케팅 콘텐츠 대행사</p>
-<h1 class="cw-rise" style="margin:0;font-size:clamp(34px,4.6vw,64px);line-height:1.16;letter-spacing:-0.04em">
+<h1 class="cw-rise" style="margin:0;font-size:clamp(36px,5.4vw,78px);line-height:1.12;letter-spacing:-0.04em">
 <span style="display:block;color:#6E6E6E;font-weight:200">아무나 쓴 글에는,</span>
 <span style="display:block;color:#fff;font-weight:700;margin-top:4px">아무도 문의하지 않습니다<span class="cw-period" style="color:#E95623">.</span></span>
 </h1>
@@ -286,18 +298,6 @@ select.cw-input option{color:#0A0A0A}
 <span><b style="color:#fff;font-weight:700;font-size:15px">95%</b>가 첫 계약 뒤에도 계속 맡기십니다</span>
 </div>
 </div>
-<div class="cw-rise" style="position:relative"><div style="position:relative;padding:2px 0"><div style="position:relative;width:300px;height:600px;margin:0 auto;border-radius:42px;border:7px solid #2A2A2A;overflow:hidden;background:radial-gradient(120% 70% at 50% 0%,#3A2A20 0%,#171311 45%,#0A0A0A 100%)">
-<p style="margin:40px 0 0;text-align:center;font-size:12px;color:#A3A3A3">월요일, 6월 9일</p>
-<p style="margin:0;text-align:center;font-size:58px;font-weight:300;color:#fff;letter-spacing:-0.03em;line-height:1.15">9:41</p>
-<div style="padding:10px 12px 0"><p style="margin:0 0 2px 4px;font-size:11px;color:#8A8A8A">오늘 · 콘텐츠를 보고 온 연락</p><div class="dv-msg" style="animation-delay:0.4s;display:flex;gap:10px;align-items:center;padding:10px 12px;border-radius:14px;background:rgba(255,255,255,.1);backdrop-filter:blur(8px);margin-top:7px"><span style="flex-shrink:0;width:30px;height:30px;border-radius:9px;background:#E95623;color:#0A0A0A;display:flex;align-items:center;justify-content:center;font-size:13px">☎</span><div style="flex:1;min-width:0"><div style="display:flex;justify-content:space-between;align-items:baseline"><p style="margin:0;font-size:12px;font-weight:700;color:#fff">전화 문의</p><span style="font-size:10px;color:#8A8A8A">9:12</span></div><p style="margin:1px 0 0;font-size:12px;color:#C9C9C9;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">블로그 보고 연락드려요</p></div></div><div class="dv-msg" style="animation-delay:1.2000000000000002s;display:flex;gap:10px;align-items:center;padding:10px 12px;border-radius:14px;background:rgba(255,255,255,.1);backdrop-filter:blur(8px);margin-top:7px"><span style="flex-shrink:0;width:30px;height:30px;border-radius:9px;background:#fff;color:#0A0A0A;display:flex;align-items:center;justify-content:center;font-size:13px">✓</span><div style="flex:1;min-width:0"><div style="display:flex;justify-content:space-between;align-items:baseline"><p style="margin:0;font-size:12px;font-weight:700;color:#fff">예약 문의</p><span style="font-size:10px;color:#8A8A8A">10:40</span></div><p style="margin:1px 0 0;font-size:12px;color:#C9C9C9;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">글 읽고 예약하고 싶어요</p></div></div><div class="dv-msg" style="animation-delay:2.0s;display:flex;gap:10px;align-items:center;padding:10px 12px;border-radius:14px;background:rgba(255,255,255,.1);backdrop-filter:blur(8px);margin-top:7px"><span style="flex-shrink:0;width:30px;height:30px;border-radius:9px;background:#E95623;color:#0A0A0A;display:flex;align-items:center;justify-content:center;font-size:13px">☎</span><div style="flex:1;min-width:0"><div style="display:flex;justify-content:space-between;align-items:baseline"><p style="margin:0;font-size:12px;font-weight:700;color:#fff">전화 문의</p><span style="font-size:10px;color:#8A8A8A">13:05</span></div><p style="margin:1px 0 0;font-size:12px;color:#C9C9C9;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">원장님 글 보고 왔어요</p></div></div><div style="margin-top:14px"><div class="dv-crew" style="animation-delay:3.0s;padding:14px 15px;border-radius:16px;background:#fff;box-shadow:0 0 0 2px #E95623,0 18px 40px rgba(233,86,35,.28)">
-<div style="display:flex;align-items:center;gap:10px"><span style="position:relative;flex-shrink:0;width:38px;height:38px;border-radius:50%;background:linear-gradient(160deg,#3A3A3A,#1C1C1C);box-shadow:0 0 0 3px #0A0A0A,0 0 0 5px #E95623;display:inline-flex;align-items:flex-end;justify-content:center;overflow:hidden"><svg width="30" height="30" viewBox="0 0 40 40" fill="#8A8A8A" style="margin-bottom:-2px"><path d="M20 8a7 7 0 1 1 0 14a7 7 0 1 1 0-14Z M6 36c0-8 6.3-12.5 14-12.5S34 28 34 36Z"/></svg></span><div style="flex:1;min-width:0"><p style="margin:0;font-size:13px;font-weight:800;color:#0A0A0A">윤크루<span style="margin-left:6px;padding:2px 8px;border-radius:999px;background:#E95623;color:#0A0A0A;font-size:10px;font-weight:800;vertical-align:1px">전담 크루</span></p><p style="margin:3px 0 0;font-size:11px;color:#6E6E6E">카카오톡 · 방금</p></div></div>
-<div style="margin-top:11px;border-radius:14px;background:#F6F5F1;padding:10px 12px 8px">
-<div style="display:flex;justify-content:space-between;align-items:center"><span style="font-size:11px;color:#6E6E6E">이번 달 리포트</span><span style="font-size:11px;font-weight:800;color:#E95623">매출 ↑</span></div>
-<svg aria-hidden="true" viewBox="0 0 240 64" style="display:block;width:100%;height:auto;margin-top:4px"><path d="M4 56 C40 52 60 46 90 40 S150 26 180 18 L232 6 L232 62 L4 62Z" fill="rgba(233,86,35,.14)"/><path class="cw-draw-l" d="M4 56 C40 52 60 46 90 40 S150 26 180 18 L232 6" fill="none" stroke="#E95623" stroke-width="2.5" stroke-linecap="round"/><circle cx="232" cy="6" r="4" fill="#E95623"/><line x1="4" y1="62" x2="236" y2="62" stroke="#DEDDD8"/></svg>
-</div>
-<p style="margin:10px 0 0;font-size:14px;line-height:1.5;color:#0A0A0A;font-weight:700">원장님, 이번 달 리포트입니다.</p>
-<p style="margin:3px 0 0;font-size:12px;line-height:1.5;color:#5C5C5C">데이터 분석해서 다음 달 전략도 바로 보내드릴게요!</p>
-</div></div></div></div></div></div>
 </div>
 
 </section>
